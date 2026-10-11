@@ -9,7 +9,6 @@ import {
     TextInput,
     TouchableOpacity,
     View,
-    KeyboardAvoidingView,
     Platform,
     Dimensions,
     Modal,
@@ -17,16 +16,10 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
+import { ChevronLeft, Eye, EyeOff, Moon, Sun } from "lucide-react-native";
+import { revealFocusedInput, useKeyboardHeight, useKeyboardScroller } from "./lib/keyboard";
 import { colors } from "./lib/theme";
 import { StudentStore } from "./lib/store";
-
-function Glyph(props) {
-    return (
-        <Text style={{ fontSize: props.size || 16, color: props.color || "#0F172A", lineHeight: (props.size || 16) + 3 }}>
-            {props.ch}
-        </Text>
-    );
-}
 
 // ============================================================
 // YARDIMCILAR
@@ -111,15 +104,22 @@ export function Screen(props) {
 
 export function ScrollScreen(props) {
     var isDark = props.dark === true;
+    var scrollRef = React.useRef(null);
+    var onKbScroll = useKeyboardScroller(scrollRef);
+    var kbH = useKeyboardHeight();
 
     return (
         <Screen dark={isDark} noTop={props.noTop} noBottom={props.noBottom}>
             <ScrollView
+                ref={scrollRef}
+                onScroll={onKbScroll}
+                scrollEventThrottle={32}
                 style={{ flex: 1 }}
                 contentContainerStyle={[
                     styles.pad,
                     isDark && styles.padDark,
                     props.contentStyle,
+                    kbH ? { paddingBottom: kbH + 32 } : null,
                 ]}
                 keyboardShouldPersistTaps="handled"
                 nestedScrollEnabled
@@ -137,20 +137,23 @@ export function ScrollScreen(props) {
 
 export function KeyboardScreen(props) {
     var isDark = props.dark === true;
+    var scrollRef = React.useRef(null);
+    var onKbScroll = useKeyboardScroller(scrollRef);
+    var kbH = useKeyboardHeight();
 
     return (
         <Screen dark={isDark}>
-            <KeyboardAvoidingView
-                style={{ flex: 1 }}
-                behavior={Platform.OS === "ios" ? "padding" : "height"}
-                keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
-            >
+            <View style={{ flex: 1 }}>
                 <ScrollView
+                    ref={scrollRef}
+                    onScroll={onKbScroll}
+                    scrollEventThrottle={32}
                     style={{ flex: 1 }}
                     contentContainerStyle={[
                         styles.pad,
                         isDark && styles.padDark,
                         props.contentStyle,
+                        kbH ? { paddingBottom: kbH + 32 } : null,
                     ]}
                     keyboardShouldPersistTaps="handled"
                     nestedScrollEnabled
@@ -158,7 +161,7 @@ export function KeyboardScreen(props) {
                 >
                     {props.children}
                 </ScrollView>
-            </KeyboardAvoidingView>
+            </View>
         </Screen>
     );
 }
@@ -319,7 +322,7 @@ export var Field = React.forwardRef(function Field(props, ref) {
                     autoComplete={props.autoComplete}
                     textContentType={props.textContentType}
                     blurOnSubmit={props.blurOnSubmit}
-                    onFocus={function () { setFocused(true); props.onFocus && props.onFocus(); }}
+                    onFocus={function () { setFocused(true); setTimeout(revealFocusedInput, 80); props.onFocus && props.onFocus(); }}
                     onBlur={function () { setFocused(false); props.onBlur && props.onBlur(); }}
                     style={[
                         styles.input,
@@ -344,7 +347,7 @@ export var Field = React.forwardRef(function Field(props, ref) {
                         style={styles.eyeBtn}
                         hitSlop={6}
                     >
-                        {secure ? <Glyph ch="⊘" size={16} color={props.dark ? "#A8A29E" : "#64748B"} /> : <Glyph ch="◉" size={16} color={props.dark ? "#F5F5F4" : "#0F172A"} />}
+                        {secure ? <Eye size={19} color={props.dark ? "#A8A29E" : "#64748B"} strokeWidth={2} /> : <EyeOff size={19} color={props.dark ? "#F5F5F4" : "#0F172A"} strokeWidth={2} />}
                     </Pressable>
                 ) : null}
             </View>
@@ -377,9 +380,9 @@ export function ThemeToggle(props) {
             style={[styles.themeBtn, isDark && styles.themeBtnDark]}
         >
             {isDark ? (
-                <Glyph ch="☼" size={18} color="#FDE68A" />
+                <Sun size={20} color="#FBBF24" strokeWidth={2.2} />
             ) : (
-                <Glyph ch="☾" size={18} color="#0F172A" />
+                <Moon size={19} color="#0D2C4D" strokeWidth={2.2} />
             )}
         </Pressable>
     );
@@ -401,7 +404,7 @@ export function PageHeader(props) {
                     }}
                     style={[styles.headerBack, isDark && styles.headerBackDark]}
                 >
-                    <Glyph ch="‹" size={22} color={isDark ? "#E2E8F0" : "#0F172A"} />
+                    <ChevronLeft size={22} color={isDark ? "#E2E8F0" : "#0F172A"} strokeWidth={2.4} />
                 </Pressable>
             ) : null}
             <View style={{ flex: 1, minWidth: 0 }}>
@@ -489,7 +492,7 @@ export function BackChip(props) {
             }}
             style={[styles.backChip, dark && styles.backChipDark, props.style]}
         >
-            <Glyph ch="‹" size={20} color={dark ? "#E2E8F0" : "#0F172A"} />
+            <ChevronLeft size={20} color={dark ? "#E2E8F0" : "#0F172A"} strokeWidth={2.4} />
             <Text style={[styles.backChipLabel, dark && styles.backChipTextDark]}>{props.label || "Geri"}</Text>
         </Pressable>
     );
@@ -648,6 +651,7 @@ export function EmptyState(props) {
 
 export function BottomSheet(props) {
     var insets = useSafeAreaInsets();
+    var kbH = useKeyboardHeight();
 
     if (!props.visible) return null;
 
@@ -665,7 +669,7 @@ export function BottomSheet(props) {
                 <Pressable
                     style={[
                         styles.bottomSheetContent,
-                        { paddingBottom: insets.bottom + 16 },
+                        { paddingBottom: Math.max(insets.bottom + 16, kbH ? kbH + 16 : 0) },
                         props.style,
                     ]}
                     onPress={function (e) { e.stopPropagation(); }}
@@ -808,10 +812,10 @@ var styles = StyleSheet.create({
         height: 42,
         borderRadius: 16,
         borderWidth: 1,
-        borderColor: "rgba(255,255,255,0.35)",
+        borderColor: "#E2E8F0",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "rgba(255,255,255,0.72)",
+        backgroundColor: "#FFFFFF",
     },
     themeBtnDark: {
         backgroundColor: "rgba(15, 23, 42, 0.75)",

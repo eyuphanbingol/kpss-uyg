@@ -12,6 +12,7 @@ import { PencilLine, Map, Shield, Layers, Timer, ChevronRight } from "lucide-rea
 import { AccentCard, PctBadge, Hit } from "../kit";
 import { TrMapView } from "../components/TrMapView";
 import { konuLabel } from "../lib/konuLabels";
+import { useLandscapeLock } from "../lib/useLandscapeLock";
 
 var MAP_CARD_IMG = {
     volkanik: require("../../assets/map/volkanik.png"),
@@ -447,6 +448,8 @@ export function MapPlayScreen({ route, navigation }) {
     var win = useWindowDimensions();
     var insets = useSafeAreaInsets();
     var meta = MapQuiz.topicMeta(topicId);
+    // Harita yatay ekranda çok daha kullanışlı: oyun açılınca ekran yataya döner, çıkınca geri döner.
+    var landReady = useLandscapeLock();
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];
@@ -585,55 +588,105 @@ export function MapPlayScreen({ route, navigation }) {
         paddingRight: Math.max(insets.right, 10)
     };
 
+    if (!landReady) {
+        return (
+            <Screen dark={isDark} style={{ backgroundColor: "#0c3d56" }} edges={["top"]}>
+                <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 24 }}>
+                    <Text style={styles.askName}>{meta ? meta.title : "Harita"}</Text>
+                    <Text style={[styles.askHint, { marginTop: 8 }]}>Harita yataya alınıyor…</Text>
+                </View>
+            </Screen>
+        );
+    }
+
+    var progressPct = total ? Math.round((Object.keys(solved).length / total) * 100) : 0;
+    // Bulunan yerin bilgisi her zaman aynı yükseklikte bir kutuda: kutu belirince harita boyutu
+    // değişmez (eskiden değişiyor ve kullanıcının yakınlaştırması sıfırlanıyordu).
+    var foundBox = (
+        <View style={[styles.found, !lastItem && styles.foundEmpty, lastItem && shown[lastItem.id] && styles.foundShown]} accessibilityLiveRegion="polite">
+            <Text style={[styles.foundTxt, lastItem && shown[lastItem.id] && styles.foundTxtShown]} numberOfLines={2}>
+                {lastItem ? (
+                    <Text>
+                        {shown[lastItem.id] ? "• " : "✓ "}
+                        <Text style={styles.foundName}>{lastItem.name}</Text>
+                        {"  →  " + (MapQuiz.placeLabel ? MapQuiz.placeLabel(lastItem) : "")}
+                    </Text>
+                ) : " "}
+            </Text>
+        </View>
+    );
+    var askPanel = (
+        <View style={landscape ? styles.sidePanel : styles.askBox}>
+            {foundBox}
+            <Text style={styles.askKicker}>{target && target.line ? "HATTI SÜRÜKLE YA DA ÇİZGİYE DOKUN" : "ADI SÜRÜKLE, YERİNE BIRAK"}</Text>
+            <Text style={[styles.askName, landscape && { fontSize: 19 }]} numberOfLines={landscape ? 3 : 2}>{target ? target.name : ""}</Text>
+            {target && target.prompt && (target.line || landscape) ? (
+                <Text style={styles.askHint} numberOfLines={3}>{target.prompt}</Text>
+            ) : null}
+            <Text style={styles.askTip}>Sol alttaki ismi parmağınla tutup haritadaki yerine bırak. İstersen doğrudan yerine de dokunabilirsin.</Text>
+            <View style={[styles.askRow, landscape && { flexDirection: "column", gap: 8 }]}>
+                <Pressable onPress={reveal} style={styles.askSkip} accessibilityRole="button">
+                    <Text style={styles.askSkipTxt}>Bilmiyorum, göster</Text>
+                </Pressable>
+                <Text style={styles.askMeta}>{misses ? (misses + " yanlış") : "Hatasız"}</Text>
+            </View>
+        </View>
+    );
+    var mapBox = (
+        <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", borderRadius: 16, marginTop: landscape ? 0 : 8 }}>
+            <TrMapView
+                mode="play"
+                place
+                pins={layer.pins || []}
+                glyph={glyph}
+                placed={solved}
+                shown={shown}
+                lastId={lastId}
+                targetId={target ? target.id : null}
+                flash={flash}
+                hl={hl}
+                drag={target ? target.name : null}
+                onPin={onPin}
+            />
+        </View>
+    );
+
     return (
         <Screen dark={isDark} style={{ overflow: "hidden", backgroundColor: "#0c3d56" }} edges={[]}>
             <View style={[{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden" }, playPad]}>
-                <View style={styles.mapAskRow}>
-                    <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
-                    <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a", textAlign: "right" }]} numberOfLines={1}>
-                        {meta ? meta.title : "Harita"} · {okCount}/{total}
-                    </Text>
-                </View>
-                <View style={styles.mapBar}>
-                    <View style={[styles.mapBarFill, { width: (total ? Math.round((Object.keys(solved).length / total) * 100) : 0) + "%" }]} />
-                </View>
-                <View style={{ flex: 1, minHeight: 0, minWidth: 0, overflow: "hidden", marginTop: 8, borderRadius: 16 }}>
-                    <TrMapView
-                        mode="play"
-                        place
-                        pins={layer.pins || []}
-                        glyph={glyph}
-                        placed={solved}
-                        shown={shown}
-                        lastId={lastId}
-                        targetId={target ? target.id : null}
-                        flash={flash}
-                        hl={hl}
-                        onPin={onPin}
-                    />
-                </View>
-                <View style={styles.askBox}>
-                    {lastItem ? (
-                        <View style={[styles.found, shown[lastItem.id] && styles.foundShown]} accessibilityLiveRegion="polite">
-                            <Text style={[styles.foundTxt, shown[lastItem.id] && styles.foundTxtShown]} numberOfLines={2}>
-                                {shown[lastItem.id] ? "• " : "✓ "}
-                                <Text style={styles.foundName}>{lastItem.name}</Text>
-                                {"  →  " + (MapQuiz.placeLabel ? MapQuiz.placeLabel(lastItem) : "")}
+                {landscape ? (
+                    <View style={{ flex: 1, flexDirection: "row", gap: 12, minHeight: 0 }}>
+                        {mapBox}
+                        <View style={{ width: Math.min(260, Math.round(win.width * 0.3)), minHeight: 0 }}>
+                            <View style={styles.mapAskRow}>
+                                <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
+                            </View>
+                            <Text style={[styles.kicker, { marginTop: 8, color: "#d7c39a" }]} numberOfLines={1}>
+                                {meta ? meta.title : "Harita"} · {okCount}/{total}
+                            </Text>
+                            <View style={styles.mapBar}>
+                                <View style={[styles.mapBarFill, { width: progressPct + "%" }]} />
+                            </View>
+                            <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingTop: 8 }} showsVerticalScrollIndicator={false}>
+                                {askPanel}
+                            </ScrollView>
+                        </View>
+                    </View>
+                ) : (
+                    <View style={{ flex: 1, minHeight: 0 }}>
+                        <View style={styles.mapAskRow}>
+                            <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} style={{ marginBottom: 0 }} />
+                            <Text style={[styles.kicker, { flex: 1, marginBottom: 0, minWidth: 0, color: "#d7c39a", textAlign: "right" }]} numberOfLines={1}>
+                                {meta ? meta.title : "Harita"} · {okCount}/{total}
                             </Text>
                         </View>
-                    ) : null}
-                    <Text style={styles.askKicker}>{target && target.line ? "HATTI BUL, ÇİZGİYE DOKUN" : "HARİTADA BUL VE DOKUN"}</Text>
-                    <Text style={[styles.askName, landscape && { fontSize: 20 }]} numberOfLines={2}>{target ? target.name : ""}</Text>
-                    {target && target.line && !landscape && target.prompt ? (
-                        <Text style={styles.askHint} numberOfLines={2}>{target.prompt}</Text>
-                    ) : null}
-                    <View style={styles.askRow}>
-                        <Pressable onPress={reveal} style={styles.askSkip}>
-                            <Text style={styles.askSkipTxt}>Bilmiyorum, göster</Text>
-                        </Pressable>
-                        <Text style={styles.askMeta}>{misses ? (misses + " yanlış") : "Hatasız"}</Text>
+                        <View style={styles.mapBar}>
+                            <View style={[styles.mapBarFill, { width: progressPct + "%" }]} />
+                        </View>
+                        {mapBox}
+                        {askPanel}
                     </View>
-                </View>
+                )}
             </View>
         </Screen>
     );
@@ -753,7 +806,10 @@ var styles = StyleSheet.create({
     askBox: { paddingTop: 10, alignItems: "center" },
     askKicker: { fontSize: 10, fontWeight: "800", letterSpacing: 1.4, color: "#d7c39a" },
     askHint: { fontSize: 12, lineHeight: 16, color: "#cbbda0", textAlign: "center", marginTop: 4 },
-    found: { alignSelf: "stretch", marginBottom: 8, paddingVertical: 6, paddingHorizontal: 12, borderRadius: 12, backgroundColor: "rgba(16,185,129,0.16)" },
+    found: { alignSelf: "stretch", marginBottom: 8, paddingVertical: 6, paddingHorizontal: 12, borderRadius: 12, backgroundColor: "rgba(16,185,129,0.16)", minHeight: 48, justifyContent: "center" },
+    foundEmpty: { backgroundColor: "transparent" },
+    sidePanel: { alignItems: "stretch" },
+    askTip: { fontSize: 11, lineHeight: 15, color: "rgba(244,228,180,0.7)", textAlign: "center", marginTop: 8 },
     foundShown: { backgroundColor: "rgba(148,163,184,0.16)" },
     foundTxt: { fontSize: 13, lineHeight: 18, color: "#d1fae5", textAlign: "center" },
     foundTxtShown: { color: "#e2e8f0" },

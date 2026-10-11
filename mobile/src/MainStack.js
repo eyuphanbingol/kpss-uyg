@@ -1,5 +1,5 @@
-import React from "react";
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import React, { useEffect } from "react";
+import { Text, View, StyleSheet, Pressable, InteractionManager } from "react-native";
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -40,6 +40,25 @@ function AppTabBar(props) {
     var streak = (student && student.streak && student.streak.count) || 0;
     var state = props.state;
     var navigation = props.navigation;
+
+    // Sekmeler ilk dokunuşta sıfırdan kurulduğu için ilk geçiş takılıyordu. Açılıştan kısa süre sonra,
+    // kullanıcı bir şey yapmıyorken diğer sekmeler arka planda tek tek hazırlanır (freezeOnBlur ile
+    // hazırlandıktan sonra görünene kadar yeniden çizilmezler).
+    useEffect(function () {
+        if (!navigation.preload) return;
+        var alive = true;
+        var timers = [];
+        var names = state.routes.map(function (r) { return r.name; });
+        names.forEach(function (name, i) {
+            timers.push(setTimeout(function () {
+                InteractionManager.runAfterInteractions(function () {
+                    if (!alive) return;
+                    try { navigation.preload(name); } catch (e) {}
+                });
+            }, 1800 + i * 450));
+        });
+        return function () { alive = false; timers.forEach(clearTimeout); };
+    }, []);
 
     return (
         <View

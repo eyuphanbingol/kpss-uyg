@@ -15,6 +15,7 @@ import { SITE } from "../lib/media";
 import { parseAuthUrl } from "../lib/authLinks";
 import { useApp } from "../AppProvider";
 import { Field, GhostButton, PrimaryButton, Tap, ThemeToggle } from "../ui";
+import { useKeyboardHeight, useKeyboardScroller } from "../lib/keyboard";
 import { needsKulvar } from "../lib/theme";
 import { BrandBackdrop } from "./SplashScreen";
 import { StatusBar } from "expo-status-bar";
@@ -103,6 +104,9 @@ export default function AuthScreen() {
     var _resendIn = useState(0);
     var resendIn = _resendIn[0], setResendIn = _resendIn[1];
     var scrollRef = useRef(null);
+    // Klavye açıkken başlık gizlenir, form klavyenin üstüne kaydırılabilir (Android kenardan kenara)
+    var kbH = useKeyboardHeight();
+    var onKbScroll = useKeyboardScroller(scrollRef);
     useEffect(function () {
         if (resendIn <= 0) return;
         var t = setTimeout(function () { setResendIn(resendIn - 1); }, 1000);
@@ -523,14 +527,18 @@ export default function AuthScreen() {
                     </View>
                     <ThemeToggle dark={dark} />
                 </View>
-                <View style={ns.hero}>
-                    <Text style={ns.kicker}>KPSS · GY-GK</Text>
-                    <Text style={ns.heroTitle}>Atamaya giden çalışma odası.</Text>
-                </View>
+                {kbH ? null : (
+                    <View style={ns.hero}>
+                        <Text style={ns.kicker}>KPSS · GY-GK</Text>
+                        <Text style={ns.heroTitle}>Atamaya giden çalışma odası.</Text>
+                    </View>
+                )}
                 <View style={[styles.sheet, dark && ns.sheetDark]}>
                     <ScrollView
                         ref={scrollRef}
-                        contentContainerStyle={ns.sheetInner}
+                        contentContainerStyle={[ns.sheetInner, kbH ? { paddingBottom: kbH + 32 } : null]}
+                        onScroll={onKbScroll}
+                        scrollEventThrottle={32}
                         keyboardShouldPersistTaps="handled"
                         keyboardDismissMode="on-drag"
                         automaticallyAdjustKeyboardInsets

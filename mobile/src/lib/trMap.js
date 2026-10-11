@@ -72,7 +72,20 @@ var CSS = [
     ".map-pin{font-size:13px;font-weight:800;paint-order:stroke;stroke:#fffaf0;stroke-width:4px;fill:#0f2a1f;pointer-events:none;}",
     ".map-pin-ok{fill:#064e3b;}",
     ".map-pin-bad{fill:#9f1239;}",
-    ".map-pin-done{fill:#44403c;}"
+    ".map-pin-done{fill:#44403c;}",
+    // Sürükle-bırak: hedefin adı çip olarak sol altta durur; sürüklerken parmağın üstünde bir nişan
+    // halkası gösterilir (parmak bırakılacak yeri kapatmasın), bırakılan nokta o halkanın merkezidir.
+    ".dragchip{position:absolute;left:8px;bottom:8px;z-index:7;max-width:calc(100% - 150px);display:flex;align-items:center;gap:8px;padding:9px 14px 9px 10px;border-radius:999px;background:linear-gradient(135deg,#F2D58A,#C5A059);color:#1C1405;font:800 14px/1.2 -apple-system,Roboto,sans-serif;box-shadow:0 10px 24px rgba(4,14,22,.45),inset 0 1px 0 rgba(255,255,255,.5);touch-action:none;}",
+    ".dragchip[hidden]{display:none;}",
+    ".dragchip .grip{width:22px;height:22px;border-radius:50%;background:rgba(28,20,5,.14);display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;}",
+    ".dragchip .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}",
+    ".dragchip.dragging{position:fixed;left:0;bottom:auto;top:0;max-width:70vw;transform-origin:center;box-shadow:0 18px 36px rgba(4,14,22,.55);pointer-events:none;}",
+    ".dragchip.back{transition:transform .2s ease-out;}",
+    ".dragchip.shake{animation:dshake .35s;}",
+    "@keyframes dshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}",
+    ".dropring{position:fixed;z-index:8;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:3px solid #fff8e8;background:rgba(245,158,11,.28);box-shadow:0 0 0 2px rgba(124,45,18,.6);pointer-events:none;}",
+    ".dropring:after{content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#7c2d12;}",
+    ".dropring[hidden]{display:none;}"
 ].join("");
 
 // WebView içinde çalışan kod. String.raw: içindeki \d gibi kaçışlar olduğu gibi kalsın.
@@ -85,6 +98,8 @@ svg.setAttribute('viewBox',svg.getAttribute('viewBox')||svg.getAttribute('viewbo
 var wrap=document.getElementById('wrap');
 var canvas=document.getElementById('canvas');
 var z={s:1,x:0,y:0};
+// Kullanıcı kendisi yakınlaştırdıysa düzen değişikliği (ör. cevap kutusunun açılması) haritayı geri sığdırmaz.
+var userZoom=false;
 var lastPlay=null;
 function mk(tag,attrs){var n=document.createElementNS(NS,tag);for(var k in attrs){n.setAttribute(k,String(attrs[k]));}return n;}
 function applyZ(s,x,y){s=Math.max(1,Math.min(6,s));if(s<=1.02){s=1;x=0;y=0;}z={s:s,x:x,y:y};
@@ -109,11 +124,13 @@ var mnx=Math.min.apply(null,xs)-pad,mxx=Math.max.apply(null,xs)+pad,mny=Math.min
 // Alttaki yakınlaştırma düğmeleri için RB piksellik bant boş bırakılır (pin düğmenin altına düşmesin)
 var RB=52;
 var sf=Math.min(W/((mxx-mnx)*k),(H-RB)/((mxy-mny)*k)),sm=Math.max(1,17/(11*k)),sc=Math.max(1,Math.min(sf,sm,4.5));
+userZoom=false;
 if(sc>1.15){var bx=(W-1000*k)/2+k*(mnx+mxx)/2,by=(H-422*k)/2+k*(mny+mxy)/2;applyZ(sc,-sc*(bx-W/2),-sc*(by-H/2)-RB/2);}
 else applyZ(1,0,0);}
 window.setPlay=function(st){
 var s=document.querySelector('svg');if(!s)return;
 lastPlay=st;
+if(chip){if(st.drag&&!dragging){chipTxt.textContent=st.drag;chip.hidden=false;}else if(!st.drag){chip.hidden=true;}}
 var old=s.querySelector('g.topic-dots');if(old)old.remove();
 var labs=s.querySelector('g.map-float-labels');if(labs)labs.remove();
 var hl={};(st.hl||[]).forEach(function(c){hl[c]=true;});
@@ -180,7 +197,7 @@ if(st.place&&(placed.length||linePts.length))fitTo(placed.concat(linePts),false)
 s.appendChild(g);s.appendChild(lg);
 };
 // Kap boyutu değişince (döndürme, bölünmüş ekran) haritayı yeniden sığdır; WebView yeniden kurulmaz.
-window.relayout=function(){window.__fitKey=null;if(lastPlay)window.setPlay(lastPlay);else applyZ(z.s,z.x,z.y);};
+window.relayout=function(){if(!userZoom)window.__fitKey=null;if(lastPlay)window.setPlay(lastPlay);else applyZ(z.s,z.x,z.y);};
 window.setConquer=function(st){
 wrap.style.setProperty('--c',st.color||'#127880');
 var nodes=document.querySelectorAll("path[id^='TR']");
@@ -190,19 +207,19 @@ p.classList.toggle('conquer-pick',st.pick===id);}
 };
 var gest={mode:'',x:0,y:0,dist:0,s0:1,x0:0,y0:0,moved:false};
 function pinchDist(t){var a=t[0],b=t[1],dx=a.clientX-b.clientX,dy=a.clientY-b.clientY;return Math.sqrt(dx*dx+dy*dy)||1;}
-function bumpZ(dir){applyZ(dir===0?1:z.s*(dir>0?1.4:0.72),dir===0?0:z.x,dir===0?0:z.y);}
+function bumpZ(dir){userZoom=dir!==0;applyZ(dir===0?1:z.s*(dir>0?1.4:0.72),dir===0?0:z.x,dir===0?0:z.y);}
 if(wrap&&canvas){
 wrap.addEventListener('touchstart',function(e){
 if(e.touches.length===1)lastTouch={x:e.touches[0].clientX,y:e.touches[0].clientY,t:Date.now()};
 canvas.classList.add('moving');
-if(e.touches.length===2){gest.mode='pinch';gest.dist=pinchDist(e.touches);gest.s0=z.s;gest.x0=z.x;gest.y0=z.y;gest.moved=true;}
+if(e.touches.length===2){gest.mode='pinch';gest.dist=pinchDist(e.touches);gest.s0=z.s;gest.x0=z.x;gest.y0=z.y;gest.moved=true;userZoom=true;}
 else if(e.touches.length===1&&z.s>1){gest.mode='pan';gest.x=e.touches[0].clientX;gest.y=e.touches[0].clientY;gest.x0=z.x;gest.y0=z.y;gest.moved=false;}
 else gest.mode='';
 },{passive:true});
 wrap.addEventListener('touchmove',function(e){
 if(gest.mode==='pinch'&&e.touches.length===2){e.preventDefault();applyZ(gest.s0*(pinchDist(e.touches)/gest.dist),gest.x0,gest.y0);}
 else if(gest.mode==='pan'&&e.touches.length===1){var dx=e.touches[0].clientX-gest.x,dy=e.touches[0].clientY-gest.y;
-if(Math.abs(dx)+Math.abs(dy)>8)gest.moved=true;if(gest.moved){e.preventDefault();applyZ(z.s,gest.x0+dx,gest.y0+dy);}}
+if(Math.abs(dx)+Math.abs(dy)>8){gest.moved=true;userZoom=true;}if(gest.moved){e.preventDefault();applyZ(z.s,gest.x0+dx,gest.y0+dy);}}
 },{passive:false});
 // Sürükleme/yakınlaştırma bitince hemen ardından gelebilecek tıklama yok sayılır; yalnızca kısa bir süre.
 // (Eskiden işaret kalıcıydı: kaydırma tıklama üretmediğinde kullanıcının sonraki ilk dokunuşu yutuluyordu.)
@@ -221,12 +238,25 @@ if(zr)zr.onclick=function(e){e.stopPropagation();bumpZ(0);};
 var lastTouch=null;
 function provinceAt(x,y){var list=document.elementsFromPoint?document.elementsFromPoint(x,y):[document.elementFromPoint(x,y)];
 for(var i=0;i<list.length;i++){var el=list[i];var pth=el&&el.closest?el.closest('path'):null;var pid=pth&&pth.getAttribute('id');if(pid&&/^TR\d{2}$/.test(pid))return pid;}return null;}
-document.addEventListener('click',function(ev){
-flushZ();if(Date.now()<skipClickUntil){skipClickUntil=0;return;}
-if(ev.target&&ev.target.closest&&ev.target.closest('.zoom-tools'))return;
-var px=ev.clientX,py=ev.clientY;
-if(lastTouch&&Date.now()-lastTouch.t<1000){px=lastTouch.x;py=lastTouch.y;}
-lastTouch=null;
+var chip=document.getElementById('dragchip'),chipTxt=document.getElementById('dragtxt'),ring=document.getElementById('dropring');
+var dragging=false,LIFT=64;
+function dragAt(t){var x=t.clientX,y=t.clientY-LIFT;ring.style.left=x+'px';ring.style.top=y+'px';
+chip.style.transform='translate('+(x-chip.offsetWidth/2)+'px,'+(y-chip.offsetHeight-26)+'px) scale(1.04)';return{x:x,y:y};}
+var dropPt=null;
+if(chip){
+chip.addEventListener('touchstart',function(e){if(e.touches.length!==1)return;e.stopPropagation();e.preventDefault();flushZ();
+dragging=true;chip.classList.remove('back','shake');chip.classList.add('dragging');ring.hidden=false;dropPt=dragAt(e.touches[0]);},{passive:false});
+chip.addEventListener('touchmove',function(e){if(!dragging)return;e.stopPropagation();e.preventDefault();dropPt=dragAt(e.touches[0]);},{passive:false});
+function endDrag(e){if(!dragging)return;e.stopPropagation();dragging=false;ring.hidden=true;
+chip.classList.remove('dragging');chip.style.transform='';
+var mark=dropPt?findMark(dropPt.x,dropPt.y,34):null;dropPt=null;
+if(mark)post({type:'pin',id:mark.getAttribute('data-pin')});
+else{chip.classList.add('shake');setTimeout(function(){chip.classList.remove('shake');},400);}
+if(lastPlay&&lastPlay.drag)chipTxt.textContent=lastPlay.drag;}
+chip.addEventListener('touchend',endDrag);chip.addEventListener('touchcancel',endDrag);
+}
+// Ekran noktasına en yakın hedef (pin ya da çizgi); dokunma ve sürükleyip bırakma ortak kullanır.
+function findMark(px,py,minReach){
 var best=null,bestD=1e9,targetLine=null;
 var marks=document.querySelectorAll('[data-pin]');
 var sv=document.querySelector('svg'),ctm=sv&&sv.getScreenCTM?sv.getScreenCTM():null,spt=ctm?sv.createSVGPoint():null;
@@ -244,9 +274,16 @@ var well=marks[mi].querySelector('.place-well')||marks[mi].querySelector('.topic
 var mr=well.getBoundingClientRect();
 var mcx=mr.left+mr.width/2,mcy=mr.top+mr.height/2;
 var md=Math.sqrt((mcx-px)*(mcx-px)+(mcy-py)*(mcy-py));
-var reach=Math.max(26,mr.width*1.1);
+var reach=Math.max(minReach,mr.width*1.1);
 if(md<=reach&&md<bestD){bestD=md;best=marks[mi];}}
-var mark=targetLine||best||(ev.target.closest?ev.target.closest('[data-pin]'):null);
+return targetLine||best;}
+document.addEventListener('click',function(ev){
+flushZ();if(Date.now()<skipClickUntil){skipClickUntil=0;return;}
+if(ev.target&&ev.target.closest&&(ev.target.closest('.zoom-tools')||ev.target.closest('.dragchip')))return;
+var px=ev.clientX,py=ev.clientY;
+if(lastTouch&&Date.now()-lastTouch.t<1000){px=lastTouch.x;py=lastTouch.y;}
+lastTouch=null;
+var mark=findMark(px,py,26)||(ev.target.closest?ev.target.closest('[data-pin]'):null);
 if(mark){post({type:'pin',id:mark.getAttribute('data-pin')});return;}
 var id=provinceAt(px,py);
 if(id)post({type:'province',id:id});
@@ -270,6 +307,9 @@ export function mapDocument(svgText, mode) {
         + "<button type=\"button\" id=\"zplus\" aria-label=\"Yakınlaştır\">+</button>"
         + "<button type=\"button\" id=\"zminus\" aria-label=\"Uzaklaştır\">−</button>"
         + "<button type=\"button\" id=\"zreset\" class=\"zreset\">Tam</button>"
-        + "</div></div><script>" + SCRIPT + "</script></body></html>";
+        + "</div>"
+        + "<div class=\"dragchip\" id=\"dragchip\" hidden><span class=\"grip\">✥</span><span class=\"txt\" id=\"dragtxt\"></span></div>"
+        + "<div class=\"dropring\" id=\"dropring\" hidden></div>"
+        + "</div><script>" + SCRIPT + "</script></body></html>";
     return docCache[key];
 }

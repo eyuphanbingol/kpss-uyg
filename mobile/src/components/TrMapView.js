@@ -41,7 +41,8 @@ export function TrMapView(props) {
             shown: p.shown || {},
             lastId: p.lastId || null,
             flash: p.flash || null,
-            hl: p.hl || []
+            hl: p.hl || [],
+            drag: p.drag || null
         }) + "); true;";
     }
 
@@ -53,7 +54,7 @@ export function TrMapView(props) {
 
     useEffect(function () {
         run(stateScript());
-    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.shown, props.lastId, props.flash, props.hl]);
+    }, [mode, props.pins, props.glyph, props.picked, props.targetId, props.cleared, props.labels, props.separate, props.owned, props.pick, props.color, props.place, props.placed, props.shown, props.lastId, props.flash, props.hl, props.drag]);
 
     useEffect(function () {
         var sub = AppState.addEventListener("change", function (next) {

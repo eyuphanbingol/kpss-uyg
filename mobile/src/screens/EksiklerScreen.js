@@ -1,5 +1,5 @@
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { useEffect, useMemo, useState } from "react";
+import { Text, View, StyleSheet, InteractionManager } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
 import { go } from "../nav";
@@ -43,12 +43,33 @@ export default function EksiklerScreen({ navigation }) {
     var isDark = app.dark;
     var plan = app.plan;
 
-    // ---------- Group by Ders ----------
-    var byDers = {};
-    plan.rows.forEach(function (r) {
-        if (!byDers[r.ders]) byDers[r.ders] = [];
-        byDers[r.ders].push(r);
-    });
+    // Uzun konu listesi ilk karede yalnız ilk ders için çizilir, gerisi geçiş bitince eklenir
+    // (sekmeye geçerken 100+ kartı birden kurmak ekranı donduruyordu).
+    var _full = useState(false); var full = _full[0]; var setFull = _full[1];
+    useEffect(function () {
+        var task = InteractionManager.runAfterInteractions(function () { setFull(true); });
+        return function () { if (task && task.cancel) task.cancel(); };
+    }, []);
+
+    // ---------- Group by Ders + tamamlanma (tek sefer hesaplanır) ----------
+    var grouped = useMemo(function () {
+        var byDers = {};
+        var doneMap = {};
+        var completed = 0;
+        plan.rows.forEach(function (r) {
+            if (!byDers[r.ders]) byDers[r.ders] = [];
+            byDers[r.ders].push(r);
+            var d = StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
+                sorular: new Array(r.soruSayisi || 0),
+                notlar: new Array(r.notSayisi || 0)
+            });
+            doneMap[r.ders + "\u0000" + r.konu] = d;
+            if (d) completed++;
+        });
+        return { byDers: byDers, doneMap: doneMap, completed: completed };
+    }, [plan.rows, app.student]);
+    var byDers = grouped.byDers;
+    function isDone(r) { return !!grouped.doneMap[r.ders + "\u0000" + r.konu]; }
 
     // ---------- Start Review ----------
     function start(kind) {
@@ -59,12 +80,7 @@ export default function EksiklerScreen({ navigation }) {
 
     // ---------- Stats ----------
     var totalTopics = plan.rows.length;
-    var completedTopics = plan.rows.filter(function (r) {
-        return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
-            sorular: new Array(r.soruSayisi || 0),
-            notlar: new Array(r.notSayisi || 0)
-        });
-    }).length;
+    var completedTopics = grouped.completed;
     var progress = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
 
     // ============================================================
@@ -131,14 +147,10 @@ export default function EksiklerScreen({ navigation }) {
             </Tap>
 
             {/* Ders Listesi */}
-            {Object.keys(byDers).map(function (ders) {
+            {Object.keys(byDers).map(function (ders, di) {
                 var dersTopics = byDers[ders] || [];
-                var doneCount = dersTopics.filter(function (r) {
-                    return StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
-                        sorular: new Array(r.soruSayisi || 0),
-                        notlar: new Array(r.notSayisi || 0)
-                    });
-                }).length;
+                var doneCount = dersTopics.filter(isDone).length;
+                if (!full && di > 0) return null;
 
                 return (
                     <View key={ders} style={styles.dersSection}>
@@ -147,11 +159,8 @@ export default function EksiklerScreen({ navigation }) {
                             <PctBadge label={doneCount + "/" + dersTopics.length} />
                         </View>
 
-                        {dersTopics.map(function (r) {
-                            var done = StudentStore.topicComplete(StudentStore.getTopic(r.ders, r.konu), {
-                                sorular: new Array(r.soruSayisi || 0),
-                                notlar: new Array(r.notSayisi || 0)
-                            });
+                        {(full ? dersTopics : dersTopics.slice(0, 8)).map(function (r) {
+                            var done = isDone(r);
 
                             return (
                                 <AccentCard key={r.konu} dark={isDark} accent={done ? "#D97706" : "#CBD5E1"} chevron

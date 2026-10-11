@@ -2044,6 +2044,47 @@ function MapTopics(props) {
     );
 }
 
+// Hedefin adı: tutup haritada yerine bırakılır. Dokunmatikte bırakma noktası parmağın biraz üstündedir
+// (parmak yeri kapatmasın); orada nişan halkası gösterilir. Haritaya doğrudan tıklamak da çalışır.
+function MapDragChip(props) {
+    const [drag, setDrag] = useState(null);
+    const [shake, setShake] = useState(false);
+    const dragRef = useRef(null);
+    function at(e) {
+        var lift = e.pointerType === "touch" ? 64 : 0;
+        return { x: e.clientX, y: e.clientY - lift };
+    }
+    if (!props.label) return null;
+    return (
+        <>
+            <button type="button"
+                className={"map-drag-chip" + (drag ? " is-dragging" : "") + (shake ? " is-shake" : "")}
+                style={drag ? { left: drag.x + "px", top: drag.y + "px" } : null}
+                aria-label={"Sürükleyip haritada yerine bırak: " + props.label}
+                onPointerDown={function (e) {
+                    if (e.button > 0) return;
+                    e.preventDefault();
+                    try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
+                    var p = at(e); dragRef.current = p; setDrag(p);
+                }}
+                onPointerMove={function (e) {
+                    if (!dragRef.current) return;
+                    var p = at(e); dragRef.current = p; setDrag(p);
+                }}
+                onPointerUp={function () {
+                    var p = dragRef.current;
+                    dragRef.current = null; setDrag(null);
+                    if (p && !props.onDrop(p.x, p.y)) { setShake(true); setTimeout(function () { setShake(false); }, 400); }
+                }}
+                onPointerCancel={function () { dragRef.current = null; setDrag(null); }}>
+                <span className="map-drag-grip" aria-hidden="true">✥</span>
+                <span className="map-drag-txt">{props.label}</span>
+            </button>
+            {drag ? <span className="map-drop-ring" style={{ left: drag.x + "px", top: drag.y + "px" }} aria-hidden="true" /> : null}
+        </>
+    );
+}
+
 function MapPlay(props) {
     const quiz = window.MapQuiz;
     const meta = quiz ? quiz.topicMeta(props.topicId) : null;
@@ -2070,6 +2111,10 @@ function MapPlay(props) {
     const targetRef = useRef(null);
     const flashTimer = useRef(null);
     const fitKeyRef = useRef("");
+    // Kullanıcı kendisi yakınlaştırdıysa sahne boyutu değişince (cevap kutusu, döndürme) yeniden sığdırılmaz
+    const userZoomRef = useRef(false);
+    const fitSizeRef = useRef("");
+    const [stageTick, setStageTick] = useState(0);
     const lastRef = useRef(null);
     const target = round.items[idx] || null;
     targetRef.current = target;
@@ -2085,6 +2130,7 @@ function MapPlay(props) {
         lastRef.current = null;
         zoomRef.current = { s: 1, x: 0, y: 0 };
         fitKeyRef.current = "";
+        userZoomRef.current = false;
         if (hostRef.current) hostRef.current.style.transform = "translate(0px, 0px) scale(1)";
     }, [props.seed, props.topicId]);
 
@@ -2127,6 +2173,8 @@ function MapPlay(props) {
             return Math.sqrt(dx * dx + dy * dy) || 1;
         }
         function onTouchStart(e) {
+            // Sürükleme çipinden başlayan dokunuş haritayı kaydırmaz
+            if (e.target && e.target.closest && e.target.closest(".map-drag-chip")) { gest.mode = ""; return; }
             // Parmağın gerçek noktası: tarayıcı dokunuşu komşu öğeye kaydırabiliyor (touch adjustment)
             if (e.touches.length === 1) stage.__lastTouch = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
             if (e.touches.length === 2) {
@@ -2136,6 +2184,7 @@ function MapPlay(props) {
                 gest.x0 = zoomRef.current.x;
                 gest.y0 = zoomRef.current.y;
                 gest.moved = true;
+                userZoomRef.current = true;
             } else if (e.touches.length === 1) {
                 gest.mode = "pan";
                 gest.x = e.touches[0].clientX;
@@ -2152,7 +2201,7 @@ function MapPlay(props) {
             } else if (gest.mode === "pan" && e.touches.length === 1 && zoomRef.current.s > 1) {
                 var dx = e.touches[0].clientX - gest.x;
                 var dy = e.touches[0].clientY - gest.y;
-                if (Math.abs(dx) + Math.abs(dy) > 10) gest.moved = true;
+                if (Math.abs(dx) + Math.abs(dy) > 10) { gest.moved = true; userZoomRef.current = true; }
                 if (gest.moved) {
                     e.preventDefault();
                     apply(zoomRef.current.s, gest.x0 + dx, gest.y0 + dy);
@@ -2166,9 +2215,13 @@ function MapPlay(props) {
         }
         function onWheel(e) {
             e.preventDefault();
+            userZoomRef.current = true;
             var z = zoomRef.current;
             apply(z.s * (e.deltaY > 0 ? 0.88 : 1.14), z.x, z.y);
         }
+        // Sahne boyutu değişince sığdırma yeniden değerlendirilir
+        var ro = window.ResizeObserver ? new ResizeObserver(function () { setStageTick(function (t) { return t + 1; }); }) : null;
+        if (ro) ro.observe(stage);
         stage.addEventListener("touchstart", onTouchStart, { passive: true });
         stage.addEventListener("touchmove", onTouchMove, { passive: false });
         stage.addEventListener("touchend", onTouchEnd);
@@ -2179,10 +2232,12 @@ function MapPlay(props) {
             stage.removeEventListener("touchmove", onTouchMove);
             stage.removeEventListener("touchend", onTouchEnd);
             stage.removeEventListener("wheel", onWheel);
+            if (ro) ro.disconnect();
         };
     }, [svgHtml, mapFail, done]);
 
     function bumpZoom(dir) {
+        userZoomRef.current = dir !== 0;
         var z = zoomRef.current;
         var s = dir === 0 ? 1 : z.s * (dir > 0 ? 1.4 : 0.72);
         var x = dir === 0 ? 0 : z.x;
@@ -2362,9 +2417,14 @@ function MapPlay(props) {
 
         // ilk açılışta tüm hedeflere yakınlaş (küçük ekranda pinler görünür olsun)
         var fitKey = props.seed + "|" + props.topicId;
-        var stageEl = stageRef.current;
-        if (fitKeyRef.current !== fitKey && stageEl && pins.length) {
+        // Ölçü, dönüşümün uygulandığı harita kutusundan alınır (dış sahneden değil): dikey telefonda
+        // sahne harita kutusundan uzun olduğu için eskiden harita yukarı kayıyordu.
+        var stageEl = hostRef.current;
+        var sizeKey = stageEl ? stageEl.clientWidth + "x" + stageEl.clientHeight : "";
+        if (stageEl && pins.length && (fitKeyRef.current !== fitKey || (!userZoomRef.current && fitSizeRef.current !== sizeKey))) {
             fitKeyRef.current = fitKey;
+            fitSizeRef.current = sizeKey;
+            userZoomRef.current = false;
             var W = stageEl.clientWidth, H = stageEl.clientHeight;
             if (W > 0 && H > 0) {
                 var k = Math.min(W / 1000, H / 422);
@@ -2383,6 +2443,9 @@ function MapPlay(props) {
                     var tx = -s * (bx - W / 2), ty = -s * (by - H / 2);
                     zoomRef.current = { s: s, x: tx, y: ty };
                     el.style.transform = "translate(" + tx + "px, " + ty + "px) scale(" + s + ")";
+                } else {
+                    zoomRef.current = { s: 1, x: 0, y: 0 };
+                    el.style.transform = "translate(0px, 0px) scale(1)";
                 }
             }
         }
@@ -2417,7 +2480,7 @@ function MapPlay(props) {
         }
         el.addEventListener("click", onClick);
         return function () { el.removeEventListener("click", onClick); };
-    }, [svgHtml, solved, flash, hit, round, done, idx, props.topicId]);
+    }, [svgHtml, solved, flash, hit, round, done, idx, props.topicId, stageTick]);
 
     useEffect(function () {
         return function () { if (flashTimer.current) clearTimeout(flashTimer.current); };
@@ -2500,6 +2563,12 @@ function MapPlay(props) {
                         <button type="button" onClick={function () { bumpZoom(-1); }} aria-label="Uzaklaştır">−</button>
                         <button type="button" className="map-zoom-reset" onClick={function () { bumpZoom(0); }}>Tam</button>
                     </div>
+                    <MapDragChip label={target ? target.name : ""} onDrop={function (x, y) {
+                        var id = nearestPin(x, y);
+                        if (!id) return false;
+                        answer(id);
+                        return true;
+                    }} />
                 </div>
             ) : (
                 <div className="map-play-stage p-4 overflow-auto">
@@ -2515,7 +2584,7 @@ function MapPlay(props) {
                         <span>{quiz.placeLabel ? quiz.placeLabel(lastItem) : ""}</span>
                     </p>
                 ) : null}
-                <p className="map-ask-kicker">{target && target.line ? "Haritada hattı bul, çizgiye dokun" : "Haritada bul ve dokun"}</p>
+                <p className="map-ask-kicker">{target && target.line ? "Hattı sürükle ya da çizgiye dokun" : "Adı sürükle, yerine bırak ya da yerine dokun"}</p>
                 <p className="map-ask-name">{target ? target.name : ""}</p>
                 {target && target.prompt ? <p className="map-ask-hint">{target.prompt}</p> : null}
                 <div className="map-ask-actions">
