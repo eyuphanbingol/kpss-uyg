@@ -1738,6 +1738,8 @@ function AlistirmaDersList(props) {
                     const t = themeFor(ders, props.isDark);
                     const konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                     if (!konular.length) return null;
+                    // Boşluklar notlardan üretilir: notu olmayan ders (ör. Matematik) listede boş görünmesin
+                    if (!konular.some(function (k) { return ((kpssData[ders][k] || {}).notlar || []).length > 0; })) return null;
                     return (
                         <AccentRow key={ders} title={ders} sub={konular.length + " konu"} onClick={function () { props.onDers(ders); }} />
                     );
@@ -1754,23 +1756,32 @@ function AlistirmaKonuList(props) {
     const engine = window.ClozeEngine;
     const topics = (props.student && props.student.topics && props.student.topics[ders]) || {};
     const [stats, setStats] = useState(null);
+    // Boşluk sayısı konunun tüm notları taranarak bulunur; tüm konuları tek seferde saymak zayıf
+    // telefonlarda ekranı donduruyordu. Liste hemen çizilir, sayılar küçük parçalar hâlinde dolar.
     useEffect(function () {
-        var id = requestAnimationFrame(function () {
-            var next = {};
-            konular.forEach(function (konu, idx) {
+        var cancelled = false, timer = null, i = 0, acc = {};
+        function step() {
+            if (cancelled) return;
+            var t0 = Date.now();
+            do {
+                var konu = konular[i];
                 var kd = props.kpssData[ders][konu] || {};
                 var tp = topics[konu] || {};
                 var n = engine ? engine.countForKonu(kd) : 0;
-                next[konu] = {
+                acc[konu] = {
                     n: n,
                     left: n && engine ? engine.remainingCount(kd, tp.solvedCloze) : 0,
-                    open: StudentStore.isKonuOpen(ders, konular, idx, props.kpssData),
+                    open: StudentStore.isKonuOpen(ders, konular, i, props.kpssData),
                     done: StudentStore.topicComplete(tp, kd)
                 };
-            });
-            setStats(next);
-        });
-        return function () { cancelAnimationFrame(id); };
+                i++;
+            } while (i < konular.length && Date.now() - t0 < 16);
+            var snap = Object.assign({}, acc);
+            setStats(function (prev) { return Object.assign({}, prev || {}, snap); });
+            if (i < konular.length) timer = setTimeout(step, 0);
+        }
+        if (konular.length) timer = setTimeout(step, 0);
+        return function () { cancelled = true; if (timer) clearTimeout(timer); };
     }, [ders, props.student]);
     return (
         <Shell>
@@ -1787,7 +1798,8 @@ function AlistirmaKonuList(props) {
             </div>
             <div className="space-y-3">
                 {konular.map(function (konu, idx) {
-                    const st = (stats && stats[konu]) || { n: 0, left: 0, open: true, done: false };
+                    const ready = !!(stats && stats[konu]);
+                    const st = ready ? stats[konu] : { n: 0, left: 0, open: true, done: false };
                     const open = st.open !== false;
                     return (
                         <button key={konu} disabled={!open} onClick={function () { if (open) props.onKonu(konu); }}
@@ -1797,7 +1809,7 @@ function AlistirmaKonuList(props) {
                                     <div className={"h-10 w-10 rounded-xl flex items-center justify-center font-stat text-sm shrink-0 " + (st.done ? "bg-emerald-50 text-emerald-600" : (open ? "bg-teal-50 text-teal-800" : "bg-stone-100 text-stone-400"))}>{st.done ? "✓" : (open ? idx + 1 : "🔒")}</div>
                                     <div className="min-w-0">
                                         <div className="font-bold text-slate-800 dark:text-slate-100">{kLabel(konu)}</div>
-                                        <p className="text-xs text-slate-400 mt-1">{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz alıştırma yok" : "\u00a0")) : "Önce önceki konunun testlerini bitir"}</p>
+                                        <p className="text-xs text-slate-400 mt-1">{open ? (!ready ? "Boşluklar sayılıyor…" : st.n ? (st.left + " / " + st.n + " boşluk") : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
                                 {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}

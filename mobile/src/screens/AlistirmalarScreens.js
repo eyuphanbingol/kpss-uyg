@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useMemo, useRef, useState } from "react";
-import { Image, Pressable, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { ActivityIndicator, Image, Pressable, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
 import { ClozeEngine } from "../lib/clozeEngine";
@@ -128,7 +128,10 @@ export function AlistirmaDersListScreen({ navigation }) {
             />
             {Object.keys(kpssData).filter(function (ders) {
                 if (!ClozeEngine.dersEnabled(ders)) return false;
-                return Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; }).length > 0;
+                // Boşluklar notlardan üretilir: notu olmayan ders (ör. Matematik) listede boş görünmesin
+                return Object.keys(kpssData[ders] || {}).some(function (k) {
+                    return k !== "_" && ((kpssData[ders][k] || {}).notlar || []).length > 0;
+                });
             }).map(function (ders) {
                 var konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                 return (
@@ -159,23 +162,36 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
     var stats = statsState[0];
     var setStats = statsState[1];
 
+    // Boşluk sayısı için konunun tüm notları taranır (konu başına telefonda yüzlerce ms). Eskiden liste
+    // açılırken bütün konular tek seferde hesaplanıyor, ekran saniyelerce donuyordu ("açılmıyor").
+    // Artık liste hemen çizilir; sayılar küçük parçalar hâlinde, dokunuşlar arasına girerek dolar.
     useEffect(function () {
-        var id = requestAnimationFrame(function () {
-            var next = {};
-            konular.forEach(function (konu, idx) {
-                var kd = app.kpssData[ders][konu] || {};
-                var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
-                var n = ClozeEngine.countForKonu(kd);
-                next[konu] = {
-                    n: n,
-                    left: n ? ClozeEngine.remainingCount(kd, tp.solvedCloze) : 0,
-                    open: StudentStore.isKonuOpen(ders, konular, idx, app.kpssData),
-                    done: StudentStore.topicComplete(tp, kd)
-                };
-            });
-            setStats(next);
-        });
-        return function () { cancelAnimationFrame(id); };
+        var cancelled = false;
+        var timer = null;
+        var i = 0;
+        var acc = {};
+        function one(konu, idx) {
+            var kd = app.kpssData[ders][konu] || {};
+            var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
+            var n = ClozeEngine.countForKonu(kd);
+            acc[konu] = {
+                n: n,
+                left: n ? ClozeEngine.remainingCount(kd, tp.solvedCloze) : 0,
+                open: StudentStore.isKonuOpen(ders, konular, idx, app.kpssData),
+                done: StudentStore.topicComplete(tp, kd)
+            };
+        }
+        function step() {
+            if (cancelled) return;
+            var t0 = Date.now();
+            do { one(konular[i], i); i++; } while (i < konular.length && Date.now() - t0 < 16);
+            // önceki değerler korunur: ilerleme değişince sayılar bir an "sayılıyor"a dönmesin
+            var snap = Object.assign({}, acc);
+            setStats(function (prev) { return Object.assign({}, prev || {}, snap); });
+            if (i < konular.length) timer = setTimeout(step, 0);
+        }
+        if (konular.length) timer = setTimeout(step, 0);
+        return function () { cancelled = true; if (timer) clearTimeout(timer); };
     }, [ders, app.student]);
 
     return (
@@ -188,7 +204,8 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                 right={null}
             />
             {konular.map(function (konu) {
-                var st = (stats && stats[konu]) || { n: 0, left: 0, open: true, done: false };
+                var ready = !!(stats && stats[konu]);
+                var st = ready ? stats[konu] : { n: 0, left: 0, open: true, done: false };
                 var open = st.open !== false;
                 return (
                     <AccentCard
@@ -204,7 +221,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                         <View style={styles.konuRow}>
                             <View style={{ flex: 1, minWidth: 0, paddingRight: 8 }}>
                                 <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={2}>{konuLabel(konu)}</Text>
-                                <Text style={styles.meta}>{open ? (st.n ? (st.left + " / " + st.n + " boşluk") : (stats ? "Henüz yok" : " ")) : "Önce önceki konunun testlerini bitir"}</Text>
+                                <Text style={styles.meta}>{open ? (!ready ? "Boşluklar sayılıyor…" : st.n ? (st.left + " / " + st.n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
                             </View>
                             {st.done ? <PctBadge label="Tamam" /> : null}
                         </View>
@@ -273,6 +290,10 @@ export function ClozePlayScreen({ route, navigation }) {
                 <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
                 <Text style={[styles.kicker, isDark && styles.textMuted]}>{ders}</Text>
                 <Text style={[styles.konuTitle, isDark && styles.textLight]}>{konuLabel(konu)}</Text>
+                <View style={{ alignItems: "center", paddingVertical: 48 }}>
+                    <ActivityIndicator size="large" color={isDark ? "#5EC4CC" : "#127880"} />
+                    <Text style={[styles.meta, isDark && styles.textMuted, { marginTop: 12 }]}>Boşluklar hazırlanıyor…</Text>
+                </View>
             </ScrollScreen>
         );
     }

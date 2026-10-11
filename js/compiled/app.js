@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:271237:7ruok*/
+/*jsx:babel-7.29.9-react-classic:272143:ais3h9*/
 const {
   useState,
   useEffect,
@@ -2846,6 +2846,10 @@ function AlistirmaDersList(props) {
       return k !== "_";
     });
     if (!konular.length) return null;
+    // Boşluklar notlardan üretilir: notu olmayan ders (ör. Matematik) listede boş görünmesin
+    if (!konular.some(function (k) {
+      return ((kpssData[ders][k] || {}).notlar || []).length > 0;
+    })) return null;
     return /*#__PURE__*/React.createElement(AccentRow, {
       key: ders,
       title: ders,
@@ -2865,24 +2869,39 @@ function AlistirmaKonuList(props) {
   const engine = window.ClozeEngine;
   const topics = props.student && props.student.topics && props.student.topics[ders] || {};
   const [stats, setStats] = useState(null);
+  // Boşluk sayısı konunun tüm notları taranarak bulunur; tüm konuları tek seferde saymak zayıf
+  // telefonlarda ekranı donduruyordu. Liste hemen çizilir, sayılar küçük parçalar hâlinde dolar.
   useEffect(function () {
-    var id = requestAnimationFrame(function () {
-      var next = {};
-      konular.forEach(function (konu, idx) {
+    var cancelled = false,
+      timer = null,
+      i = 0,
+      acc = {};
+    function step() {
+      if (cancelled) return;
+      var t0 = Date.now();
+      do {
+        var konu = konular[i];
         var kd = props.kpssData[ders][konu] || {};
         var tp = topics[konu] || {};
         var n = engine ? engine.countForKonu(kd) : 0;
-        next[konu] = {
+        acc[konu] = {
           n: n,
           left: n && engine ? engine.remainingCount(kd, tp.solvedCloze) : 0,
-          open: StudentStore.isKonuOpen(ders, konular, idx, props.kpssData),
+          open: StudentStore.isKonuOpen(ders, konular, i, props.kpssData),
           done: StudentStore.topicComplete(tp, kd)
         };
+        i++;
+      } while (i < konular.length && Date.now() - t0 < 16);
+      var snap = Object.assign({}, acc);
+      setStats(function (prev) {
+        return Object.assign({}, prev || {}, snap);
       });
-      setStats(next);
-    });
+      if (i < konular.length) timer = setTimeout(step, 0);
+    }
+    if (konular.length) timer = setTimeout(step, 0);
     return function () {
-      cancelAnimationFrame(id);
+      cancelled = true;
+      if (timer) clearTimeout(timer);
     };
   }, [ders, props.student]);
   return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
@@ -2904,7 +2923,8 @@ function AlistirmaKonuList(props) {
   }, "Derslerle ayn\u0131 s\u0131ra. Konu bitince buras\u0131 da a\xE7\u0131l\u0131r."))), /*#__PURE__*/React.createElement("div", {
     className: "space-y-3"
   }, konular.map(function (konu, idx) {
-    const st = stats && stats[konu] || {
+    const ready = !!(stats && stats[konu]);
+    const st = ready ? stats[konu] : {
       n: 0,
       left: 0,
       open: true,
@@ -2930,7 +2950,7 @@ function AlistirmaKonuList(props) {
       className: "font-bold text-slate-800 dark:text-slate-100"
     }, kLabel(konu)), /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-slate-400 mt-1"
-    }, open ? st.n ? st.left + " / " + st.n + " boşluk" : stats ? "Henüz alıştırma yok" : "\u00a0" : "Önce önceki konunun testlerini bitir"))), open ? /*#__PURE__*/React.createElement("span", {
+    }, open ? !ready ? "Boşluklar sayılıyor…" : st.n ? st.left + " / " + st.n + " boşluk" : "Henüz alıştırma yok" : "Önce önceki konunun testlerini bitir"))), open ? /*#__PURE__*/React.createElement("span", {
       className: "text-stone-300 text-lg shrink-0"
     }, "\u2192") : null));
   })));
