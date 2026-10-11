@@ -21,7 +21,7 @@
         ],
         legal: {
             operator: "Atanly işletmecisi",
-            email: ""
+            email: "atanly10@gmail.com"
         },
         premiumEnabled: false,
         freeWeeklyExams: 2,

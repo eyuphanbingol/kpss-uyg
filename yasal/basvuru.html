@@ -55,7 +55,7 @@
             <button type="submit">Başvuruyu e-posta olarak hazırla</button>
         </form>
         <p class="muted" id="kvkk-out"></p>
-        <p class="muted">Veri sorumlusu resmi e-postası henüz duyurulmadıysa başvuru metni cihazınızda hazırlanır; kopyalayıp işletmeciye iletebilir veya uygulama içi silme talebini kullanabilirsiniz. Kanuni cevap süresi kural olarak 30 gündür.</p>
+        <p class="muted">Başvurunuz e-posta uygulamanızda <a href="mailto:atanly10@gmail.com">atanly10@gmail.com</a> adresine hazırlanır; gönder demeniz yeterlidir. E-posta uygulaması açılmazsa metni bu adrese kendiniz gönderebilir veya uygulama içi silme özelliğini kullanabilirsiniz. Kanuni cevap süresi kural olarak 30 gündür.</p>
     </main>
     <footer>Atanly</footer>
     <script>
@@ -66,7 +66,7 @@
                 "%0AE-posta: " + encodeURIComponent(f.email.value) +
                 "%0ATalep: " + encodeURIComponent(f.talep.value) +
                 "%0A%0A" + encodeURIComponent(f.aciklama.value);
-            var mail = "mailto:?subject=" + encodeURIComponent("Atanly KVKK başvurusu") + "&body=" + body;
+            var mail = "mailto:atanly10@gmail.com?subject=" + encodeURIComponent("Atanly KVKK başvurusu") + "&body=" + body;
             document.getElementById("kvkk-out").textContent = "E-posta penceresi açılmazsa metni kopyalayıp saklayın.";
             window.location.href = mail;
         });

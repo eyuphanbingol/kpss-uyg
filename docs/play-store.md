@@ -12,7 +12,7 @@ Görseller bu klasörde: `docs/play-store/`
      üretime çıkmadan önce 12 test kullanıcısıyla 14 gün kapalı test** ister (adım 6).
    - Kuruluş (şirket) hesabı açarsan bu test şartı yoktur, D-U-N-S numarası gerekir.
 2. Hesapta **geliştirici iletişim e-postası** zorunlu ve mağazada herkese görünür
-   (örn. `destek@atanly.com`). Aynı adresi `js/config.js` → `legal.email` alanına da yazmalısın.
+   → **atanly10@gmail.com** (sitede ve yasal sayfalarda da bu adres yazılı).
 
 ---
 
@@ -119,7 +119,7 @@ Reklam yok. Verilerin satılmaz ve paylaşılmaz.
 Tablet görselleri isteğe bağlı; boş bırakılabilir.
 
 **Kategori:** Eğitim · **Etiketler:** Eğitim, Sınava hazırlık
-**İletişim:** e-posta (zorunlu), web sitesi `https://www.atanly.com`
+**İletişim:** e-posta `atanly10@gmail.com` (zorunlu), web sitesi `https://www.atanly.com`
 
 ---
 
