@@ -272,8 +272,9 @@ import { StudentStore } from "./store";
         if (!B) return A;
         var aAdmin = A.status === "approved" || A.status === "rejected";
         var bAdmin = B.status === "approved" || B.status === "rejected";
-        if (aAdmin && !bAdmin) return A;
-        if (bAdmin && !aAdmin) return B;
+        // Yönetici kararı, kararın verildiği talepten daha yeni bir talep yoksa geçerlidir (red sonrası yeni talep kaybolmasın)
+        if (aAdmin && !bAdmin) return (B.at || "") > (A.at || "") ? B : A;
+        if (bAdmin && !aAdmin) return (A.at || "") > (B.at || "") ? A : B;
         return (A.at || "") >= (B.at || "") ? A : B;
     }
 
@@ -465,7 +466,8 @@ import { StudentStore } from "./store";
                     }
                 }
             }
-            var keptReq = pickEduReq(pickEduReq(local, remote), global.StudentStore.getState());
+            // pickEduReq durum (state) bekler; ara sonucu yeniden duruma sarmalamak gerekir, yoksa reddedilen talep düşer
+            var keptReq = pickEduReq({ userProfile: { educationChangeRequest: pickEduReq(local, remote) } }, global.StudentStore.getState());
             if (keptReq && keptReq.status === "pending" && keptReq.to && (keptReq.to === merged.userProfile.educationLevel || keptReq.to === dbEdu)) {
                 keptReq = null;
             }

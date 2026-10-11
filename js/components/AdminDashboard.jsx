@@ -2,604 +2,939 @@
     const { useEffect, useState, useMemo, useCallback, useRef } = React;
 
     // ============================================================
-    // YARDIMCI FONKSİYONLAR
+    // Yönetim paneli. Veriler önce veritabanı fonksiyonlarından (supabase/patch-admin-panel.sql)
+    // okunur; o yama henüz kurulmamışsa "admin-action" sunucu fonksiyonuna düşülür ve panelin
+    // üstünde kurulum uyarısı çıkar. Hiçbir hata sessizce yutulmaz.
     // ============================================================
 
-    function fmtDate(x) {
-        if (!x) return "—";
-        try {
-            var d = new Date(x);
-            if (isNaN(d.getTime())) return String(x).slice(0, 10);
-            return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit", year: "numeric" });
-        } catch (e) { return "—"; }
-    }
+    var LEVELS = [
+        { id: "lisans", t: "Lisans" },
+        { id: "onlisans", t: "Ön lisans" },
+        { id: "ortaogretim", t: "Ortaöğretim" }
+    ];
+    var ACTION_LABELS = {
+        grant_premium: "Premium verildi", revoke_premium: "Premium kaldırıldı", block: "Engellendi", unblock: "Engel kaldırıldı",
+        delete_user: "Kullanıcı silindi", approve_edu: "Eğitim talebi onaylandı", reject_edu: "Eğitim talebi reddedildi",
+        announce: "Duyuru yayınlandı", delete_announce: "Duyuru silindi", submit_edu: "Eğitim talebi gönderildi",
+        delete_my_account: "Hesabını sildi", inspect_user: "Kullanıcı incelendi", user_list: "Liste açıldı",
+        list_edu_requests: "Talepler açıldı", list_announcements: "Duyurular açıldı"
+    };
 
-    function fmtTime(x) {
-        if (!x) return "—";
-        try {
-            var d = new Date(x);
-            if (isNaN(d.getTime())) return String(x).slice(0, 10);
-            return d.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
-        } catch (e) { return "—"; }
-    }
-
+    function num(n) { return (Number(n) || 0).toLocaleString("tr-TR"); }
+    function toDate(x) { if (!x) return null; var d = new Date(String(x).length === 10 ? x + "T12:00:00" : x); return isNaN(d.getTime()) ? null : d; }
+    function fmtDate(x) { var d = toDate(x); return d ? d.toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" }) : "—"; }
     function fmtDateTime(x) {
-        if (!x) return "—";
-        try {
-            var d = new Date(x);
-            if (isNaN(d.getTime())) return String(x).slice(0, 10);
-            return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit", year: "numeric" }) + " " + 
-                   d.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
-        } catch (e) { return "—"; }
+        var d = toDate(x);
+        return d ? d.toLocaleDateString("tr-TR", { day: "numeric", month: "short" }) + " " + d.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" }) : "—";
     }
-
-    function locLabel(loc) {
-        if (!loc) return "—";
-        if (typeof loc === "string") return loc || "—";
-        var city = loc.city || loc.region || "";
-        var country = loc.country || loc.countryCode || "";
-        if (city && country) return city + ", " + country;
-        return city || country || loc.tz || "—";
+    function todayStr() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+    function daysSince(x) {
+        if (!x) return Infinity;
+        var a = toDate(String(x).slice(0, 10)); if (!a) return Infinity;
+        var b = toDate(todayStr());
+        return Math.round((b - a) / 86400000);
     }
-
-    function eduLabel(id) {
-        if (id === "onlisans") return "Ön lisans";
-        if (id === "ortaogretim") return "Ortaöğretim";
-        if (id === "lisans") return "Lisans";
-        return id || "—";
+    function lastSeen(x) {
+        var n = daysSince(x);
+        if (n === Infinity) return { t: "Hiç çalışmadı", tone: "rose" };
+        if (n <= 0) return { t: "Bugün", tone: "green" };
+        if (n === 1) return { t: "Dün", tone: "green" };
+        if (n < 7) return { t: n + " gün önce", tone: "gold" };
+        return { t: n + " gün önce", tone: "rose" };
     }
-
-    function trackLabel(id) {
-        var map = { "B": "B Grubu", "A": "A Grubu", "ogretmen": "Öğretmenlik", "dhbt": "DHBT" };
-        return map[id] || id || "—";
-    }
-
-    function getLevelColor(level) {
-        var map = {
-            "lisans": "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
-            "onlisans": "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300",
-            "ortaogretim": "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
-        };
-        return map[level] || "bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300";
+    function eduLabel(id) { var l = LEVELS.filter(function (x) { return x.id === id; })[0]; return l ? l.t : (id || "—"); }
+    function trackLabel(id) { return ({ B: "B grubu", A: "A grubu", ogretmen: "Öğretmenlik", dhbt: "DHBT" })[id] || id || "—"; }
+    function platformLabel(id) { return ({ web: "Web", ios: "iOS", android: "Android" })[id] || id || "—"; }
+    function cleanDetail(s) { return /^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(String(s || "")) ? "" : (s || ""); }
+    function initial(s) { return String(s || "?").trim().charAt(0).toLocaleUpperCase("tr-TR") || "?"; }
+    function futureExamDate(level) {
+        var d = window.KpssConfig && window.KpssConfig.examDateByLevel && window.KpssConfig.examDateByLevel[level];
+        return d && d > todayStr() ? d : null;
     }
 
     function parseAnnounceRow(row) {
         var raw = String((row && row.body) || "");
         var exp = row && row.expires_at;
         var m = raw.match(/^<!--kpss-exp:([^>]+)-->/);
-        if (m) {
-            exp = exp || m[1];
-            raw = raw.slice(m[0].length);
-        }
+        if (m) { exp = exp || m[1]; raw = raw.slice(m[0].length); }
         var ts = exp ? new Date(exp).getTime() : NaN;
-        var live = !exp || (isFinite(ts) && ts > Date.now());
+        var published = !row || row.published !== false;
+        return { id: row && row.id, text: raw.trim(), expiresAt: exp || null, createdAt: row && row.created_at, live: published && (!exp || (isFinite(ts) && ts > Date.now())) };
+    }
+
+    // ---------- hata metni ----------
+    function errText(e, fallback) {
+        if (!e) return fallback || "İşlem tamamlanamadı.";
+        if (typeof e === "string") return e;
+        if (e.hint && /[a-zçğıöşü]/i.test(e.hint) && /[çğıöşüÇĞİÖŞÜ]|\s/.test(e.hint) && !/^(perhaps|try|no function)/i.test(e.hint)) return e.hint;
+        if (e.tr) return e.tr;
+        return window.trError ? window.trError(e, fallback || "İşlem tamamlanamadı.") : (fallback || "İşlem tamamlanamadı.");
+    }
+    function isMissingFn(e) {
+        var s = String((e && e.message) || "") + " " + String((e && e.code) || "");
+        return /PGRST202|42883|could not find the function|function .* does not exist|schema cache/i.test(s);
+    }
+
+    // ---------- sunucu fonksiyonu (yedek yol) ----------
+    async function edge(sb, action, body) {
+        if (!sb.functions) throw { tr: "Sunucu fonksiyonu kullanılamıyor." };
+        var r = await sb.functions.invoke("admin-action", { body: Object.assign({ action: action }, body || {}) });
+        if (r.error) {
+            var ctx = r.error.context, b = null;
+            try { if (ctx && typeof ctx.json === "function") b = await ctx.json(); else if (ctx && ctx.body) b = ctx.body; } catch (e) { b = null; }
+            var status = ctx && ctx.status;
+            throw { tr: (b && b.error) || (status === 403 ? "Bu işlem için yetkin yok." : "Sunucu fonksiyonuna ulaşılamadı (admin-action)."), message: r.error.message };
+        }
+        var d = r.data;
+        if (typeof d === "string") { try { d = JSON.parse(d); } catch (e) { d = null; } }
+        if (d && d.ok === false) throw { tr: d.error || "İşlem başarısız." };
+        return d && Object.prototype.hasOwnProperty.call(d, "data") ? d.data : d;
+    }
+
+    // Önce veritabanı fonksiyonu; yoksa yedek. legacy: true → yedek kullanıldı (kurulum uyarısı)
+    async function call(sb, name, args, fallback) {
+        var r = await sb.rpc(name, args || {});
+        if (!r.error) return { data: r.data, legacy: false };
+        if (isMissingFn(r.error) && fallback) return { data: await fallback(), legacy: true };
+        throw r.error;
+    }
+
+    function overviewFromUsers(users, pendingEdu, annLive) {
+        var d = todayStr(), st = users.filter(function (u) { return u.role !== "admin"; });
+        var by = function (k) { var o = {}; st.forEach(function (u) { var v = u[k] || "bilinmiyor"; o[v] = (o[v] || 0) + 1; }); return o; };
+        var act = [];
+        for (var i = 13; i >= 0; i--) {
+            var x = new Date(); x.setDate(x.getDate() - i);
+            var day = x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0") + "-" + String(x.getDate()).padStart(2, "0");
+            act.push({ day: day, n: users.filter(function (u) { return String(u.last_study_at || "").slice(0, 10) === day; }).length });
+        }
         return {
-            id: row && row.id,
-            text: raw.trim(),
-            expiresAt: exp || null,
-            createdAt: row && row.created_at,
-            published: row && row.published !== false,
-            live: live && (row && row.published !== false)
+            users: st.length,
+            dau: users.filter(function (u) { return String(u.last_study_at || "").slice(0, 10) === d; }).length,
+            wau: users.filter(function (u) { return daysSince(u.last_study_at) <= 6; }).length,
+            mau: users.filter(function (u) { return daysSince(u.last_study_at) <= 29; }).length,
+            idle7: st.filter(function (u) { return daysSince(u.last_study_at) > 7; }).length,
+            premium: users.filter(function (u) { return u.premium; }).length,
+            blocked: users.filter(function (u) { return u.blocked; }).length,
+            questions: users.reduce(function (s, u) { return s + (Number(u.questions_total) || 0); }, 0),
+            pending_edu: pendingEdu, by_level: by("education_level"), by_platform: by("platform"), active_14: act, announcements: annLive
         };
     }
 
-    function getStatusBadge(lastStudyAt) {
-        if (!lastStudyAt) return { label: "Hiç çalışmamış", color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300" };
-        var diff = (Date.now() - new Date(lastStudyAt).getTime()) / (1000 * 60 * 60 * 24);
-        if (diff < 1) return { label: "🟢 Bugün aktif", color: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300" };
-        if (diff < 3) return { label: "🟡 3 gün içinde", color: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" };
-        if (diff < 7) return { label: "🟠 7 gün içinde", color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300" };
-        return { label: "🔴 7+ gün pasif", color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300" };
+    // ---------- simgeler ----------
+    var ICONS = {
+        ozet: "M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z",
+        talepler: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+        kullanicilar: "M17 20h5v-2a3 3 0 00-5.36-1.86M17 20H7m10 0v-2c0-.66-.13-1.28-.36-1.86M7 20H2v-2a3 3 0 015.36-1.86M7 20v-2c0-.66.13-1.28.36-1.86m0 0a5 5 0 019.28 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+        analiz: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z",
+        duyuru: "M11 5.88V19.24a1.76 1.76 0 01-3.42.59l-2.15-6.15M18 13a3 3 0 100-6M5.44 13.68A4 4 0 017 6h1.83c4.1 0 7.63-1.23 9.17-3v14c-1.54-1.77-5.07-3-9.17-3H7a4 4 0 01-1.56-.32z",
+        deneme: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        gecmis: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.59a1 1 0 01.7.29l5.42 5.42a1 1 0 01.29.7V19a2 2 0 01-2 2z",
+        refresh: "M4 4v5h.58m15.36 2A8 8 0 004.58 9m0 0H9m11 11v-5h-.58m0 0a8 8 0 01-15.36-2m15.36 2H15",
+        out: "M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1",
+        star: "M11.48 3.5a.56.56 0 011.04 0l2.13 5.11a.56.56 0 00.47.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 00-.18.56l1.28 5.38a.56.56 0 01-.84.61l-4.72-2.88a.56.56 0 00-.59 0l-4.72 2.88a.56.56 0 01-.84-.61l1.28-5.38a.56.56 0 00-.18-.56l-4.2-3.6a.56.56 0 01.32-.99l5.52-.44a.56.56 0 00.47-.35l2.13-5.11z",
+        ban: "M18.36 5.64a9 9 0 11-12.73 0M18.36 5.64A9 9 0 005.64 18.36M18.36 5.64L5.64 18.36",
+        trash: "M19 7l-.87 12.14A2 2 0 0116.14 21H7.86a2 2 0 01-1.99-1.86L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16",
+        check: "M5 13l4 4L19 7", x: "M6 18L18 6M6 6l12 12", search: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+        q: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", bolt: "M13 10V3L4 14h7v7l9-11h-7z", arrow: "M13 7l5 5m0 0l-5 5m5-5H6",
+        warn: "M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+    };
+    function Ico(p) {
+        return (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={p.w || 1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={p.className} style={p.style}>
+                <path d={ICONS[p.n]} />
+            </svg>
+        );
+    }
+
+    // ============================================================
+    // ORTAK PARÇALAR
+    // ============================================================
+    function Confirm(p) {
+        const okRef = useRef(null);
+        useEffect(function () {
+            if (okRef.current) okRef.current.focus();
+            function onKey(e) { if (e.key === "Escape") p.onClose(); }
+            document.addEventListener("keydown", onKey);
+            return function () { document.removeEventListener("keydown", onKey); };
+        }, []);
+        return (
+            <div>
+                <div className="adm-scrim" onClick={p.onClose}></div>
+                <div className="adm-modal" role="dialog" aria-modal="true" aria-labelledby="adm-confirm-t">
+                    <div className="flex items-start gap-3">
+                        <span className={"adm-ico " + (p.tone === "danger" ? "adm-ico-rose" : p.tone === "ok" ? "adm-ico-green" : "adm-ico-gold")}><Ico n={p.icon || "warn"} /></span>
+                        <div className="min-w-0">
+                            <h2 id="adm-confirm-t" className="text-lg font-extrabold leading-snug">{p.title}</h2>
+                            {p.body && <p className="text-sm adm-muted mt-1.5 leading-relaxed">{p.body}</p>}
+                        </div>
+                    </div>
+                    {p.children}
+                    <div className="flex gap-2 justify-end mt-5">
+                        <button type="button" className="adm-btn adm-btn-ghost" onClick={p.onClose}>Vazgeç</button>
+                        <button type="button" ref={okRef} className={"adm-btn " + (p.tone === "danger" ? "adm-btn-danger" : p.tone === "ok" ? "adm-btn-ok" : "adm-btn-primary")}
+                            onClick={function () { p.onOk(); p.onClose(); }}>{p.okLabel || "Onayla"}</button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    function Empty(p) {
+        return (
+            <div className="adm-card p-10 text-center">
+                <span className="adm-ico adm-ico-teal mx-auto mb-3" style={{ width: 52, height: 52, borderRadius: 16 }}><Ico n={p.icon || "check"} /></span>
+                <p className="font-bold">{p.title}</p>
+                {p.text && <p className="text-sm adm-muted mt-1 max-w-md mx-auto">{p.text}</p>}
+            </div>
+        );
+    }
+
+    function Kpi(p) {
+        return (
+            <div className="adm-card adm-kpi">
+                <div className="flex items-center justify-between gap-2">
+                    <span className="adm-label">{p.label}</span>
+                    <span className={"adm-ico adm-ico-" + (p.tone || "teal")}><Ico n={p.icon} /></span>
+                </div>
+                <div className="adm-kpi-n mt-2">{p.value}</div>
+                {p.sub && <div className="text-xs adm-muted mt-1">{p.sub}</div>}
+            </div>
+        );
+    }
+
+    function Head(p) {
+        return (
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-5">
+                <div>
+                    <div className="adm-eyebrow">{p.eyebrow}</div>
+                    <h1 className="adm-h1 mt-1">{p.title}</h1>
+                    {p.sub && <p className="text-sm adm-muted mt-1.5 max-w-2xl">{p.sub}</p>}
+                </div>
+                {p.right}
+            </div>
+        );
+    }
+
+    function Dist(p) {
+        var entries = Object.keys(p.data || {}).map(function (k) { return [k, p.data[k]]; }).sort(function (a, b) { return b[1] - a[1]; });
+        var total = entries.reduce(function (s, e) { return s + e[1]; }, 0) || 1;
+        if (!entries.length) return <p className="text-sm adm-muted">Veri yok.</p>;
+        return (
+            <ul className="space-y-3">
+                {entries.map(function (e) {
+                    var pct = Math.round((e[1] / total) * 100);
+                    return (
+                        <li key={e[0]}>
+                            <div className="flex justify-between text-sm mb-1.5"><span className="font-semibold">{p.label(e[0])}</span><span className="adm-muted">{num(e[1])} · %{pct}</span></div>
+                            <div className={"adm-meter " + (p.meter || "")}><span style={{ width: Math.max(2, pct) + "%" }}></span></div>
+                        </li>
+                    );
+                })}
+            </ul>
+        );
     }
 
     // ============================================================
     // ANA BİLEŞEN
     // ============================================================
-
     function AdminDashboard(props) {
         const student = props.student;
+        const up = student.userProfile || {};
+        const isAdmin = up.role === "admin";
+        const myId = up.authUserId || "";
+
         const [tab, setTab] = useState("ozet");
-        const [rows, setRows] = useState([]);
-        const [kpi, setKpi] = useState(null);
+        const [loading, setLoading] = useState(true);
+        const [loadedAt, setLoadedAt] = useState(null);
+        const [users, setUsers] = useState([]);
+        const [ov, setOv] = useState(null);
+        const [edu, setEdu] = useState([]);
+        const [ann, setAnn] = useState([]);
         const [hard, setHard] = useState([]);
-        const [announce, setAnnounce] = useState("");
-        const [announceHours, setAnnounceHours] = useState("24");
-        const [announceList, setAnnounceList] = useState([]);
+        const [audit, setAudit] = useState(null);
+        const [errors, setErrors] = useState({});
+        const [legacy, setLegacy] = useState(false);
+        const [toast, setToast] = useState(null);
+        const [busy, setBusy] = useState("");
+        const [confirm, setConfirm] = useState(null);
+        const [sel, setSel] = useState(null);
         const [detail, setDetail] = useState(null);
+        const [detailErr, setDetailErr] = useState("");
         const [q, setQ] = useState("");
         const [filter, setFilter] = useState("all");
-        const [msg, setMsg] = useState("");
-        const [busy, setBusy] = useState(false);
-        const [log, setLog] = useState([]);
-        const [eduReqs, setEduReqs] = useState([]);
-        const [sidebarOpen, setSidebarOpen] = useState(false);
-        const [selectedUserId, setSelectedUserId] = useState(null);
-        const [stats, setStats] = useState(null);
-        const [sortField, setSortField] = useState("last_study_at");
-        const [sortOrder, setSortOrder] = useState("desc");
+        const [sort, setSort] = useState("recent");
         const [page, setPage] = useState(1);
-        const pageSize = 20;
+        const [annText, setAnnText] = useState("");
+        const [annHours, setAnnHours] = useState("24");
+        const [grantDays, setGrantDays] = useState(30);
+        const PAGE = 25;
+        const toastTimer = useRef(null);
 
-        const isAdmin = student.userProfile && student.userProfile.role === "admin";
-        const email = (student.userProfile && student.userProfile.email) || "";
-
-        // ---------- Refs ----------
-        const searchInputRef = useRef(null);
-        const announceRef = useRef(null);
-
-        // ---------- Load Fonksiyonu ----------
-        const load = useCallback(async function () {
-            var sb = window.SupabaseClient && window.SupabaseClient.get();
-            if (!sb) { setMsg("Veritabanı bağlı değil."); return; }
-
-            setBusy(true);
-            try {
-                // KPI'lar
-                var r = await sb.rpc("admin_kpis");
-                if (r.error) setMsg("Özet: " + (window.trError ? window.trError(r.error) : "yüklenemedi"));
-                else setKpi(r.data);
-
-                // Kullanıcı listesi (konum payload'dan)
-                var listed = false;
-                var rUsers = await sb.functions.invoke("admin-action", { body: { action: "user_list" } });
-                if (!rUsers.error) {
-                    var ud = rUsers.data;
-                    if (typeof ud === "string") {
-                        try { ud = JSON.parse(ud); } catch (e) { ud = null; }
-                    }
-                    var ulist = [];
-                    if (ud && ud.ok === false) ulist = [];
-                    else if (Array.isArray(ud)) ulist = ud;
-                    else if (ud && Array.isArray(ud.data)) ulist = ud.data;
-                    else if (ud && ud.data && Array.isArray(ud.data.data)) ulist = ud.data.data;
-                    if (ulist.length) {
-                        setRows(ulist);
-                        listed = true;
-                    }
-                }
-                if (!listed) {
-                    var r2 = await sb.rpc("admin_user_list");
-                    if (!r2.error && r2.data) {
-                        setRows(Array.isArray(r2.data) ? r2.data : []);
-                    } else {
-                        var r3 = await sb.from("admin_user_directory").select("*").limit(500);
-                        if (r3.error) setMsg("Kullanıcı listesi yüklenemedi.");
-                        else setRows(r3.data || []);
-                    }
-                }
-
-                // Zor konular
-                var r4 = await sb.rpc("admin_hard_topics");
-                if (!r4.error && r4.data) setHard(Array.isArray(r4.data) ? r4.data : []);
-
-                // Eğitim talepleri
-                var r5 = await sb.functions.invoke("admin-action", { body: { action: "list_edu_requests" } });
-                if (!r5.error) {
-                    var d = r5.data;
-                    if (typeof d === "string") {
-                        try { d = JSON.parse(d); } catch (e) { d = null; }
-                    }
-                    var list = [];
-                    if (Array.isArray(d)) list = d;
-                    else if (d && Array.isArray(d.data)) list = d.data;
-                    else if (d && d.data && Array.isArray(d.data.data)) list = d.data.data;
-                    setEduReqs(list);
-                }
-
-                var r7 = await sb.functions.invoke("admin-action", { body: { action: "list_announcements" } });
-                var alist = [];
-                if (!r7.error) {
-                    var ad = r7.data;
-                    if (typeof ad === "string") {
-                        try { ad = JSON.parse(ad); } catch (e) { ad = null; }
-                    }
-                    if (Array.isArray(ad)) alist = ad;
-                    else if (ad && Array.isArray(ad.data)) alist = ad.data;
-                    else if (ad && ad.data && Array.isArray(ad.data.data)) alist = ad.data.data;
-                }
-                if (!alist.length) {
-                    var rA = await sb.from("app_announcements").select("id,body,published,created_at,expires_at").order("created_at", { ascending: false }).limit(80);
-                    if (rA.error) {
-                        rA = await sb.from("app_announcements").select("id,body,published,created_at").order("created_at", { ascending: false }).limit(80);
-                    }
-                    if (!rA.error) alist = rA.data || [];
-                }
-                setAnnounceList(alist.map(parseAnnounceRow));
-
-                var r6 = await sb.rpc("admin_stats");
-                if (!r6.error && r6.data) setStats(r6.data);
-
-            } catch (e) {
-                setMsg("Ağ hatası. Bağlantını kontrol edip tekrar dene.");
-            } finally {
-                setBusy(false);
-            }
+        const sbGet = function () { return window.SupabaseClient && window.SupabaseClient.get(); };
+        const say = useCallback(function (ok, text) {
+            setToast({ ok: ok, text: text });
+            clearTimeout(toastTimer.current);
+            toastTimer.current = setTimeout(function () { setToast(null); }, ok ? 3500 : 7000);
         }, []);
 
-        // ---------- Effect ----------
-        useEffect(function () {
-            if (isAdmin) load();
-        }, [isAdmin, load]);
+        // ---------- yükleme ----------
+        const load = useCallback(async function () {
+            var sb = sbGet();
+            if (!sb) { setErrors({ genel: "Veritabanına bağlanılamadı." }); setLoading(false); return; }
+            setLoading(true);
+            var errs = {}, usedLegacy = false;
+            function track(r) { if (r && r.legacy) usedLegacy = true; return r; }
 
-        // ---------- Action ----------
-        const act = useCallback(async function (name, payload) {
-            var sb = window.SupabaseClient && window.SupabaseClient.get();
-            if (!sb) { setMsg("Sunucu bağlı değil."); return; }
-            setBusy(true);
-            try {
-                var res = await sb.functions.invoke("admin-action", { body: Object.assign({ action: name }, payload) });
-                if (res.error) {
-                    setMsg(window.trError ? window.trError(res.error, "İşlem başarısız.") : "İşlem başarısız.");
-                } else if (res.data && res.data.ok === false) {
-                    setMsg(window.trError ? window.trError(res.data.error, "İşlem başarısız.") : "İşlem başarısız.");
-                } else {
-                    setMsg("✅ İşlem başarıyla uygulandı.");
-                    setLog(function (L) {
-                        return [{ t: name, at: new Date().toLocaleTimeString("tr-TR"), detail: payload }].concat(L).slice(0, 20);
-                    });
-                    if (name === "inspect_user" && res.data) {
-                        setDetail(res.data.data || res.data);
-                    }
-                    if (name === "delete_user") setDetail(null);
-                    load();
+            var pUsers = call(sb, "admin_users", {}, async function () {
+                try { return await edge(sb, "user_list"); } catch (e) {
+                    var r2 = await sb.rpc("admin_user_list");
+                    if (r2.error) throw e;
+                    return r2.data || [];
                 }
-            } catch (e) {
-                setMsg(window.trError ? window.trError(e, "İşlem başarısız.") : "İşlem başarısız.");
-            } finally {
-                setBusy(false);
-            }
-        }, [load]);
-
-        // ---------- Inspect ----------
-        const inspect = useCallback(async function (uid) {
-            await act("inspect_user", { user_id: uid });
-        }, [act]);
-
-        // ---------- Sıralama ----------
-        const sortedRows = useMemo(function () {
-            var sorted = rows.slice();
-            sorted.sort(function (a, b) {
-                var aVal = a[sortField] || "";
-                var bVal = b[sortField] || "";
-                if (sortField === "last_study_at") {
-                    var aDate = aVal ? new Date(aVal).getTime() : 0;
-                    var bDate = bVal ? new Date(bVal).getTime() : 0;
-                    return sortOrder === "desc" ? bDate - aDate : aDate - bDate;
+            }).then(track).catch(function (e) { errs.kullanicilar = errText(e, "Kullanıcı listesi yüklenemedi."); return null; });
+            var pEdu = call(sb, "admin_edu_requests", {}, function () { return edge(sb, "list_edu_requests"); })
+                .then(track).catch(function (e) { errs.talepler = errText(e, "Eğitim talepleri yüklenemedi."); return null; });
+            var pAnn = call(sb, "admin_announcements", {}, async function () {
+                try { return await edge(sb, "list_announcements"); } catch (e) {
+                    var rA = await sb.from("app_announcements").select("id,body,published,created_at,expires_at").order("created_at", { ascending: false }).limit(80);
+                    if (rA.error) throw e;
+                    return rA.data || [];
                 }
-                if (typeof aVal === "string") {
-                    return sortOrder === "desc" ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
-                }
-                return sortOrder === "desc" ? bVal - aVal : aVal - bVal;
+            }).then(track).catch(function (e) { errs.duyuru = errText(e, "Duyurular yüklenemedi."); return null; });
+            var pOv = call(sb, "admin_overview", {}, function () { return null; }).then(track).catch(function (e) { errs.ozet = errText(e, "Özet yüklenemedi."); return null; });
+            var pHard = sb.rpc("admin_hard_topics").then(function (r) { if (r.error) { if (!isMissingFn(r.error)) errs.analiz = errText(r.error, "Zor konular yüklenemedi."); return []; } return r.data || []; });
+            var pAudit = sb.rpc("admin_audit_log", { p_limit: 120 }).then(function (r) {
+                if (r.error) { if (isMissingFn(r.error)) { usedLegacy = true; return null; } errs.gecmis = errText(r.error, "İşlem geçmişi yüklenemedi."); return null; }
+                return r.data || [];
             });
-            return sorted;
-        }, [rows, sortField, sortOrder]);
 
-        // ---------- Filtre ----------
-        const filteredRows = useMemo(function () {
-            return sortedRows.filter(function (u) {
-                var hay = ((u.nickname || "") + (u.email || "") + (u.target_type || "") + (u.education_level || "") + (u.user_id || "") + (u.location || "")).toLowerCase();
-                if (q && hay.indexOf(q.toLowerCase()) < 0) return false;
-                if (filter === "premium" && !u.premium) return false;
-                if (filter === "lisans" && u.education_level !== "lisans") return false;
-                if (filter === "onlisans" && u.education_level !== "onlisans") return false;
-                if (filter === "ortaogretim" && u.education_level !== "ortaogretim") return false;
-                if (filter === "idle7") {
-                    if (!u.last_study_at) return true;
-                    return (Date.now() - new Date(u.last_study_at).getTime()) > 7 * 86400000;
+            var res = await Promise.all([pUsers, pEdu, pAnn, pOv, pHard, pAudit].map(function (p) { return p.catch(function () { return null; }); }));
+            var uList = res[0] ? (Array.isArray(res[0].data) ? res[0].data : []) : null;
+            var eList = res[1] ? (Array.isArray(res[1].data) ? res[1].data : []) : null;
+            var aList = res[2] ? (Array.isArray(res[2].data) ? res[2].data : []).map(parseAnnounceRow) : null;
+            if (uList) setUsers(uList);
+            if (eList) setEdu(eList);
+            if (aList) setAnn(aList);
+            var o = res[3] && res[3].data;
+            if (!o && uList) o = overviewFromUsers(uList, (eList || []).length, (aList || []).filter(function (a) { return a.live; }).length);
+            if (o) setOv(o);
+            setHard(Array.isArray(res[4]) ? res[4] : []);
+            setAudit(res[5]);
+            setErrors(errs);
+            setLegacy(usedLegacy);
+            setLoadedAt(new Date());
+            setLoading(false);
+        }, []);
+
+        useEffect(function () { if (isAdmin) load(); }, [isAdmin, load]);
+        useEffect(function () { return function () { clearTimeout(toastTimer.current); }; }, []);
+
+        // ---------- ayrıntı ----------
+        const openDetail = useCallback(async function (uid) {
+            setSel(uid); setDetail(null); setDetailErr(""); setGrantDays(30);
+            var sb = sbGet(); if (!sb) return;
+            try {
+                var r = await call(sb, "admin_user_detail", { p_user: uid }, function () { return edge(sb, "inspect_user", { user_id: uid }); });
+                var d = r.data || {};
+                if (r.legacy) d = Object.assign({}, d, { wrong_count: d.wrongCount, edu_request: d.educationChangeRequest });
+                setDetail(d);
+            } catch (e) { setDetailErr(errText(e, "Kullanıcı ayrıntısı yüklenemedi.")); }
+        }, []);
+        const closeDetail = function () { setSel(null); setDetail(null); setDetailErr(""); };
+        useEffect(function () {
+            if (!sel) return;
+            function onKey(e) { if (e.key === "Escape" && !confirm) closeDetail(); }
+            document.addEventListener("keydown", onKey);
+            return function () { document.removeEventListener("keydown", onKey); };
+        }, [sel, confirm]);
+
+        // ---------- işlemler ----------
+        const run = useCallback(async function (key, fn, okText, after) {
+            var sb = sbGet();
+            if (!sb) { say(false, "Veritabanına bağlanılamadı."); return; }
+            setBusy(key);
+            try {
+                await fn(sb);
+                say(true, okText);
+                if (after) after();
+                await load();
+            } catch (e) {
+                say(false, errText(e, "İşlem tamamlanamadı."));
+            } finally { setBusy(""); }
+        }, [load, say]);
+
+        function setPremium(u, days) {
+            var on = days > 0;
+            run("premium:" + u.user_id, function (sb) {
+                return call(sb, "admin_set_premium", { p_user: u.user_id, p_days: on ? days : 0 }, function () {
+                    return edge(sb, on ? "grant_premium" : "revoke_premium", on ? { user_id: u.user_id, days: days } : { user_id: u.user_id });
+                });
+            }, on ? (u.nickname || "Kullanıcı") + " için " + days + " gün Premium açıldı." : (u.nickname || "Kullanıcı") + " artık ücretsiz planda.", function () { if (sel === u.user_id) openDetail(u.user_id); });
+        }
+        function setBlocked(u, on) {
+            run("block:" + u.user_id, function (sb) {
+                return call(sb, "admin_set_blocked", { p_user: u.user_id, p_blocked: on }, function () { return edge(sb, on ? "block" : "unblock", { user_id: u.user_id }); });
+            }, on ? (u.nickname || "Kullanıcı") + " engellendi." : (u.nickname || "Kullanıcı") + " için engel kaldırıldı.", function () { if (sel === u.user_id) openDetail(u.user_id); });
+        }
+        function deleteUser(u) {
+            run("delete:" + u.user_id, function (sb) {
+                return call(sb, "admin_delete_user", { p_user: u.user_id }, function () { return edge(sb, "delete_user", { user_id: u.user_id }); });
+            }, (u.nickname || "Kullanıcı") + " kalıcı olarak silindi.", closeDetail);
+        }
+        function decideEdu(r, approve) {
+            var exam = approve ? futureExamDate(r.to) : null;
+            run("edu:" + r.user_id, function (sb) {
+                return call(sb, "admin_edu_decide", { p_user: r.user_id, p_approve: approve, p_exam_date: exam }, function () {
+                    return edge(sb, approve ? "approve_edu" : "reject_edu", approve ? { user_id: r.user_id, to: r.to, exam_date: exam } : { user_id: r.user_id });
+                });
+            }, approve ? (r.nickname || "Öğrenci") + " artık " + eduLabel(r.to) + " düzeyinde." : (r.nickname || "Öğrenci") + " talebi reddedildi.");
+        }
+        function publish() {
+            var text = annText.trim();
+            if (!text) return;
+            var hours = Number(annHours) || 0;
+            run("announce", function (sb) {
+                return call(sb, "admin_announce", { p_text: text, p_hours: hours > 0 ? hours : null }, function () { return edge(sb, "announce", { text: text, hours: hours }); });
+            }, "Duyuru yayınlandı. Öğrenciler Bugün ekranında görecek.", function () { setAnnText(""); });
+        }
+        function removeAnn(a) {
+            run("ann:" + a.id, function (sb) {
+                return call(sb, "admin_announce_delete", { p_id: a.id }, function () { return edge(sb, "delete_announce", { id: a.id }); });
+            }, "Duyuru silindi.");
+        }
+
+        // ---------- liste ----------
+        const counts = useMemo(function () {
+            return {
+                all: users.length,
+                premium: users.filter(function (u) { return u.premium; }).length,
+                blocked: users.filter(function (u) { return u.blocked; }).length,
+                pending: users.filter(function (u) { return u.edu_request; }).length,
+                active: users.filter(function (u) { return daysSince(u.last_study_at) <= 0; }).length,
+                idle7: users.filter(function (u) { return u.role !== "admin" && daysSince(u.last_study_at) > 7; }).length
+            };
+        }, [users]);
+        const filtered = useMemo(function () {
+            var needle = q.trim().toLocaleLowerCase("tr-TR");
+            var list = users.filter(function (u) {
+                if (needle) {
+                    var hay = [u.nickname, u.email, u.user_id, u.location, eduLabel(u.education_level), trackLabel(u.target_type), platformLabel(u.platform)].join(" ").toLocaleLowerCase("tr-TR");
+                    if (hay.indexOf(needle) < 0) return false;
                 }
-                if (filter === "active") {
-                    if (!u.last_study_at) return false;
-                    return (Date.now() - new Date(u.last_study_at).getTime()) < 1 * 86400000;
-                }
+                if (filter === "premium") return !!u.premium;
+                if (filter === "blocked") return !!u.blocked;
+                if (filter === "pending") return !!u.edu_request;
+                if (filter === "active") return daysSince(u.last_study_at) <= 0;
+                if (filter === "idle7") return u.role !== "admin" && daysSince(u.last_study_at) > 7;
+                if (filter === "lisans" || filter === "onlisans" || filter === "ortaogretim") return u.education_level === filter;
                 return true;
             });
-        }, [sortedRows, q, filter]);
+            var key = {
+                recent: function (u) { return -(toDate(u.last_study_at) || 0); },
+                questions: function (u) { return -(Number(u.questions_total) || 0); },
+                name: null,
+                joined: function (u) { return -(toDate(u.created_at || u.updated_at) || 0); }
+            }[sort];
+            list = list.slice().sort(function (a, b) {
+                if (!key) return String(a.nickname || "").localeCompare(String(b.nickname || ""), "tr");
+                return key(a) - key(b);
+            });
+            return list;
+        }, [users, q, filter, sort]);
+        const pages = Math.max(1, Math.ceil(filtered.length / PAGE));
+        const curPage = Math.min(page, pages);
+        const pageRows = filtered.slice((curPage - 1) * PAGE, curPage * PAGE);
+        const selUser = sel ? (users.filter(function (u) { return u.user_id === sel; })[0] || { user_id: sel, nickname: detail && detail.nickname }) : null;
 
-        // ---------- Sayfalama ----------
-        const paginatedRows = useMemo(function () {
-            var start = (page - 1) * pageSize;
-            var end = start + pageSize;
-            return filteredRows.slice(start, end);
-        }, [filteredRows, page]);
-
-        const totalPages = useMemo(function () {
-            return Math.ceil(filteredRows.length / pageSize);
-        }, [filteredRows]);
-
-        // ---------- İstatistikler ----------
-        const summaryStats = useMemo(function () {
-            var total = rows.length;
-            var premium = rows.filter(function (u) { return u.premium; }).length;
-            var active = rows.filter(function (u) {
-                if (!u.last_study_at) return false;
-                return (Date.now() - new Date(u.last_study_at).getTime()) < 1 * 86400000;
-            }).length;
-            var totalQ = rows.reduce(function (sum, u) { return sum + (u.questions_total || 0); }, 0);
-            return { total, premium, active, totalQ, avgQ: total > 0 ? Math.round(totalQ / total) : 0 };
-        }, [rows]);
-
-        // ---------- Navigation ----------
-        const nav = [
-            { id: "ozet", t: "📊 Özet", icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" },
-            { id: "talepler", t: "📋 Talepler" + (eduReqs.length ? " (" + eduReqs.length + ")" : ""), icon: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-            { id: "kullanicilar", t: "👥 Kullanıcılar", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
-            { id: "analiz", t: "📈 Analiz", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
-            { id: "icerik", t: "📢 Duyuru", icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" },
-            { id: "deneme", t: "🕒 Canlı Deneme", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" }
-        ];
-
-        // ---------- Yetki Kontrol ----------
+        // ---------- yetki ----------
         if (!isAdmin) {
             return (
-                <div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900 dark:to-stone-800">
-                    <div className="text-center max-w-sm p-8 rounded-3xl glass card-hover">
-                        <div className="text-6xl mb-4">🔒</div>
-                        <h1 className="text-2xl font-black gradient-text mb-2">Yetki Yok</h1>
-                        <p className="text-sm text-stone-500 dark:text-stone-400 mb-6">Bu hesap yönetici yetkisine sahip değil.</p>
-                        <button onClick={props.onSignOut} className="px-6 py-3 rounded-2xl btn-primary text-white font-semibold">
-                            Çıkış Yap
-                        </button>
+                <div className="adm min-h-screen flex items-center justify-center p-6">
+                    <div className="adm-card text-center max-w-sm p-8">
+                        <span className="adm-ico adm-ico-rose mx-auto mb-3"><Ico n="ban" /></span>
+                        <h1 className="text-xl font-extrabold mb-2">Yetki yok</h1>
+                        <p className="text-sm adm-muted mb-6">Bu hesap yönetici yetkisine sahip değil.</p>
+                        <button onClick={props.onSignOut} className="adm-btn adm-btn-primary w-full">Çıkış yap</button>
                     </div>
                 </div>
             );
         }
 
-        // ============================================================
-        // RENDER
-        // ============================================================
+        const nav = [
+            { id: "ozet", t: "Özet", icon: "ozet" },
+            { id: "talepler", t: "Eğitim talepleri", icon: "talepler", badge: edu.length },
+            { id: "kullanicilar", t: "Kullanıcılar", icon: "kullanicilar" },
+            { id: "analiz", t: "Analiz", icon: "analiz" },
+            { id: "duyuru", t: "Duyurular", icon: "duyuru" },
+            { id: "deneme", t: "Canlı deneme", icon: "deneme" },
+            { id: "gecmis", t: "İşlem geçmişi", icon: "gecmis" }
+        ];
+        const go = function (id) { setTab(id); try { window.scrollTo(0, 0); } catch (e) {} };
+        const errList = Object.keys(errors);
+        const act14 = (ov && ov.active_14) || [];
+        const maxAct = Math.max(1, Math.max.apply(null, act14.map(function (x) { return Number(x.n) || 0; }).concat([0])));
+        const refreshBtn = (
+            <button type="button" className="adm-btn adm-btn-ghost adm-btn-sm" onClick={load} disabled={loading} aria-label="Verileri yenile">
+                {loading ? <span className="adm-spin" aria-hidden="true"></span> : <Ico n="refresh" />}
+                <span>{loading ? "Yükleniyor" : "Yenile"}</span>
+            </button>
+        );
 
+        // ============================================================
         return (
-            <div className="min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-50 flex">
-                {/* ===== SIDEBAR (Desktop) ===== */}
-                <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 shadow-lg">
-                    <div className="px-5 py-6 border-b border-stone-200 dark:border-stone-800">
-                        <div className="flex items-center gap-3">
-                            {window.AtanomLogo
-                                ? window.AtanomLogo("h-10 w-10 object-contain")
-                                : <img src="icons/atanom.png" alt="Atanly" className="h-10 w-10 object-contain" />}
-                            <div>
-                                <p className="text-sm font-bold gradient-text">Yönetim Paneli</p>
-                                <p className="text-[10px] text-stone-400 truncate max-w-[140px]">{email}</p>
-                            </div>
+            <div className="adm flex">
+                {/* ---------- yan menü (masaüstü) ---------- */}
+                <aside className="adm-side hidden lg:flex flex-col w-72 shrink-0 sticky top-0 h-screen px-4 py-6" aria-label="Yönetim menüsü">
+                    <div className="flex items-center gap-3 px-2 mb-8">
+                        {window.AtanomLogo ? window.AtanomLogo("h-11 w-11 object-contain rounded-xl") : <img src="icons/atanom.png" alt="" className="h-11 w-11 object-contain rounded-xl" />}
+                        <div className="min-w-0">
+                            <div className="text-lg font-extrabold leading-tight">Atanly <span className="adm-gold">Yönetim</span></div>
+                            <div className="text-xs text-white/70 truncate">{up.email || "Yönetici"}</div>
                         </div>
                     </div>
-                    <nav className="px-3 py-4 space-y-1 flex-1">
+                    <nav className="flex-1 space-y-1">
                         {nav.map(function (n) {
-                            var active = tab === n.id;
                             return (
-                                <button key={n.id} onClick={function () { setTab(n.id); setSidebarOpen(false); }}
-                                    className={"w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-3 " +
-                                        (active 
-                                            ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 shadow-sm" 
-                                            : "text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800")}>
-                                    <span className="text-lg">{n.t.split(" ")[0]}</span>
-                                    <span className="flex-1">{n.t.split(" ").slice(1).join(" ")}</span>
-                                    {n.id === "talepler" && eduReqs.length > 0 && (
-                                        <span className="h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center">
-                                            {eduReqs.length}
-                                        </span>
-                                    )}
+                                <button key={n.id} type="button" className="adm-nav" aria-current={tab === n.id ? "page" : undefined} onClick={function () { go(n.id); }}>
+                                    <Ico n={n.icon} /><span className="flex-1">{n.t}</span>
+                                    {n.badge > 0 && <span className="adm-count" aria-label={n.badge + " bekleyen"}>{n.badge}</span>}
                                 </button>
                             );
                         })}
                     </nav>
-                    <div className="p-4 border-t border-stone-200 dark:border-stone-800">
-                        <button onClick={props.onSignOut} className="w-full py-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
-                            🚪 Çıkış
-                        </button>
+                    <div className="rounded-2xl p-4 mb-3" style={{ background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.1)" }}>
+                        <div className="text-xs text-white/70">Son güncelleme</div>
+                        <div className="text-sm font-bold mt-0.5">{loadedAt ? loadedAt.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" }) : "—"}</div>
                     </div>
+                    <button type="button" className="adm-btn adm-btn-glass w-full" onClick={props.onSignOut}><Ico n="out" />Çıkış</button>
                 </aside>
 
-                {/* ===== MAIN CONTENT ===== */}
                 <div className="flex-1 min-w-0">
-                    {/* Mobile Header */}
-                    <header className="md:hidden flex items-center justify-between px-4 py-3 border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-0 z-10">
-                        <button onClick={function () { setSidebarOpen(!sidebarOpen); }} className="p-2 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                        <span className="font-bold gradient-text">Yönetim</span>
-                        <button onClick={props.onSignOut} className="text-sm font-medium text-stone-500">Çıkış</button>
-                    </header>
-
-                    {/* Mobile Sidebar Overlay */}
-                    {sidebarOpen && (
-                        <div className="md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={function () { setSidebarOpen(false); }}>
-                            <div className="w-72 h-full bg-white dark:bg-stone-950 shadow-2xl p-4" onClick={function (e) { e.stopPropagation(); }}>
-                                <div className="flex justify-between items-center mb-6">
-                                    <span className="font-bold gradient-text">Yönetim</span>
-                                    <button onClick={function () { setSidebarOpen(false); }} className="p-2 rounded-xl hover:bg-stone-100">✕</button>
-                                </div>
-                                {nav.map(function (n) {
-                                    var active = tab === n.id;
-                                    return (
-                                        <button key={n.id} onClick={function () { setTab(n.id); setSidebarOpen(false); }}
-                                            className={"w-full text-left px-4 py-3 rounded-xl text-sm font-medium flex items-center gap-3 " +
-                                                (active ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700" : "hover:bg-stone-100 dark:hover:bg-stone-800")}>
-                                            <span>{n.t}</span>
-                                            {n.id === "talepler" && eduReqs.length > 0 && (
-                                                <span className="ml-auto h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center">
-                                                    {eduReqs.length}
-                                                </span>
-                                            )}
-                                        </button>
-                                    );
-                                })}
-                                <button onClick={props.onSignOut} className="w-full mt-4 py-3 rounded-xl border border-stone-200 text-sm font-medium">Çıkış</button>
+                    {/* ---------- üst çubuk (mobil / tablet) ---------- */}
+                    <header className="adm-top lg:hidden sticky top-0 z-30" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+                        <div className="flex items-center justify-between gap-3 px-4 pt-3 pb-2">
+                            <div className="flex items-center gap-2.5 min-w-0">
+                                {window.AtanomLogo ? window.AtanomLogo("h-9 w-9 object-contain rounded-lg") : <img src="icons/atanom.png" alt="" className="h-9 w-9 object-contain rounded-lg" />}
+                                <div className="font-extrabold truncate">Atanly <span className="adm-gold">Yönetim</span></div>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <button type="button" className="adm-btn adm-btn-glass adm-btn-sm" onClick={load} disabled={loading} aria-label="Verileri yenile">
+                                    {loading ? <span className="adm-spin" aria-hidden="true"></span> : <Ico n="refresh" />}
+                                </button>
+                                <button type="button" className="adm-btn adm-btn-glass adm-btn-sm" onClick={props.onSignOut}>Çıkış</button>
                             </div>
                         </div>
-                    )}
-
-                    {/* Mobile Tabs */}
-                    <div className="md:hidden flex gap-1 px-4 py-3 overflow-x-auto border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-12 z-10">
-                        {nav.map(function (n) {
-                            return (
-                                <button key={n.id} onClick={function () { setTab(n.id); }}
-                                    className={"shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors " + 
-                                        (tab === n.id ? "bg-indigo-600 text-white" : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400")}>
-                                    {n.t}
-                                    {n.id === "talepler" && eduReqs.length > 0 && (
-                                        <span className="ml-1 text-[10px] bg-white/30 px-1 rounded">{eduReqs.length}</span>
-                                    )}
-                                </button>
-                            );
-                        })}
-                    </div>
-
-                    <main className="p-4 md:p-8 max-w-7xl mx-auto">
-                        {/* Messages */}
-                        {msg && (
-                            <div className="mb-4 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm flex items-center justify-between">
-                                <span>{msg}</span>
-                                <button onClick={function () { setMsg(""); }} className="text-amber-600 hover:text-amber-800">✕</button>
-                            </div>
-                        )}
-
-                        {/* Loading */}
-                        {busy && (
-                            <div className="mb-4 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-sm flex items-center gap-3">
-                                <div className="animate-spin h-4 w-4 border-2 border-indigo-600 border-t-transparent rounded-full"></div>
-                                İşlem devam ediyor...
-                            </div>
-                        )}
-
-                        {/* ===== ÖZET TAB ===== */}
-                        {tab === "ozet" && (
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <h1 className="text-2xl md:text-3xl font-black gradient-text">📊 Yönetim Özeti</h1>
-                                    <button onClick={load} disabled={busy} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">
-                                        🔄 Yenile
+                        <nav className="flex gap-2 overflow-x-auto px-4 pb-3" aria-label="Yönetim bölümleri" style={{ scrollbarWidth: "none" }}>
+                            {nav.map(function (n) {
+                                return (
+                                    <button key={n.id} type="button" className="adm-pill" aria-current={tab === n.id ? "page" : undefined} onClick={function () { go(n.id); }}>
+                                        {n.t}{n.badge > 0 && <span className="adm-count" style={{ height: 20, minWidth: 20, fontSize: 10 }}>{n.badge}</span>}
                                     </button>
-                                </div>
+                                );
+                            })}
+                        </nav>
+                    </header>
 
-                                {/* KPI Cards */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                    <div className="rounded-2xl glass p-5 card-hover">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">👥 Toplam Kullanıcı</p>
-                                        <p className="text-3xl font-bold gradient-text mt-2">{kpi ? kpi.users : "—"}</p>
-                                        <p className="text-xs text-stone-400 mt-1">+{summaryStats.active} bugün aktif</p>
-                                    </div>
-                                    <div className="rounded-2xl glass p-5 card-hover">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">⭐ Premium</p>
-                                        <p className="text-3xl font-bold text-amber-600 mt-2">{summaryStats.premium}</p>
-                                        <p className="text-xs text-stone-400 mt-1">%{rows.length ? Math.round((summaryStats.premium / rows.length) * 100) : 0} dönüşüm</p>
-                                    </div>
-                                    <div className="rounded-2xl glass p-5 card-hover">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">📝 Toplam Soru</p>
-                                        <p className="text-3xl font-bold text-emerald-600 mt-2">{summaryStats.totalQ}</p>
-                                        <p className="text-xs text-stone-400 mt-1">Ø {summaryStats.avgQ} / kullanıcı</p>
-                                    </div>
-                                    <div className="rounded-2xl glass p-5 card-hover">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">📈 Tahmini Ciro</p>
-                                        <p className="text-3xl font-bold text-indigo-600 mt-2">{summaryStats.premium * 149} ₺</p>
-                                        <p className="text-xs text-stone-400 mt-1">149 ₺ / ay · gerçek ödeme yok</p>
-                                    </div>
+                    <main className="px-4 py-6 md:px-8 md:py-8 max-w-7xl mx-auto">
+                        {legacy && (
+                            <div className="adm-alert adm-alert-warn mb-4" role="status">
+                                <Ico n="warn" className="w-5 h-5 shrink-0 mt-0.5" />
+                                <div><b>Veritabanı yaması eksik.</b> Panel şimdilik yedek yoldan çalışıyor; bazı bölümler (işlem geçmişi, ayrıntılı özet) kapalı.
+                                    Supabase → SQL Editor'da <code className="font-mono">supabase/patch-admin-panel.sql</code> dosyasını bir kez çalıştır.</div>
+                            </div>
+                        )}
+                        {errList.length > 0 && (
+                            <div className="adm-alert adm-alert-err mb-4" role="alert">
+                                <Ico n="warn" className="w-5 h-5 shrink-0 mt-0.5" />
+                                <div className="min-w-0">
+                                    <b>Bazı veriler yüklenemedi.</b>
+                                    <ul className="mt-1 space-y-0.5">{errList.map(function (k) { return <li key={k}>{errors[k]}</li>; })}</ul>
                                 </div>
+                                <button type="button" className="adm-btn adm-btn-ghost adm-btn-sm ml-auto" onClick={load}>Tekrar dene</button>
+                            </div>
+                        )}
 
-                                {/* Quick Stats */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                    <div className="rounded-2xl bg-rose-50 dark:bg-rose-950/20 p-4 text-center border border-rose-100 dark:border-rose-800/30">
-                                        <div className="text-2xl font-bold text-rose-600">{rows.filter(function(u) { return !u.last_study_at || (Date.now() - new Date(u.last_study_at).getTime()) > 7 * 86400000; }).length}</div>
-                                        <div className="text-xs text-rose-500 mt-0.5">🔴 Pasif (7+ gün)</div>
-                                    </div>
-                                    <div className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 p-4 text-center border border-emerald-100 dark:border-emerald-800/30">
-                                        <div className="text-2xl font-bold text-emerald-600">{summaryStats.active}</div>
-                                        <div className="text-xs text-emerald-500 mt-0.5">🟢 Bugün Aktif</div>
-                                    </div>
-                                    <div className="rounded-2xl bg-amber-50 dark:bg-amber-950/20 p-4 text-center border border-amber-100 dark:border-amber-800/30">
-                                        <div className="text-2xl font-bold text-amber-600">{eduReqs.length}</div>
-                                        <div className="text-xs text-amber-500 mt-0.5">📋 Bekleyen Talep</div>
-                                    </div>
-                                    <div className="rounded-2xl bg-indigo-50 dark:bg-indigo-950/20 p-4 text-center border border-indigo-100 dark:border-indigo-800/30">
-                                        <div className="text-2xl font-bold text-indigo-600">{hard.length}</div>
-                                        <div className="text-xs text-indigo-500 mt-0.5">📊 Zor Konu</div>
-                                    </div>
-                                </div>
-
-                                {/* Activity Log */}
-                                {log.length > 0 && (
-                                    <div className="rounded-2xl glass p-5">
-                                        <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">📋 İşlem Geçmişi</p>
-                                        <div className="space-y-1 max-h-48 overflow-y-auto">
-                                            {log.map(function (x, i) {
+                        {/* ================= ÖZET ================= */}
+                        {tab === "ozet" && (
+                            <div className="space-y-5">
+                                <section className="adm-hero p-6 md:p-8">
+                                    <div className="adm-hero-grid"></div>
+                                    <div className="relative flex flex-col md:flex-row md:items-end justify-between gap-6">
+                                        <div>
+                                            <div className="text-xs font-extrabold tracking-[.16em] uppercase text-white/70">Yönetim özeti</div>
+                                            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mt-2">Hoş geldin, <span className="adm-gold">{(student.profile && student.profile.name) || up.nickname || "yönetici"}</span></h1>
+                                            <p className="text-white/75 text-sm mt-2 max-w-xl">{fmtDate(new Date())} · {ov ? num(ov.dau) + " öğrenci bugün çalıştı" : "Veriler yükleniyor"}{edu.length ? " · " + edu.length + " eğitim talebi seni bekliyor" : ""}</p>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-3 md:gap-5 text-center">
+                                            {[["Bugün", ov && ov.dau], ["7 gün", ov && ov.wau], ["30 gün", ov && ov.mau]].map(function (x) {
                                                 return (
-                                                    <div key={i} className="flex items-center gap-3 text-xs text-stone-500 dark:text-stone-400 py-1 border-b border-stone-100 dark:border-stone-800">
-                                                        <span className="font-mono text-stone-400">{x.at}</span>
-                                                        <span className="font-medium text-stone-700 dark:text-stone-300">{x.t}</span>
-                                                        {x.detail && <span className="text-stone-400">· {JSON.stringify(x.detail).slice(0, 40)}</span>}
+                                                    <div key={x[0]} className="rounded-2xl px-4 py-3" style={{ background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.12)" }}>
+                                                        <div className="text-2xl md:text-3xl font-extrabold">{ov ? num(x[1]) : "—"}</div>
+                                                        <div className="text-[11px] font-bold uppercase tracking-wider text-white/70 mt-0.5">{x[0]}</div>
                                                     </div>
                                                 );
                                             })}
                                         </div>
                                     </div>
+                                </section>
+
+                                {edu.length > 0 && (
+                                    <button type="button" onClick={function () { go("talepler"); }} className="adm-card w-full text-left p-4 flex items-center gap-4" style={{ borderColor: "#E9D3A0" }}>
+                                        <span className="adm-ico adm-ico-gold"><Ico n="talepler" /></span>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="font-extrabold">{edu.length} eğitim değişikliği talebi bekliyor</div>
+                                            <div className="text-sm adm-muted truncate">{edu.slice(0, 3).map(function (r) { return (r.nickname || "Öğrenci") + " → " + eduLabel(r.to); }).join(" · ")}</div>
+                                        </div>
+                                        <span className="adm-btn adm-btn-gold adm-btn-sm">İncele<Ico n="arrow" /></span>
+                                    </button>
                                 )}
 
-                                <p className="text-xs text-stone-400 text-center">Öğrenci uygulaması bu hesapta açılmaz · v2.0</p>
+                                <div className="grid grid-cols-2 xl:grid-cols-4 gap-3 md:gap-4">
+                                    <Kpi label="Öğrenci" icon="kullanicilar" tone="navy" value={ov ? num(ov.users) : "—"} sub={ov ? num(ov.idle7) + " kişi 7+ gündür pasif" : ""} />
+                                    <Kpi label="Premium" icon="star" tone="gold" value={ov ? num(ov.premium) : "—"} sub={ov && ov.users ? "%" + Math.round((ov.premium / ov.users) * 100) + " oran" : ""} />
+                                    <Kpi label="Çözülen soru" icon="q" tone="green" value={ov ? num(ov.questions) : "—"} sub={ov && ov.users ? "Kişi başı " + num(Math.round(ov.questions / ov.users)) : ""} />
+                                    <Kpi label="Engelli hesap" icon="ban" tone="rose" value={ov ? num(ov.blocked) : "—"} sub={ov ? num(ov.announcements) + " duyuru yayında" : ""} />
+                                </div>
+
+                                <div className="grid lg:grid-cols-3 gap-4">
+                                    <section className="adm-card p-5 lg:col-span-2" aria-labelledby="adm-act-t">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div><h2 id="adm-act-t" className="font-extrabold">Günlük aktif öğrenci</h2><p className="text-xs adm-muted">Son 14 gün · o gün en son çalışan öğrenci sayısı</p></div>
+                                            <span className="adm-chip adm-chip-teal">Bugün {ov ? num(ov.dau) : "—"}</span>
+                                        </div>
+                                        {loading && !ov ? <div className="adm-skel" style={{ height: 140 }}></div> : (
+                                            <div>
+                                                <div className="adm-bars" role="img" aria-label={"Son 14 günün aktif öğrenci sayıları: " + act14.map(function (x) { return fmtDate(x.day) + " " + x.n; }).join(", ")}>
+                                                    {act14.map(function (x, i) {
+                                                        return <div key={x.day} title={fmtDate(x.day) + ": " + x.n} className={"adm-bar" + (i === act14.length - 1 ? " adm-bar-today" : "")} style={{ height: Math.round(((Number(x.n) || 0) / maxAct) * 100) + "%" }}></div>;
+                                                    })}
+                                                </div>
+                                                <div className="flex gap-1.5 mt-2 text-[10px] adm-muted">
+                                                    {act14.map(function (x, i) { return <span key={x.day} className="flex-1 text-center">{i % 2 === act14.length % 2 ? String(x.day).slice(8, 10) : ""}</span>; })}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </section>
+                                    <section className="adm-card p-5" aria-labelledby="adm-lvl-t">
+                                        <h2 id="adm-lvl-t" className="font-extrabold mb-4">Eğitim düzeyi</h2>
+                                        <Dist data={ov && ov.by_level} label={eduLabel} />
+                                        <h2 className="font-extrabold mt-6 mb-4">Platform</h2>
+                                        <Dist data={ov && ov.by_platform} label={platformLabel} meter="adm-meter-gold" />
+                                    </section>
+                                </div>
+
+                                <section className="adm-card p-5" aria-labelledby="adm-last-t">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <h2 id="adm-last-t" className="font-extrabold">Son işlemler</h2>
+                                        <button type="button" className="text-sm font-bold" style={{ color: "var(--a-teal)" }} onClick={function () { go("gecmis"); }}>Tümü</button>
+                                    </div>
+                                    {!audit || !audit.length ? <p className="text-sm adm-muted">{audit ? "Henüz işlem yok." : "İşlem geçmişi için veritabanı yaması gerekli."}</p> : (
+                                        <ul className="divide-y" style={{ borderColor: "var(--a-line2)" }}>
+                                            {audit.slice(0, 5).map(function (a, i) {
+                                                return (
+                                                    <li key={i} className="py-2.5 flex items-center gap-3 text-sm">
+                                                        <span className={"adm-chip " + (a.ok === false ? "adm-chip-rose" : "adm-chip-teal")}>{ACTION_LABELS[a.action] || a.action}</span>
+                                                        <span className="truncate flex-1">{a.target || cleanDetail(a.detail)}</span>
+                                                        <span className="adm-muted text-xs shrink-0">{fmtDateTime(a.at)}</span>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    )}
+                                </section>
                             </div>
                         )}
 
-                        {/* ===== TALEPLER TAB ===== */}
+                        {/* ================= EĞİTİM TALEPLERİ ================= */}
                         {tab === "talepler" && (
                             <div>
-                                <div className="flex items-start justify-between gap-3 mb-2">
-                                    <h1 className="text-2xl md:text-3xl font-black gradient-text">📋 Eğitim Değişiklik Talepleri</h1>
-                                    <button type="button" disabled={busy} onClick={load} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline shrink-0">
-                                        🔄 Yenile
-                                    </button>
-                                </div>
-                                <p className="text-sm text-stone-500 dark:text-stone-400 mb-6">Öğrenci kayıtta seçtiği düzeyi kendi değiştiremez. Onaylarsan sınav tarihi de ÖSYM takvimine çekilir.</p>
-                                
-                                {eduReqs.length === 0 ? (
-                                    <div className="rounded-2xl glass p-12 text-center">
-                                        <div className="text-4xl mb-3">✅</div>
-                                        <p className="text-sm text-stone-400">Bekleyen talep yok.</p>
-                                    </div>
+                                <Head eyebrow="Onay bekleyenler" title="Eğitim değişikliği talepleri" right={refreshBtn}
+                                    sub="Soru çözmeye başlamış öğrenci düzeyini kendisi değiştiremez; talep buraya düşer. Onaylarsan düzeyi ve (geleceğe ait ise) sınav tarihi güncellenir." />
+                                {loading && !edu.length ? <div className="adm-skel" style={{ height: 120 }}></div> : !edu.length ? (
+                                    <Empty title="Bekleyen talep yok" text="Öğrenci Profil → Ayarlar'dan düzey değişikliği istediğinde burada görünür." />
                                 ) : (
-                                    <div className="rounded-2xl glass overflow-hidden">
+                                    <ul className="grid md:grid-cols-2 gap-4">
+                                        {edu.map(function (r) {
+                                            var exam = futureExamDate(r.to);
+                                            var b = busy === "edu:" + r.user_id;
+                                            return (
+                                                <li key={r.user_id} className="adm-card p-5">
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="adm-avatar">{initial(r.nickname)}</span>
+                                                        <div className="min-w-0 flex-1">
+                                                            <div className="font-extrabold truncate">{r.nickname || "Öğrenci"}</div>
+                                                            <div className="text-xs adm-muted">{fmtDateTime(r.at)}{r.questions_total != null ? " · " + num(r.questions_total) + " soru çözmüş" : ""}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex items-center gap-2 mt-4">
+                                                        <span className="adm-chip">{eduLabel(r.from)}</span>
+                                                        <Ico n="arrow" className="w-4 h-4 adm-muted" />
+                                                        <span className="adm-chip adm-chip-teal">{eduLabel(r.to)}</span>
+                                                    </div>
+                                                    <div className="flex gap-2 mt-5">
+                                                        <button type="button" className="adm-btn adm-btn-ok flex-1" disabled={!!busy}
+                                                            onClick={function () {
+                                                                setConfirm({ tone: "ok", icon: "check", title: (r.nickname || "Öğrenci") + " " + eduLabel(r.to) + " düzeyine geçsin mi?", okLabel: "Onayla",
+                                                                    body: exam ? "Sınav tarihi " + fmtDate(exam) + " olarak ayarlanır. Öğrenci uygulamayı açınca yeni düzeyi görür." : "Öğrenci uygulamayı açınca yeni düzeyi görür. Sınav tarihi değişmez (takvimdeki tarih geçmiş).",
+                                                                    onOk: function () { decideEdu(r, true); } });
+                                                            }}>{b ? <span className="adm-spin"></span> : <Ico n="check" />}Onayla</button>
+                                                        <button type="button" className="adm-btn adm-btn-ghost flex-1" disabled={!!busy}
+                                                            onClick={function () {
+                                                                setConfirm({ tone: "danger", icon: "x", title: "Talep reddedilsin mi?", okLabel: "Reddet", body: "Öğrenci " + eduLabel(r.from) + " düzeyinde kalır ve talebinin reddedildiğini görür.", onOk: function () { decideEdu(r, false); } });
+                                                            }}><Ico n="x" />Reddet</button>
+                                                    </div>
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                )}
+                            </div>
+                        )}
+
+                        {/* ================= KULLANICILAR ================= */}
+                        {tab === "kullanicilar" && (
+                            <div>
+                                <Head eyebrow="Hesaplar" title="Kullanıcılar" right={refreshBtn} sub={num(users.length) + " hesap · satıra dokunarak ayrıntı ve işlemleri aç."} />
+                                <div className="adm-card p-4 mb-4">
+                                    <div className="flex flex-col md:flex-row gap-3">
+                                        <label className="relative flex-1">
+                                            <span className="sr-only">Kullanıcı ara</span>
+                                            <Ico n="search" className="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 adm-muted" />
+                                            <input type="search" value={q} onChange={function (e) { setQ(e.target.value); setPage(1); }} placeholder="Ad, e-posta, konum, düzey…" className="adm-input" style={{ paddingLeft: 44 }} />
+                                        </label>
+                                        <label className="flex items-center gap-2 shrink-0">
+                                            <span className="adm-label">Sırala</span>
+                                            <select value={sort} onChange={function (e) { setSort(e.target.value); }} className="adm-input" style={{ width: "auto" }}>
+                                                <option value="recent">Son çalışma</option>
+                                                <option value="questions">Soru sayısı</option>
+                                                <option value="name">Ad (A–Z)</option>
+                                                <option value="joined">Kayıt tarihi</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div className="adm-seg mt-3" role="group" aria-label="Filtre">
+                                        {[["all", "Tümü", counts.all], ["active", "Bugün aktif", counts.active], ["idle7", "7+ gün pasif", counts.idle7], ["premium", "Premium", counts.premium],
+                                            ["pending", "Talep bekleyen", counts.pending], ["blocked", "Engelli", counts.blocked], ["lisans", "Lisans"], ["onlisans", "Ön lisans"], ["ortaogretim", "Ortaöğretim"]].map(function (f) {
+                                            return <button key={f[0]} type="button" aria-pressed={filter === f[0]} onClick={function () { setFilter(f[0]); setPage(1); }}>{f[1]}{f[2] != null ? " · " + f[2] : ""}</button>;
+                                        })}
+                                    </div>
+                                </div>
+
+                                {loading && !users.length ? <div className="adm-skel" style={{ height: 260 }}></div> : !filtered.length ? (
+                                    <Empty icon="search" title="Eşleşen kullanıcı yok" text={users.length ? "Aramayı ya da filtreyi değiştir." : "Liste boş."} />
+                                ) : (
+                                    <div>
+                                        {/* masaüstü tablo */}
+                                        <div className="adm-card overflow-hidden hidden md:block">
+                                            <div className="overflow-x-auto">
+                                                <table className="adm-table">
+                                                    <thead><tr>
+                                                        <th scope="col">Kullanıcı</th><th scope="col">Düzey</th><th scope="col">Son çalışma</th>
+                                                        <th scope="col" style={{ textAlign: "right" }}>Soru</th><th scope="col">Durum</th><th scope="col"><span className="sr-only">Aç</span></th>
+                                                    </tr></thead>
+                                                    <tbody>
+                                                        {pageRows.map(function (u) {
+                                                            var ls = lastSeen(u.last_study_at);
+                                                            return (
+                                                                <tr key={u.user_id} className="adm-row" tabIndex={0} onClick={function () { openDetail(u.user_id); }}
+                                                                    onKeyDown={function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(u.user_id); } }}
+                                                                    aria-label={(u.nickname || "Kullanıcı") + " ayrıntısını aç"}>
+                                                                    <td>
+                                                                        <div className="flex items-center gap-3 min-w-0">
+                                                                            <span className={"adm-avatar" + (u.premium ? " adm-avatar-gold" : "")}>{initial(u.nickname)}</span>
+                                                                            <div className="min-w-0">
+                                                                                <div className="font-bold truncate max-w-[220px]">{u.nickname || "—"}{u.role === "admin" && <span className="adm-chip adm-chip-navy ml-2">Yönetici</span>}</div>
+                                                                                <div className="text-xs adm-muted truncate max-w-[260px]">{u.email || u.location || String(u.user_id || "").slice(0, 8)}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><span className="adm-chip">{eduLabel(u.education_level)}</span></td>
+                                                                    <td><span className={"adm-chip adm-chip-" + ls.tone}>{ls.t}</span></td>
+                                                                    <td style={{ textAlign: "right" }} className="font-bold">{num(u.questions_total)}</td>
+                                                                    <td>
+                                                                        <div className="flex flex-wrap gap-1.5">
+                                                                            {u.premium && <span className="adm-chip adm-chip-gold">Premium</span>}
+                                                                            {u.blocked && <span className="adm-chip adm-chip-rose">Engelli</span>}
+                                                                            {u.edu_request && <span className="adm-chip adm-chip-teal">Talep</span>}
+                                                                            {!u.premium && !u.blocked && !u.edu_request && <span className="adm-muted text-xs">Ücretsiz</span>}
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style={{ textAlign: "right" }}><Ico n="arrow" className="w-4 h-4 adm-muted inline" /></td>
+                                                                </tr>
+                                                            );
+                                                        })}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        {/* mobil kartlar */}
+                                        <ul className="md:hidden space-y-2.5">
+                                            {pageRows.map(function (u) {
+                                                var ls = lastSeen(u.last_study_at);
+                                                return (
+                                                    <li key={u.user_id}>
+                                                        <button type="button" className="adm-card adm-row w-full text-left p-4 flex items-center gap-3" onClick={function () { openDetail(u.user_id); }}>
+                                                            <span className={"adm-avatar" + (u.premium ? " adm-avatar-gold" : "")}>{initial(u.nickname)}</span>
+                                                            <span className="min-w-0 flex-1">
+                                                                <span className="block font-bold truncate">{u.nickname || "—"}</span>
+                                                                <span className="flex flex-wrap gap-1.5 mt-1.5">
+                                                                    <span className="adm-chip">{eduLabel(u.education_level)}</span>
+                                                                    <span className={"adm-chip adm-chip-" + ls.tone}>{ls.t}</span>
+                                                                    {u.premium && <span className="adm-chip adm-chip-gold">Premium</span>}
+                                                                    {u.blocked && <span className="adm-chip adm-chip-rose">Engelli</span>}
+                                                                    {u.edu_request && <span className="adm-chip adm-chip-teal">Talep</span>}
+                                                                </span>
+                                                            </span>
+                                                            <span className="text-right shrink-0"><span className="block font-extrabold">{num(u.questions_total)}</span><span className="text-[11px] adm-muted">soru</span></span>
+                                                        </button>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                        <div className="flex items-center justify-between gap-3 mt-4">
+                                            <span className="text-sm adm-muted">{num((curPage - 1) * PAGE + 1)}–{num(Math.min(curPage * PAGE, filtered.length))} / {num(filtered.length)}</span>
+                                            {pages > 1 && (
+                                                <div className="flex items-center gap-2">
+                                                    <button type="button" className="adm-btn adm-btn-ghost adm-btn-sm" disabled={curPage <= 1} onClick={function () { setPage(curPage - 1); }} aria-label="Önceki sayfa">‹ Önceki</button>
+                                                    <span className="text-sm font-bold">{curPage} / {pages}</span>
+                                                    <button type="button" className="adm-btn adm-btn-ghost adm-btn-sm" disabled={curPage >= pages} onClick={function () { setPage(curPage + 1); }} aria-label="Sonraki sayfa">Sonraki ›</button>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {/* ================= ANALİZ ================= */}
+                        {tab === "analiz" && (
+                            <div>
+                                <Head eyebrow="Öğrenme verisi" title="Analiz" right={refreshBtn} sub="Öğrencilerin en çok zorlandığı konular ve kitle dağılımı." />
+                                <div className="grid lg:grid-cols-3 gap-4">
+                                    <section className="adm-card p-5 lg:col-span-2" aria-labelledby="adm-hard-t">
+                                        <h2 id="adm-hard-t" className="font-extrabold">En çok zorlanılan konular</h2>
+                                        <p className="text-xs adm-muted mb-4">Yanlış ağırlığı toplamına göre ilk 10</p>
+                                        {!hard.length ? <p className="text-sm adm-muted">Henüz yeterli veri yok.</p> : (
+                                            <ol className="space-y-3.5">
+                                                {hard.map(function (h, i) {
+                                                    var top = Number(hard[0].wrong_weight) || 1;
+                                                    return (
+                                                        <li key={i} className="flex items-center gap-3">
+                                                            <span className="w-6 text-sm font-extrabold adm-muted text-right">{i + 1}</span>
+                                                            <div className="flex-1 min-w-0">
+                                                                <div className="flex justify-between gap-3 text-sm mb-1.5">
+                                                                    <span className="font-bold truncate">{h.konu || "—"} <span className="adm-muted font-semibold">· {h.ders || ""}</span></span>
+                                                                    <span className="adm-muted shrink-0">{num(h.users)} kişi</span>
+                                                                </div>
+                                                                <div className="adm-meter adm-meter-rose"><span style={{ width: Math.max(3, Math.round(((Number(h.wrong_weight) || 0) / top) * 100)) + "%" }}></span></div>
+                                                            </div>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ol>
+                                        )}
+                                    </section>
+                                    <section className="adm-card p-5" aria-labelledby="adm-dist-t">
+                                        <h2 id="adm-dist-t" className="font-extrabold mb-4">Eğitim düzeyi</h2>
+                                        <Dist data={ov && ov.by_level} label={eduLabel} />
+                                        <h2 className="font-extrabold mt-6 mb-4">Platform</h2>
+                                        <Dist data={ov && ov.by_platform} label={platformLabel} meter="adm-meter-gold" />
+                                        <h2 className="font-extrabold mt-6 mb-3">Etkileşim</h2>
+                                        <div className="grid grid-cols-2 gap-3 text-center">
+                                            <div className="rounded-2xl p-3" style={{ background: "var(--a-soft)" }}><div className="text-xl font-extrabold">{ov && ov.mau ? "%" + Math.round((ov.dau / ov.mau) * 100) : "—"}</div><div className="text-xs adm-muted">Günlük / aylık</div></div>
+                                            <div className="rounded-2xl p-3" style={{ background: "var(--a-soft)" }}><div className="text-xl font-extrabold">{ov && ov.users ? "%" + Math.round((ov.mau / ov.users) * 100) : "—"}</div><div className="text-xs adm-muted">30 günde aktif</div></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* ================= DUYURULAR ================= */}
+                        {tab === "duyuru" && (
+                            <div>
+                                <Head eyebrow="İletişim" title="Duyurular" right={refreshBtn} sub="Yayınladığın duyuru tüm öğrencilerin Bugün ekranının üstünde bant olarak görünür." />
+                                <div className="grid lg:grid-cols-5 gap-4">
+                                    <section className="adm-card p-5 lg:col-span-3" aria-labelledby="adm-new-t">
+                                        <h2 id="adm-new-t" className="font-extrabold mb-3">Yeni duyuru</h2>
+                                        <label className="block">
+                                            <span className="sr-only">Duyuru metni</span>
+                                            <textarea className="adm-input" maxLength={500} value={annText} onChange={function (e) { setAnnText(e.target.value); }}
+                                                placeholder="Örn: Pazar 10.00'da canlı deneme var, kaydını unutma!" />
+                                        </label>
+                                        <div className="flex justify-between text-xs adm-muted mt-1.5"><span>Düz metin; bağlantı ve biçim eklenmez.</span><span>{annText.length}/500</span></div>
+                                        <div className="mt-4">
+                                            <div className="adm-label mb-2">Yayında kalma süresi</div>
+                                            <div className="adm-seg" role="group" aria-label="Yayın süresi">
+                                                {[["6", "6 saat"], ["24", "1 gün"], ["72", "3 gün"], ["168", "1 hafta"], ["0", "Süresiz"]].map(function (h) {
+                                                    return <button key={h[0]} type="button" aria-pressed={annHours === h[0]} onClick={function () { setAnnHours(h[0]); }}>{h[1]}</button>;
+                                                })}
+                                            </div>
+                                        </div>
+                                        {annText.trim() && (
+                                            <div className="mt-5">
+                                                <div className="adm-label mb-2">Öğrencinin göreceği</div>
+                                                <div className="adm-banner text-sm font-semibold leading-relaxed">📢 {annText.trim()}</div>
+                                            </div>
+                                        )}
+                                        <div className="flex justify-end mt-5">
+                                            <button type="button" className="adm-btn adm-btn-gold" disabled={!annText.trim() || !!busy}
+                                                onClick={function () {
+                                                    setConfirm({ tone: "ok", icon: "duyuru", title: "Duyuru yayınlansın mı?", okLabel: "Yayınla",
+                                                        body: "Tüm öğrencilere " + (annHours === "0" ? "süresiz" : ({ "6": "6 saat", "24": "1 gün", "72": "3 gün", "168": "1 hafta" })[annHours] + " boyunca") + " gösterilir.", onOk: publish });
+                                                }}>{busy === "announce" ? <span className="adm-spin"></span> : <Ico n="duyuru" />}Yayınla</button>
+                                        </div>
+                                    </section>
+                                    <section className="lg:col-span-2" aria-labelledby="adm-ann-t">
+                                        <h2 id="adm-ann-t" className="font-extrabold mb-3">Yayınlananlar <span className="adm-muted font-semibold">· {ann.length}</span></h2>
+                                        {!ann.length ? <Empty icon="duyuru" title="Henüz duyuru yok" /> : (
+                                            <ul className="space-y-3">
+                                                {ann.map(function (a) {
+                                                    return (
+                                                        <li key={a.id || a.createdAt} className="adm-card p-4">
+                                                            <div className="flex items-start gap-3">
+                                                                <p className="text-sm font-semibold leading-relaxed flex-1 min-w-0 break-words">{a.text || "—"}</p>
+                                                                <span className={"adm-chip " + (a.live ? "adm-chip-green" : "")}>{a.live ? "Yayında" : "Süresi doldu"}</span>
+                                                            </div>
+                                                            <div className="flex items-center justify-between gap-3 mt-3">
+                                                                <span className="text-xs adm-muted">{fmtDateTime(a.createdAt)} · {a.expiresAt ? "bitiş " + fmtDateTime(a.expiresAt) : "süresiz"}</span>
+                                                                <button type="button" className="adm-btn adm-btn-soft-danger adm-btn-sm" disabled={!a.id || !!busy} aria-label="Duyuruyu sil"
+                                                                    onClick={function () { setConfirm({ tone: "danger", icon: "trash", title: "Duyuru silinsin mi?", body: "Öğrencilerin ekranındaki bant da kalkar.", okLabel: "Sil", onOk: function () { removeAnn(a); } }); }}>
+                                                                    <Ico n="trash" />Sil
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        )}
+                                    </section>
+                                </div>
+                            </div>
+                        )}
+
+                        {tab === "deneme" && <LiveAdminHost />}
+
+                        {/* ================= İŞLEM GEÇMİŞİ ================= */}
+                        {tab === "gecmis" && (
+                            <div>
+                                <Head eyebrow="Denetim" title="İşlem geçmişi" right={refreshBtn} sub="Yönetici işlemleri ve reddedilen yetkisiz denemeler (son 120 kayıt)." />
+                                {audit === null ? (
+                                    <Empty icon="gecmis" title="İşlem geçmişi kapalı" text="Supabase SQL Editor'da supabase/patch-admin-panel.sql dosyasını çalıştırınca açılır." />
+                                ) : !audit.length ? <Empty icon="gecmis" title="Henüz kayıt yok" /> : (
+                                    <div className="adm-card overflow-hidden">
                                         <div className="overflow-x-auto">
-                                            <table className="w-full text-sm">
-                                                <thead>
-                                                    <tr className="text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50">
-                                                        <th className="font-medium px-4 py-3">Kullanıcı</th>
-                                                        <th className="font-medium px-4 py-3">Şu an</th>
-                                                        <th className="font-medium px-4 py-3">İstenen</th>
-                                                        <th className="font-medium px-4 py-3">Tarih</th>
-                                                        <th className="font-medium px-4 py-3 text-right">İşlem</th>
-                                                    </tr>
-                                                </thead>
+                                            <table className="adm-table">
+                                                <thead><tr><th scope="col">Zaman</th><th scope="col">İşlem</th><th scope="col">Yapan</th><th scope="col">Hedef</th><th scope="col">Ayrıntı</th></tr></thead>
                                                 <tbody>
-                                                    {eduReqs.map(function (r) {
+                                                    {audit.map(function (a, i) {
                                                         return (
-                                                            <tr key={r.user_id} className="border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors">
-                                                                <td className="px-4 py-3">
-                                                                    <div className="font-medium">{r.nickname || "—"}</div>
-                                                                    <div className="text-xs text-stone-400 font-mono">{(r.user_id || "").slice(0, 8)}…</div>
-                                                                </td>
-                                                                <td className="px-4 py-3">
-                                                                    <span className={"text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.from)}>
-                                                                        {eduLabel(r.from)}
-                                                                    </span>
-                                                                </td>
-                                                                <td className="px-4 py-3">
-                                                                    <span className={"text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.to)}>
-                                                                        {eduLabel(r.to)}
-                                                                    </span>
-                                                                </td>
-                                                                <td className="px-4 py-3 text-stone-500 text-xs">{fmtDateTime(r.at)}</td>
-                                                                <td className="px-4 py-3">
-                                                                    <div className="flex gap-2 justify-end">
-                                                                        <button disabled={busy} onClick={function () { act("approve_edu", { user_id: r.user_id, to: r.to }); }}
-                                                                            className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors shadow-sm">
-                                                                            ✅ Onayla
-                                                                        </button>
-                                                                        <button disabled={busy} onClick={function () { act("reject_edu", { user_id: r.user_id }); }}
-                                                                            className="text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-300 dark:border-stone-600 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
-                                                                            ❌ Reddet
-                                                                        </button>
-                                                                    </div>
-                                                                </td>
+                                                            <tr key={i}>
+                                                                <td className="whitespace-nowrap adm-muted text-xs">{fmtDateTime(a.at)}</td>
+                                                                <td><span className={"adm-chip " + (a.ok === false ? "adm-chip-rose" : "adm-chip-teal")}>{a.ok === false ? "Reddedildi · " : ""}{ACTION_LABELS[a.action] || a.action}</span></td>
+                                                                <td className="font-semibold">{a.actor || "—"}</td>
+                                                                <td>{a.target || "—"}</td>
+                                                                <td className="adm-muted text-xs max-w-[280px] truncate">{cleanDetail(a.detail)}</td>
                                                             </tr>
                                                         );
                                                     })}
@@ -610,394 +945,141 @@
                                 )}
                             </div>
                         )}
-
-                        {/* ===== KULLANICILAR TAB ===== */}
-                        {tab === "kullanicilar" && (
-                            <div>
-                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-                                    <h1 className="text-2xl md:text-3xl font-black gradient-text">👥 Kullanıcılar</h1>
-                                    <span className="text-sm text-stone-400 bg-stone-100 dark:bg-stone-800 px-3 py-1 rounded-full">
-                                        {filteredRows.length} kayıt
-                                    </span>
-                                </div>
-
-                                {/* Search & Filters */}
-                                <div className="flex flex-col sm:flex-row gap-3 mb-4">
-                                    <div className="flex-1 relative">
-                                        <input 
-                                            ref={searchInputRef}
-                                            value={q} 
-                                            onChange={function (e) { setQ(e.target.value); setPage(1); }} 
-                                            placeholder="🔍 Ara: ad, konum, eğitim, email…"
-                                            className="w-full px-4 py-3 pl-10 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-                                        />
-                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">🔍</span>
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {[
-                                            { id: "all", t: "Tümü" },
-                                            { id: "premium", t: "⭐ Premium" },
-                                            { id: "lisans", t: "🎓 Lisans" },
-                                            { id: "onlisans", t: "🎓 Ön Lisans" },
-                                            { id: "ortaogretim", t: "🏫 Ortaöğretim" },
-                                            { id: "active", t: "🟢 Bugün Aktif" },
-                                            { id: "idle7", t: "🔴 Pasif 7+" }
-                                        ].map(function (f) {
-                                            var active = filter === f.id;
-                                            return (
-                                                <button key={f.id} onClick={function () { setFilter(f.id); setPage(1); }}
-                                                    className={"shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all " + 
-                                                        (active 
-                                                            ? "bg-indigo-600 text-white shadow-sm" 
-                                                            : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700")}>
-                                                    {f.t}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-
-                                {/* Table */}
-                                <div className="rounded-2xl glass overflow-hidden">
-                                    <div className="overflow-x-auto">
-                                        <table className="w-full text-sm">
-                                            <thead>
-                                                <tr className="text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50">
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("nickname"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Kullanıcı {sortField === "nickname" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("education_level"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Eğitim {sortField === "education_level" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("location"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Konum {sortField === "location" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("target_type"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Kulvar {sortField === "target_type" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("questions_total"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Soru {sortField === "questions_total" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3 cursor-pointer hover:text-stone-700" onClick={function () { setSortField("last_study_at"); setSortOrder(sortOrder === "asc" ? "desc" : "asc"); }}>
-                                                        Son Çalışma {sortField === "last_study_at" && (sortOrder === "asc" ? "↑" : "↓")}
-                                                    </th>
-                                                    <th className="font-medium px-4 py-3">Plan</th>
-                                                    <th className="font-medium px-4 py-3 text-right">İşlem</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {paginatedRows.length === 0 ? (
-                                                    <tr><td colSpan={8} className="px-4 py-12 text-center text-stone-400">Kayıt yok veya liste yetkisi eksik.</td></tr>
-                                                ) : paginatedRows.map(function (u) {
-                                                    var status = getStatusBadge(u.last_study_at);
-                                                    return (
-                                                        <tr key={u.user_id || u.nickname} className={"border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors " + (status.label.includes("pasif") ? "bg-rose-50/30 dark:bg-rose-950/10" : "")}>
-                                                            <td className="px-4 py-3">
-                                                                <div className="font-medium">{u.nickname || "—"}</div>
-                                                                <div className="text-xs text-stone-400 font-mono">{u.email || (u.user_id || "").slice(0, 12)}</div>
-                                                            </td>
-                                                            <td className="px-4 py-3">
-                                                                <span className={"text-[10px] font-medium px-2 py-0.5 rounded-full " + getLevelColor(u.education_level)}>
-                                                                    {eduLabel(u.education_level)}
-                                                                </span>
-                                                            </td>
-                                                            <td className="px-4 py-3 text-xs text-stone-600 dark:text-stone-400">{u.location || "—"}</td>
-                                                            <td className="px-4 py-3 text-xs text-stone-600 dark:text-stone-400">{trackLabel(u.target_type)}</td>
-                                                            <td className="px-4 py-3 font-semibold">{u.questions_total || 0}</td>
-                                                            <td className="px-4 py-3">
-                                                                <div className="text-xs">{fmtDate(u.last_study_at)}</div>
-                                                                <div className="text-[10px] text-stone-400">{status.label}</div>
-                                                            </td>
-                                                            <td className="px-4 py-3">
-                                                                <span className={"text-[10px] font-bold px-2 py-0.5 rounded-full " + (u.premium ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" : "bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400")}>
-                                                                    {u.premium ? "⭐ Premium" : "Ücretsiz"}
-                                                                </span>
-                                                            </td>
-                                                            <td className="px-4 py-3">
-                                                                <div className="flex flex-wrap gap-1 justify-end">
-                                                                    {u.premium ? (
-                                                                        <button disabled={busy} onClick={function () {
-                                                                            if (!confirm("Bu kullanıcının Premium'u alınsın mı?")) return;
-                                                                            act("revoke_premium", { user_id: u.user_id });
-                                                                        }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300 hover:bg-stone-200 transition-colors">
-                                                                            Premium al
-                                                                        </button>
-                                                                    ) : (
-                                                                        <button disabled={busy} onClick={function () {
-                                                                            if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
-                                                                            act("grant_premium", { user_id: u.user_id, days: 30 });
-                                                                        }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 hover:bg-amber-200 transition-colors">
-                                                                            +30g ⭐
-                                                                        </button>
-                                                                    )}
-                                                                    <button disabled={busy} onClick={function () { inspect(u.user_id); }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 hover:bg-indigo-200 transition-colors">
-                                                                        Detay
-                                                                    </button>
-                                                                    <button disabled={busy} onClick={function () { if (confirm("Bu kullanıcı engellensin mi?")) act("block", { user_id: u.user_id }); }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 hover:bg-rose-200 transition-colors">
-                                                                        🚫
-                                                                    </button>
-                                                                    <button disabled={busy} onClick={function () {
-                                                                        if (u.user_id === (student.userProfile && student.userProfile.authUserId)) {
-                                                                            alert("Kendi hesabını silemezsin.");
-                                                                            return;
-                                                                        }
-                                                                        if (!confirm("Bu kullanıcı kalıcı silinsin mi? Giriş yapamaz, verisi gider.")) return;
-                                                                        if (!confirm("Emin misin? Bu geri alınmaz.")) return;
-                                                                        act("delete_user", { user_id: u.user_id });
-                                                                    }} className="text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition-colors">
-                                                                        Sil
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    );
-                                                })}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                {/* Pagination */}
-                                {totalPages > 1 && (
-                                    <div className="flex items-center justify-between gap-4 mt-4">
-                                        <div className="text-xs text-stone-400">
-                                            {((page - 1) * pageSize + 1)} - {Math.min(page * pageSize, filteredRows.length)} / {filteredRows.length}
-                                        </div>
-                                        <div className="flex gap-1">
-                                            <button onClick={function () { setPage(Math.max(1, page - 1)); }} disabled={page === 1}
-                                                className="px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
-                                                ←
-                                            </button>
-                                            {Array.from({ length: Math.min(5, totalPages) }, function (_, i) {
-                                                var p = i + 1;
-                                                return (
-                                                    <button key={p} onClick={function () { setPage(p); }}
-                                                        className={"px-3 py-1.5 rounded-lg text-sm font-medium transition-colors " + 
-                                                            (page === p ? "bg-indigo-600 text-white" : "border border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800")}>
-                                                        {p}
-                                                    </button>
-                                                );
-                                            })}
-                                            <button onClick={function () { setPage(Math.min(totalPages, page + 1)); }} disabled={page === totalPages}
-                                                className="px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
-                                                →
-                                            </button>
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* Detail Panel */}
-                                {detail && (
-                                    <div className="mt-4 rounded-2xl glass p-5 border-l-4 border-l-indigo-500 slide-up">
-                                        <div className="flex justify-between items-start">
-                                            <div>
-                                                <p className="font-bold text-lg">{detail.nickname || "—"}</p>
-                                                <p className="text-sm text-stone-500">{detail.email || detail.user_id}</p>
-                                                <div className="flex flex-wrap gap-2 mt-2">
-                                                    <span className="text-xs bg-indigo-50 dark:bg-indigo-950/30 px-2 py-0.5 rounded-full">📝 {detail.questions_total || (detail.counters && detail.counters.questions) || 0} soru</span>
-                                                    <span className="text-xs bg-rose-50 dark:bg-rose-950/30 px-2 py-0.5 rounded-full">❌ {detail.wrongCount || 0} yanlış</span>
-                                                    <span className="text-xs bg-emerald-50 dark:bg-emerald-950/30 px-2 py-0.5 rounded-full">🎯 {detail.target_type || "—"}</span>
-                                                    <span className="text-xs bg-stone-50 dark:bg-stone-800 px-2 py-0.5 rounded-full">📱 {detail.platform || "web"}</span>
-                                                    <span className="text-xs bg-teal-50 dark:bg-teal-950/30 px-2 py-0.5 rounded-full">📍 {detail.location || locLabel(detail.userProfile && detail.userProfile.location)}</span>
-                                                </div>
-                                            </div>
-                                            <button onClick={function () { setDetail(null); }} className="text-stone-400 hover:text-stone-600">✕</button>
-                                        </div>
-                                        <div className="flex flex-wrap gap-2 mt-4">
-                                            {detail.premium ? (
-                                                <button disabled={busy} onClick={function () {
-                                                    if (!confirm("Premium alınsın mı?")) return;
-                                                    act("revoke_premium", { user_id: detail.user_id });
-                                                }} className="text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700">Premium al</button>
-                                            ) : (
-                                                <button disabled={busy} onClick={function () {
-                                                    if (!confirm("30 gün Premium verilsin mi?")) return;
-                                                    act("grant_premium", { user_id: detail.user_id, days: 30 });
-                                                }} className="text-xs font-medium px-3 py-1.5 rounded-lg bg-amber-100 text-amber-700">+30g Premium</button>
-                                            )}
-                                            <button disabled={busy} onClick={function () {
-                                                if (detail.user_id === (student.userProfile && student.userProfile.authUserId)) {
-                                                    alert("Kendi hesabını silemezsin.");
-                                                    return;
-                                                }
-                                                if (!confirm("Kullanıcı kalıcı silinsin mi? Bu geri alınmaz.")) return;
-                                                act("delete_user", { user_id: detail.user_id });
-                                            }} className="text-xs font-medium px-3 py-1.5 rounded-lg bg-rose-600 text-white">Kullanıcıyı sil</button>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-
-                        {/* ===== ANALİZ TAB ===== */}
-                        {tab === "analiz" && (
-                            <div>
-                                <h1 className="text-2xl md:text-3xl font-black gradient-text mb-6">📈 Zor Konular</h1>
-                                <p className="text-sm text-stone-500 dark:text-stone-400 mb-4">Türkiye genelinde yanlış ağırlığı en yüksek 10 konu.</p>
-                                
-                                {hard.length === 0 ? (
-                                    <div className="rounded-2xl glass p-12 text-center">
-                                        <div className="text-4xl mb-3">📊</div>
-                                        <p className="text-sm text-stone-400">Henüz yeterli veri yok veya admin_hard_topics SQL’i çalıştırılmadı.</p>
-                                    </div>
-                                ) : (
-                                    <div className="rounded-2xl glass divide-y divide-stone-100 dark:divide-stone-800">
-                                        {hard.map(function (h, i) {
-                                            var colors = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1", "#8b5cf6", "#d946ef", "#f43f5e", "#0ea5e9"];
-                                            return (
-                                                <div key={i} className="px-5 py-4 flex items-center justify-between hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors">
-                                                    <div className="flex items-center gap-4">
-                                                        <span className="text-xs font-bold text-stone-400 w-6">{i + 1}</span>
-                                                        <div className="h-8 w-8 rounded-lg flex items-center justify-center text-sm font-bold text-white" style={{ background: colors[i % colors.length] }}>
-                                                            {h.ders ? h.ders[0] : "?"}
-                                                        </div>
-                                                        <div>
-                                                            <div className="font-medium">{h.konu || "—"}</div>
-                                                            <div className="text-xs text-stone-400">{h.ders || "—"}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="text-right">
-                                                        <div className="font-semibold text-rose-600">{h.wrong_weight || 0}</div>
-                                                        <div className="text-[10px] text-stone-400">{h.users || 0} kullanıcı</div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                )}
-
-                                {/* Ekstra Analiz Kartları */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                                    <div className="rounded-2xl glass p-5">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">📚 Toplam Konu</p>
-                                        <p className="text-2xl font-bold gradient-text mt-1">{hard.length}</p>
-                                        <p className="text-xs text-stone-400 mt-1">En çok yanlış yapılan konular</p>
-                                    </div>
-                                    <div className="rounded-2xl glass p-5">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">🎯 En Zor Ders</p>
-                                        <p className="text-2xl font-bold text-rose-600 mt-1">
-                                            {hard.length > 0 ? hard.reduce(function(a, b) { return (a.wrong_weight || 0) > (b.wrong_weight || 0) ? a : b; }).ders || "—" : "—"}
-                                        </p>
-                                        <p className="text-xs text-stone-400 mt-1">En yüksek yanlış ağırlığı</p>
-                                    </div>
-                                    <div className="rounded-2xl glass p-5">
-                                        <p className="text-xs text-stone-400 font-medium uppercase tracking-wider">👥 Etkilenen Kullanıcı</p>
-                                        <p className="text-2xl font-bold text-indigo-600 mt-1">
-                                            {hard.reduce(function(sum, h) { return sum + (h.users || 0); }, 0)}
-                                        </p>
-                                        <p className="text-xs text-stone-400 mt-1">Toplam zor konu gören</p>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {tab === "deneme" && <LiveAdminHost />}
-
-                        {/* ===== İÇERİK / DUYURU TAB ===== */}
-                        {tab === "icerik" && (
-                            <div>
-                                <h1 className="text-2xl md:text-3xl font-black gradient-text mb-6">📢 Duyuru</h1>
-                                <p className="text-sm text-stone-500 dark:text-stone-400 mb-4">Öğrencilerin "Bugün" ekranında göreceği duyuruyu yayınla.</p>
-                                
-                                <div className="rounded-2xl glass p-6">
-                                    <textarea 
-                                        ref={announceRef}
-                                        value={announce} 
-                                        onChange={function (e) { setAnnounce(e.target.value); }} 
-                                        rows={5}
-                                        className="w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none"
-                                        placeholder="📝 Duyuru metnini yaz... Örn: 'Yarın 14:00'de canlı deneme var!'"
-                                    />
-                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-4">
-                                        <div className="flex items-center gap-2">
-                                            <label className="text-xs text-stone-500 shrink-0">Süre</label>
-                                            <select value={announceHours} onChange={function (e) { setAnnounceHours(e.target.value); }}
-                                                className="px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm">
-                                                <option value="1">1 saat</option>
-                                                <option value="3">3 saat</option>
-                                                <option value="6">6 saat</option>
-                                                <option value="12">12 saat</option>
-                                                <option value="24">24 saat</option>
-                                                <option value="48">2 gün</option>
-                                                <option value="72">3 gün</option>
-                                                <option value="168">7 gün</option>
-                                                <option value="0">Süresiz</option>
-                                            </select>
-                                            <span className="text-xs text-stone-400">{announce.length}/500</span>
-                                        </div>
-                                        <button 
-                                            disabled={busy || !announce.trim()} 
-                                            onClick={function () { 
-                                                act("announce", { text: announce, hours: Number(announceHours) }); 
-                                                setAnnounce(""); 
-                                                if (announceRef.current) announceRef.current.focus();
-                                            }}
-                                            className="px-6 py-2.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all">
-                                            {busy ? "⏳ Yayınlanıyor..." : "📢 Yayınla"}
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="mt-6">
-                                    <h2 className="text-sm font-black uppercase tracking-widest text-stone-400 mb-3">Yayınlanan duyurular</h2>
-                                    {!announceList.length ? (
-                                        <p className="text-sm text-stone-400">Henüz kayıt yok.</p>
-                                    ) : (
-                                        <ul className="space-y-3">
-                                            {announceList.map(function (a) {
-                                                return (
-                                                    <li key={a.id || a.createdAt} className="rounded-2xl glass p-4">
-                                                        <div className="flex flex-wrap items-start justify-between gap-3">
-                                                            <div className="min-w-0 flex-1">
-                                                                <p className="text-sm font-semibold leading-snug">{a.text || "—"}</p>
-                                                                <p className="text-xs text-stone-400 mt-2">
-                                                                    {fmtDateTime(a.createdAt)}
-                                                                    {a.expiresAt ? " · bitiş " + fmtDateTime(a.expiresAt) : " · süresiz"}
-                                                                </p>
-                                                            </div>
-                                                            <div className="flex items-center gap-2 shrink-0">
-                                                                <span className={"text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md " + (a.live ? "bg-emerald-100 text-emerald-700" : "bg-stone-200 text-stone-600")}>
-                                                                    {a.live ? "Yayında" : "Süresi doldu"}
-                                                                </span>
-                                                                <button type="button" disabled={busy || !a.id}
-                                                                    onClick={function () {
-                                                                        if (!a.id) return;
-                                                                        if (window.confirm("Bu duyuru silinsin mi? Bant da kalkar.")) {
-                                                                            act("delete_announce", { id: a.id });
-                                                                        }
-                                                                    }}
-                                                                    className="px-3 py-1.5 rounded-xl border border-rose-200 text-rose-700 text-xs font-semibold hover:bg-rose-50 disabled:opacity-40">
-                                                                    Sil
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                );
-                                            })}
-                                        </ul>
-                                    )}
-                                </div>
-
-                                <div className="mt-6 rounded-2xl glass p-5 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border border-indigo-200 dark:border-indigo-800/30">
-                                    <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2">💡 İpucu</p>
-                                    <ul className="text-xs text-stone-600 dark:text-stone-400 space-y-1">
-                                        <li>• Duyuru tüm kullanıcılara gönderilir</li>
-                                        <li>• "Bugün" ekranının üst kısmında görünür</li>
-                                        <li>• Tüm yayınlar aşağıda durur; vakti gelince sen silersin</li>
-                                        <li>• Süre dolunca öğrenci bandı kalkar, kayıt panelde kalır</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        )}
                     </main>
                 </div>
+
+                {/* ---------- kullanıcı ayrıntısı ---------- */}
+                {sel && (
+                    <div>
+                        <div className="adm-scrim" onClick={closeDetail}></div>
+                        <div className="adm-drawer" role="dialog" aria-modal="true" aria-labelledby="adm-user-t">
+                            <div className="adm-drawer-head">
+                                <div className="adm-hero-grid"></div>
+                                <div className="relative flex items-start gap-3">
+                                    <span className={"adm-avatar" + (selUser && selUser.premium ? " adm-avatar-gold" : "")} style={{ width: 52, height: 52, fontSize: 20, borderRadius: 16 }}>{initial((detail && detail.nickname) || (selUser && selUser.nickname))}</span>
+                                    <div className="min-w-0 flex-1">
+                                        <h2 id="adm-user-t" className="text-xl font-extrabold truncate">{(detail && detail.nickname) || (selUser && selUser.nickname) || "Kullanıcı"}</h2>
+                                        <div className="text-sm text-white/75 truncate">{(detail && (detail.email || detail.name)) || (selUser && selUser.email) || ""}</div>
+                                    </div>
+                                    <button type="button" className="adm-btn adm-btn-glass adm-btn-sm" onClick={closeDetail} aria-label="Kapat"><Ico n="x" /></button>
+                                </div>
+                            </div>
+                            <div className="p-5 space-y-4">
+                                {detailErr && <div className="adm-alert adm-alert-err" role="alert"><Ico n="warn" className="w-5 h-5 shrink-0" /><span>{detailErr}</span></div>}
+                                {!detail && !detailErr && <div className="space-y-3"><div className="adm-skel" style={{ height: 90 }}></div><div className="adm-skel" style={{ height: 140 }}></div></div>}
+                                {detail && (
+                                    <div className="space-y-4">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            <span className="adm-chip adm-chip-navy">{eduLabel(detail.education_level)}</span>
+                                            <span className="adm-chip">{trackLabel(detail.target_type)}</span>
+                                            <span className="adm-chip">{platformLabel(detail.platform)}</span>
+                                            {detail.location && <span className="adm-chip">{detail.location}</span>}
+                                            {detail.premium && <span className="adm-chip adm-chip-gold">Premium{detail.premium_until ? " · " + fmtDate(detail.premium_until) + "'e kadar" : ""}</span>}
+                                            {detail.blocked && <span className="adm-chip adm-chip-rose">Engelli</span>}
+                                            {detail.role === "admin" && <span className="adm-chip adm-chip-navy">Yönetici</span>}
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-2.5">
+                                            {[["Soru", num(detail.questions_total || (detail.counters && detail.counters.questions))], ["Yanlış defteri", num(detail.wrong_count)],
+                                                ["Seri", num(detail.streak && (detail.streak.current || detail.streak.count))]].map(function (x) {
+                                                return <div key={x[0]} className="adm-card p-3 text-center"><div className="text-xl font-extrabold">{x[1]}</div><div className="text-[11px] adm-muted font-bold">{x[0]}</div></div>;
+                                            })}
+                                        </div>
+                                        <div className="adm-card p-4 text-sm space-y-2">
+                                            {[["Son çalışma", lastSeen(detail.last_study_at).t + (detail.last_study_at ? " · " + fmtDate(detail.last_study_at) : "")],
+                                                ["Kayıt", fmtDate(detail.created_at)], ["Sınav tarihi", fmtDate(detail.exam_date)],
+                                                ["Son eşitleme", fmtDateTime(detail.updated_at)], ["Kullanıcı kimliği", detail.user_id]].map(function (x) {
+                                                return <div key={x[0]} className="flex justify-between gap-4"><span className="adm-muted shrink-0">{x[0]}</span><span className={"text-right break-all " + (x[0] === "Kullanıcı kimliği" ? "font-mono text-xs adm-muted" : "font-semibold")}>{x[1] || "—"}</span></div>;
+                                            })}
+                                        </div>
+                                        {Array.isArray(detail.days) && detail.days.length > 0 && (
+                                            <div className="adm-card p-4">
+                                                <div className="font-extrabold text-sm mb-3">Son çalışma günleri</div>
+                                                <ul className="space-y-2">
+                                                    {detail.days.slice(0, 7).map(function (d) {
+                                                        var pct = d.q ? Math.round((d.c / d.q) * 100) : 0;
+                                                        return (
+                                                            <li key={d.day} className="flex items-center gap-3 text-sm">
+                                                                <span className="w-16 shrink-0 adm-muted">{fmtDate(d.day).replace(/ \d{4}$/, "")}</span>
+                                                                <div className="adm-meter flex-1"><span style={{ width: pct + "%" }}></span></div>
+                                                                <span className="w-28 text-right shrink-0 font-semibold text-xs whitespace-nowrap">{d.q} soru · %{pct}</span>
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        )}
+                                        {detail.edu_request && (
+                                            <div className="adm-card p-4 text-sm flex items-center gap-3">
+                                                <span className="adm-ico adm-ico-gold"><Ico n="talepler" /></span>
+                                                <div className="flex-1">
+                                                    <div className="font-bold">Eğitim talebi: {eduLabel(detail.edu_request.from)} → {eduLabel(detail.edu_request.to)}</div>
+                                                    <div className="adm-muted text-xs">{({ pending: "Onay bekliyor", rejected: "Reddedildi", approved: "Onaylandı" })[detail.edu_request.status] || detail.edu_request.status} · {fmtDateTime(detail.edu_request.at)}</div>
+                                                </div>
+                                                {detail.edu_request.status === "pending" && <button type="button" className="adm-btn adm-btn-ghost adm-btn-sm" onClick={function () { closeDetail(); go("talepler"); }}>Talepler</button>}
+                                            </div>
+                                        )}
+
+                                        {detail.role !== "admin" && (
+                                            <div className="space-y-3">
+                                                <div className="adm-card p-4">
+                                                    <div className="flex items-center gap-2 font-extrabold text-sm mb-3"><Ico n="star" className="w-5 h-5" style={{ color: "var(--a-gold)" }} />Premium</div>
+                                                    {detail.premium ? (
+                                                        <button type="button" className="adm-btn adm-btn-ghost w-full" disabled={!!busy}
+                                                            onClick={function () { setConfirm({ tone: "danger", icon: "star", title: "Premium kaldırılsın mı?", body: (detail.nickname || "Kullanıcı") + " ücretsiz plana döner.", okLabel: "Premium'u kaldır", onOk: function () { setPremium(selUser, 0); } }); }}>
+                                                            {busy === "premium:" + detail.user_id ? <span className="adm-spin"></span> : null}Premium'u kaldır
+                                                        </button>
+                                                    ) : (
+                                                        <div>
+                                                            <div className="adm-seg mb-3" role="group" aria-label="Premium süresi">
+                                                                {[7, 30, 90, 365].map(function (d) { return <button key={d} type="button" aria-pressed={grantDays === d} onClick={function () { setGrantDays(d); }}>{d === 365 ? "1 yıl" : d + " gün"}</button>; })}
+                                                            </div>
+                                                            <button type="button" className="adm-btn adm-btn-gold w-full" disabled={!!busy}
+                                                                onClick={function () { var d = grantDays; setConfirm({ tone: "ok", icon: "star", title: d + " gün Premium verilsin mi?", body: (detail.nickname || "Kullanıcı") + " için Premium bugünden itibaren " + d + " gün açık kalır.", okLabel: "Premium ver", onOk: function () { setPremium(selUser, d); } }); }}>
+                                                                {busy === "premium:" + detail.user_id ? <span className="adm-spin"></span> : <Ico n="star" />}Premium ver
+                                                            </button>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <div className="adm-card p-4">
+                                                    <div className="font-extrabold text-sm mb-3">Hesap</div>
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        {detail.blocked ? (
+                                                            <button type="button" className="adm-btn adm-btn-ok" disabled={!!busy}
+                                                                onClick={function () { setConfirm({ tone: "ok", icon: "check", title: "Engel kaldırılsın mı?", body: (detail.nickname || "Kullanıcı") + " uygulamayı yeniden kullanabilir.", okLabel: "Engeli kaldır", onOk: function () { setBlocked(selUser, false); } }); }}>
+                                                                <Ico n="check" />Engeli kaldır
+                                                            </button>
+                                                        ) : (
+                                                            <button type="button" className="adm-btn adm-btn-soft-danger" disabled={!!busy}
+                                                                onClick={function () { setConfirm({ tone: "danger", icon: "ban", title: "Kullanıcı engellensin mi?", body: (detail.nickname || "Kullanıcı") + " giriş yapınca \"Hesap kısıtlı\" ekranını görür. İstediğin zaman kaldırabilirsin.", okLabel: "Engelle", onOk: function () { setBlocked(selUser, true); } }); }}>
+                                                                <Ico n="ban" />Engelle
+                                                            </button>
+                                                        )}
+                                                        <button type="button" className="adm-btn adm-btn-danger" disabled={!!busy || detail.user_id === myId}
+                                                            onClick={function () { setConfirm({ tone: "danger", icon: "trash", title: "Hesap kalıcı olarak silinsin mi?", body: (detail.nickname || "Kullanıcı") + " ve tüm çalışma verisi silinir, bir daha giriş yapamaz. Bu işlem geri alınamaz.", okLabel: "Kalıcı olarak sil", onOk: function () { deleteUser(selUser); } }); }}>
+                                                            <Ico n="trash" />Sil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {confirm && <Confirm {...confirm} onClose={function () { setConfirm(null); }} />}
+                {toast && (
+                    <div className={"adm-toast " + (toast.ok ? "adm-toast-ok" : "adm-toast-err")} role={toast.ok ? "status" : "alert"}>
+                        <Ico n={toast.ok ? "check" : "warn"} className="w-5 h-5 shrink-0 mt-0.5" />
+                        <span className="flex-1">{toast.text}</span>
+                        <button type="button" onClick={function () { setToast(null); }} aria-label="Bildirimi kapat" className="shrink-0 opacity-80 hover:opacity-100"><Ico n="x" className="w-5 h-5" /></button>
+                    </div>
+                )}
             </div>
         );
     }
-
-    // ============================================================
-    // EXPORT
-    // ============================================================
 
     // Canlı deneme yönetimi ayrı dosyada; sekme açılınca yüklenir.
     function LiveAdminHost() {
@@ -1006,14 +1088,13 @@
         React.useEffect(function () {
             if (Cmp || !window.JsxLoader) return;
             window.JsxLoader.load("LiveExamAdmin", "js/components/LiveExamAdmin.jsx").then(function (C) {
-                if (C) setCmp(function () { return C; }); else setErr("Yüklenemedi.");
-            }).catch(function (e) { setErr(String(e && e.message || e)); });
+                if (C) setCmp(function () { return C; }); else setErr("Canlı deneme yönetimi yüklenemedi. Sayfayı yenile.");
+            }).catch(function (e) { setErr("Canlı deneme yönetimi yüklenemedi: " + String(e && e.message || e)); });
         }, []);
-        if (err) return <p className="text-rose-600">{err}</p>;
-        return Cmp ? <Cmp /> : <p>Yükleniyor…</p>;
+        if (err) return <div className="adm-alert adm-alert-err" role="alert">{err}</div>;
+        return Cmp ? <Cmp /> : <div className="adm-skel" style={{ height: 240 }}></div>;
     }
 
     window.KpssComponents = window.KpssComponents || {};
     window.KpssComponents.AdminDashboard = AdminDashboard;
-
 })();

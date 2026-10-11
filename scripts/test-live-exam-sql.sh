@@ -21,3 +21,15 @@ for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done   # iki 
 run supabase/patch-security-2026-10.sql   # güvenlik yaması canlı deneme akışını bozmamalı
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/live-exam-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null
+
+# Yönetim paneli veritabanı API'si (patch-admin-panel.sql): ayrı, temiz bir veritabanında
+DB=admin_panel_test
+psql -q -d postgres -c "drop database if exists $DB" -c "create database $DB" >/dev/null
+run supabase/tests/supabase-shim.sql
+# Supabase gibi: yeni tablo/fonksiyonlara anon + authenticated için varsayılan yetkiler (güvenlik yaması daraltır)
+psql -q -d $DB -c "alter default privileges in schema public grant all on tables to anon, authenticated; alter default privileges in schema public grant all on sequences to anon, authenticated; alter default privileges in schema public grant execute on functions to anon, authenticated;" >/dev/null
+for f in schema patch-saas patch-announce-expires patch-hardening patch-privilege-lock patch-admin-location patch-account-delete patch-security-2026-10 patch-admin-panel patch-admin-panel; do
+  run supabase/$f.sql   # yönetim yaması iki kez: tekrar çalıştırmak güvenli olmalı
+done
+psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/admin-panel-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
+psql -d $DB -Atc "select 1" >/dev/null

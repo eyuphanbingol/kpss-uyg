@@ -1,4 +1,5 @@
-/*jsx:babel-7.29.9-react-classic:74987:1x8sg1l*/
+/*jsx:babel-7.29.9-react-classic:87304:5k5urn*/
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
     useEffect,
@@ -9,83 +10,128 @@
   } = React;
 
   // ============================================================
-  // YARDIMCI FONKSİYONLAR
+  // Yönetim paneli. Veriler önce veritabanı fonksiyonlarından (supabase/patch-admin-panel.sql)
+  // okunur; o yama henüz kurulmamışsa "admin-action" sunucu fonksiyonuna düşülür ve panelin
+  // üstünde kurulum uyarısı çıkar. Hiçbir hata sessizce yutulmaz.
   // ============================================================
 
-  function fmtDate(x) {
-    if (!x) return "—";
-    try {
-      var d = new Date(x);
-      if (isNaN(d.getTime())) return String(x).slice(0, 10);
-      return d.toLocaleDateString("tr-TR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
-      });
-    } catch (e) {
-      return "—";
-    }
+  var LEVELS = [{
+    id: "lisans",
+    t: "Lisans"
+  }, {
+    id: "onlisans",
+    t: "Ön lisans"
+  }, {
+    id: "ortaogretim",
+    t: "Ortaöğretim"
+  }];
+  var ACTION_LABELS = {
+    grant_premium: "Premium verildi",
+    revoke_premium: "Premium kaldırıldı",
+    block: "Engellendi",
+    unblock: "Engel kaldırıldı",
+    delete_user: "Kullanıcı silindi",
+    approve_edu: "Eğitim talebi onaylandı",
+    reject_edu: "Eğitim talebi reddedildi",
+    announce: "Duyuru yayınlandı",
+    delete_announce: "Duyuru silindi",
+    submit_edu: "Eğitim talebi gönderildi",
+    delete_my_account: "Hesabını sildi",
+    inspect_user: "Kullanıcı incelendi",
+    user_list: "Liste açıldı",
+    list_edu_requests: "Talepler açıldı",
+    list_announcements: "Duyurular açıldı"
+  };
+  function num(n) {
+    return (Number(n) || 0).toLocaleString("tr-TR");
   }
-  function fmtTime(x) {
-    if (!x) return "—";
-    try {
-      var d = new Date(x);
-      if (isNaN(d.getTime())) return String(x).slice(0, 10);
-      return d.toLocaleTimeString("tr-TR", {
-        hour: "2-digit",
-        minute: "2-digit"
-      });
-    } catch (e) {
-      return "—";
-    }
+  function toDate(x) {
+    if (!x) return null;
+    var d = new Date(String(x).length === 10 ? x + "T12:00:00" : x);
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function fmtDate(x) {
+    var d = toDate(x);
+    return d ? d.toLocaleDateString("tr-TR", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    }) : "—";
   }
   function fmtDateTime(x) {
-    if (!x) return "—";
-    try {
-      var d = new Date(x);
-      if (isNaN(d.getTime())) return String(x).slice(0, 10);
-      return d.toLocaleDateString("tr-TR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
-      }) + " " + d.toLocaleTimeString("tr-TR", {
-        hour: "2-digit",
-        minute: "2-digit"
-      });
-    } catch (e) {
-      return "—";
-    }
+    var d = toDate(x);
+    return d ? d.toLocaleDateString("tr-TR", {
+      day: "numeric",
+      month: "short"
+    }) + " " + d.toLocaleTimeString("tr-TR", {
+      hour: "2-digit",
+      minute: "2-digit"
+    }) : "—";
   }
-  function locLabel(loc) {
-    if (!loc) return "—";
-    if (typeof loc === "string") return loc || "—";
-    var city = loc.city || loc.region || "";
-    var country = loc.country || loc.countryCode || "";
-    if (city && country) return city + ", " + country;
-    return city || country || loc.tz || "—";
+  function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function daysSince(x) {
+    if (!x) return Infinity;
+    var a = toDate(String(x).slice(0, 10));
+    if (!a) return Infinity;
+    var b = toDate(todayStr());
+    return Math.round((b - a) / 86400000);
+  }
+  function lastSeen(x) {
+    var n = daysSince(x);
+    if (n === Infinity) return {
+      t: "Hiç çalışmadı",
+      tone: "rose"
+    };
+    if (n <= 0) return {
+      t: "Bugün",
+      tone: "green"
+    };
+    if (n === 1) return {
+      t: "Dün",
+      tone: "green"
+    };
+    if (n < 7) return {
+      t: n + " gün önce",
+      tone: "gold"
+    };
+    return {
+      t: n + " gün önce",
+      tone: "rose"
+    };
   }
   function eduLabel(id) {
-    if (id === "onlisans") return "Ön lisans";
-    if (id === "ortaogretim") return "Ortaöğretim";
-    if (id === "lisans") return "Lisans";
-    return id || "—";
+    var l = LEVELS.filter(function (x) {
+      return x.id === id;
+    })[0];
+    return l ? l.t : id || "—";
   }
   function trackLabel(id) {
-    var map = {
-      "B": "B Grubu",
-      "A": "A Grubu",
-      "ogretmen": "Öğretmenlik",
-      "dhbt": "DHBT"
-    };
-    return map[id] || id || "—";
+    return {
+      B: "B grubu",
+      A: "A grubu",
+      ogretmen: "Öğretmenlik",
+      dhbt: "DHBT"
+    }[id] || id || "—";
   }
-  function getLevelColor(level) {
-    var map = {
-      "lisans": "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
-      "onlisans": "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300",
-      "ortaogretim": "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
-    };
-    return map[level] || "bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300";
+  function platformLabel(id) {
+    return {
+      web: "Web",
+      ios: "iOS",
+      android: "Android"
+    }[id] || id || "—";
+  }
+  function cleanDetail(s) {
+    return /^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(String(s || "")) ? "" : s || "";
+  }
+  function initial(s) {
+    return String(s || "?").trim().charAt(0).toLocaleUpperCase("tr-TR") || "?";
+  }
+  function futureExamDate(level) {
+    var d = window.KpssConfig && window.KpssConfig.examDateByLevel && window.KpssConfig.examDateByLevel[level];
+    return d && d > todayStr() ? d : null;
   }
   function parseAnnounceRow(row) {
     var raw = String(row && row.body || "");
@@ -96,1094 +142,1891 @@
       raw = raw.slice(m[0].length);
     }
     var ts = exp ? new Date(exp).getTime() : NaN;
-    var live = !exp || isFinite(ts) && ts > Date.now();
+    var published = !row || row.published !== false;
     return {
       id: row && row.id,
       text: raw.trim(),
       expiresAt: exp || null,
       createdAt: row && row.created_at,
-      published: row && row.published !== false,
-      live: live && row && row.published !== false
+      live: published && (!exp || isFinite(ts) && ts > Date.now())
     };
   }
-  function getStatusBadge(lastStudyAt) {
-    if (!lastStudyAt) return {
-      label: "Hiç çalışmamış",
-      color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300"
+
+  // ---------- hata metni ----------
+  function errText(e, fallback) {
+    if (!e) return fallback || "İşlem tamamlanamadı.";
+    if (typeof e === "string") return e;
+    if (e.hint && /[a-zçğıöşü]/i.test(e.hint) && /[çğıöşüÇĞİÖŞÜ]|\s/.test(e.hint) && !/^(perhaps|try|no function)/i.test(e.hint)) return e.hint;
+    if (e.tr) return e.tr;
+    return window.trError ? window.trError(e, fallback || "İşlem tamamlanamadı.") : fallback || "İşlem tamamlanamadı.";
+  }
+  function isMissingFn(e) {
+    var s = String(e && e.message || "") + " " + String(e && e.code || "");
+    return /PGRST202|42883|could not find the function|function .* does not exist|schema cache/i.test(s);
+  }
+
+  // ---------- sunucu fonksiyonu (yedek yol) ----------
+  async function edge(sb, action, body) {
+    if (!sb.functions) throw {
+      tr: "Sunucu fonksiyonu kullanılamıyor."
     };
-    var diff = (Date.now() - new Date(lastStudyAt).getTime()) / (1000 * 60 * 60 * 24);
-    if (diff < 1) return {
-      label: "🟢 Bugün aktif",
-      color: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
+    var r = await sb.functions.invoke("admin-action", {
+      body: Object.assign({
+        action: action
+      }, body || {})
+    });
+    if (r.error) {
+      var ctx = r.error.context,
+        b = null;
+      try {
+        if (ctx && typeof ctx.json === "function") b = await ctx.json();else if (ctx && ctx.body) b = ctx.body;
+      } catch (e) {
+        b = null;
+      }
+      var status = ctx && ctx.status;
+      throw {
+        tr: b && b.error || (status === 403 ? "Bu işlem için yetkin yok." : "Sunucu fonksiyonuna ulaşılamadı (admin-action)."),
+        message: r.error.message
+      };
+    }
+    var d = r.data;
+    if (typeof d === "string") {
+      try {
+        d = JSON.parse(d);
+      } catch (e) {
+        d = null;
+      }
+    }
+    if (d && d.ok === false) throw {
+      tr: d.error || "İşlem başarısız."
     };
-    if (diff < 3) return {
-      label: "🟡 3 gün içinde",
-      color: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
+    return d && Object.prototype.hasOwnProperty.call(d, "data") ? d.data : d;
+  }
+
+  // Önce veritabanı fonksiyonu; yoksa yedek. legacy: true → yedek kullanıldı (kurulum uyarısı)
+  async function call(sb, name, args, fallback) {
+    var r = await sb.rpc(name, args || {});
+    if (!r.error) return {
+      data: r.data,
+      legacy: false
     };
-    if (diff < 7) return {
-      label: "🟠 7 gün içinde",
-      color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300"
+    if (isMissingFn(r.error) && fallback) return {
+      data: await fallback(),
+      legacy: true
     };
+    throw r.error;
+  }
+  function overviewFromUsers(users, pendingEdu, annLive) {
+    var d = todayStr(),
+      st = users.filter(function (u) {
+        return u.role !== "admin";
+      });
+    var by = function (k) {
+      var o = {};
+      st.forEach(function (u) {
+        var v = u[k] || "bilinmiyor";
+        o[v] = (o[v] || 0) + 1;
+      });
+      return o;
+    };
+    var act = [];
+    for (var i = 13; i >= 0; i--) {
+      var x = new Date();
+      x.setDate(x.getDate() - i);
+      var day = x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0") + "-" + String(x.getDate()).padStart(2, "0");
+      act.push({
+        day: day,
+        n: users.filter(function (u) {
+          return String(u.last_study_at || "").slice(0, 10) === day;
+        }).length
+      });
+    }
     return {
-      label: "🔴 7+ gün pasif",
-      color: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300"
+      users: st.length,
+      dau: users.filter(function (u) {
+        return String(u.last_study_at || "").slice(0, 10) === d;
+      }).length,
+      wau: users.filter(function (u) {
+        return daysSince(u.last_study_at) <= 6;
+      }).length,
+      mau: users.filter(function (u) {
+        return daysSince(u.last_study_at) <= 29;
+      }).length,
+      idle7: st.filter(function (u) {
+        return daysSince(u.last_study_at) > 7;
+      }).length,
+      premium: users.filter(function (u) {
+        return u.premium;
+      }).length,
+      blocked: users.filter(function (u) {
+        return u.blocked;
+      }).length,
+      questions: users.reduce(function (s, u) {
+        return s + (Number(u.questions_total) || 0);
+      }, 0),
+      pending_edu: pendingEdu,
+      by_level: by("education_level"),
+      by_platform: by("platform"),
+      active_14: act,
+      announcements: annLive
     };
+  }
+
+  // ---------- simgeler ----------
+  var ICONS = {
+    ozet: "M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z",
+    talepler: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+    kullanicilar: "M17 20h5v-2a3 3 0 00-5.36-1.86M17 20H7m10 0v-2c0-.66-.13-1.28-.36-1.86M7 20H2v-2a3 3 0 015.36-1.86M7 20v-2c0-.66.13-1.28.36-1.86m0 0a5 5 0 019.28 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+    analiz: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z",
+    duyuru: "M11 5.88V19.24a1.76 1.76 0 01-3.42.59l-2.15-6.15M18 13a3 3 0 100-6M5.44 13.68A4 4 0 017 6h1.83c4.1 0 7.63-1.23 9.17-3v14c-1.54-1.77-5.07-3-9.17-3H7a4 4 0 01-1.56-.32z",
+    deneme: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    gecmis: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.59a1 1 0 01.7.29l5.42 5.42a1 1 0 01.29.7V19a2 2 0 01-2 2z",
+    refresh: "M4 4v5h.58m15.36 2A8 8 0 004.58 9m0 0H9m11 11v-5h-.58m0 0a8 8 0 01-15.36-2m15.36 2H15",
+    out: "M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1",
+    star: "M11.48 3.5a.56.56 0 011.04 0l2.13 5.11a.56.56 0 00.47.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 00-.18.56l1.28 5.38a.56.56 0 01-.84.61l-4.72-2.88a.56.56 0 00-.59 0l-4.72 2.88a.56.56 0 01-.84-.61l1.28-5.38a.56.56 0 00-.18-.56l-4.2-3.6a.56.56 0 01.32-.99l5.52-.44a.56.56 0 00.47-.35l2.13-5.11z",
+    ban: "M18.36 5.64a9 9 0 11-12.73 0M18.36 5.64A9 9 0 005.64 18.36M18.36 5.64L5.64 18.36",
+    trash: "M19 7l-.87 12.14A2 2 0 0116.14 21H7.86a2 2 0 01-1.99-1.86L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16",
+    check: "M5 13l4 4L19 7",
+    x: "M6 18L18 6M6 6l12 12",
+    search: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+    q: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+    bolt: "M13 10V3L4 14h7v7l9-11h-7z",
+    arrow: "M13 7l5 5m0 0l-5 5m5-5H6",
+    warn: "M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+  };
+  function Ico(p) {
+    return /*#__PURE__*/React.createElement("svg", {
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: p.w || 1.8,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": "true",
+      className: p.className,
+      style: p.style
+    }, /*#__PURE__*/React.createElement("path", {
+      d: ICONS[p.n]
+    }));
+  }
+
+  // ============================================================
+  // ORTAK PARÇALAR
+  // ============================================================
+  function Confirm(p) {
+    const okRef = useRef(null);
+    useEffect(function () {
+      if (okRef.current) okRef.current.focus();
+      function onKey(e) {
+        if (e.key === "Escape") p.onClose();
+      }
+      document.addEventListener("keydown", onKey);
+      return function () {
+        document.removeEventListener("keydown", onKey);
+      };
+    }, []);
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-scrim",
+      onClick: p.onClose
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "adm-modal",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-labelledby": "adm-confirm-t"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-start gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-ico " + (p.tone === "danger" ? "adm-ico-rose" : p.tone === "ok" ? "adm-ico-green" : "adm-ico-gold")
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: p.icon || "warn"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-confirm-t",
+      className: "text-lg font-extrabold leading-snug"
+    }, p.title), p.body && /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted mt-1.5 leading-relaxed"
+    }, p.body))), p.children, /*#__PURE__*/React.createElement("div", {
+      className: "flex gap-2 justify-end mt-5"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost",
+      onClick: p.onClose
+    }, "Vazge\xE7"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      ref: okRef,
+      className: "adm-btn " + (p.tone === "danger" ? "adm-btn-danger" : p.tone === "ok" ? "adm-btn-ok" : "adm-btn-primary"),
+      onClick: function () {
+        p.onOk();
+        p.onClose();
+      }
+    }, p.okLabel || "Onayla"))));
+  }
+  function Empty(p) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-10 text-center"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-ico adm-ico-teal mx-auto mb-3",
+      style: {
+        width: 52,
+        height: 52,
+        borderRadius: 16
+      }
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: p.icon || "check"
+    })), /*#__PURE__*/React.createElement("p", {
+      className: "font-bold"
+    }, p.title), p.text && /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted mt-1 max-w-md mx-auto"
+    }, p.text));
+  }
+  function Kpi(p) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "adm-card adm-kpi"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between gap-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-label"
+    }, p.label), /*#__PURE__*/React.createElement("span", {
+      className: "adm-ico adm-ico-" + (p.tone || "teal")
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: p.icon
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "adm-kpi-n mt-2"
+    }, p.value), p.sub && /*#__PURE__*/React.createElement("div", {
+      className: "text-xs adm-muted mt-1"
+    }, p.sub));
+  }
+  function Head(p) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-5"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-eyebrow"
+    }, p.eyebrow), /*#__PURE__*/React.createElement("h1", {
+      className: "adm-h1 mt-1"
+    }, p.title), p.sub && /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted mt-1.5 max-w-2xl"
+    }, p.sub)), p.right);
+  }
+  function Dist(p) {
+    var entries = Object.keys(p.data || {}).map(function (k) {
+      return [k, p.data[k]];
+    }).sort(function (a, b) {
+      return b[1] - a[1];
+    });
+    var total = entries.reduce(function (s, e) {
+      return s + e[1];
+    }, 0) || 1;
+    if (!entries.length) return /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted"
+    }, "Veri yok.");
+    return /*#__PURE__*/React.createElement("ul", {
+      className: "space-y-3"
+    }, entries.map(function (e) {
+      var pct = Math.round(e[1] / total * 100);
+      return /*#__PURE__*/React.createElement("li", {
+        key: e[0]
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex justify-between text-sm mb-1.5"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "font-semibold"
+      }, p.label(e[0])), /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted"
+      }, num(e[1]), " \xB7 %", pct)), /*#__PURE__*/React.createElement("div", {
+        className: "adm-meter " + (p.meter || "")
+      }, /*#__PURE__*/React.createElement("span", {
+        style: {
+          width: Math.max(2, pct) + "%"
+        }
+      })));
+    }));
   }
 
   // ============================================================
   // ANA BİLEŞEN
   // ============================================================
-
   function AdminDashboard(props) {
     const student = props.student;
+    const up = student.userProfile || {};
+    const isAdmin = up.role === "admin";
+    const myId = up.authUserId || "";
     const [tab, setTab] = useState("ozet");
-    const [rows, setRows] = useState([]);
-    const [kpi, setKpi] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [loadedAt, setLoadedAt] = useState(null);
+    const [users, setUsers] = useState([]);
+    const [ov, setOv] = useState(null);
+    const [edu, setEdu] = useState([]);
+    const [ann, setAnn] = useState([]);
     const [hard, setHard] = useState([]);
-    const [announce, setAnnounce] = useState("");
-    const [announceHours, setAnnounceHours] = useState("24");
-    const [announceList, setAnnounceList] = useState([]);
+    const [audit, setAudit] = useState(null);
+    const [errors, setErrors] = useState({});
+    const [legacy, setLegacy] = useState(false);
+    const [toast, setToast] = useState(null);
+    const [busy, setBusy] = useState("");
+    const [confirm, setConfirm] = useState(null);
+    const [sel, setSel] = useState(null);
     const [detail, setDetail] = useState(null);
+    const [detailErr, setDetailErr] = useState("");
     const [q, setQ] = useState("");
     const [filter, setFilter] = useState("all");
-    const [msg, setMsg] = useState("");
-    const [busy, setBusy] = useState(false);
-    const [log, setLog] = useState([]);
-    const [eduReqs, setEduReqs] = useState([]);
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [selectedUserId, setSelectedUserId] = useState(null);
-    const [stats, setStats] = useState(null);
-    const [sortField, setSortField] = useState("last_study_at");
-    const [sortOrder, setSortOrder] = useState("desc");
+    const [sort, setSort] = useState("recent");
     const [page, setPage] = useState(1);
-    const pageSize = 20;
-    const isAdmin = student.userProfile && student.userProfile.role === "admin";
-    const email = student.userProfile && student.userProfile.email || "";
+    const [annText, setAnnText] = useState("");
+    const [annHours, setAnnHours] = useState("24");
+    const [grantDays, setGrantDays] = useState(30);
+    const PAGE = 25;
+    const toastTimer = useRef(null);
+    const sbGet = function () {
+      return window.SupabaseClient && window.SupabaseClient.get();
+    };
+    const say = useCallback(function (ok, text) {
+      setToast({
+        ok: ok,
+        text: text
+      });
+      clearTimeout(toastTimer.current);
+      toastTimer.current = setTimeout(function () {
+        setToast(null);
+      }, ok ? 3500 : 7000);
+    }, []);
 
-    // ---------- Refs ----------
-    const searchInputRef = useRef(null);
-    const announceRef = useRef(null);
-
-    // ---------- Load Fonksiyonu ----------
+    // ---------- yükleme ----------
     const load = useCallback(async function () {
-      var sb = window.SupabaseClient && window.SupabaseClient.get();
+      var sb = sbGet();
       if (!sb) {
-        setMsg("Veritabanı bağlı değil.");
+        setErrors({
+          genel: "Veritabanına bağlanılamadı."
+        });
+        setLoading(false);
         return;
       }
-      setBusy(true);
-      try {
-        // KPI'lar
-        var r = await sb.rpc("admin_kpis");
-        if (r.error) setMsg("Özet: " + (window.trError ? window.trError(r.error) : "yüklenemedi"));else setKpi(r.data);
-
-        // Kullanıcı listesi (konum payload'dan)
-        var listed = false;
-        var rUsers = await sb.functions.invoke("admin-action", {
-          body: {
-            action: "user_list"
-          }
-        });
-        if (!rUsers.error) {
-          var ud = rUsers.data;
-          if (typeof ud === "string") {
-            try {
-              ud = JSON.parse(ud);
-            } catch (e) {
-              ud = null;
-            }
-          }
-          var ulist = [];
-          if (ud && ud.ok === false) ulist = [];else if (Array.isArray(ud)) ulist = ud;else if (ud && Array.isArray(ud.data)) ulist = ud.data;else if (ud && ud.data && Array.isArray(ud.data.data)) ulist = ud.data.data;
-          if (ulist.length) {
-            setRows(ulist);
-            listed = true;
-          }
-        }
-        if (!listed) {
+      setLoading(true);
+      var errs = {},
+        usedLegacy = false;
+      function track(r) {
+        if (r && r.legacy) usedLegacy = true;
+        return r;
+      }
+      var pUsers = call(sb, "admin_users", {}, async function () {
+        try {
+          return await edge(sb, "user_list");
+        } catch (e) {
           var r2 = await sb.rpc("admin_user_list");
-          if (!r2.error && r2.data) {
-            setRows(Array.isArray(r2.data) ? r2.data : []);
-          } else {
-            var r3 = await sb.from("admin_user_directory").select("*").limit(500);
-            if (r3.error) setMsg("Kullanıcı listesi yüklenemedi.");else setRows(r3.data || []);
-          }
+          if (r2.error) throw e;
+          return r2.data || [];
         }
-
-        // Zor konular
-        var r4 = await sb.rpc("admin_hard_topics");
-        if (!r4.error && r4.data) setHard(Array.isArray(r4.data) ? r4.data : []);
-
-        // Eğitim talepleri
-        var r5 = await sb.functions.invoke("admin-action", {
-          body: {
-            action: "list_edu_requests"
-          }
-        });
-        if (!r5.error) {
-          var d = r5.data;
-          if (typeof d === "string") {
-            try {
-              d = JSON.parse(d);
-            } catch (e) {
-              d = null;
-            }
-          }
-          var list = [];
-          if (Array.isArray(d)) list = d;else if (d && Array.isArray(d.data)) list = d.data;else if (d && d.data && Array.isArray(d.data.data)) list = d.data.data;
-          setEduReqs(list);
-        }
-        var r7 = await sb.functions.invoke("admin-action", {
-          body: {
-            action: "list_announcements"
-          }
-        });
-        var alist = [];
-        if (!r7.error) {
-          var ad = r7.data;
-          if (typeof ad === "string") {
-            try {
-              ad = JSON.parse(ad);
-            } catch (e) {
-              ad = null;
-            }
-          }
-          if (Array.isArray(ad)) alist = ad;else if (ad && Array.isArray(ad.data)) alist = ad.data;else if (ad && ad.data && Array.isArray(ad.data.data)) alist = ad.data.data;
-        }
-        if (!alist.length) {
+      }).then(track).catch(function (e) {
+        errs.kullanicilar = errText(e, "Kullanıcı listesi yüklenemedi.");
+        return null;
+      });
+      var pEdu = call(sb, "admin_edu_requests", {}, function () {
+        return edge(sb, "list_edu_requests");
+      }).then(track).catch(function (e) {
+        errs.talepler = errText(e, "Eğitim talepleri yüklenemedi.");
+        return null;
+      });
+      var pAnn = call(sb, "admin_announcements", {}, async function () {
+        try {
+          return await edge(sb, "list_announcements");
+        } catch (e) {
           var rA = await sb.from("app_announcements").select("id,body,published,created_at,expires_at").order("created_at", {
             ascending: false
           }).limit(80);
-          if (rA.error) {
-            rA = await sb.from("app_announcements").select("id,body,published,created_at").order("created_at", {
-              ascending: false
-            }).limit(80);
-          }
-          if (!rA.error) alist = rA.data || [];
+          if (rA.error) throw e;
+          return rA.data || [];
         }
-        setAnnounceList(alist.map(parseAnnounceRow));
-        var r6 = await sb.rpc("admin_stats");
-        if (!r6.error && r6.data) setStats(r6.data);
-      } catch (e) {
-        setMsg("Ağ hatası. Bağlantını kontrol edip tekrar dene.");
-      } finally {
-        setBusy(false);
-      }
+      }).then(track).catch(function (e) {
+        errs.duyuru = errText(e, "Duyurular yüklenemedi.");
+        return null;
+      });
+      var pOv = call(sb, "admin_overview", {}, function () {
+        return null;
+      }).then(track).catch(function (e) {
+        errs.ozet = errText(e, "Özet yüklenemedi.");
+        return null;
+      });
+      var pHard = sb.rpc("admin_hard_topics").then(function (r) {
+        if (r.error) {
+          if (!isMissingFn(r.error)) errs.analiz = errText(r.error, "Zor konular yüklenemedi.");
+          return [];
+        }
+        return r.data || [];
+      });
+      var pAudit = sb.rpc("admin_audit_log", {
+        p_limit: 120
+      }).then(function (r) {
+        if (r.error) {
+          if (isMissingFn(r.error)) {
+            usedLegacy = true;
+            return null;
+          }
+          errs.gecmis = errText(r.error, "İşlem geçmişi yüklenemedi.");
+          return null;
+        }
+        return r.data || [];
+      });
+      var res = await Promise.all([pUsers, pEdu, pAnn, pOv, pHard, pAudit].map(function (p) {
+        return p.catch(function () {
+          return null;
+        });
+      }));
+      var uList = res[0] ? Array.isArray(res[0].data) ? res[0].data : [] : null;
+      var eList = res[1] ? Array.isArray(res[1].data) ? res[1].data : [] : null;
+      var aList = res[2] ? (Array.isArray(res[2].data) ? res[2].data : []).map(parseAnnounceRow) : null;
+      if (uList) setUsers(uList);
+      if (eList) setEdu(eList);
+      if (aList) setAnn(aList);
+      var o = res[3] && res[3].data;
+      if (!o && uList) o = overviewFromUsers(uList, (eList || []).length, (aList || []).filter(function (a) {
+        return a.live;
+      }).length);
+      if (o) setOv(o);
+      setHard(Array.isArray(res[4]) ? res[4] : []);
+      setAudit(res[5]);
+      setErrors(errs);
+      setLegacy(usedLegacy);
+      setLoadedAt(new Date());
+      setLoading(false);
     }, []);
-
-    // ---------- Effect ----------
     useEffect(function () {
       if (isAdmin) load();
     }, [isAdmin, load]);
+    useEffect(function () {
+      return function () {
+        clearTimeout(toastTimer.current);
+      };
+    }, []);
 
-    // ---------- Action ----------
-    const act = useCallback(async function (name, payload) {
-      var sb = window.SupabaseClient && window.SupabaseClient.get();
+    // ---------- ayrıntı ----------
+    const openDetail = useCallback(async function (uid) {
+      setSel(uid);
+      setDetail(null);
+      setDetailErr("");
+      setGrantDays(30);
+      var sb = sbGet();
+      if (!sb) return;
+      try {
+        var r = await call(sb, "admin_user_detail", {
+          p_user: uid
+        }, function () {
+          return edge(sb, "inspect_user", {
+            user_id: uid
+          });
+        });
+        var d = r.data || {};
+        if (r.legacy) d = Object.assign({}, d, {
+          wrong_count: d.wrongCount,
+          edu_request: d.educationChangeRequest
+        });
+        setDetail(d);
+      } catch (e) {
+        setDetailErr(errText(e, "Kullanıcı ayrıntısı yüklenemedi."));
+      }
+    }, []);
+    const closeDetail = function () {
+      setSel(null);
+      setDetail(null);
+      setDetailErr("");
+    };
+    useEffect(function () {
+      if (!sel) return;
+      function onKey(e) {
+        if (e.key === "Escape" && !confirm) closeDetail();
+      }
+      document.addEventListener("keydown", onKey);
+      return function () {
+        document.removeEventListener("keydown", onKey);
+      };
+    }, [sel, confirm]);
+
+    // ---------- işlemler ----------
+    const run = useCallback(async function (key, fn, okText, after) {
+      var sb = sbGet();
       if (!sb) {
-        setMsg("Sunucu bağlı değil.");
+        say(false, "Veritabanına bağlanılamadı.");
         return;
       }
-      setBusy(true);
+      setBusy(key);
       try {
-        var res = await sb.functions.invoke("admin-action", {
-          body: Object.assign({
-            action: name
-          }, payload)
-        });
-        if (res.error) {
-          setMsg(window.trError ? window.trError(res.error, "İşlem başarısız.") : "İşlem başarısız.");
-        } else if (res.data && res.data.ok === false) {
-          setMsg(window.trError ? window.trError(res.data.error, "İşlem başarısız.") : "İşlem başarısız.");
-        } else {
-          setMsg("✅ İşlem başarıyla uygulandı.");
-          setLog(function (L) {
-            return [{
-              t: name,
-              at: new Date().toLocaleTimeString("tr-TR"),
-              detail: payload
-            }].concat(L).slice(0, 20);
-          });
-          if (name === "inspect_user" && res.data) {
-            setDetail(res.data.data || res.data);
-          }
-          if (name === "delete_user") setDetail(null);
-          load();
-        }
+        await fn(sb);
+        say(true, okText);
+        if (after) after();
+        await load();
       } catch (e) {
-        setMsg(window.trError ? window.trError(e, "İşlem başarısız.") : "İşlem başarısız.");
+        say(false, errText(e, "İşlem tamamlanamadı."));
       } finally {
-        setBusy(false);
+        setBusy("");
       }
-    }, [load]);
-
-    // ---------- Inspect ----------
-    const inspect = useCallback(async function (uid) {
-      await act("inspect_user", {
-        user_id: uid
-      });
-    }, [act]);
-
-    // ---------- Sıralama ----------
-    const sortedRows = useMemo(function () {
-      var sorted = rows.slice();
-      sorted.sort(function (a, b) {
-        var aVal = a[sortField] || "";
-        var bVal = b[sortField] || "";
-        if (sortField === "last_study_at") {
-          var aDate = aVal ? new Date(aVal).getTime() : 0;
-          var bDate = bVal ? new Date(bVal).getTime() : 0;
-          return sortOrder === "desc" ? bDate - aDate : aDate - bDate;
-        }
-        if (typeof aVal === "string") {
-          return sortOrder === "desc" ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
-        }
-        return sortOrder === "desc" ? bVal - aVal : aVal - bVal;
-      });
-      return sorted;
-    }, [rows, sortField, sortOrder]);
-
-    // ---------- Filtre ----------
-    const filteredRows = useMemo(function () {
-      return sortedRows.filter(function (u) {
-        var hay = ((u.nickname || "") + (u.email || "") + (u.target_type || "") + (u.education_level || "") + (u.user_id || "") + (u.location || "")).toLowerCase();
-        if (q && hay.indexOf(q.toLowerCase()) < 0) return false;
-        if (filter === "premium" && !u.premium) return false;
-        if (filter === "lisans" && u.education_level !== "lisans") return false;
-        if (filter === "onlisans" && u.education_level !== "onlisans") return false;
-        if (filter === "ortaogretim" && u.education_level !== "ortaogretim") return false;
-        if (filter === "idle7") {
-          if (!u.last_study_at) return true;
-          return Date.now() - new Date(u.last_study_at).getTime() > 7 * 86400000;
-        }
-        if (filter === "active") {
-          if (!u.last_study_at) return false;
-          return Date.now() - new Date(u.last_study_at).getTime() < 1 * 86400000;
-        }
-        return true;
-      });
-    }, [sortedRows, q, filter]);
-
-    // ---------- Sayfalama ----------
-    const paginatedRows = useMemo(function () {
-      var start = (page - 1) * pageSize;
-      var end = start + pageSize;
-      return filteredRows.slice(start, end);
-    }, [filteredRows, page]);
-    const totalPages = useMemo(function () {
-      return Math.ceil(filteredRows.length / pageSize);
-    }, [filteredRows]);
-
-    // ---------- İstatistikler ----------
-    const summaryStats = useMemo(function () {
-      var total = rows.length;
-      var premium = rows.filter(function (u) {
-        return u.premium;
-      }).length;
-      var active = rows.filter(function (u) {
-        if (!u.last_study_at) return false;
-        return Date.now() - new Date(u.last_study_at).getTime() < 1 * 86400000;
-      }).length;
-      var totalQ = rows.reduce(function (sum, u) {
-        return sum + (u.questions_total || 0);
-      }, 0);
-      return {
-        total,
-        premium,
-        active,
-        totalQ,
-        avgQ: total > 0 ? Math.round(totalQ / total) : 0
-      };
-    }, [rows]);
-
-    // ---------- Navigation ----------
-    const nav = [{
-      id: "ozet",
-      t: "📊 Özet",
-      icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-    }, {
-      id: "talepler",
-      t: "📋 Talepler" + (eduReqs.length ? " (" + eduReqs.length + ")" : ""),
-      icon: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-    }, {
-      id: "kullanicilar",
-      t: "👥 Kullanıcılar",
-      icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-    }, {
-      id: "analiz",
-      t: "📈 Analiz",
-      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-    }, {
-      id: "icerik",
-      t: "📢 Duyuru",
-      icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
-    }, {
-      id: "deneme",
-      t: "🕒 Canlı Deneme",
-      icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-    }];
-
-    // ---------- Yetki Kontrol ----------
-    if (!isAdmin) {
-      return /*#__PURE__*/React.createElement("div", {
-        className: "min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900 dark:to-stone-800"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "text-center max-w-sm p-8 rounded-3xl glass card-hover"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "text-6xl mb-4"
-      }, "\uD83D\uDD12"), /*#__PURE__*/React.createElement("h1", {
-        className: "text-2xl font-black gradient-text mb-2"
-      }, "Yetki Yok"), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm text-stone-500 dark:text-stone-400 mb-6"
-      }, "Bu hesap y\xF6netici yetkisine sahip de\u011Fil."), /*#__PURE__*/React.createElement("button", {
-        onClick: props.onSignOut,
-        className: "px-6 py-3 rounded-2xl btn-primary text-white font-semibold"
-      }, "\xC7\u0131k\u0131\u015F Yap")));
-    }
-
-    // ============================================================
-    // RENDER
-    // ============================================================
-
-    return /*#__PURE__*/React.createElement("div", {
-      className: "min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-50 flex"
-    }, /*#__PURE__*/React.createElement("aside", {
-      className: "hidden md:flex w-64 shrink-0 flex-col border-r border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 shadow-lg"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "px-5 py-6 border-b border-stone-200 dark:border-stone-800"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-3"
-    }, window.AtanomLogo ? window.AtanomLogo("h-10 w-10 object-contain") : /*#__PURE__*/React.createElement("img", {
-      src: "icons/atanom.png",
-      alt: "Atanly",
-      className: "h-10 w-10 object-contain"
-    }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-bold gradient-text"
-    }, "Y\xF6netim Paneli"), /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 truncate max-w-[140px]"
-    }, email)))), /*#__PURE__*/React.createElement("nav", {
-      className: "px-3 py-4 space-y-1 flex-1"
-    }, nav.map(function (n) {
-      var active = tab === n.id;
-      return /*#__PURE__*/React.createElement("button", {
-        key: n.id,
-        onClick: function () {
-          setTab(n.id);
-          setSidebarOpen(false);
-        },
-        className: "w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-3 " + (active ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 shadow-sm" : "text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800")
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-lg"
-      }, n.t.split(" ")[0]), /*#__PURE__*/React.createElement("span", {
-        className: "flex-1"
-      }, n.t.split(" ").slice(1).join(" ")), n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
-        className: "h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center"
-      }, eduReqs.length));
-    })), /*#__PURE__*/React.createElement("div", {
-      className: "p-4 border-t border-stone-200 dark:border-stone-800"
-    }, /*#__PURE__*/React.createElement("button", {
-      onClick: props.onSignOut,
-      className: "w-full py-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-    }, "\uD83D\uDEAA \xC7\u0131k\u0131\u015F"))), /*#__PURE__*/React.createElement("div", {
-      className: "flex-1 min-w-0"
-    }, /*#__PURE__*/React.createElement("header", {
-      className: "md:hidden flex items-center justify-between px-4 py-3 border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-0 z-10"
-    }, /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setSidebarOpen(!sidebarOpen);
-      },
-      className: "p-2 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800"
-    }, /*#__PURE__*/React.createElement("svg", {
-      className: "w-6 h-6",
-      fill: "none",
-      stroke: "currentColor",
-      viewBox: "0 0 24 24"
-    }, /*#__PURE__*/React.createElement("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: 2,
-      d: "M4 6h16M4 12h16M4 18h16"
-    }))), /*#__PURE__*/React.createElement("span", {
-      className: "font-bold gradient-text"
-    }, "Y\xF6netim"), /*#__PURE__*/React.createElement("button", {
-      onClick: props.onSignOut,
-      className: "text-sm font-medium text-stone-500"
-    }, "\xC7\u0131k\u0131\u015F")), sidebarOpen && /*#__PURE__*/React.createElement("div", {
-      className: "md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
-      onClick: function () {
-        setSidebarOpen(false);
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "w-72 h-full bg-white dark:bg-stone-950 shadow-2xl p-4",
-      onClick: function (e) {
-        e.stopPropagation();
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between items-center mb-6"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "font-bold gradient-text"
-    }, "Y\xF6netim"), /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setSidebarOpen(false);
-      },
-      className: "p-2 rounded-xl hover:bg-stone-100"
-    }, "\u2715")), nav.map(function (n) {
-      var active = tab === n.id;
-      return /*#__PURE__*/React.createElement("button", {
-        key: n.id,
-        onClick: function () {
-          setTab(n.id);
-          setSidebarOpen(false);
-        },
-        className: "w-full text-left px-4 py-3 rounded-xl text-sm font-medium flex items-center gap-3 " + (active ? "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700" : "hover:bg-stone-100 dark:hover:bg-stone-800")
-      }, /*#__PURE__*/React.createElement("span", null, n.t), n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
-        className: "ml-auto h-5 w-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center"
-      }, eduReqs.length));
-    }), /*#__PURE__*/React.createElement("button", {
-      onClick: props.onSignOut,
-      className: "w-full mt-4 py-3 rounded-xl border border-stone-200 text-sm font-medium"
-    }, "\xC7\u0131k\u0131\u015F"))), /*#__PURE__*/React.createElement("div", {
-      className: "md:hidden flex gap-1 px-4 py-3 overflow-x-auto border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 sticky top-12 z-10"
-    }, nav.map(function (n) {
-      return /*#__PURE__*/React.createElement("button", {
-        key: n.id,
-        onClick: function () {
-          setTab(n.id);
-        },
-        className: "shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors " + (tab === n.id ? "bg-indigo-600 text-white" : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400")
-      }, n.t, n.id === "talepler" && eduReqs.length > 0 && /*#__PURE__*/React.createElement("span", {
-        className: "ml-1 text-[10px] bg-white/30 px-1 rounded"
-      }, eduReqs.length));
-    })), /*#__PURE__*/React.createElement("main", {
-      className: "p-4 md:p-8 max-w-7xl mx-auto"
-    }, msg && /*#__PURE__*/React.createElement("div", {
-      className: "mb-4 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm flex items-center justify-between"
-    }, /*#__PURE__*/React.createElement("span", null, msg), /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setMsg("");
-      },
-      className: "text-amber-600 hover:text-amber-800"
-    }, "\u2715")), busy && /*#__PURE__*/React.createElement("div", {
-      className: "mb-4 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-sm flex items-center gap-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "animate-spin h-4 w-4 border-2 border-indigo-600 border-t-transparent rounded-full"
-    }), "\u0130\u015Flem devam ediyor..."), tab === "ozet" && /*#__PURE__*/React.createElement("div", {
-      className: "space-y-6"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between"
-    }, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\uD83D\uDCCA Y\xF6netim \xD6zeti"), /*#__PURE__*/React.createElement("button", {
-      onClick: load,
-      disabled: busy,
-      className: "text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
-    }, "\uD83D\uDD04 Yenile")), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-2 md:grid-cols-4 gap-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5 card-hover"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83D\uDC65 Toplam Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("p", {
-      className: "text-3xl font-bold gradient-text mt-2"
-    }, kpi ? kpi.users : "—"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "+", summaryStats.active, " bug\xFCn aktif")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5 card-hover"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\u2B50 Premium"), /*#__PURE__*/React.createElement("p", {
-      className: "text-3xl font-bold text-amber-600 mt-2"
-    }, summaryStats.premium), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "%", rows.length ? Math.round(summaryStats.premium / rows.length * 100) : 0, " d\xF6n\xFC\u015F\xFCm")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5 card-hover"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83D\uDCDD Toplam Soru"), /*#__PURE__*/React.createElement("p", {
-      className: "text-3xl font-bold text-emerald-600 mt-2"
-    }, summaryStats.totalQ), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "\xD8 ", summaryStats.avgQ, " / kullan\u0131c\u0131")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5 card-hover"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83D\uDCC8 Tahmini Ciro"), /*#__PURE__*/React.createElement("p", {
-      className: "text-3xl font-bold text-indigo-600 mt-2"
-    }, summaryStats.premium * 149, " \u20BA"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "149 \u20BA / ay \xB7 ger\xE7ek \xF6deme yok"))), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-2 md:grid-cols-4 gap-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl bg-rose-50 dark:bg-rose-950/20 p-4 text-center border border-rose-100 dark:border-rose-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl font-bold text-rose-600"
-    }, rows.filter(function (u) {
-      return !u.last_study_at || Date.now() - new Date(u.last_study_at).getTime() > 7 * 86400000;
-    }).length), /*#__PURE__*/React.createElement("div", {
-      className: "text-xs text-rose-500 mt-0.5"
-    }, "\uD83D\uDD34 Pasif (7+ g\xFCn)")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 p-4 text-center border border-emerald-100 dark:border-emerald-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl font-bold text-emerald-600"
-    }, summaryStats.active), /*#__PURE__*/React.createElement("div", {
-      className: "text-xs text-emerald-500 mt-0.5"
-    }, "\uD83D\uDFE2 Bug\xFCn Aktif")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl bg-amber-50 dark:bg-amber-950/20 p-4 text-center border border-amber-100 dark:border-amber-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl font-bold text-amber-600"
-    }, eduReqs.length), /*#__PURE__*/React.createElement("div", {
-      className: "text-xs text-amber-500 mt-0.5"
-    }, "\uD83D\uDCCB Bekleyen Talep")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl bg-indigo-50 dark:bg-indigo-950/20 p-4 text-center border border-indigo-100 dark:border-indigo-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl font-bold text-indigo-600"
-    }, hard.length), /*#__PURE__*/React.createElement("div", {
-      className: "text-xs text-indigo-500 mt-0.5"
-    }, "\uD83D\uDCCA Zor Konu"))), log.length > 0 && /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-3"
-    }, "\uD83D\uDCCB \u0130\u015Flem Ge\xE7mi\u015Fi"), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-1 max-h-48 overflow-y-auto"
-    }, log.map(function (x, i) {
-      return /*#__PURE__*/React.createElement("div", {
-        key: i,
-        className: "flex items-center gap-3 text-xs text-stone-500 dark:text-stone-400 py-1 border-b border-stone-100 dark:border-stone-800"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "font-mono text-stone-400"
-      }, x.at), /*#__PURE__*/React.createElement("span", {
-        className: "font-medium text-stone-700 dark:text-stone-300"
-      }, x.t), x.detail && /*#__PURE__*/React.createElement("span", {
-        className: "text-stone-400"
-      }, "\xB7 ", JSON.stringify(x.detail).slice(0, 40)));
-    }))), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 text-center"
-    }, "\xD6\u011Frenci uygulamas\u0131 bu hesapta a\xE7\u0131lmaz \xB7 v2.0")), tab === "talepler" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-start justify-between gap-3 mb-2"
-    }, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\uD83D\uDCCB E\u011Fitim De\u011Fi\u015Fiklik Talepleri"), /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      disabled: busy,
-      onClick: load,
-      className: "text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline shrink-0"
-    }, "\uD83D\uDD04 Yenile")), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-500 dark:text-stone-400 mb-6"
-    }, "\xD6\u011Frenci kay\u0131tta se\xE7ti\u011Fi d\xFCzeyi kendi de\u011Fi\u015Ftiremez. Onaylarsan s\u0131nav tarihi de \xD6SYM takvimine \xE7ekilir."), eduReqs.length === 0 ? /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-12 text-center"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-4xl mb-3"
-    }, "\u2705"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400"
-    }, "Bekleyen talep yok.")) : /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass overflow-hidden"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "overflow-x-auto"
-    }, /*#__PURE__*/React.createElement("table", {
-      className: "w-full text-sm"
-    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
-      className: "text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50"
-    }, /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3"
-    }, "Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3"
-    }, "\u015Eu an"), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3"
-    }, "\u0130stenen"), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3"
-    }, "Tarih"), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 text-right"
-    }, "\u0130\u015Flem"))), /*#__PURE__*/React.createElement("tbody", null, eduReqs.map(function (r) {
-      return /*#__PURE__*/React.createElement("tr", {
-        key: r.user_id,
-        className: "border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors"
-      }, /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "font-medium"
-      }, r.nickname || "—"), /*#__PURE__*/React.createElement("div", {
-        className: "text-xs text-stone-400 font-mono"
-      }, (r.user_id || "").slice(0, 8), "\u2026")), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.from)
-      }, eduLabel(r.from))), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-xs font-medium px-2 py-0.5 rounded-full " + getLevelColor(r.to)
-      }, eduLabel(r.to))), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3 text-stone-500 text-xs"
-      }, fmtDateTime(r.at)), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "flex gap-2 justify-end"
-      }, /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          act("approve_edu", {
-            user_id: r.user_id,
-            to: r.to
+    }, [load, say]);
+    function setPremium(u, days) {
+      var on = days > 0;
+      run("premium:" + u.user_id, function (sb) {
+        return call(sb, "admin_set_premium", {
+          p_user: u.user_id,
+          p_days: on ? days : 0
+        }, function () {
+          return edge(sb, on ? "grant_premium" : "revoke_premium", on ? {
+            user_id: u.user_id,
+            days: days
+          } : {
+            user_id: u.user_id
           });
-        },
-        className: "text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors shadow-sm"
-      }, "\u2705 Onayla"), /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          act("reject_edu", {
+        });
+      }, on ? (u.nickname || "Kullanıcı") + " için " + days + " gün Premium açıldı." : (u.nickname || "Kullanıcı") + " artık ücretsiz planda.", function () {
+        if (sel === u.user_id) openDetail(u.user_id);
+      });
+    }
+    function setBlocked(u, on) {
+      run("block:" + u.user_id, function (sb) {
+        return call(sb, "admin_set_blocked", {
+          p_user: u.user_id,
+          p_blocked: on
+        }, function () {
+          return edge(sb, on ? "block" : "unblock", {
+            user_id: u.user_id
+          });
+        });
+      }, on ? (u.nickname || "Kullanıcı") + " engellendi." : (u.nickname || "Kullanıcı") + " için engel kaldırıldı.", function () {
+        if (sel === u.user_id) openDetail(u.user_id);
+      });
+    }
+    function deleteUser(u) {
+      run("delete:" + u.user_id, function (sb) {
+        return call(sb, "admin_delete_user", {
+          p_user: u.user_id
+        }, function () {
+          return edge(sb, "delete_user", {
+            user_id: u.user_id
+          });
+        });
+      }, (u.nickname || "Kullanıcı") + " kalıcı olarak silindi.", closeDetail);
+    }
+    function decideEdu(r, approve) {
+      var exam = approve ? futureExamDate(r.to) : null;
+      run("edu:" + r.user_id, function (sb) {
+        return call(sb, "admin_edu_decide", {
+          p_user: r.user_id,
+          p_approve: approve,
+          p_exam_date: exam
+        }, function () {
+          return edge(sb, approve ? "approve_edu" : "reject_edu", approve ? {
+            user_id: r.user_id,
+            to: r.to,
+            exam_date: exam
+          } : {
             user_id: r.user_id
           });
+        });
+      }, approve ? (r.nickname || "Öğrenci") + " artık " + eduLabel(r.to) + " düzeyinde." : (r.nickname || "Öğrenci") + " talebi reddedildi.");
+    }
+    function publish() {
+      var text = annText.trim();
+      if (!text) return;
+      var hours = Number(annHours) || 0;
+      run("announce", function (sb) {
+        return call(sb, "admin_announce", {
+          p_text: text,
+          p_hours: hours > 0 ? hours : null
+        }, function () {
+          return edge(sb, "announce", {
+            text: text,
+            hours: hours
+          });
+        });
+      }, "Duyuru yayınlandı. Öğrenciler Bugün ekranında görecek.", function () {
+        setAnnText("");
+      });
+    }
+    function removeAnn(a) {
+      run("ann:" + a.id, function (sb) {
+        return call(sb, "admin_announce_delete", {
+          p_id: a.id
+        }, function () {
+          return edge(sb, "delete_announce", {
+            id: a.id
+          });
+        });
+      }, "Duyuru silindi.");
+    }
+
+    // ---------- liste ----------
+    const counts = useMemo(function () {
+      return {
+        all: users.length,
+        premium: users.filter(function (u) {
+          return u.premium;
+        }).length,
+        blocked: users.filter(function (u) {
+          return u.blocked;
+        }).length,
+        pending: users.filter(function (u) {
+          return u.edu_request;
+        }).length,
+        active: users.filter(function (u) {
+          return daysSince(u.last_study_at) <= 0;
+        }).length,
+        idle7: users.filter(function (u) {
+          return u.role !== "admin" && daysSince(u.last_study_at) > 7;
+        }).length
+      };
+    }, [users]);
+    const filtered = useMemo(function () {
+      var needle = q.trim().toLocaleLowerCase("tr-TR");
+      var list = users.filter(function (u) {
+        if (needle) {
+          var hay = [u.nickname, u.email, u.user_id, u.location, eduLabel(u.education_level), trackLabel(u.target_type), platformLabel(u.platform)].join(" ").toLocaleLowerCase("tr-TR");
+          if (hay.indexOf(needle) < 0) return false;
+        }
+        if (filter === "premium") return !!u.premium;
+        if (filter === "blocked") return !!u.blocked;
+        if (filter === "pending") return !!u.edu_request;
+        if (filter === "active") return daysSince(u.last_study_at) <= 0;
+        if (filter === "idle7") return u.role !== "admin" && daysSince(u.last_study_at) > 7;
+        if (filter === "lisans" || filter === "onlisans" || filter === "ortaogretim") return u.education_level === filter;
+        return true;
+      });
+      var key = {
+        recent: function (u) {
+          return -(toDate(u.last_study_at) || 0);
         },
-        className: "text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-300 dark:border-stone-600 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors"
-      }, "\u274C Reddet"))));
-    })))))), tab === "kullanicilar" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
-    }, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\uD83D\uDC65 Kullan\u0131c\u0131lar"), /*#__PURE__*/React.createElement("span", {
-      className: "text-sm text-stone-400 bg-stone-100 dark:bg-stone-800 px-3 py-1 rounded-full"
-    }, filteredRows.length, " kay\u0131t")), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col sm:flex-row gap-3 mb-4"
+        questions: function (u) {
+          return -(Number(u.questions_total) || 0);
+        },
+        name: null,
+        joined: function (u) {
+          return -(toDate(u.created_at || u.updated_at) || 0);
+        }
+      }[sort];
+      list = list.slice().sort(function (a, b) {
+        if (!key) return String(a.nickname || "").localeCompare(String(b.nickname || ""), "tr");
+        return key(a) - key(b);
+      });
+      return list;
+    }, [users, q, filter, sort]);
+    const pages = Math.max(1, Math.ceil(filtered.length / PAGE));
+    const curPage = Math.min(page, pages);
+    const pageRows = filtered.slice((curPage - 1) * PAGE, curPage * PAGE);
+    const selUser = sel ? users.filter(function (u) {
+      return u.user_id === sel;
+    })[0] || {
+      user_id: sel,
+      nickname: detail && detail.nickname
+    } : null;
+
+    // ---------- yetki ----------
+    if (!isAdmin) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "adm min-h-screen flex items-center justify-center p-6"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "adm-card text-center max-w-sm p-8"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-ico adm-ico-rose mx-auto mb-3"
+      }, /*#__PURE__*/React.createElement(Ico, {
+        n: "ban"
+      })), /*#__PURE__*/React.createElement("h1", {
+        className: "text-xl font-extrabold mb-2"
+      }, "Yetki yok"), /*#__PURE__*/React.createElement("p", {
+        className: "text-sm adm-muted mb-6"
+      }, "Bu hesap y\xF6netici yetkisine sahip de\u011Fil."), /*#__PURE__*/React.createElement("button", {
+        onClick: props.onSignOut,
+        className: "adm-btn adm-btn-primary w-full"
+      }, "\xC7\u0131k\u0131\u015F yap")));
+    }
+    const nav = [{
+      id: "ozet",
+      t: "Özet",
+      icon: "ozet"
+    }, {
+      id: "talepler",
+      t: "Eğitim talepleri",
+      icon: "talepler",
+      badge: edu.length
+    }, {
+      id: "kullanicilar",
+      t: "Kullanıcılar",
+      icon: "kullanicilar"
+    }, {
+      id: "analiz",
+      t: "Analiz",
+      icon: "analiz"
+    }, {
+      id: "duyuru",
+      t: "Duyurular",
+      icon: "duyuru"
+    }, {
+      id: "deneme",
+      t: "Canlı deneme",
+      icon: "deneme"
+    }, {
+      id: "gecmis",
+      t: "İşlem geçmişi",
+      icon: "gecmis"
+    }];
+    const go = function (id) {
+      setTab(id);
+      try {
+        window.scrollTo(0, 0);
+      } catch (e) {}
+    };
+    const errList = Object.keys(errors);
+    const act14 = ov && ov.active_14 || [];
+    const maxAct = Math.max(1, Math.max.apply(null, act14.map(function (x) {
+      return Number(x.n) || 0;
+    }).concat([0])));
+    const refreshBtn = /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost adm-btn-sm",
+      onClick: load,
+      disabled: loading,
+      "aria-label": "Verileri yenile"
+    }, loading ? /*#__PURE__*/React.createElement("span", {
+      className: "adm-spin",
+      "aria-hidden": "true"
+    }) : /*#__PURE__*/React.createElement(Ico, {
+      n: "refresh"
+    }), /*#__PURE__*/React.createElement("span", null, loading ? "Yükleniyor" : "Yenile"));
+
+    // ============================================================
+    return /*#__PURE__*/React.createElement("div", {
+      className: "adm flex"
+    }, /*#__PURE__*/React.createElement("aside", {
+      className: "adm-side hidden lg:flex flex-col w-72 shrink-0 sticky top-0 h-screen px-4 py-6",
+      "aria-label": "Y\xF6netim men\xFCs\xFC"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "flex-1 relative"
-    }, /*#__PURE__*/React.createElement("input", {
-      ref: searchInputRef,
+      className: "flex items-center gap-3 px-2 mb-8"
+    }, window.AtanomLogo ? window.AtanomLogo("h-11 w-11 object-contain rounded-xl") : /*#__PURE__*/React.createElement("img", {
+      src: "icons/atanom.png",
+      alt: "",
+      className: "h-11 w-11 object-contain rounded-xl"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-lg font-extrabold leading-tight"
+    }, "Atanly ", /*#__PURE__*/React.createElement("span", {
+      className: "adm-gold"
+    }, "Y\xF6netim")), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-white/70 truncate"
+    }, up.email || "Yönetici"))), /*#__PURE__*/React.createElement("nav", {
+      className: "flex-1 space-y-1"
+    }, nav.map(function (n) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: n.id,
+        type: "button",
+        className: "adm-nav",
+        "aria-current": tab === n.id ? "page" : undefined,
+        onClick: function () {
+          go(n.id);
+        }
+      }, /*#__PURE__*/React.createElement(Ico, {
+        n: n.icon
+      }), /*#__PURE__*/React.createElement("span", {
+        className: "flex-1"
+      }, n.t), n.badge > 0 && /*#__PURE__*/React.createElement("span", {
+        className: "adm-count",
+        "aria-label": n.badge + " bekleyen"
+      }, n.badge));
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl p-4 mb-3",
+      style: {
+        background: "rgba(255,255,255,.06)",
+        border: "1px solid rgba(255,255,255,.1)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-white/70"
+    }, "Son g\xFCncelleme"), /*#__PURE__*/React.createElement("div", {
+      className: "text-sm font-bold mt-0.5"
+    }, loadedAt ? loadedAt.toLocaleTimeString("tr-TR", {
+      hour: "2-digit",
+      minute: "2-digit"
+    }) : "—")), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-glass w-full",
+      onClick: props.onSignOut
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "out"
+    }), "\xC7\u0131k\u0131\u015F")), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 min-w-0"
+    }, /*#__PURE__*/React.createElement("header", {
+      className: "adm-top lg:hidden sticky top-0 z-30",
+      style: {
+        paddingTop: "env(safe-area-inset-top)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between gap-3 px-4 pt-3 pb-2"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2.5 min-w-0"
+    }, window.AtanomLogo ? window.AtanomLogo("h-9 w-9 object-contain rounded-lg") : /*#__PURE__*/React.createElement("img", {
+      src: "icons/atanom.png",
+      alt: "",
+      className: "h-9 w-9 object-contain rounded-lg"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "font-extrabold truncate"
+    }, "Atanly ", /*#__PURE__*/React.createElement("span", {
+      className: "adm-gold"
+    }, "Y\xF6netim"))), /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-glass adm-btn-sm",
+      onClick: load,
+      disabled: loading,
+      "aria-label": "Verileri yenile"
+    }, loading ? /*#__PURE__*/React.createElement("span", {
+      className: "adm-spin",
+      "aria-hidden": "true"
+    }) : /*#__PURE__*/React.createElement(Ico, {
+      n: "refresh"
+    })), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-glass adm-btn-sm",
+      onClick: props.onSignOut
+    }, "\xC7\u0131k\u0131\u015F"))), /*#__PURE__*/React.createElement("nav", {
+      className: "flex gap-2 overflow-x-auto px-4 pb-3",
+      "aria-label": "Y\xF6netim b\xF6l\xFCmleri",
+      style: {
+        scrollbarWidth: "none"
+      }
+    }, nav.map(function (n) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: n.id,
+        type: "button",
+        className: "adm-pill",
+        "aria-current": tab === n.id ? "page" : undefined,
+        onClick: function () {
+          go(n.id);
+        }
+      }, n.t, n.badge > 0 && /*#__PURE__*/React.createElement("span", {
+        className: "adm-count",
+        style: {
+          height: 20,
+          minWidth: 20,
+          fontSize: 10
+        }
+      }, n.badge));
+    }))), /*#__PURE__*/React.createElement("main", {
+      className: "px-4 py-6 md:px-8 md:py-8 max-w-7xl mx-auto"
+    }, legacy && /*#__PURE__*/React.createElement("div", {
+      className: "adm-alert adm-alert-warn mb-4",
+      role: "status"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "warn",
+      className: "w-5 h-5 shrink-0 mt-0.5"
+    }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("b", null, "Veritaban\u0131 yamas\u0131 eksik."), " Panel \u015Fimdilik yedek yoldan \xE7al\u0131\u015F\u0131yor; baz\u0131 b\xF6l\xFCmler (i\u015Flem ge\xE7mi\u015Fi, ayr\u0131nt\u0131l\u0131 \xF6zet) kapal\u0131. Supabase \u2192 SQL Editor'da ", /*#__PURE__*/React.createElement("code", {
+      className: "font-mono"
+    }, "supabase/patch-admin-panel.sql"), " dosyas\u0131n\u0131 bir kez \xE7al\u0131\u015Ft\u0131r.")), errList.length > 0 && /*#__PURE__*/React.createElement("div", {
+      className: "adm-alert adm-alert-err mb-4",
+      role: "alert"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "warn",
+      className: "w-5 h-5 shrink-0 mt-0.5"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("b", null, "Baz\u0131 veriler y\xFCklenemedi."), /*#__PURE__*/React.createElement("ul", {
+      className: "mt-1 space-y-0.5"
+    }, errList.map(function (k) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: k
+      }, errors[k]);
+    }))), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost adm-btn-sm ml-auto",
+      onClick: load
+    }, "Tekrar dene")), tab === "ozet" && /*#__PURE__*/React.createElement("div", {
+      className: "space-y-5"
+    }, /*#__PURE__*/React.createElement("section", {
+      className: "adm-hero p-6 md:p-8"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-hero-grid"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "relative flex flex-col md:flex-row md:items-end justify-between gap-6"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "text-xs font-extrabold tracking-[.16em] uppercase text-white/70"
+    }, "Y\xF6netim \xF6zeti"), /*#__PURE__*/React.createElement("h1", {
+      className: "text-3xl md:text-4xl font-extrabold tracking-tight mt-2"
+    }, "Ho\u015F geldin, ", /*#__PURE__*/React.createElement("span", {
+      className: "adm-gold"
+    }, student.profile && student.profile.name || up.nickname || "yönetici")), /*#__PURE__*/React.createElement("p", {
+      className: "text-white/75 text-sm mt-2 max-w-xl"
+    }, fmtDate(new Date()), " \xB7 ", ov ? num(ov.dau) + " öğrenci bugün çalıştı" : "Veriler yükleniyor", edu.length ? " · " + edu.length + " eğitim talebi seni bekliyor" : "")), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-3 gap-3 md:gap-5 text-center"
+    }, [["Bugün", ov && ov.dau], ["7 gün", ov && ov.wau], ["30 gün", ov && ov.mau]].map(function (x) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: x[0],
+        className: "rounded-2xl px-4 py-3",
+        style: {
+          background: "rgba(255,255,255,.08)",
+          border: "1px solid rgba(255,255,255,.12)"
+        }
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "text-2xl md:text-3xl font-extrabold"
+      }, ov ? num(x[1]) : "—"), /*#__PURE__*/React.createElement("div", {
+        className: "text-[11px] font-bold uppercase tracking-wider text-white/70 mt-0.5"
+      }, x[0]));
+    })))), edu.length > 0 && /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        go("talepler");
+      },
+      className: "adm-card w-full text-left p-4 flex items-center gap-4",
+      style: {
+        borderColor: "#E9D3A0"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-ico adm-ico-gold"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "talepler"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 min-w-0"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-extrabold"
+    }, edu.length, " e\u011Fitim de\u011Fi\u015Fikli\u011Fi talebi bekliyor"), /*#__PURE__*/React.createElement("div", {
+      className: "text-sm adm-muted truncate"
+    }, edu.slice(0, 3).map(function (r) {
+      return (r.nickname || "Öğrenci") + " → " + eduLabel(r.to);
+    }).join(" · "))), /*#__PURE__*/React.createElement("span", {
+      className: "adm-btn adm-btn-gold adm-btn-sm"
+    }, "\u0130ncele", /*#__PURE__*/React.createElement(Ico, {
+      n: "arrow"
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 xl:grid-cols-4 gap-3 md:gap-4"
+    }, /*#__PURE__*/React.createElement(Kpi, {
+      label: "\xD6\u011Frenci",
+      icon: "kullanicilar",
+      tone: "navy",
+      value: ov ? num(ov.users) : "—",
+      sub: ov ? num(ov.idle7) + " kişi 7+ gündür pasif" : ""
+    }), /*#__PURE__*/React.createElement(Kpi, {
+      label: "Premium",
+      icon: "star",
+      tone: "gold",
+      value: ov ? num(ov.premium) : "—",
+      sub: ov && ov.users ? "%" + Math.round(ov.premium / ov.users * 100) + " oran" : ""
+    }), /*#__PURE__*/React.createElement(Kpi, {
+      label: "\xC7\xF6z\xFClen soru",
+      icon: "q",
+      tone: "green",
+      value: ov ? num(ov.questions) : "—",
+      sub: ov && ov.users ? "Kişi başı " + num(Math.round(ov.questions / ov.users)) : ""
+    }), /*#__PURE__*/React.createElement(Kpi, {
+      label: "Engelli hesap",
+      icon: "ban",
+      tone: "rose",
+      value: ov ? num(ov.blocked) : "—",
+      sub: ov ? num(ov.announcements) + " duyuru yayında" : ""
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "grid lg:grid-cols-3 gap-4"
+    }, /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5 lg:col-span-2",
+      "aria-labelledby": "adm-act-t"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between mb-4"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-act-t",
+      className: "font-extrabold"
+    }, "G\xFCnl\xFCk aktif \xF6\u011Frenci"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs adm-muted"
+    }, "Son 14 g\xFCn \xB7 o g\xFCn en son \xE7al\u0131\u015Fan \xF6\u011Frenci say\u0131s\u0131")), /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip adm-chip-teal"
+    }, "Bug\xFCn ", ov ? num(ov.dau) : "—")), loading && !ov ? /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 140
+      }
+    }) : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-bars",
+      role: "img",
+      "aria-label": "Son 14 günün aktif öğrenci sayıları: " + act14.map(function (x) {
+        return fmtDate(x.day) + " " + x.n;
+      }).join(", ")
+    }, act14.map(function (x, i) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: x.day,
+        title: fmtDate(x.day) + ": " + x.n,
+        className: "adm-bar" + (i === act14.length - 1 ? " adm-bar-today" : ""),
+        style: {
+          height: Math.round((Number(x.n) || 0) / maxAct * 100) + "%"
+        }
+      });
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "flex gap-1.5 mt-2 text-[10px] adm-muted"
+    }, act14.map(function (x, i) {
+      return /*#__PURE__*/React.createElement("span", {
+        key: x.day,
+        className: "flex-1 text-center"
+      }, i % 2 === act14.length % 2 ? String(x.day).slice(8, 10) : "");
+    })))), /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5",
+      "aria-labelledby": "adm-lvl-t"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-lvl-t",
+      className: "font-extrabold mb-4"
+    }, "E\u011Fitim d\xFCzeyi"), /*#__PURE__*/React.createElement(Dist, {
+      data: ov && ov.by_level,
+      label: eduLabel
+    }), /*#__PURE__*/React.createElement("h2", {
+      className: "font-extrabold mt-6 mb-4"
+    }, "Platform"), /*#__PURE__*/React.createElement(Dist, {
+      data: ov && ov.by_platform,
+      label: platformLabel,
+      meter: "adm-meter-gold"
+    }))), /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5",
+      "aria-labelledby": "adm-last-t"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between mb-3"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-last-t",
+      className: "font-extrabold"
+    }, "Son i\u015Flemler"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "text-sm font-bold",
+      style: {
+        color: "var(--a-teal)"
+      },
+      onClick: function () {
+        go("gecmis");
+      }
+    }, "T\xFCm\xFC")), !audit || !audit.length ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted"
+    }, audit ? "Henüz işlem yok." : "İşlem geçmişi için veritabanı yaması gerekli.") : /*#__PURE__*/React.createElement("ul", {
+      className: "divide-y",
+      style: {
+        borderColor: "var(--a-line2)"
+      }
+    }, audit.slice(0, 5).map(function (a, i) {
+      return /*#__PURE__*/React.createElement("li", {
+        key: i,
+        className: "py-2.5 flex items-center gap-3 text-sm"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip " + (a.ok === false ? "adm-chip-rose" : "adm-chip-teal")
+      }, ACTION_LABELS[a.action] || a.action), /*#__PURE__*/React.createElement("span", {
+        className: "truncate flex-1"
+      }, a.target || cleanDetail(a.detail)), /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted text-xs shrink-0"
+      }, fmtDateTime(a.at)));
+    })))), tab === "talepler" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Head, {
+      eyebrow: "Onay bekleyenler",
+      title: "E\u011Fitim de\u011Fi\u015Fikli\u011Fi talepleri",
+      right: refreshBtn,
+      sub: "Soru \xE7\xF6zmeye ba\u015Flam\u0131\u015F \xF6\u011Frenci d\xFCzeyini kendisi de\u011Fi\u015Ftiremez; talep buraya d\xFC\u015Fer. Onaylarsan d\xFCzeyi ve (gelece\u011Fe ait ise) s\u0131nav tarihi g\xFCncellenir."
+    }), loading && !edu.length ? /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 120
+      }
+    }) : !edu.length ? /*#__PURE__*/React.createElement(Empty, {
+      title: "Bekleyen talep yok",
+      text: "\xD6\u011Frenci Profil \u2192 Ayarlar'dan d\xFCzey de\u011Fi\u015Fikli\u011Fi istedi\u011Finde burada g\xF6r\xFCn\xFCr."
+    }) : /*#__PURE__*/React.createElement("ul", {
+      className: "grid md:grid-cols-2 gap-4"
+    }, edu.map(function (r) {
+      var exam = futureExamDate(r.to);
+      var b = busy === "edu:" + r.user_id;
+      return /*#__PURE__*/React.createElement("li", {
+        key: r.user_id,
+        className: "adm-card p-5"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center gap-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-avatar"
+      }, initial(r.nickname)), /*#__PURE__*/React.createElement("div", {
+        className: "min-w-0 flex-1"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "font-extrabold truncate"
+      }, r.nickname || "Öğrenci"), /*#__PURE__*/React.createElement("div", {
+        className: "text-xs adm-muted"
+      }, fmtDateTime(r.at), r.questions_total != null ? " · " + num(r.questions_total) + " soru çözmüş" : ""))), /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center gap-2 mt-4"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip"
+      }, eduLabel(r.from)), /*#__PURE__*/React.createElement(Ico, {
+        n: "arrow",
+        className: "w-4 h-4 adm-muted"
+      }), /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-teal"
+      }, eduLabel(r.to))), /*#__PURE__*/React.createElement("div", {
+        className: "flex gap-2 mt-5"
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "adm-btn adm-btn-ok flex-1",
+        disabled: !!busy,
+        onClick: function () {
+          setConfirm({
+            tone: "ok",
+            icon: "check",
+            title: (r.nickname || "Öğrenci") + " " + eduLabel(r.to) + " düzeyine geçsin mi?",
+            okLabel: "Onayla",
+            body: exam ? "Sınav tarihi " + fmtDate(exam) + " olarak ayarlanır. Öğrenci uygulamayı açınca yeni düzeyi görür." : "Öğrenci uygulamayı açınca yeni düzeyi görür. Sınav tarihi değişmez (takvimdeki tarih geçmiş).",
+            onOk: function () {
+              decideEdu(r, true);
+            }
+          });
+        }
+      }, b ? /*#__PURE__*/React.createElement("span", {
+        className: "adm-spin"
+      }) : /*#__PURE__*/React.createElement(Ico, {
+        n: "check"
+      }), "Onayla"), /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "adm-btn adm-btn-ghost flex-1",
+        disabled: !!busy,
+        onClick: function () {
+          setConfirm({
+            tone: "danger",
+            icon: "x",
+            title: "Talep reddedilsin mi?",
+            okLabel: "Reddet",
+            body: "Öğrenci " + eduLabel(r.from) + " düzeyinde kalır ve talebinin reddedildiğini görür.",
+            onOk: function () {
+              decideEdu(r, false);
+            }
+          });
+        }
+      }, /*#__PURE__*/React.createElement(Ico, {
+        n: "x"
+      }), "Reddet")));
+    }))), tab === "kullanicilar" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Head, {
+      eyebrow: "Hesaplar",
+      title: "Kullan\u0131c\u0131lar",
+      right: refreshBtn,
+      sub: num(users.length) + " hesap · satıra dokunarak ayrıntı ve işlemleri aç."
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4 mb-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-col md:flex-row gap-3"
+    }, /*#__PURE__*/React.createElement("label", {
+      className: "relative flex-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "sr-only"
+    }, "Kullan\u0131c\u0131 ara"), /*#__PURE__*/React.createElement(Ico, {
+      n: "search",
+      className: "w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 adm-muted"
+    }), /*#__PURE__*/React.createElement("input", {
+      type: "search",
       value: q,
       onChange: function (e) {
         setQ(e.target.value);
         setPage(1);
       },
-      placeholder: "\uD83D\uDD0D Ara: ad, konum, e\u011Fitim, email\u2026",
-      className: "w-full px-4 py-3 pl-10 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-    }), /*#__PURE__*/React.createElement("span", {
-      className: "absolute left-3 top-1/2 -translate-y-1/2 text-stone-400"
-    }, "\uD83D\uDD0D")), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-wrap gap-2"
-    }, [{
-      id: "all",
-      t: "Tümü"
-    }, {
-      id: "premium",
-      t: "⭐ Premium"
-    }, {
-      id: "lisans",
-      t: "🎓 Lisans"
-    }, {
-      id: "onlisans",
-      t: "🎓 Ön Lisans"
-    }, {
-      id: "ortaogretim",
-      t: "🏫 Ortaöğretim"
-    }, {
-      id: "active",
-      t: "🟢 Bugün Aktif"
-    }, {
-      id: "idle7",
-      t: "🔴 Pasif 7+"
-    }].map(function (f) {
-      var active = filter === f.id;
+      placeholder: "Ad, e-posta, konum, d\xFCzey\u2026",
+      className: "adm-input",
+      style: {
+        paddingLeft: 44
+      }
+    })), /*#__PURE__*/React.createElement("label", {
+      className: "flex items-center gap-2 shrink-0"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-label"
+    }, "S\u0131rala"), /*#__PURE__*/React.createElement("select", {
+      value: sort,
+      onChange: function (e) {
+        setSort(e.target.value);
+      },
+      className: "adm-input",
+      style: {
+        width: "auto"
+      }
+    }, /*#__PURE__*/React.createElement("option", {
+      value: "recent"
+    }, "Son \xE7al\u0131\u015Fma"), /*#__PURE__*/React.createElement("option", {
+      value: "questions"
+    }, "Soru say\u0131s\u0131"), /*#__PURE__*/React.createElement("option", {
+      value: "name"
+    }, "Ad (A\u2013Z)"), /*#__PURE__*/React.createElement("option", {
+      value: "joined"
+    }, "Kay\u0131t tarihi")))), /*#__PURE__*/React.createElement("div", {
+      className: "adm-seg mt-3",
+      role: "group",
+      "aria-label": "Filtre"
+    }, [["all", "Tümü", counts.all], ["active", "Bugün aktif", counts.active], ["idle7", "7+ gün pasif", counts.idle7], ["premium", "Premium", counts.premium], ["pending", "Talep bekleyen", counts.pending], ["blocked", "Engelli", counts.blocked], ["lisans", "Lisans"], ["onlisans", "Ön lisans"], ["ortaogretim", "Ortaöğretim"]].map(function (f) {
       return /*#__PURE__*/React.createElement("button", {
-        key: f.id,
+        key: f[0],
+        type: "button",
+        "aria-pressed": filter === f[0],
         onClick: function () {
-          setFilter(f.id);
+          setFilter(f[0]);
           setPage(1);
-        },
-        className: "shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all " + (active ? "bg-indigo-600 text-white shadow-sm" : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700")
-      }, f.t);
-    }))), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass overflow-hidden"
+        }
+      }, f[1], f[2] != null ? " · " + f[2] : "");
+    }))), loading && !users.length ? /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 260
+      }
+    }) : !filtered.length ? /*#__PURE__*/React.createElement(Empty, {
+      icon: "search",
+      title: "E\u015Fle\u015Fen kullan\u0131c\u0131 yok",
+      text: users.length ? "Aramayı ya da filtreyi değiştir." : "Liste boş."
+    }) : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-card overflow-hidden hidden md:block"
     }, /*#__PURE__*/React.createElement("div", {
       className: "overflow-x-auto"
     }, /*#__PURE__*/React.createElement("table", {
-      className: "w-full text-sm"
-    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
-      className: "text-left text-xs text-stone-400 border-b border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50"
-    }, /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("nickname");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      className: "adm-table"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "D\xFCzey"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Son \xE7al\u0131\u015Fma"), /*#__PURE__*/React.createElement("th", {
+      scope: "col",
+      style: {
+        textAlign: "right"
       }
-    }, "Kullan\u0131c\u0131 ", sortField === "nickname" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("education_level");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-      }
-    }, "E\u011Fitim ", sortField === "education_level" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("location");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-      }
-    }, "Konum ", sortField === "location" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("target_type");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-      }
-    }, "Kulvar ", sortField === "target_type" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("questions_total");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-      }
-    }, "Soru ", sortField === "questions_total" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 cursor-pointer hover:text-stone-700",
-      onClick: function () {
-        setSortField("last_study_at");
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-      }
-    }, "Son \xC7al\u0131\u015Fma ", sortField === "last_study_at" && (sortOrder === "asc" ? "↑" : "↓")), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3"
-    }, "Plan"), /*#__PURE__*/React.createElement("th", {
-      className: "font-medium px-4 py-3 text-right"
-    }, "\u0130\u015Flem"))), /*#__PURE__*/React.createElement("tbody", null, paginatedRows.length === 0 ? /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
-      colSpan: 8,
-      className: "px-4 py-12 text-center text-stone-400"
-    }, "Kay\u0131t yok veya liste yetkisi eksik.")) : paginatedRows.map(function (u) {
-      var status = getStatusBadge(u.last_study_at);
-      return /*#__PURE__*/React.createElement("tr", {
-        key: u.user_id || u.nickname,
-        className: "border-b border-stone-100 dark:border-stone-800 last:border-0 hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors " + (status.label.includes("pasif") ? "bg-rose-50/30 dark:bg-rose-950/10" : "")
-      }, /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "font-medium"
-      }, u.nickname || "—"), /*#__PURE__*/React.createElement("div", {
-        className: "text-xs text-stone-400 font-mono"
-      }, u.email || (u.user_id || "").slice(0, 12))), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-[10px] font-medium px-2 py-0.5 rounded-full " + getLevelColor(u.education_level)
-      }, eduLabel(u.education_level))), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3 text-xs text-stone-600 dark:text-stone-400"
-      }, u.location || "—"), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3 text-xs text-stone-600 dark:text-stone-400"
-      }, trackLabel(u.target_type)), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3 font-semibold"
-      }, u.questions_total || 0), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "text-xs"
-      }, fmtDate(u.last_study_at)), /*#__PURE__*/React.createElement("div", {
-        className: "text-[10px] text-stone-400"
-      }, status.label)), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "text-[10px] font-bold px-2 py-0.5 rounded-full " + (u.premium ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" : "bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400")
-      }, u.premium ? "⭐ Premium" : "Ücretsiz")), /*#__PURE__*/React.createElement("td", {
-        className: "px-4 py-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "flex flex-wrap gap-1 justify-end"
-      }, u.premium ? /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          if (!confirm("Bu kullanıcının Premium'u alınsın mı?")) return;
-          act("revoke_premium", {
-            user_id: u.user_id
-          });
-        },
-        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300 hover:bg-stone-200 transition-colors"
-      }, "Premium al") : /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          if (!confirm("Bu kullanıcıya 30 gün Premium verilsin mi?")) return;
-          act("grant_premium", {
-            user_id: u.user_id,
-            days: 30
-          });
-        },
-        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 hover:bg-amber-200 transition-colors"
-      }, "+30g \u2B50"), /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          inspect(u.user_id);
-        },
-        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 hover:bg-indigo-200 transition-colors"
-      }, "Detay"), /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          if (confirm("Bu kullanıcı engellensin mi?")) act("block", {
-            user_id: u.user_id
-          });
-        },
-        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 hover:bg-rose-200 transition-colors"
-      }, "\uD83D\uDEAB"), /*#__PURE__*/React.createElement("button", {
-        disabled: busy,
-        onClick: function () {
-          if (u.user_id === (student.userProfile && student.userProfile.authUserId)) {
-            alert("Kendi hesabını silemezsin.");
-            return;
-          }
-          if (!confirm("Bu kullanıcı kalıcı silinsin mi? Giriş yapamaz, verisi gider.")) return;
-          if (!confirm("Emin misin? Bu geri alınmaz.")) return;
-          act("delete_user", {
-            user_id: u.user_id
-          });
-        },
-        className: "text-[10px] font-medium px-2 py-1 rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition-colors"
-      }, "Sil"))));
-    }))))), totalPages > 1 && /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between gap-4 mt-4"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-xs text-stone-400"
-    }, (page - 1) * pageSize + 1, " - ", Math.min(page * pageSize, filteredRows.length), " / ", filteredRows.length), /*#__PURE__*/React.createElement("div", {
-      className: "flex gap-1"
-    }, /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setPage(Math.max(1, page - 1));
-      },
-      disabled: page === 1,
-      className: "px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-    }, "\u2190"), Array.from({
-      length: Math.min(5, totalPages)
-    }, function (_, i) {
-      var p = i + 1;
-      return /*#__PURE__*/React.createElement("button", {
-        key: p,
-        onClick: function () {
-          setPage(p);
-        },
-        className: "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors " + (page === p ? "bg-indigo-600 text-white" : "border border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800")
-      }, p);
-    }), /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setPage(Math.min(totalPages, page + 1));
-      },
-      disabled: page === totalPages,
-      className: "px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700 text-sm disabled:opacity-40 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-    }, "\u2192"))), detail && /*#__PURE__*/React.createElement("div", {
-      className: "mt-4 rounded-2xl glass p-5 border-l-4 border-l-indigo-500 slide-up"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between items-start"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-      className: "font-bold text-lg"
-    }, detail.nickname || "—"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-500"
-    }, detail.email || detail.user_id), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-wrap gap-2 mt-2"
+    }, "Soru"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Durum"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
     }, /*#__PURE__*/React.createElement("span", {
-      className: "text-xs bg-indigo-50 dark:bg-indigo-950/30 px-2 py-0.5 rounded-full"
-    }, "\uD83D\uDCDD ", detail.questions_total || detail.counters && detail.counters.questions || 0, " soru"), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs bg-rose-50 dark:bg-rose-950/30 px-2 py-0.5 rounded-full"
-    }, "\u274C ", detail.wrongCount || 0, " yanl\u0131\u015F"), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs bg-emerald-50 dark:bg-emerald-950/30 px-2 py-0.5 rounded-full"
-    }, "\uD83C\uDFAF ", detail.target_type || "—"), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs bg-stone-50 dark:bg-stone-800 px-2 py-0.5 rounded-full"
-    }, "\uD83D\uDCF1 ", detail.platform || "web"), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs bg-teal-50 dark:bg-teal-950/30 px-2 py-0.5 rounded-full"
-    }, "\uD83D\uDCCD ", detail.location || locLabel(detail.userProfile && detail.userProfile.location)))), /*#__PURE__*/React.createElement("button", {
-      onClick: function () {
-        setDetail(null);
-      },
-      className: "text-stone-400 hover:text-stone-600"
-    }, "\u2715")), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-wrap gap-2 mt-4"
-    }, detail.premium ? /*#__PURE__*/React.createElement("button", {
-      disabled: busy,
-      onClick: function () {
-        if (!confirm("Premium alınsın mı?")) return;
-        act("revoke_premium", {
-          user_id: detail.user_id
-        });
-      },
-      className: "text-xs font-medium px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-700"
-    }, "Premium al") : /*#__PURE__*/React.createElement("button", {
-      disabled: busy,
-      onClick: function () {
-        if (!confirm("30 gün Premium verilsin mi?")) return;
-        act("grant_premium", {
-          user_id: detail.user_id,
-          days: 30
-        });
-      },
-      className: "text-xs font-medium px-3 py-1.5 rounded-lg bg-amber-100 text-amber-700"
-    }, "+30g Premium"), /*#__PURE__*/React.createElement("button", {
-      disabled: busy,
-      onClick: function () {
-        if (detail.user_id === (student.userProfile && student.userProfile.authUserId)) {
-          alert("Kendi hesabını silemezsin.");
-          return;
-        }
-        if (!confirm("Kullanıcı kalıcı silinsin mi? Bu geri alınmaz.")) return;
-        act("delete_user", {
-          user_id: detail.user_id
-        });
-      },
-      className: "text-xs font-medium px-3 py-1.5 rounded-lg bg-rose-600 text-white"
-    }, "Kullan\u0131c\u0131y\u0131 sil")))), tab === "analiz" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text mb-6"
-    }, "\uD83D\uDCC8 Zor Konular"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-500 dark:text-stone-400 mb-4"
-    }, "T\xFCrkiye genelinde yanl\u0131\u015F a\u011F\u0131rl\u0131\u011F\u0131 en y\xFCksek 10 konu."), hard.length === 0 ? /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-12 text-center"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-4xl mb-3"
-    }, "\uD83D\uDCCA"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400"
-    }, "Hen\xFCz yeterli veri yok veya admin_hard_topics SQL\u2019i \xE7al\u0131\u015Ft\u0131r\u0131lmad\u0131.")) : /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass divide-y divide-stone-100 dark:divide-stone-800"
-    }, hard.map(function (h, i) {
-      var colors = ["#4f46e5", "#7c3aed", "#ec4899", "#f59e0b", "#10b981", "#6366f1", "#8b5cf6", "#d946ef", "#f43f5e", "#0ea5e9"];
-      return /*#__PURE__*/React.createElement("div", {
-        key: i,
-        className: "px-5 py-4 flex items-center justify-between hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "flex items-center gap-4"
+      className: "sr-only"
+    }, "A\xE7")))), /*#__PURE__*/React.createElement("tbody", null, pageRows.map(function (u) {
+      var ls = lastSeen(u.last_study_at);
+      return /*#__PURE__*/React.createElement("tr", {
+        key: u.user_id,
+        className: "adm-row",
+        tabIndex: 0,
+        onClick: function () {
+          openDetail(u.user_id);
+        },
+        onKeyDown: function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openDetail(u.user_id);
+          }
+        },
+        "aria-label": (u.nickname || "Kullanıcı") + " ayrıntısını aç"
+      }, /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center gap-3 min-w-0"
       }, /*#__PURE__*/React.createElement("span", {
-        className: "text-xs font-bold text-stone-400 w-6"
-      }, i + 1), /*#__PURE__*/React.createElement("div", {
-        className: "h-8 w-8 rounded-lg flex items-center justify-center text-sm font-bold text-white",
-        style: {
-          background: colors[i % colors.length]
-        }
-      }, h.ders ? h.ders[0] : "?"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-        className: "font-medium"
-      }, h.konu || "—"), /*#__PURE__*/React.createElement("div", {
-        className: "text-xs text-stone-400"
-      }, h.ders || "—"))), /*#__PURE__*/React.createElement("div", {
-        className: "text-right"
+        className: "adm-avatar" + (u.premium ? " adm-avatar-gold" : "")
+      }, initial(u.nickname)), /*#__PURE__*/React.createElement("div", {
+        className: "min-w-0"
       }, /*#__PURE__*/React.createElement("div", {
-        className: "font-semibold text-rose-600"
-      }, h.wrong_weight || 0), /*#__PURE__*/React.createElement("div", {
-        className: "text-[10px] text-stone-400"
-      }, h.users || 0, " kullan\u0131c\u0131")));
+        className: "font-bold truncate max-w-[220px]"
+      }, u.nickname || "—", u.role === "admin" && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-navy ml-2"
+      }, "Y\xF6netici")), /*#__PURE__*/React.createElement("div", {
+        className: "text-xs adm-muted truncate max-w-[260px]"
+      }, u.email || u.location || String(u.user_id || "").slice(0, 8))))), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip"
+      }, eduLabel(u.education_level))), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-" + ls.tone
+      }, ls.t)), /*#__PURE__*/React.createElement("td", {
+        style: {
+          textAlign: "right"
+        },
+        className: "font-bold"
+      }, num(u.questions_total)), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-wrap gap-1.5"
+      }, u.premium && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-gold"
+      }, "Premium"), u.blocked && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-rose"
+      }, "Engelli"), u.edu_request && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-teal"
+      }, "Talep"), !u.premium && !u.blocked && !u.edu_request && /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted text-xs"
+      }, "\xDCcretsiz"))), /*#__PURE__*/React.createElement("td", {
+        style: {
+          textAlign: "right"
+        }
+      }, /*#__PURE__*/React.createElement(Ico, {
+        n: "arrow",
+        className: "w-4 h-4 adm-muted inline"
+      })));
+    }))))), /*#__PURE__*/React.createElement("ul", {
+      className: "md:hidden space-y-2.5"
+    }, pageRows.map(function (u) {
+      var ls = lastSeen(u.last_study_at);
+      return /*#__PURE__*/React.createElement("li", {
+        key: u.user_id
+      }, /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "adm-card adm-row w-full text-left p-4 flex items-center gap-3",
+        onClick: function () {
+          openDetail(u.user_id);
+        }
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-avatar" + (u.premium ? " adm-avatar-gold" : "")
+      }, initial(u.nickname)), /*#__PURE__*/React.createElement("span", {
+        className: "min-w-0 flex-1"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "block font-bold truncate"
+      }, u.nickname || "—"), /*#__PURE__*/React.createElement("span", {
+        className: "flex flex-wrap gap-1.5 mt-1.5"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip"
+      }, eduLabel(u.education_level)), /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-" + ls.tone
+      }, ls.t), u.premium && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-gold"
+      }, "Premium"), u.blocked && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-rose"
+      }, "Engelli"), u.edu_request && /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip adm-chip-teal"
+      }, "Talep"))), /*#__PURE__*/React.createElement("span", {
+        className: "text-right shrink-0"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "block font-extrabold"
+      }, num(u.questions_total)), /*#__PURE__*/React.createElement("span", {
+        className: "text-[11px] adm-muted"
+      }, "soru"))));
     })), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-1 md:grid-cols-3 gap-4 mt-6"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83D\uDCDA Toplam Konu"), /*#__PURE__*/React.createElement("p", {
-      className: "text-2xl font-bold gradient-text mt-1"
-    }, hard.length), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "En \xE7ok yanl\u0131\u015F yap\u0131lan konular")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83C\uDFAF En Zor Ders"), /*#__PURE__*/React.createElement("p", {
-      className: "text-2xl font-bold text-rose-600 mt-1"
-    }, hard.length > 0 ? hard.reduce(function (a, b) {
-      return (a.wrong_weight || 0) > (b.wrong_weight || 0) ? a : b;
-    }).ders || "—" : "—"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "En y\xFCksek yanl\u0131\u015F a\u011F\u0131rl\u0131\u011F\u0131")), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-5"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 font-medium uppercase tracking-wider"
-    }, "\uD83D\uDC65 Etkilenen Kullan\u0131c\u0131"), /*#__PURE__*/React.createElement("p", {
-      className: "text-2xl font-bold text-indigo-600 mt-1"
-    }, hard.reduce(function (sum, h) {
-      return sum + (h.users || 0);
-    }, 0)), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 mt-1"
-    }, "Toplam zor konu g\xF6ren")))), tab === "deneme" && /*#__PURE__*/React.createElement(LiveAdminHost, null), tab === "icerik" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
-      className: "text-2xl md:text-3xl font-black gradient-text mb-6"
-    }, "\uD83D\uDCE2 Duyuru"), /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-500 dark:text-stone-400 mb-4"
-    }, "\xD6\u011Frencilerin \"Bug\xFCn\" ekran\u0131nda g\xF6rece\u011Fi duyuruyu yay\u0131nla."), /*#__PURE__*/React.createElement("div", {
-      className: "rounded-2xl glass p-6"
-    }, /*#__PURE__*/React.createElement("textarea", {
-      ref: announceRef,
-      value: announce,
-      onChange: function (e) {
-        setAnnounce(e.target.value);
-      },
-      rows: 5,
-      className: "w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none",
-      placeholder: "\uD83D\uDCDD Duyuru metnini yaz... \xD6rn: 'Yar\u0131n 14:00'de canl\u0131 deneme var!'"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-4"
-    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center justify-between gap-3 mt-4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "text-sm adm-muted"
+    }, num((curPage - 1) * PAGE + 1), "\u2013", num(Math.min(curPage * PAGE, filtered.length)), " / ", num(filtered.length)), pages > 1 && /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-2"
-    }, /*#__PURE__*/React.createElement("label", {
-      className: "text-xs text-stone-500 shrink-0"
-    }, "S\xFCre"), /*#__PURE__*/React.createElement("select", {
-      value: announceHours,
-      onChange: function (e) {
-        setAnnounceHours(e.target.value);
-      },
-      className: "px-3 py-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm"
-    }, /*#__PURE__*/React.createElement("option", {
-      value: "1"
-    }, "1 saat"), /*#__PURE__*/React.createElement("option", {
-      value: "3"
-    }, "3 saat"), /*#__PURE__*/React.createElement("option", {
-      value: "6"
-    }, "6 saat"), /*#__PURE__*/React.createElement("option", {
-      value: "12"
-    }, "12 saat"), /*#__PURE__*/React.createElement("option", {
-      value: "24"
-    }, "24 saat"), /*#__PURE__*/React.createElement("option", {
-      value: "48"
-    }, "2 g\xFCn"), /*#__PURE__*/React.createElement("option", {
-      value: "72"
-    }, "3 g\xFCn"), /*#__PURE__*/React.createElement("option", {
-      value: "168"
-    }, "7 g\xFCn"), /*#__PURE__*/React.createElement("option", {
-      value: "0"
-    }, "S\xFCresiz")), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs text-stone-400"
-    }, announce.length, "/500")), /*#__PURE__*/React.createElement("button", {
-      disabled: busy || !announce.trim(),
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost adm-btn-sm",
+      disabled: curPage <= 1,
       onClick: function () {
-        act("announce", {
-          text: announce,
-          hours: Number(announceHours)
-        });
-        setAnnounce("");
-        if (announceRef.current) announceRef.current.focus();
+        setPage(curPage - 1);
       },
-      className: "px-6 py-2.5 rounded-2xl btn-primary text-white font-semibold disabled:opacity-40 transition-all"
-    }, busy ? "⏳ Yayınlanıyor..." : "📢 Yayınla"))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6"
+      "aria-label": "\xD6nceki sayfa"
+    }, "\u2039 \xD6nceki"), /*#__PURE__*/React.createElement("span", {
+      className: "text-sm font-bold"
+    }, curPage, " / ", pages), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost adm-btn-sm",
+      disabled: curPage >= pages,
+      onClick: function () {
+        setPage(curPage + 1);
+      },
+      "aria-label": "Sonraki sayfa"
+    }, "Sonraki \u203A"))))), tab === "analiz" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Head, {
+      eyebrow: "\xD6\u011Frenme verisi",
+      title: "Analiz",
+      right: refreshBtn,
+      sub: "\xD6\u011Frencilerin en \xE7ok zorland\u0131\u011F\u0131 konular ve kitle da\u011F\u0131l\u0131m\u0131."
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "grid lg:grid-cols-3 gap-4"
+    }, /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5 lg:col-span-2",
+      "aria-labelledby": "adm-hard-t"
     }, /*#__PURE__*/React.createElement("h2", {
-      className: "text-sm font-black uppercase tracking-widest text-stone-400 mb-3"
-    }, "Yay\u0131nlanan duyurular"), !announceList.length ? /*#__PURE__*/React.createElement("p", {
-      className: "text-sm text-stone-400"
-    }, "Hen\xFCz kay\u0131t yok.") : /*#__PURE__*/React.createElement("ul", {
+      id: "adm-hard-t",
+      className: "font-extrabold"
+    }, "En \xE7ok zorlan\u0131lan konular"), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs adm-muted mb-4"
+    }, "Yanl\u0131\u015F a\u011F\u0131rl\u0131\u011F\u0131 toplam\u0131na g\xF6re ilk 10"), !hard.length ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm adm-muted"
+    }, "Hen\xFCz yeterli veri yok.") : /*#__PURE__*/React.createElement("ol", {
+      className: "space-y-3.5"
+    }, hard.map(function (h, i) {
+      var top = Number(hard[0].wrong_weight) || 1;
+      return /*#__PURE__*/React.createElement("li", {
+        key: i,
+        className: "flex items-center gap-3"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "w-6 text-sm font-extrabold adm-muted text-right"
+      }, i + 1), /*#__PURE__*/React.createElement("div", {
+        className: "flex-1 min-w-0"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex justify-between gap-3 text-sm mb-1.5"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "font-bold truncate"
+      }, h.konu || "—", " ", /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted font-semibold"
+      }, "\xB7 ", h.ders || "")), /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted shrink-0"
+      }, num(h.users), " ki\u015Fi")), /*#__PURE__*/React.createElement("div", {
+        className: "adm-meter adm-meter-rose"
+      }, /*#__PURE__*/React.createElement("span", {
+        style: {
+          width: Math.max(3, Math.round((Number(h.wrong_weight) || 0) / top * 100)) + "%"
+        }
+      }))));
+    }))), /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5",
+      "aria-labelledby": "adm-dist-t"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-dist-t",
+      className: "font-extrabold mb-4"
+    }, "E\u011Fitim d\xFCzeyi"), /*#__PURE__*/React.createElement(Dist, {
+      data: ov && ov.by_level,
+      label: eduLabel
+    }), /*#__PURE__*/React.createElement("h2", {
+      className: "font-extrabold mt-6 mb-4"
+    }, "Platform"), /*#__PURE__*/React.createElement(Dist, {
+      data: ov && ov.by_platform,
+      label: platformLabel,
+      meter: "adm-meter-gold"
+    }), /*#__PURE__*/React.createElement("h2", {
+      className: "font-extrabold mt-6 mb-3"
+    }, "Etkile\u015Fim"), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 gap-3 text-center"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl p-3",
+      style: {
+        background: "var(--a-soft)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-xl font-extrabold"
+    }, ov && ov.mau ? "%" + Math.round(ov.dau / ov.mau * 100) : "—"), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs adm-muted"
+    }, "G\xFCnl\xFCk / ayl\u0131k")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-2xl p-3",
+      style: {
+        background: "var(--a-soft)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-xl font-extrabold"
+    }, ov && ov.users ? "%" + Math.round(ov.mau / ov.users * 100) : "—"), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs adm-muted"
+    }, "30 g\xFCnde aktif")))))), tab === "duyuru" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Head, {
+      eyebrow: "\u0130leti\u015Fim",
+      title: "Duyurular",
+      right: refreshBtn,
+      sub: "Yay\u0131nlad\u0131\u011F\u0131n duyuru t\xFCm \xF6\u011Frencilerin Bug\xFCn ekran\u0131n\u0131n \xFCst\xFCnde bant olarak g\xF6r\xFCn\xFCr."
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "grid lg:grid-cols-5 gap-4"
+    }, /*#__PURE__*/React.createElement("section", {
+      className: "adm-card p-5 lg:col-span-3",
+      "aria-labelledby": "adm-new-t"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-new-t",
+      className: "font-extrabold mb-3"
+    }, "Yeni duyuru"), /*#__PURE__*/React.createElement("label", {
+      className: "block"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "sr-only"
+    }, "Duyuru metni"), /*#__PURE__*/React.createElement("textarea", {
+      className: "adm-input",
+      maxLength: 500,
+      value: annText,
+      onChange: function (e) {
+        setAnnText(e.target.value);
+      },
+      placeholder: "\xD6rn: Pazar 10.00'da canl\u0131 deneme var, kayd\u0131n\u0131 unutma!"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between text-xs adm-muted mt-1.5"
+    }, /*#__PURE__*/React.createElement("span", null, "D\xFCz metin; ba\u011Flant\u0131 ve bi\xE7im eklenmez."), /*#__PURE__*/React.createElement("span", null, annText.length, "/500")), /*#__PURE__*/React.createElement("div", {
+      className: "mt-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-label mb-2"
+    }, "Yay\u0131nda kalma s\xFCresi"), /*#__PURE__*/React.createElement("div", {
+      className: "adm-seg",
+      role: "group",
+      "aria-label": "Yay\u0131n s\xFCresi"
+    }, [["6", "6 saat"], ["24", "1 gün"], ["72", "3 gün"], ["168", "1 hafta"], ["0", "Süresiz"]].map(function (h) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: h[0],
+        type: "button",
+        "aria-pressed": annHours === h[0],
+        onClick: function () {
+          setAnnHours(h[0]);
+        }
+      }, h[1]);
+    }))), annText.trim() && /*#__PURE__*/React.createElement("div", {
+      className: "mt-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-label mb-2"
+    }, "\xD6\u011Frencinin g\xF6rece\u011Fi"), /*#__PURE__*/React.createElement("div", {
+      className: "adm-banner text-sm font-semibold leading-relaxed"
+    }, "\uD83D\uDCE2 ", annText.trim())), /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-end mt-5"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-gold",
+      disabled: !annText.trim() || !!busy,
+      onClick: function () {
+        setConfirm({
+          tone: "ok",
+          icon: "duyuru",
+          title: "Duyuru yayınlansın mı?",
+          okLabel: "Yayınla",
+          body: "Tüm öğrencilere " + (annHours === "0" ? "süresiz" : {
+            "6": "6 saat",
+            "24": "1 gün",
+            "72": "3 gün",
+            "168": "1 hafta"
+          }[annHours] + " boyunca") + " gösterilir.",
+          onOk: publish
+        });
+      }
+    }, busy === "announce" ? /*#__PURE__*/React.createElement("span", {
+      className: "adm-spin"
+    }) : /*#__PURE__*/React.createElement(Ico, {
+      n: "duyuru"
+    }), "Yay\u0131nla"))), /*#__PURE__*/React.createElement("section", {
+      className: "lg:col-span-2",
+      "aria-labelledby": "adm-ann-t"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-ann-t",
+      className: "font-extrabold mb-3"
+    }, "Yay\u0131nlananlar ", /*#__PURE__*/React.createElement("span", {
+      className: "adm-muted font-semibold"
+    }, "\xB7 ", ann.length)), !ann.length ? /*#__PURE__*/React.createElement(Empty, {
+      icon: "duyuru",
+      title: "Hen\xFCz duyuru yok"
+    }) : /*#__PURE__*/React.createElement("ul", {
       className: "space-y-3"
-    }, announceList.map(function (a) {
+    }, ann.map(function (a) {
       return /*#__PURE__*/React.createElement("li", {
         key: a.id || a.createdAt,
-        className: "rounded-2xl glass p-4"
+        className: "adm-card p-4"
       }, /*#__PURE__*/React.createElement("div", {
-        className: "flex flex-wrap items-start justify-between gap-3"
-      }, /*#__PURE__*/React.createElement("div", {
-        className: "min-w-0 flex-1"
+        className: "flex items-start gap-3"
       }, /*#__PURE__*/React.createElement("p", {
-        className: "text-sm font-semibold leading-snug"
-      }, a.text || "—"), /*#__PURE__*/React.createElement("p", {
-        className: "text-xs text-stone-400 mt-2"
-      }, fmtDateTime(a.createdAt), a.expiresAt ? " · bitiş " + fmtDateTime(a.expiresAt) : " · süresiz")), /*#__PURE__*/React.createElement("div", {
-        className: "flex items-center gap-2 shrink-0"
+        className: "text-sm font-semibold leading-relaxed flex-1 min-w-0 break-words"
+      }, a.text || "—"), /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip " + (a.live ? "adm-chip-green" : "")
+      }, a.live ? "Yayında" : "Süresi doldu")), /*#__PURE__*/React.createElement("div", {
+        className: "flex items-center justify-between gap-3 mt-3"
       }, /*#__PURE__*/React.createElement("span", {
-        className: "text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md " + (a.live ? "bg-emerald-100 text-emerald-700" : "bg-stone-200 text-stone-600")
-      }, a.live ? "Yayında" : "Süresi doldu"), /*#__PURE__*/React.createElement("button", {
+        className: "text-xs adm-muted"
+      }, fmtDateTime(a.createdAt), " \xB7 ", a.expiresAt ? "bitiş " + fmtDateTime(a.expiresAt) : "süresiz"), /*#__PURE__*/React.createElement("button", {
         type: "button",
-        disabled: busy || !a.id,
+        className: "adm-btn adm-btn-soft-danger adm-btn-sm",
+        disabled: !a.id || !!busy,
+        "aria-label": "Duyuruyu sil",
         onClick: function () {
-          if (!a.id) return;
-          if (window.confirm("Bu duyuru silinsin mi? Bant da kalkar.")) {
-            act("delete_announce", {
-              id: a.id
-            });
+          setConfirm({
+            tone: "danger",
+            icon: "trash",
+            title: "Duyuru silinsin mi?",
+            body: "Öğrencilerin ekranındaki bant da kalkar.",
+            okLabel: "Sil",
+            onOk: function () {
+              removeAnn(a);
+            }
+          });
+        }
+      }, /*#__PURE__*/React.createElement(Ico, {
+        n: "trash"
+      }), "Sil")));
+    }))))), tab === "deneme" && /*#__PURE__*/React.createElement(LiveAdminHost, null), tab === "gecmis" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Head, {
+      eyebrow: "Denetim",
+      title: "\u0130\u015Flem ge\xE7mi\u015Fi",
+      right: refreshBtn,
+      sub: "Y\xF6netici i\u015Flemleri ve reddedilen yetkisiz denemeler (son 120 kay\u0131t)."
+    }), audit === null ? /*#__PURE__*/React.createElement(Empty, {
+      icon: "gecmis",
+      title: "\u0130\u015Flem ge\xE7mi\u015Fi kapal\u0131",
+      text: "Supabase SQL Editor'da supabase/patch-admin-panel.sql dosyas\u0131n\u0131 \xE7al\u0131\u015Ft\u0131r\u0131nca a\xE7\u0131l\u0131r."
+    }) : !audit.length ? /*#__PURE__*/React.createElement(Empty, {
+      icon: "gecmis",
+      title: "Hen\xFCz kay\u0131t yok"
+    }) : /*#__PURE__*/React.createElement("div", {
+      className: "adm-card overflow-hidden"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "overflow-x-auto"
+    }, /*#__PURE__*/React.createElement("table", {
+      className: "adm-table"
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Zaman"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "\u0130\u015Flem"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Yapan"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Hedef"), /*#__PURE__*/React.createElement("th", {
+      scope: "col"
+    }, "Ayr\u0131nt\u0131"))), /*#__PURE__*/React.createElement("tbody", null, audit.map(function (a, i) {
+      return /*#__PURE__*/React.createElement("tr", {
+        key: i
+      }, /*#__PURE__*/React.createElement("td", {
+        className: "whitespace-nowrap adm-muted text-xs"
+      }, fmtDateTime(a.at)), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
+        className: "adm-chip " + (a.ok === false ? "adm-chip-rose" : "adm-chip-teal")
+      }, a.ok === false ? "Reddedildi · " : "", ACTION_LABELS[a.action] || a.action)), /*#__PURE__*/React.createElement("td", {
+        className: "font-semibold"
+      }, a.actor || "—"), /*#__PURE__*/React.createElement("td", null, a.target || "—"), /*#__PURE__*/React.createElement("td", {
+        className: "adm-muted text-xs max-w-[280px] truncate"
+      }, cleanDetail(a.detail)));
+    })))))))), sel && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-scrim",
+      onClick: closeDetail
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "adm-drawer",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-labelledby": "adm-user-t"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-drawer-head"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-hero-grid"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "relative flex items-start gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-avatar" + (selUser && selUser.premium ? " adm-avatar-gold" : ""),
+      style: {
+        width: 52,
+        height: 52,
+        fontSize: 20,
+        borderRadius: 16
+      }
+    }, initial(detail && detail.nickname || selUser && selUser.nickname)), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0 flex-1"
+    }, /*#__PURE__*/React.createElement("h2", {
+      id: "adm-user-t",
+      className: "text-xl font-extrabold truncate"
+    }, detail && detail.nickname || selUser && selUser.nickname || "Kullanıcı"), /*#__PURE__*/React.createElement("div", {
+      className: "text-sm text-white/75 truncate"
+    }, detail && (detail.email || detail.name) || selUser && selUser.email || "")), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-glass adm-btn-sm",
+      onClick: closeDetail,
+      "aria-label": "Kapat"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "x"
+    })))), /*#__PURE__*/React.createElement("div", {
+      className: "p-5 space-y-4"
+    }, detailErr && /*#__PURE__*/React.createElement("div", {
+      className: "adm-alert adm-alert-err",
+      role: "alert"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "warn",
+      className: "w-5 h-5 shrink-0"
+    }), /*#__PURE__*/React.createElement("span", null, detailErr)), !detail && !detailErr && /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 90
+      }
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 140
+      }
+    })), detail && /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-1.5"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip adm-chip-navy"
+    }, eduLabel(detail.education_level)), /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip"
+    }, trackLabel(detail.target_type)), /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip"
+    }, platformLabel(detail.platform)), detail.location && /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip"
+    }, detail.location), detail.premium && /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip adm-chip-gold"
+    }, "Premium", detail.premium_until ? " · " + fmtDate(detail.premium_until) + "'e kadar" : ""), detail.blocked && /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip adm-chip-rose"
+    }, "Engelli"), detail.role === "admin" && /*#__PURE__*/React.createElement("span", {
+      className: "adm-chip adm-chip-navy"
+    }, "Y\xF6netici")), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-3 gap-2.5"
+    }, [["Soru", num(detail.questions_total || detail.counters && detail.counters.questions)], ["Yanlış defteri", num(detail.wrong_count)], ["Seri", num(detail.streak && (detail.streak.current || detail.streak.count))]].map(function (x) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: x[0],
+        className: "adm-card p-3 text-center"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "text-xl font-extrabold"
+      }, x[1]), /*#__PURE__*/React.createElement("div", {
+        className: "text-[11px] adm-muted font-bold"
+      }, x[0]));
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4 text-sm space-y-2"
+    }, [["Son çalışma", lastSeen(detail.last_study_at).t + (detail.last_study_at ? " · " + fmtDate(detail.last_study_at) : "")], ["Kayıt", fmtDate(detail.created_at)], ["Sınav tarihi", fmtDate(detail.exam_date)], ["Son eşitleme", fmtDateTime(detail.updated_at)], ["Kullanıcı kimliği", detail.user_id]].map(function (x) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: x[0],
+        className: "flex justify-between gap-4"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "adm-muted shrink-0"
+      }, x[0]), /*#__PURE__*/React.createElement("span", {
+        className: "text-right break-all " + (x[0] === "Kullanıcı kimliği" ? "font-mono text-xs adm-muted" : "font-semibold")
+      }, x[1] || "—"));
+    })), Array.isArray(detail.days) && detail.days.length > 0 && /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-extrabold text-sm mb-3"
+    }, "Son \xE7al\u0131\u015Fma g\xFCnleri"), /*#__PURE__*/React.createElement("ul", {
+      className: "space-y-2"
+    }, detail.days.slice(0, 7).map(function (d) {
+      var pct = d.q ? Math.round(d.c / d.q * 100) : 0;
+      return /*#__PURE__*/React.createElement("li", {
+        key: d.day,
+        className: "flex items-center gap-3 text-sm"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "w-16 shrink-0 adm-muted"
+      }, fmtDate(d.day).replace(/ \d{4}$/, "")), /*#__PURE__*/React.createElement("div", {
+        className: "adm-meter flex-1"
+      }, /*#__PURE__*/React.createElement("span", {
+        style: {
+          width: pct + "%"
+        }
+      })), /*#__PURE__*/React.createElement("span", {
+        className: "w-28 text-right shrink-0 font-semibold text-xs whitespace-nowrap"
+      }, d.q, " soru \xB7 %", pct));
+    }))), detail.edu_request && /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4 text-sm flex items-center gap-3"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "adm-ico adm-ico-gold"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "talepler"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-bold"
+    }, "E\u011Fitim talebi: ", eduLabel(detail.edu_request.from), " \u2192 ", eduLabel(detail.edu_request.to)), /*#__PURE__*/React.createElement("div", {
+      className: "adm-muted text-xs"
+    }, {
+      pending: "Onay bekliyor",
+      rejected: "Reddedildi",
+      approved: "Onaylandı"
+    }[detail.edu_request.status] || detail.edu_request.status, " \xB7 ", fmtDateTime(detail.edu_request.at))), detail.edu_request.status === "pending" && /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost adm-btn-sm",
+      onClick: function () {
+        closeDetail();
+        go("talepler");
+      }
+    }, "Talepler")), detail.role !== "admin" && /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2 font-extrabold text-sm mb-3"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "star",
+      className: "w-5 h-5",
+      style: {
+        color: "var(--a-gold)"
+      }
+    }), "Premium"), detail.premium ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ghost w-full",
+      disabled: !!busy,
+      onClick: function () {
+        setConfirm({
+          tone: "danger",
+          icon: "star",
+          title: "Premium kaldırılsın mı?",
+          body: (detail.nickname || "Kullanıcı") + " ücretsiz plana döner.",
+          okLabel: "Premium'u kaldır",
+          onOk: function () {
+            setPremium(selUser, 0);
           }
-        },
-        className: "px-3 py-1.5 rounded-xl border border-rose-200 text-rose-700 text-xs font-semibold hover:bg-rose-50 disabled:opacity-40"
-      }, "Sil"))));
-    }))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6 rounded-2xl glass p-5 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border border-indigo-200 dark:border-indigo-800/30"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-2"
-    }, "\uD83D\uDCA1 \u0130pucu"), /*#__PURE__*/React.createElement("ul", {
-      className: "text-xs text-stone-600 dark:text-stone-400 space-y-1"
-    }, /*#__PURE__*/React.createElement("li", null, "\u2022 Duyuru t\xFCm kullan\u0131c\u0131lara g\xF6nderilir"), /*#__PURE__*/React.createElement("li", null, "\u2022 \"Bug\xFCn\" ekran\u0131n\u0131n \xFCst k\u0131sm\u0131nda g\xF6r\xFCn\xFCr"), /*#__PURE__*/React.createElement("li", null, "\u2022 T\xFCm yay\u0131nlar a\u015Fa\u011F\u0131da durur; vakti gelince sen silersin"), /*#__PURE__*/React.createElement("li", null, "\u2022 S\xFCre dolunca \xF6\u011Frenci band\u0131 kalkar, kay\u0131t panelde kal\u0131r")))))));
+        });
+      }
+    }, busy === "premium:" + detail.user_id ? /*#__PURE__*/React.createElement("span", {
+      className: "adm-spin"
+    }) : null, "Premium'u kald\u0131r") : /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "adm-seg mb-3",
+      role: "group",
+      "aria-label": "Premium s\xFCresi"
+    }, [7, 30, 90, 365].map(function (d) {
+      return /*#__PURE__*/React.createElement("button", {
+        key: d,
+        type: "button",
+        "aria-pressed": grantDays === d,
+        onClick: function () {
+          setGrantDays(d);
+        }
+      }, d === 365 ? "1 yıl" : d + " gün");
+    })), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-gold w-full",
+      disabled: !!busy,
+      onClick: function () {
+        var d = grantDays;
+        setConfirm({
+          tone: "ok",
+          icon: "star",
+          title: d + " gün Premium verilsin mi?",
+          body: (detail.nickname || "Kullanıcı") + " için Premium bugünden itibaren " + d + " gün açık kalır.",
+          okLabel: "Premium ver",
+          onOk: function () {
+            setPremium(selUser, d);
+          }
+        });
+      }
+    }, busy === "premium:" + detail.user_id ? /*#__PURE__*/React.createElement("span", {
+      className: "adm-spin"
+    }) : /*#__PURE__*/React.createElement(Ico, {
+      n: "star"
+    }), "Premium ver"))), /*#__PURE__*/React.createElement("div", {
+      className: "adm-card p-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-extrabold text-sm mb-3"
+    }, "Hesap"), /*#__PURE__*/React.createElement("div", {
+      className: "grid grid-cols-2 gap-2"
+    }, detail.blocked ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-ok",
+      disabled: !!busy,
+      onClick: function () {
+        setConfirm({
+          tone: "ok",
+          icon: "check",
+          title: "Engel kaldırılsın mı?",
+          body: (detail.nickname || "Kullanıcı") + " uygulamayı yeniden kullanabilir.",
+          okLabel: "Engeli kaldır",
+          onOk: function () {
+            setBlocked(selUser, false);
+          }
+        });
+      }
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "check"
+    }), "Engeli kald\u0131r") : /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-soft-danger",
+      disabled: !!busy,
+      onClick: function () {
+        setConfirm({
+          tone: "danger",
+          icon: "ban",
+          title: "Kullanıcı engellensin mi?",
+          body: (detail.nickname || "Kullanıcı") + " giriş yapınca \"Hesap kısıtlı\" ekranını görür. İstediğin zaman kaldırabilirsin.",
+          okLabel: "Engelle",
+          onOk: function () {
+            setBlocked(selUser, true);
+          }
+        });
+      }
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "ban"
+    }), "Engelle"), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "adm-btn adm-btn-danger",
+      disabled: !!busy || detail.user_id === myId,
+      onClick: function () {
+        setConfirm({
+          tone: "danger",
+          icon: "trash",
+          title: "Hesap kalıcı olarak silinsin mi?",
+          body: (detail.nickname || "Kullanıcı") + " ve tüm çalışma verisi silinir, bir daha giriş yapamaz. Bu işlem geri alınamaz.",
+          okLabel: "Kalıcı olarak sil",
+          onOk: function () {
+            deleteUser(selUser);
+          }
+        });
+      }
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "trash"
+    }), "Sil")))))))), confirm && /*#__PURE__*/React.createElement(Confirm, _extends({}, confirm, {
+      onClose: function () {
+        setConfirm(null);
+      }
+    })), toast && /*#__PURE__*/React.createElement("div", {
+      className: "adm-toast " + (toast.ok ? "adm-toast-ok" : "adm-toast-err"),
+      role: toast.ok ? "status" : "alert"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: toast.ok ? "check" : "warn",
+      className: "w-5 h-5 shrink-0 mt-0.5"
+    }), /*#__PURE__*/React.createElement("span", {
+      className: "flex-1"
+    }, toast.text), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: function () {
+        setToast(null);
+      },
+      "aria-label": "Bildirimi kapat",
+      className: "shrink-0 opacity-80 hover:opacity-100"
+    }, /*#__PURE__*/React.createElement(Ico, {
+      n: "x",
+      className: "w-5 h-5"
+    }))));
   }
-
-  // ============================================================
-  // EXPORT
-  // ============================================================
 
   // Canlı deneme yönetimi ayrı dosyada; sekme açılınca yüklenir.
   function LiveAdminHost() {
@@ -1196,15 +2039,21 @@
       window.JsxLoader.load("LiveExamAdmin", "js/components/LiveExamAdmin.jsx").then(function (C) {
         if (C) setCmp(function () {
           return C;
-        });else setErr("Yüklenemedi.");
+        });else setErr("Canlı deneme yönetimi yüklenemedi. Sayfayı yenile.");
       }).catch(function (e) {
-        setErr(String(e && e.message || e));
+        setErr("Canlı deneme yönetimi yüklenemedi: " + String(e && e.message || e));
       });
     }, []);
-    if (err) return /*#__PURE__*/React.createElement("p", {
-      className: "text-rose-600"
+    if (err) return /*#__PURE__*/React.createElement("div", {
+      className: "adm-alert adm-alert-err",
+      role: "alert"
     }, err);
-    return Cmp ? /*#__PURE__*/React.createElement(Cmp, null) : /*#__PURE__*/React.createElement("p", null, "Y\xFCkleniyor\u2026");
+    return Cmp ? /*#__PURE__*/React.createElement(Cmp, null) : /*#__PURE__*/React.createElement("div", {
+      className: "adm-skel",
+      style: {
+        height: 240
+      }
+    });
   }
   window.KpssComponents = window.KpssComponents || {};
   window.KpssComponents.AdminDashboard = AdminDashboard;

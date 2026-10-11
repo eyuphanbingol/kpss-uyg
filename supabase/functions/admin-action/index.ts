@@ -31,6 +31,7 @@ const ADMIN_ACTIONS: Record<string, 1> = {
   grant_premium: 1,
   revoke_premium: 1,
   block: 1,
+  unblock: 1,
   announce: 1,
   list_edu_requests: 1,
   approve_edu: 1,
@@ -133,13 +134,13 @@ Deno.serve(async (req) => {
     return json(req, { ok: false, error: "Bu işlem için yetkin yok." }, 403);
   }
 
-  if ((action === "grant_premium" || action === "revoke_premium" || action === "block" || action === "approve_edu" || action === "reject_edu" || action === "delete_user" || action === "inspect_user") && !isUuid(body.user_id)) {
+  if ((action === "grant_premium" || action === "revoke_premium" || action === "block" || action === "unblock" || action === "approve_edu" || action === "reject_edu" || action === "delete_user" || action === "inspect_user") && !isUuid(body.user_id)) {
     return json(req, { ok: false, error: "Geçersiz kullanıcı." }, 400);
   }
 
   if (action === "user_list") {
     const { data } = await admin.from("student_states")
-      .select("user_id,nickname,education_level,target_type,platform,premium,last_study_at,questions_total,updated_at,role,payload")
+      .select("user_id,nickname,education_level,target_type,platform,premium,blocked,last_study_at,questions_total,updated_at,role,payload")
       .order("updated_at", { ascending: false })
       .limit(400);
     const list = (data || []).map((r: any) => {
@@ -152,6 +153,7 @@ Deno.serve(async (req) => {
         target_type: r.target_type,
         platform: r.platform,
         premium: r.premium,
+        blocked: !!(r.blocked || up.blocked),
         last_study_at: r.last_study_at,
         questions_total: r.questions_total,
         updated_at: r.updated_at,
@@ -190,6 +192,13 @@ Deno.serve(async (req) => {
     if (blockedUpd.error) {
       await admin.from("student_states").update({ payload }).eq("user_id", body.user_id);
     }
+  } else if (action === "unblock") {
+    const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
+    const payload = Object.assign({}, row?.payload || {}, {
+      userProfile: Object.assign({}, row?.payload?.userProfile || {}, { blocked: false })
+    });
+    const upd = await admin.from("student_states").update({ payload, blocked: false }).eq("user_id", body.user_id);
+    if (upd.error) return json(req, { ok: false, error: "Kayıt güncellenemedi." }, 500);
   } else if (action === "announce") {
     const text = String(body.text || "").trim().slice(0, 500);
     if (!text) return json(req, { ok: false, error: "Metin boş olamaz." }, 400);
@@ -250,14 +259,18 @@ Deno.serve(async (req) => {
     next.userProfile = Object.assign({}, next.userProfile || {}, { educationLevel: to });
     delete next.userProfile.educationChangeRequest;
     delete next.educationChangeRequest;
-    next.profile = Object.assign({}, next.profile || {}, { examDate: levels[to] });
+    // Sınav tarihi yalnız gelecekteyse yazılır (geçmiş bir tarih öğrencinin geri sayımını bozar)
+    const examDate = String(body.exam_date || levels[to] || "");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(examDate) && examDate > new Date().toISOString().slice(0, 10)) {
+      next.profile = Object.assign({}, next.profile || {}, { examDate });
+    }
     const upd = await admin.from("student_states").update({ payload: next, education_level: to }).eq("user_id", body.user_id);
     if (upd.error) return json(req, { ok: false, error: "Kayıt güncellenemedi." }, 500);
   } else if (action === "reject_edu") {
     const { data: row } = await admin.from("student_states").select("payload").eq("user_id", body.user_id).maybeSingle();
     const payload = Object.assign({}, row?.payload || {});
     const existing = eduReqFromPayload(payload) || {};
-    const reqObj = Object.assign({}, existing, { status: "rejected", at: new Date().toISOString() });
+    const reqObj = Object.assign({}, existing, { status: "rejected", decidedAt: new Date().toISOString() });
     const next = writeEduReq(payload, reqObj);
     await admin.from("student_states").update({ payload: next }).eq("user_id", body.user_id);
   } else if (action === "delete_user") {
@@ -294,9 +307,9 @@ Deno.serve(async (req) => {
     const delA = await admin.from("app_announcements").delete().eq("id", id);
     if (delA.error) return json(req, { ok: false, error: "Duyuru silinemedi." }, 500);
   } else if (action === "inspect_user") {
-    const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,questions_total,last_study_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
+    const { data } = await admin.from("student_states").select("nickname,education_level,target_type,premium,blocked,questions_total,last_study_at,updated_at,payload,platform,role").eq("user_id", body.user_id).maybeSingle();
     const p = data?.payload || {};
-    const req = eduReqFromPayload(p);
+    const eduReq = eduReqFromPayload(p);
     return json(req, {
       ok: true,
       data: {
@@ -305,6 +318,10 @@ Deno.serve(async (req) => {
         education_level: data?.education_level,
         target_type: data?.target_type,
         premium: data?.premium,
+        premium_until: (p.userProfile && p.userProfile.premiumUntil) || null,
+        blocked: !!(data?.blocked || (p.userProfile && p.userProfile.blocked)),
+        updated_at: data?.updated_at,
+        exam_date: (p.profile && p.profile.examDate) || null,
         questions_total: data?.questions_total,
         last_study_at: data?.last_study_at,
         platform: data?.platform,
@@ -313,7 +330,7 @@ Deno.serve(async (req) => {
         streak: p.streak || null,
         counters: p.counters || null,
         wrongCount: (p.wrongBook || []).length,
-        educationChangeRequest: req
+        educationChangeRequest: eduReq
       }
     });
   }
