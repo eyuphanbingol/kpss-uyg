@@ -9,6 +9,21 @@
 
 begin;
 
+-- ---------- bağımlılıklar: daha önce çalıştırılmamış isteğe bağlı yamalar (tekrar çalıştırmak zararsız) ----------
+alter table public.app_announcements add column if not exists expires_at timestamptz;
+alter table public.student_states add column if not exists blocked boolean not null default false;
+create table if not exists public.security_audit (
+  id uuid primary key default gen_random_uuid(),
+  at timestamptz not null default now(),
+  actor uuid,
+  action text not null,
+  target uuid,
+  ok boolean not null default true,
+  detail text
+);
+alter table public.security_audit enable row level security;
+revoke all on public.security_audit from public, anon, authenticated;
+
 -- ---------- yardımcılar ----------
 create or replace function public.admin_require()
 returns uuid language plpgsql stable security definer set search_path = public as $$

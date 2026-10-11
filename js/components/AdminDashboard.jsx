@@ -68,6 +68,9 @@
         if (typeof e === "string") return e;
         if (e.hint && /[a-zçğıöşü]/i.test(e.hint) && /[çğıöşüÇĞİÖŞÜ]|\s/.test(e.hint) && !/^(perhaps|try|no function)/i.test(e.hint)) return e.hint;
         if (e.tr) return e.tr;
+        if (/42703|42P01|column .* does not exist|relation .* does not exist/i.test(String(e.message || "") + " " + String(e.code || ""))) {
+            return "Veritabanı yaması eski: supabase/patch-admin-panel.sql dosyasını SQL Editor'da yeniden çalıştır.";
+        }
         return window.trError ? window.trError(e, fallback || "İşlem tamamlanamadı.") : (fallback || "İşlem tamamlanamadı.");
     }
     function isMissingFn(e) {

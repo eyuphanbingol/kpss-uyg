@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:87304:5k5urn*/
+/*jsx:babel-7.29.9-react-classic:87574:w8shv9*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -158,6 +158,9 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     if (typeof e === "string") return e;
     if (e.hint && /[a-zçğıöşü]/i.test(e.hint) && /[çğıöşüÇĞİÖŞÜ]|\s/.test(e.hint) && !/^(perhaps|try|no function)/i.test(e.hint)) return e.hint;
     if (e.tr) return e.tr;
+    if (/42703|42P01|column .* does not exist|relation .* does not exist/i.test(String(e.message || "") + " " + String(e.code || ""))) {
+      return "Veritabanı yaması eski: supabase/patch-admin-panel.sql dosyasını SQL Editor'da yeniden çalıştır.";
+    }
     return window.trError ? window.trError(e, fallback || "İşlem tamamlanamadı.") : fallback || "İşlem tamamlanamadı.";
   }
   function isMissingFn(e) {
