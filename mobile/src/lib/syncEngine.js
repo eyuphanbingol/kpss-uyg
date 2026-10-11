@@ -596,9 +596,17 @@ import { StudentStore } from "./store";
         return Math.max(n, c);
     }
 
+    // Değişiklikler toplanıp seyrek gönderilir: oyunda her dokunuşta sunucudan çekme + birleştirme +
+    // gönderme yapılması telefonu yoruyordu. Uygulama arka plana geçince flush() hemen gönderir.
     function schedule() {
         if (timer) clearTimeout(timer);
-        timer = setTimeout(function () { pullPush(); }, 1200);
+        timer = setTimeout(function () { timer = null; pullPush(); }, 6000);
+    }
+    function flush() {
+        if (!timer) return;
+        clearTimeout(timer);
+        timer = null;
+        pullPush();
     }
 
     if (typeof global.addEventListener === "function") {
@@ -610,6 +618,7 @@ import { StudentStore } from "./store";
         sync: pullPush,
         resetProgress: resetProgress,
         schedule: schedule,
+        flush: flush,
         weekStart: weekStart,
         ensureLocation: ensureLocation
     };

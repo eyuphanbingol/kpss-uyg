@@ -319,9 +319,6 @@ export function PanicPlayScreen({ navigation }) {
     var i = iState[0];
     var setI = iState[1];
     var PANIC_MS = 30000;
-    var msState = useState(PANIC_MS);
-    var ms = msState[0];
-    var setMs = msState[1];
     var scoreState = useState(0);
     var score = scoreState[0];
     var setScore = scoreState[1];
@@ -331,30 +328,22 @@ export function PanicPlayScreen({ navigation }) {
     var missedState = useState([]);
     var missed = missedState[0];
     var setMissed = missedState[1];
-    var live = useRef({ ms: PANIC_MS, score: 0, i: 0 });
+    // Kalan süre bir bitiş anı olarak tutulur; saniyede birkaç kez yalnız saat bileşeni yeniden çizilir
+    // (eskiden 80 ms'de bir tüm ekran yeniden çiziliyordu, Android'de oyun takılıyordu).
+    var live = useRef({ endAt: Date.now() + PANIC_MS, score: 0, i: 0 });
     var best = ((app.student && app.student.games) || {}).panicBest || 0;
 
     useEffect(function () {
-        live.current = { ms: PANIC_MS, score: 0, i: 0 };
-        setMs(PANIC_MS); setI(0); setScore(0); setOver(false); setMissed([]);
+        live.current = { endAt: Date.now() + PANIC_MS, score: 0, i: 0 };
+        setI(0); setScore(0); setOver(false); setMissed([]);
     }, [seed]);
 
-    useEffect(function () {
-        if (over) return;
-        var t0 = Date.now();
-        var start = live.current.ms;
-        var id = setInterval(function () {
-            var left = start - (Date.now() - t0);
-            live.current.ms = left;
-            setMs(left);
-            if (left <= 0) {
-                clearInterval(id);
-                setOver(true);
-                StudentStore.notePanicBest(live.current.score);
-            }
-        }, 80);
-        return function () { clearInterval(id); };
-    }, [i, over, seed]);
+    function timeUp() {
+        if (live.current.over) return;
+        live.current.over = true;
+        setOver(true);
+        StudentStore.notePanicBest(live.current.score);
+    }
 
     function choose(opt) {
         if (over || !deck.length) return;
@@ -363,15 +352,13 @@ export function PanicPlayScreen({ navigation }) {
         if (ok) {
             live.current.score += 1;
             setScore(live.current.score);
-            live.current.ms = Math.max(0, live.current.ms + 2000);
+            live.current.endAt += 2000;
         } else {
             setMissed(function (prev) { return prev.concat([{ q: q.q, picked: opt, a: q.a }]); });
-            live.current.ms = Math.max(0, live.current.ms - 3000);
+            live.current.endAt -= 3000;
         }
-        setMs(live.current.ms);
-        if (live.current.ms <= 0) {
-            setOver(true);
-            StudentStore.notePanicBest(live.current.score);
+        if (live.current.endAt <= Date.now()) {
+            timeUp();
             return;
         }
         live.current.i += 1;
@@ -413,7 +400,7 @@ export function PanicPlayScreen({ navigation }) {
         <ScrollScreen dark={isDark}>
             <BackChip dark={isDark} label="Alıştırmalar" onPress={function () { navigation.goBack(); }} />
             <Text style={[styles.kicker, isDark && styles.muted]}>Son 30 saniye · doğru +2 · yanlış −3</Text>
-            <Text style={[styles.timer, isDark && styles.light]}>{Math.max(0, ms / 1000).toFixed(1)}</Text>
+            <PanicClock liveRef={live} over={over} onTimeUp={timeUp} style={[styles.timer, isDark && styles.light]} />
             <View style={[styles.stem, isDark && styles.stemDark]}>
                 <Text style={[styles.stemText, isDark && styles.light]}>{q ? q.q : ""}</Text>
             </View>
@@ -428,6 +415,24 @@ export function PanicPlayScreen({ navigation }) {
             <Text style={[styles.meta, isDark && styles.muted, { marginTop: 12 }]}>{score} doğru · rekor {best}</Text>
         </ScrollScreen>
     );
+}
+
+// Geri sayım: yalnız bu küçük bileşen saniyede ~8 kez çizilir
+function PanicClock(props) {
+    var [now, setNow] = useState(Date.now());
+    var onTimeUp = useRef(props.onTimeUp);
+    onTimeUp.current = props.onTimeUp;
+    useEffect(function () {
+        if (props.over) return;
+        var id = setInterval(function () {
+            var t = Date.now();
+            setNow(t);
+            if (props.liveRef.current.endAt <= t) { clearInterval(id); onTimeUp.current(); }
+        }, 120);
+        return function () { clearInterval(id); };
+    }, [props.over]);
+    var left = Math.max(0, props.liveRef.current.endAt - now);
+    return <Text style={props.style}>{(left / 1000).toFixed(1)}</Text>;
 }
 
 var styles = StyleSheet.create({

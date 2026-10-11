@@ -5,7 +5,7 @@ import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
 import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
-import { AppState, Platform } from "react-native";
+import { AppState, InteractionManager, Platform } from "react-native";
 import * as Linking from "expo-linking";
 import { parseAuthUrl } from "./lib/authLinks";
 import { fetchRemoteCatalog, readCachedCatalog, looksCatalog } from "./lib/catalog";
@@ -158,6 +158,8 @@ export function AppProvider(props) {
                     SyncEngine.sync().catch(function () {});
                 }
             }
+            // Arka plana geçerken bekleyen değişiklikler hemen gönderilir (eşitleme artık seyrek çalışıyor)
+            if (nextAppState === "background" && session && SyncEngine.flush) SyncEngine.flush();
             appStateRef.current = nextAppState;
         });
 
@@ -289,13 +291,27 @@ export function AppProvider(props) {
     }
 
     // ---------- Plan ----------
+    // Katalog süzgeci öğrenci verisine bakmaz: yalnız katalog değişince yeniden kurulur. (Eskiden her
+    // dokunuşta — oyunda her kartta — yeni katalog nesnesi üretiliyor, kataloğa bağlı her hesap baştan yapılıyordu.)
     var visibleData = useMemo(function () {
         return filterCatalog(kpssData, student);
-    }, [kpssData, student]);
+    }, [kpssData]);
 
-    // Plan hesabı (tüm katalog) düşük öncelikli: dokunuşlara cevap bunu beklemez
-    var planStudent = useDeferredValue(student);
-    var planData = useDeferredValue(visibleData);
+    // Plan hesabı (tüm katalog) dokunuşlara hiç karışmaz: öğrenci verisi değişmeyi bırakınca, etkileşim
+    // bittikten sonra bir kez yapılır. Oyunda art arda gelen her cevap ayrı plan hesabı tetiklemez.
+    var _planIn = useState({ s: student, d: visibleData });
+    var planIn = _planIn[0];
+    var setPlanIn = _planIn[1];
+    useEffect(function () {
+        if (planIn.s === student && planIn.d === visibleData) return;
+        var task = null;
+        var t = setTimeout(function () {
+            task = InteractionManager.runAfterInteractions(function () { setPlanIn({ s: student, d: visibleData }); });
+        }, 700);
+        return function () { clearTimeout(t); if (task && task.cancel) task.cancel(); };
+    }, [student, visibleData]);
+    var planStudent = useDeferredValue(planIn.s);
+    var planData = useDeferredValue(planIn.d);
     var plan = useMemo(function () {
         try {
             return StudyPlanner.buildPlan(planData, planStudent);
