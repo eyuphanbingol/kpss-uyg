@@ -65,6 +65,28 @@
     };
 
     var ITEM_LL = {
+        "Ulubat (Uluabat) Gölü": [28.58, 40.17],
+        "Acıgöl (Denizli)": [29.88, 37.83],
+        "Acıgöl (Nevşehir)": [34.52, 38.55],
+        "Nazik Gölü": [42.28, 38.85],
+        "Sera Gölü": [39.63, 40.96],
+        "Zinav Gölü": [37.37, 40.37],
+        "Yedigöller": [31.8, 40.9],
+        "Borabay Gölü": [36.15, 40.8],
+        "Kestel Gölü": [30.45, 37.5],
+        "Avlan Gölü": [29.98, 36.7],
+        "Suğla Gölü": [32.03, 37.33],
+        "Kızören Obruğu": [33.18, 38.13],
+        "Akyatan Lagünü": [35.27, 36.63],
+        "Paradeniz Lagünü": [34.0, 36.34],
+        "Mogan Gölü": [32.78, 39.77],
+        "Eymir Gölü": [32.83, 39.82],
+        "Kaçkar buzul gölleri": [41.1, 40.86],
+        "Uludağ buzul gölleri": [29.2, 40.07],
+        "Munzur buzul gölleri": [39.6, 39.3],
+        "Cilo-Sat buzul gölleri": [44.0, 37.45],
+        "Bolkar buzul gölleri (Karagöl)": [34.56, 37.4],
+        "Aladağlar Yedigöller": [35.15, 37.82],
         "En çok yağış: Antalya (Toros yamaçları)": [30.6, 37.0],
         "Rafineri: Batman": [41.14, 37.88],
         "BTK hattı (Kars–Gürcistan)": [43.1, 41.1],
@@ -496,10 +518,21 @@
             id: "su", title: "Sular · kıyılar · geçitler", icon: "💧",
             kids: [
                 { id: "akarsu", title: "Akarsular", icon: "💧", hoverImg: "img/map/kart/akarsu.svg" },
-                { id: "goller", title: "Göller", icon: "🏞️", hoverImg: "img/map/kart/goller.svg" },
                 { id: "havza", title: "Kapalı havzalar", icon: "🌊", hoverImg: "img/map/kart/havza.svg" },
                 { id: "kiyi", title: "Kıyı tipleri", icon: "🏖️", hoverImg: "img/map/kart/kiyi.svg" },
                 { id: "gecit", title: "Geçitler ve boğazlar", icon: "🏔️", hoverImg: "img/map/kart/gecit.svg" }
+            ]
+        },
+        {
+            id: "goller-g", title: "Göller (oluşumuna göre)", icon: "🏞️",
+            kids: [
+                { id: "gol-tektonik", title: "Tektonik göller", icon: "🏞️", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-volkanik", title: "Volkanik göller (krater · volkanik set)", icon: "🌋", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-heyelan", title: "Heyelan set gölleri", icon: "🪨", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-karstik", title: "Karstik göller", icon: "🪨", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-kiyi", title: "Kıyı set gölleri (lagün)", icon: "🌅", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-aluvyal", title: "Alüvyal set gölleri", icon: "🟡", hoverImg: "img/map/kart/goller.svg" },
+                { id: "gol-buzul", title: "Buzul (sirk) gölleri", icon: "🧊", hoverImg: "img/map/kart/goller.svg" }
             ]
         },
         {
@@ -744,22 +777,57 @@
         ["Çoruh", "Artvin", { prompt: "Gürcistan/Karadeniz'e dökülen Çoruh'u bul.", follow: { q: "Rejimi en düzenli akarsulardan biri?", choices: ["Gediz", "Çoruh", "Küçük Menderes", "Asi"], answer: "Çoruh" } }]
     ].forEach(function (r) { ITEMS.push(F("akarsu", r[0], r[1], r[2] || {})); });
 
-    [
-        ["Van Gölü", "Van", { follow: { q: "Türkiye'nin en büyük gölü?", choices: ["Tuz Gölü", "Van Gölü", "Beyşehir", "Eğirdir"], answer: "Van Gölü" } }],
-        ["Tuz Gölü", "Aksaray-Konya-Ankara", { follow: { q: "En büyük 2. göl hangisidir?", choices: ["Beyşehir", "Tuz Gölü", "Eğirdir", "İznik"], answer: "Tuz Gölü" } }],
-        ["Beyşehir Gölü", "Konya", { follow: { q: "En büyük tatlı su gölü?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }],
-        ["Eğirdir Gölü", "Isparta", { follow: { q: "Beyşehir ve Eğirdir'in oluşumu?", choices: ["Sadece karstik", "Tektonik + karstik", "Sadece volkanik", "Lagün"], answer: "Tektonik + karstik" } }],
-        ["İznik Gölü", "Bursa"], ["Sapanca Gölü", "Sakarya"], ["Manyas (Kuş) Gölü", "Balıkesir"],
-        ["Burdur Gölü", "Burdur"], ["Akşehir Gölü", "Konya-Afyonkarahisar"], ["Eber Gölü", "Afyonkarahisar"],
-        ["Hazar Gölü", "Elazığ"], ["Salda Gölü", "Burdur"],
-        ["Nemrut Krater Gölü", "Bitlis"], ["Meke Gölü", "Konya"], ["Gölcük (Isparta)", "Isparta"],
-        ["Tortum Gölü", "Erzurum", { prompt: "Heyelan set gölü Tortum'u bul." }],
-        ["Abant Gölü", "Bolu"], ["Çıldır Gölü", "Ardahan-Kars"], ["Erçek Gölü", "Van"],
-        ["Bafa Gölü", "Aydın-Muğla", { prompt: "Alüvyal set gölü Bafa'yı (Çamiçi) bul." }],
-        ["Köyceğiz Gölü", "Muğla"],
-        ["Büyükçekmece", "İstanbul", { prompt: "Lagün / limani kıyı: Büyükçekmece'yi bul." }],
-        ["Küçükçekmece", "İstanbul"], ["Terkos (Durusu)", "İstanbul"]
-    ].forEach(function (r) { ITEMS.push(F("goller", r[0], r[1], r[2] || {})); });
+    // Göller oluşumuna göre ayrı oyunlardır. Her gölün türü ders kitaplarındaki (MEB/ÖSYM) sınıflamaya göre;
+    // kaynaklar arasında türü tartışmalı olan göller (Gölmarmara, Abant) bilerek eklenmedi.
+    function lakes(topic, label, rows) {
+        rows.forEach(function (r) {
+            var ex = r[2] || {};
+            if (!ex.prompt) ex.prompt = label + ": " + r[0] + " nerede? Haritada bul.";
+            ITEMS.push(F(topic, r[0], r[1], ex));
+        });
+    }
+    lakes("gol-tektonik", "Tektonik göl", [
+        ["Tuz Gölü", "Aksaray-Konya-Ankara", { follow: { q: "Yüz ölçümü en büyük 2. göl hangisidir?", choices: ["Beyşehir", "Tuz Gölü", "Eğirdir", "İznik"], answer: "Tuz Gölü" } }],
+        ["İznik Gölü", "Bursa"], ["Ulubat (Uluabat) Gölü", "Bursa"], ["Manyas (Kuş) Gölü", "Balıkesir"],
+        ["Sapanca Gölü", "Sakarya"], ["Hazar Gölü", "Elazığ", { follow: { q: "Hazar Gölü hangi fay hattı üzerindedir?", choices: ["Kuzey Anadolu Fayı", "Doğu Anadolu Fayı", "Batı Anadolu Fayı", "Ölü Deniz Fayı"], answer: "Doğu Anadolu Fayı" } }],
+        ["Akşehir Gölü", "Konya-Afyonkarahisar"], ["Eber Gölü", "Afyonkarahisar"],
+        ["Burdur Gölü", "Burdur"], ["Acıgöl (Denizli)", "Denizli-Afyonkarahisar", { prompt: "Tektonik göl: Denizli–Afyonkarahisar sınırındaki Acıgöl'ü bul (Nevşehir'deki Acıgöl volkaniktir)." }]
+    ]);
+    lakes("gol-volkanik", "Volkanik göl", [
+        ["Nemrut Krater Gölü", "Bitlis", { prompt: "Krater (kaldera) gölü: Nemrut Krater Gölü'nü bul." }],
+        ["Meke Gölü", "Konya", { prompt: "Krater (maar) gölü: Karapınar'daki Meke Gölü'nü bul." }],
+        ["Acıgöl (Nevşehir)", "Nevşehir", { prompt: "Krater (maar) gölü: Nevşehir'deki Acıgöl'ü bul." }],
+        ["Gölcük (Isparta)", "Isparta", { prompt: "Krater gölü: Isparta Gölcük'ü bul." }],
+        ["Van Gölü", "Van", { prompt: "Volkanik set gölü: Van Gölü'nü bul.", follow: { q: "Van Gölü'nün önünü hangi volkanın lavları kapatmıştır?", choices: ["Erciyes", "Nemrut (Bitlis)", "Hasan Dağı", "Ağrı Dağı"], answer: "Nemrut (Bitlis)" } }],
+        ["Erçek Gölü", "Van", { prompt: "Volkanik set gölü: Erçek Gölü'nü bul." }],
+        ["Nazik Gölü", "Bitlis", { prompt: "Volkanik set gölü: Ahlat'taki Nazik Gölü'nü bul." }],
+        ["Çıldır Gölü", "Ardahan-Kars", { prompt: "Volkanik set gölü: Çıldır Gölü'nü bul." }]
+    ]);
+    lakes("gol-heyelan", "Heyelan set gölü", [
+        ["Tortum Gölü", "Erzurum"], ["Sera Gölü", "Trabzon"], ["Zinav Gölü", "Tokat"],
+        ["Yedigöller", "Bolu"], ["Borabay Gölü", "Amasya"]
+    ]);
+    lakes("gol-karstik", "Karstik göl", [
+        ["Salda Gölü", "Burdur", { follow: { q: "Salda Gölü'nün oluşumu nedir?", choices: ["Volkanik", "Karstik", "Heyelan set", "Buzul"], answer: "Karstik" } }],
+        ["Kestel Gölü", "Burdur"], ["Avlan Gölü", "Antalya"], ["Suğla Gölü", "Konya"],
+        ["Kızören Obruğu", "Konya", { prompt: "Karstik göl (obruk): Kızören Obruk Gölü'nü bul." }],
+        ["Beyşehir Gölü", "Konya", { prompt: "Tektonik-karstik göl: Beyşehir Gölü'nü bul.", follow: { q: "Türkiye'nin en büyük tatlı su gölü hangisidir?", choices: ["Van", "Tuz", "Beyşehir", "İznik"], answer: "Beyşehir" } }],
+        ["Eğirdir Gölü", "Isparta", { prompt: "Tektonik-karstik göl: Eğirdir Gölü'nü bul.", follow: { q: "Beyşehir ve Eğirdir göllerinin oluşumu nedir?", choices: ["Sadece karstik", "Tektonik + karstik", "Sadece volkanik", "Lagün"], answer: "Tektonik + karstik" } }]
+    ]);
+    lakes("gol-kiyi", "Kıyı set gölü (lagün)", [
+        ["Büyükçekmece", "İstanbul"], ["Küçükçekmece", "İstanbul"], ["Terkos (Durusu)", "İstanbul"],
+        ["Akyatan Lagünü", "Adana"], ["Paradeniz Lagünü", "Mersin"]
+    ]);
+    lakes("gol-aluvyal", "Alüvyal set gölü", [
+        ["Mogan Gölü", "Ankara"], ["Eymir Gölü", "Ankara"],
+        ["Bafa Gölü", "Aydın-Muğla", { prompt: "Alüvyal set gölü: Büyük Menderes'in kapattığı Bafa (Çamiçi) Gölü'nü bul." }],
+        ["Köyceğiz Gölü", "Muğla"]
+    ]);
+    lakes("gol-buzul", "Buzul (sirk) gölü", [
+        ["Kaçkar buzul gölleri", "Rize-Artvin"], ["Uludağ buzul gölleri", "Bursa"],
+        ["Munzur buzul gölleri", "Tunceli-Erzincan"], ["Cilo-Sat buzul gölleri", "Hakkâri"],
+        ["Bolkar buzul gölleri (Karagöl)", "Niğde-Mersin"], ["Aladağlar Yedigöller", "Niğde-Adana-Kayseri"]
+    ]);
 
     ITEMS.push(F("havza", "Tuz Gölü kapalı havzası", "Aksaray-Konya-Ankara", { prompt: "İç Anadolu kapalı havzasını (Tuz Gölü) bul." }));
     ITEMS.push(F("havza", "Van Gölü havzası", "Van", { prompt: "Doğu Anadolu kapalı göl havzasını bul.", follow: { q: "Van Gölü'nün oluşumu?", choices: ["Sadece karstik", "Tektonik + volkanik set", "Sadece heyelan", "Lagün"], answer: "Tektonik + volkanik set" } }));
@@ -1285,11 +1353,6 @@
             if (n.indexOf("limani") >= 0) return "🛶";
             if (n.indexOf("kalank") >= 0 || n.indexOf("karst") >= 0) return "🪨";
             return "🏖️";
-        }
-        if (t === "goller") {
-            if (n.indexOf("cekmece") >= 0 || n.indexOf("terkos") >= 0 || n.indexOf("akyatan") >= 0) return "🌅";
-            if (n.indexOf("krater") >= 0 || n.indexOf("meke") >= 0 || n.indexOf("golcuk") >= 0 || n.indexOf("nemrut") >= 0) return "🌋";
-            return "🏞️";
         }
         if (t === "bitki") {
             if (n.indexOf("sigla") >= 0 || n.indexOf("goknar") >= 0 || n.indexOf("mese") >= 0 || n.indexOf("hurma") >= 0) return "🌳";
