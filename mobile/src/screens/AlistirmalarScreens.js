@@ -471,7 +471,7 @@ export function MapPlayScreen({ route, navigation }) {
     var insets = useSafeAreaInsets();
     var meta = MapQuiz.topicMeta(topicId);
     // Harita yatay ekranda çok daha kullanışlı: oyun açılınca ekran yataya döner, çıkınca geri döner.
-    var landReady = useLandscapeLock();
+    var landReady = useLandscapeLock(navigation);
     var _seed = useState(0);
     var seed = _seed[0];
     var setSeed = _seed[1];

@@ -77,7 +77,8 @@
             ["Et kombinalarının bulunduğu illerden biri hangisidir?", ["Erzurum", "Rize", "Tekirdağ", "Giresun"], "Erzurum"]
         ],
         TR27: [
-            ["Milli Mücadele'de Antep'e verilen unvan hangisidir?", ["Kahraman", "Gazi", "Ulu", "Büyük"], "Kahraman"]
+            ["Millî Mücadele'de Antep'e verilen unvan hangisidir?", ["Kahraman", "Gazi", "Şanlı", "Ulu"], "Gazi"],
+            ["Zeugma Mozaik Müzesi hangi ildedir?", ["Gaziantep", "Hatay", "Mardin", "Adana"], "Gaziantep"]
         ],
         TR31: [
             ["Hatay'ın Türkiye'ye katıldığı yıl hangisidir?", ["1939", "1923", "1919", "1945"], "1939"],
@@ -159,10 +160,8 @@
         ],
         TR63: [
             ["Harran Ovası hangi ildedir?", ["Şanlıurfa", "Gaziantep", "Mardin", "Diyarbakır"], "Şanlıurfa"],
-            ["Antep fıstığı üretiminde notlara göre öne çıkan il hangisidir?", ["Şanlıurfa", "Rize", "Konya", "Trabzon"], "Şanlıurfa"],
-            ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"],
-            ["Türkiye'nin ilk güneş tarlası nerededir?", ["Şanlıurfa-Birecik", "Konya-Karapınar", "Mersin", "Aydın"], "Şanlıurfa-Birecik"],
-            ["En büyük kargo havalimanı hangisidir?", ["Şanlıurfa (GAP)", "Sinop", "Hopa", "Cide"], "Şanlıurfa (GAP)"]
+            ["Göbeklitepe hangi ildedir?", ["Şanlıurfa", "Mardin", "Gaziantep", "Adıyaman"], "Şanlıurfa"],
+            ["Milli Mücadele'de Urfa'ya verilen unvan hangisidir?", ["Şanlı", "Kahraman", "Gazi", "Ulu"], "Şanlı"]
         ],
         TR65: [
             ["Türkiye'nin en büyük gölü hangisidir?", ["Van Gölü", "Tuz Gölü", "Beyşehir", "İznik"], "Van Gölü"],
@@ -189,10 +188,11 @@
         ],
         TR72: [
             ["Türkiye'de petrol ilk kez hangi ilde bulunmuştur?", ["Batman", "Zonguldak", "İzmir", "Konya"], "Batman"],
-            ["Hammaddeye bağlı tek petro-kimya tesisi nerededir?", ["Batman", "İstanbul", "Rize", "Kayseri"], "Batman"]
+            ["Hammadde kaynağına (petrol sahalarına) yakın kurulan rafineri hangi ildedir?", ["Batman", "İzmir", "Kocaeli", "Kırıkkale"], "Batman"]
         ],
         TR46: [
-            ["Türkiye'nin en büyük linyit santrali nerededir?", ["Afşin-Elbistan", "Alaçatı", "Akkuyu", "Silopi"], "Afşin-Elbistan"]
+            ["Türkiye'nin en büyük linyit santrali nerededir?", ["Afşin-Elbistan", "Alaçatı", "Akkuyu", "Silopi"], "Afşin-Elbistan"],
+            ["Millî Mücadele'de Maraş'a verilen unvan hangisidir?", ["Kahraman", "Gazi", "Şanlı", "Ulu"], "Kahraman"]
         ],
         TR73: [
             ["Asfaltit (katı petrol) Türkiye'de nerede bulunur?", ["Şırnak-Silopi", "Zonguldak", "Bartın", "Konya"], "Şırnak-Silopi"],
@@ -207,13 +207,180 @@
             ["Çay fabrikalarının bulunduğu illerden biri hangisidir?", ["Artvin", "Konya", "Batman", "Kütahya"], "Artvin"]
         ],
         TR04: [
-            ["Gürbulak sınır kapısı hangi ildedir?", ["Ağrı", "Edirne", "Şırnak", "Hatay"], "Ağrı"]
+            ["Gürbulak sınır kapısı hangi ildedir?", ["Ağrı", "Edirne", "Şırnak", "Hatay"], "Ağrı"],
+            ["İshak Paşa Sarayı hangi ildedir?", ["Ağrı", "Van", "Kars", "Erzurum"], "Ağrı"]
         ],
         TR57: [
-            ["Doğal liman olduğu halde hinterlandı dar olduğu için gelişemeyen liman hangisidir?", ["Sinop", "İzmir", "Mersin", "İstanbul"], "Sinop"]
+            ["Doğal liman olduğu halde hinterlandı dar olduğu için gelişemeyen liman hangisidir?", ["Sinop", "İzmir", "Mersin", "İstanbul"], "Sinop"],
+            ["Türkiye'nin en kuzey noktası İnceburun hangi ildedir?", ["Sinop", "Kastamonu", "Kırklareli", "Samsun"], "Sinop"]
         ],
         TR26: [
-            ["Türkiye'nin ilk YHT hattı hangi ili Ankara'ya bağlar?", ["Eskişehir", "Erzurum", "Antalya", "Rize"], "Eskişehir"]
+            ["Türkiye'nin ilk YHT hattı hangi ili Ankara'ya bağlar?", ["Eskişehir", "Erzurum", "Antalya", "Rize"], "Eskişehir"],
+            ["Lületaşı hangi ilde çıkarılır?", ["Eskişehir", "Kütahya", "Bilecik", "Afyonkarahisar"], "Eskişehir"]
+        ],
+        TR02: [
+            ["Kommagene Krallığı'nın dev heykellerinin bulunduğu Nemrut Dağı hangi ildedir?", ["Adıyaman", "Bitlis", "Malatya", "Van"], "Adıyaman"],
+            ["Atatürk Barajı hangi iki ilin sınırındadır?", ["Adıyaman–Şanlıurfa", "Elazığ–Malatya", "Diyarbakır–Batman", "Sivas–Erzincan"], "Adıyaman–Şanlıurfa"]
+        ],
+        TR03: [
+            ["Büyük Taarruz'un yönetildiği Kocatepe hangi ildedir?", ["Afyonkarahisar", "Kütahya", "Eskişehir", "Uşak"], "Afyonkarahisar"],
+            ["Haşhaş ekiminin yoğun olduğu illerden biri hangisidir?", ["Afyonkarahisar", "Rize", "Trabzon", "Edirne"], "Afyonkarahisar"]
+        ],
+        TR05: [
+            ["Amasya Genelgesi hangi yıl yayımlandı?", ["1919", "1920", "1921", "1923"], "1919"],
+            ["Yeşilırmak kıyısındaki Pontus kral kaya mezarlarıyla bilinen il hangisidir?", ["Amasya", "Rize", "Kars", "Edirne"], "Amasya"]
+        ],
+        TR10: [
+            ["Kuşcenneti Millî Parkı (Manyas Gölü) hangi ildedir?", ["Balıkesir", "Bursa", "Çanakkale", "Sakarya"], "Balıkesir"],
+            ["Bor yataklarının bulunduğu illerden biri hangisidir?", ["Balıkesir", "Rize", "Hakkâri", "Edirne"], "Balıkesir"]
+        ],
+        TR11: [
+            ["Osmanlı Devleti'nin kurulduğu Söğüt hangi ildedir?", ["Bilecik", "Bursa", "Eskişehir", "Kütahya"], "Bilecik"],
+            ["Şeyh Edebali Türbesi hangi ildedir?", ["Bilecik", "Konya", "Kırşehir", "Amasya"], "Bilecik"]
+        ],
+        TR12: [
+            ["Kuzey ve Doğu Anadolu faylarının birleştiği Karlıova hangi ildedir?", ["Bingöl", "Erzincan", "Muş", "Elazığ"], "Bingöl"],
+            ["Bingöl Dağları'ndan doğan akarsulardan biri hangisidir?", ["Aras", "Gediz", "Sakarya", "Yeşilırmak"], "Aras"]
+        ],
+        TR13: [
+            ["Van Gölü'nün önünü lavlarıyla kapatan Nemrut volkanı hangi ildedir?", ["Bitlis", "Adıyaman", "Van", "Muş"], "Bitlis"],
+            ["Selçuklu Meydan Mezarlığı'nın bulunduğu Ahlat hangi ildedir?", ["Bitlis", "Van", "Muş", "Siirt"], "Bitlis"]
+        ],
+        TR14: [
+            ["Yedigöller Millî Parkı hangi ildedir?", ["Bolu", "Kastamonu", "Sakarya", "Bartın"], "Bolu"],
+            ["Aşçılığıyla ünlü Mengen ilçesi hangi ildedir?", ["Bolu", "Düzce", "Zonguldak", "Karabük"], "Bolu"]
+        ],
+        TR15: [
+            ["Karstik oluşumlu Salda Gölü hangi ildedir?", ["Burdur", "Isparta", "Denizli", "Antalya"], "Burdur"],
+            ["Sagalassos antik kenti hangi ildedir?", ["Burdur", "Aydın", "Muğla", "Konya"], "Burdur"]
+        ],
+        TR18: [
+            ["Tuz mağarasıyla bilinen il hangisidir?", ["Çankırı", "Rize", "Mersin", "Edirne"], "Çankırı"],
+            ["Ilgaz Dağı hangi iki ilin sınırındadır?", ["Kastamonu–Çankırı", "Bolu–Düzce", "Sinop–Samsun", "Tokat–Sivas"], "Kastamonu–Çankırı"]
+        ],
+        TR19: [
+            ["Hitit başkenti Hattuşa hangi ildedir?", ["Çorum", "Yozgat", "Kırıkkale", "Amasya"], "Çorum"],
+            ["Leblebisiyle ünlü il hangisidir?", ["Çorum", "Rize", "Van", "Muğla"], "Çorum"]
+        ],
+        TR23: [
+            ["Doğu Anadolu Fayı üzerindeki Hazar Gölü hangi ildedir?", ["Elazığ", "Malatya", "Bingöl", "Tunceli"], "Elazığ"],
+            ["Keban Barajı hangi ildedir?", ["Elazığ", "Adıyaman", "Diyarbakır", "Artvin"], "Elazığ"]
+        ],
+        TR24: [
+            ["1939'da büyük depremle yıkılan Doğu Anadolu ili hangisidir?", ["Erzincan", "Van", "Kars", "Ağrı"], "Erzincan"],
+            ["Tulum peyniriyle ünlü il hangisidir?", ["Erzincan", "Rize", "Hatay", "Muğla"], "Erzincan"]
+        ],
+        TR28: [
+            ["Fındık üretiminde öne çıkan illerden biri hangisidir?", ["Giresun", "Konya", "Van", "Edirne"], "Giresun"],
+            ["Kümbet Yaylası hangi ildedir?", ["Giresun", "Muğla", "Konya", "Edirne"], "Giresun"]
+        ],
+        TR29: [
+            ["Karaca Mağarası hangi ildedir?", ["Gümüşhane", "Trabzon", "Rize", "Bayburt"], "Gümüşhane"],
+            ["Pestil ve kömesiyle ünlü il hangisidir?", ["Gümüşhane", "Muğla", "Edirne", "Hatay"], "Gümüşhane"]
+        ],
+        TR30: [
+            ["Türkiye'nin en yüksek kıvrım dağı olan Uludoruk (Cilo) hangi ildedir?", ["Hakkâri", "Van", "Şırnak", "Ağrı"], "Hakkâri"],
+            ["Zap Suyu hangi ilden geçer?", ["Hakkâri", "Erzurum", "Kars", "Sivas"], "Hakkâri"]
+        ],
+        TR37: [
+            ["Atatürk'ün 1925'te Şapka İnkılabı'nı halka tanıttığı il hangisidir?", ["Kastamonu", "Ankara", "Sivas", "Samsun"], "Kastamonu"],
+            ["Millî Mücadele'de cepheye malzeme taşınan İnebolu limanı hangi ildedir?", ["Kastamonu", "Sinop", "Zonguldak", "Bartın"], "Kastamonu"]
+        ],
+        TR39: [
+            ["Istranca (Yıldız) Dağları hangi ildedir?", ["Kırklareli", "Edirne", "Tekirdağ", "Çanakkale"], "Kırklareli"],
+            ["Dupnisa Mağarası hangi ildedir?", ["Kırklareli", "Zonguldak", "Antalya", "Gümüşhane"], "Kırklareli"]
+        ],
+        TR40: [
+            ["Ahilik teşkilatının kurucusu Ahi Evran'ın türbesi hangi ildedir?", ["Kırşehir", "Konya", "Kayseri", "Bursa"], "Kırşehir"],
+            ["Gök bilimi medresesi olarak yapılan Cacabey Medresesi hangi ildedir?", ["Kırşehir", "Sivas", "Erzurum", "Amasya"], "Kırşehir"]
+        ],
+        TR43: [
+            ["Emet bor yatakları hangi ildedir?", ["Kütahya", "Balıkesir", "Eskişehir", "Bursa"], "Kütahya"],
+            ["Çini sanatıyla ünlü İç Batı Anadolu ili hangisidir?", ["Kütahya", "Rize", "Van", "Mardin"], "Kütahya"]
+        ],
+        TR47: [
+            ["Deyrulzafaran Manastırı ve taş evleriyle bilinen il hangisidir?", ["Mardin", "Siirt", "Batman", "Kilis"], "Mardin"],
+            ["Fosfat yataklarıyla bilinen Mazıdağı hangi ildedir?", ["Mardin", "Hatay", "Elazığ", "Tunceli"], "Mardin"]
+        ],
+        TR49: [
+            ["1071'de Malazgirt Savaşı'nın yapıldığı Malazgirt hangi ildedir?", ["Muş", "Van", "Bitlis", "Ağrı"], "Muş"],
+            ["Muş Ovası'ndan geçen akarsu hangisidir?", ["Murat", "Kızılırmak", "Sakarya", "Gediz"], "Murat"]
+        ],
+        TR51: [
+            ["Orta Toroslar'ın en yüksek noktası Demirkazık'ın bulunduğu Aladağlar hangi ildedir?", ["Niğde", "Mersin", "Antalya", "Kahramanmaraş"], "Niğde"],
+            ["Obsidiyen yataklarıyla bilinen Göllüdağ volkanı hangi ildedir?", ["Niğde", "Van", "Kars", "Bitlis"], "Niğde"]
+        ],
+        TR54: [
+            ["Sapanca Gölü hangi ildedir?", ["Sakarya", "Kocaeli", "Bursa", "Bolu"], "Sakarya"],
+            ["Adapazarı hangi ilin merkezidir?", ["Sakarya", "Kocaeli", "Düzce", "Bilecik"], "Sakarya"]
+        ],
+        TR56: [
+            ["Fıstığı ve battaniyesiyle bilinen il hangisidir?", ["Siirt", "Rize", "Kars", "Muğla"], "Siirt"],
+            ["Botan Çayı hangi ilden geçer?", ["Siirt", "Rize", "Edirne", "Bolu"], "Siirt"]
+        ],
+        TR59: [
+            ["Namık Kemal'in doğduğu il hangisidir?", ["Tekirdağ", "Edirne", "İstanbul", "Bursa"], "Tekirdağ"],
+            ["Ayçiçeği üretiminde öne çıkan illerden biri hangisidir?", ["Tekirdağ", "Rize", "Van", "Hatay"], "Tekirdağ"]
+        ],
+        TR60: [
+            ["Heyelan set gölü Zinav hangi ildedir?", ["Tokat", "Sivas", "Amasya", "Erzurum"], "Tokat"],
+            ["Yazmacılığıyla ünlü il hangisidir?", ["Tokat", "Rize", "Muğla", "Iğdır"], "Tokat"]
+        ],
+        TR62: [
+            ["Munzur Vadisi Millî Parkı hangi ildedir?", ["Tunceli", "Erzincan", "Bingöl", "Elazığ"], "Tunceli"],
+            ["Türkiye'nin en az nüfuslu illerinden biri olan Doğu Anadolu ili hangisidir?", ["Tunceli", "Erzurum", "Van", "Malatya"], "Tunceli"]
+        ],
+        TR64: [
+            ["Karun Hazinesi'nin sergilendiği il hangisidir?", ["Uşak", "Manisa", "İzmir", "Denizli"], "Uşak"],
+            ["Halıcılığıyla bilinen Ege ili hangisidir?", ["Uşak", "Rize", "Van", "Kars"], "Uşak"]
+        ],
+        TR66: [
+            ["Türkiye'nin ilk millî parkı Yozgat Çamlığı hangi ildedir?", ["Yozgat", "Bolu", "Bursa", "Kastamonu"], "Yozgat"],
+            ["Sarıkaya Roma Hamamı hangi ildedir?", ["Yozgat", "Çorum", "Afyonkarahisar", "Kırşehir"], "Yozgat"]
+        ],
+        TR68: [
+            ["Ihlara Vadisi hangi ildedir?", ["Aksaray", "Nevşehir", "Niğde", "Kayseri"], "Aksaray"],
+            ["Tuz Gölü'ne kıyısı olan illerden biri hangisidir?", ["Aksaray", "Van", "Rize", "Edirne"], "Aksaray"]
+        ],
+        TR69: [
+            ["Türkiye'nin en az nüfuslu ili hangisidir?", ["Bayburt", "İstanbul", "Ankara", "İzmir"], "Bayburt"],
+            ["Çoruh Nehri'nin geçtiği illerden biri hangisidir?", ["Bayburt", "Konya", "Edirne", "Muğla"], "Bayburt"]
+        ],
+        TR70: [
+            ["Türkçeyi resmî dil ilan eden Karamanoğlu Mehmet Bey ile anılan il hangisidir?", ["Karaman", "Konya", "Kayseri", "Sivas"], "Karaman"],
+            ["Binbir Kilise (Madenşehir) hangi ildedir?", ["Karaman", "Nevşehir", "Aksaray", "Hatay"], "Karaman"]
+        ],
+        TR71: [
+            ["Orta Anadolu Rafinerisi hangi ildedir?", ["Kırıkkale", "Batman", "İzmir", "Kocaeli"], "Kırıkkale"],
+            ["Makine ve Kimya Endüstrisi silah fabrikalarıyla bilinen il hangisidir?", ["Kırıkkale", "Rize", "Muğla", "Artvin"], "Kırıkkale"]
+        ],
+        TR74: [
+            ["Amasra hangi ildedir?", ["Bartın", "Zonguldak", "Kastamonu", "Sinop"], "Bartın"],
+            ["Küre Dağları Millî Parkı Kastamonu ile hangi ilin sınırındadır?", ["Bartın", "Sinop", "Çorum", "Bolu"], "Bartın"]
+        ],
+        TR75: [
+            ["Çıldır Gölü hangi iki ilin sınırındadır?", ["Ardahan–Kars", "Van–Bitlis", "Erzurum–Ağrı", "Muş–Bingöl"], "Ardahan–Kars"],
+            ["Kura Nehri'nin geçtiği il hangisidir?", ["Ardahan", "Hakkâri", "Sivas", "Malatya"], "Ardahan"]
+        ],
+        TR76: [
+            ["Mikroklimasıyla pamuk yetiştirilebilen Doğu Anadolu ili hangisidir?", ["Iğdır", "Kars", "Ardahan", "Erzurum"], "Iğdır"],
+            ["Nahçıvan'a açılan Dilucu sınır kapısı hangi ildedir?", ["Iğdır", "Kars", "Ağrı", "Van"], "Iğdır"]
+        ],
+        TR77: [
+            ["Termal kaplıcaları ve Atatürk Köşkü ile bilinen Marmara ili hangisidir?", ["Yalova", "Edirne", "Kırklareli", "Tekirdağ"], "Yalova"],
+            ["Osmangazi Köprüsü hangi iki ili birbirine bağlar?", ["Kocaeli–Yalova", "İstanbul–Tekirdağ", "Çanakkale–Balıkesir", "Bursa–Balıkesir"], "Kocaeli–Yalova"]
+        ],
+        TR78: [
+            ["Türkiye'nin ilk demir-çelik fabrikası hangi ilde kuruldu?", ["Karabük", "Zonguldak", "Hatay", "Sivas"], "Karabük"],
+            ["UNESCO listesindeki Safranbolu hangi ildedir?", ["Karabük", "Bartın", "Kastamonu", "Bolu"], "Karabük"]
+        ],
+        TR79: [
+            ["Öncüpınar sınır kapısı hangi ildedir?", ["Kilis", "Hatay", "Şanlıurfa", "Mardin"], "Kilis"],
+            ["Zeytin ve zeytinyağıyla bilinen il hangisidir?", ["Kilis", "Bitlis", "Ardahan", "Bayburt"], "Kilis"]
+        ],
+        TR81: [
+            ["1999'da Bolu'dan ayrılarak il olan şehir hangisidir?", ["Düzce", "Karabük", "Bartın", "Yalova"], "Düzce"],
+            ["Akçakoca hangi ildedir?", ["Düzce", "Zonguldak", "Sakarya", "Bolu"], "Düzce"]
         ]
     };
 

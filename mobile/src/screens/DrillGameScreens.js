@@ -13,7 +13,7 @@ export function ConquerPlayScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
     var win = useWindowDimensions();
-    var landReady = useLandscapeLock();
+    var landReady = useLandscapeLock(navigation);
     var games = (app.student && app.student.games) || {};
     var owned = games.conquer || {};
     var [quiz, setQuiz] = useState(null);

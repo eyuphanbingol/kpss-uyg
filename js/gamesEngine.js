@@ -115,62 +115,6 @@
         });
     }
 
-    function nameNeedles(code) {
-        var name = names()[code] || "";
-        var raw = [name];
-        if (name === "Afyonkarahisar") raw.push("Afyon", "Afyonkarahisar");
-        if (name === "Kahramanmaraş") raw.push("Maraş", "K.Maraş");
-        if (name === "Şanlıurfa") raw.push("Urfa");
-        if (name === "Hatay") raw.push("Antakya");
-        var out = [];
-        raw.forEach(function (s) {
-            var f = fold(s);
-            if (f.length >= 3 && out.indexOf(f) < 0) out.push(f);
-        });
-        return out;
-    }
-
-    function blobHits(blobFold, needles) {
-        for (var i = 0; i < needles.length; i++) {
-            var n = needles[i];
-            if (!n) continue;
-            if (n.length <= 4) {
-                if (new RegExp("(^|[^a-z0-9])" + n + "([^a-z0-9]|$)", "i").test(blobFold)) return true;
-            } else if (blobFold.indexOf(n) >= 0) return true;
-        }
-        return false;
-    }
-
-    function answersOtherProvince(correct, code) {
-        var cf = fold(correct);
-        var mine = fold(names()[code] || "");
-        if (mine && cf.indexOf(mine) >= 0) return false;
-        var codes = allCodes();
-        var i, n;
-        for (i = 0; i < codes.length; i++) {
-            if (codes[i] === code) continue;
-            n = fold(names()[codes[i]] || "");
-            if (n.length >= 4 && (cf === n || cf.indexOf(n) >= 0)) return true;
-        }
-        return false;
-    }
-
-    function catalogHits(code, kpssData) {
-        var needles = nameNeedles(code);
-        if (!needles.length || !kpssData) return [];
-        var out = [];
-        walkQs(kpssData, function (ders, konu, q) {
-            var stem = fold(stripHtml(q.question || ""));
-            var extra = fold(stripHtml(q.explanation || ""));
-            if (!blobHits(stem, needles) && !blobHits(extra, needles)) return;
-            var item = qToMcq(q);
-            if (!item) return;
-            if (answersOtherProvince(item.correct, code)) return;
-            out.push(item);
-        });
-        return shuffle(out);
-    }
-
     function walkNotes(kpssData, fn) {
         Object.keys(kpssData || {}).forEach(function (ders) {
             Object.keys(kpssData[ders] || {}).forEach(function (konu) {
@@ -194,47 +138,59 @@
             });
     }
 
-    function noteHits(code, kpssData) {
-        var needles = nameNeedles(code);
-        var name = names()[code];
-        if (!needles.length || !name || !kpssData) return [];
-        var mine = [];
-        var other = [];
-        walkNotes(kpssData, function (ders, konu, html) {
-            noteSnippets(html).forEach(function (s) {
-                if (blobHits(fold(s), needles)) {
-                    if (mine.indexOf(s) < 0) mine.push(s);
-                } else if (other.indexOf(s) < 0) {
-                    other.push(s);
-                }
-            });
-        });
-        return mine.map(function (fact) {
-            var dist = shuffle(other.filter(function (x) { return x !== fact; })).slice(0, 3);
-            while (dist.length < 3) dist.push("—");
-            return mcq(name + " notlarından hangisi bu il ile ilgilidir?", [fact].concat(dist), fact);
-        });
-    }
+    // Yalnız tek bir yere ait hedefler (göl, dağ, geçit, liman, baraj…). Toprak, tarım, maden, sanayi, akarsu gibi
+    // birçok ile yayılan konular alınmaz: çeldirici olarak seçilen ürün/maden bu ilde de bulunabilir.
+    var PLACE_TOPIC = /^(gol-|volkanik$|kirik$|kivrim$|gecit$|delta$|ova-|plato-|liman$|hes$|yht$|demiryolu-kapi$)/;
 
+    // İle özgü harita soruları: aynı konudaki (ör. "Tektonik göller") başka bölgelerden hedefler çeldirici olur;
+    // böylece şıklar aynı türden ve yalnız biri bu ilde. Adında il adı geçen hedefler cevabı ele verdiği için alınmaz.
     function localFeatureQs(code) {
         var name = names()[code];
         if (!name) return [];
-        var mine = [];
-        var pool = [];
+        var fname = fold(name);
+        var myRegion = regionIdOf(code);
+        var items = (mq().ITEMS || []).filter(function (it) {
+            return it && !it.mcq && !it.path && PLACE_TOPIC.test(it.topic || "") && it.codes && it.codes.length &&
+                it.codes.length <= 3 && fold(it.name).indexOf(fname) < 0;
+        });
+        // Konu başına tek soru (ör. Bitlis'te iki volkanik göl sorusu üst üste gelmesin).
+        var byTopic = {};
+        shuffle(items).forEach(function (it) {
+            if (it.codes.indexOf(code) >= 0 && !byTopic[it.topic]) byTopic[it.topic] = it;
+        });
+        var out = [];
+        Object.keys(byTopic).forEach(function (t) {
+            var it = byTopic[t];
+            var seen = {};
+            seen[fold(it.name)] = 1;
+            var dist = shuffle(items.filter(function (o) {
+                if (o.topic !== it.topic || o.codes.indexOf(code) >= 0) return false;
+                return o.codes.every(function (c) { return regionIdOf(c) !== myRegion; });
+            })).filter(function (o) {
+                var k = fold(o.name);
+                if (seen[k]) return false;
+                seen[k] = 1;
+                return true;
+            }).slice(0, 3).map(function (o) { return o.name; });
+            if (dist.length < 3) return;
+            var meta = mq().topicMeta ? mq().topicMeta(it.topic) : null;
+            var head = meta && meta.title ? meta.title + " · " : "";
+            out.push(mcq(head + "Hangisi " + name + " il sınırları içindedir?", [it.name].concat(dist), it.name));
+        });
+        return out;
+    }
+
+    // Harita oyunundaki elle yazılmış takip soruları (yalnız bu ile ait hedeflerinki).
+    function localFollowQs(code) {
+        var name = names()[code];
+        var out = [];
         (mq().ITEMS || []).forEach(function (it) {
-            var label = String(it.name || "").replace(/\s*\(.*\)\s*$/, "").trim();
-            if (!label || label.length < 3) return;
-            if ((it.codes || []).indexOf(code) >= 0) {
-                if (mine.indexOf(label) < 0) mine.push(label);
-            } else if (pool.indexOf(label) < 0) {
-                pool.push(label);
-            }
+            var f = it && it.follow;
+            if (!f || !f.q || !it.codes || it.codes.length > 2 || it.codes.indexOf(code) < 0) return;
+            if (!Array.isArray(f.choices) || f.choices.indexOf(f.answer) < 0) return;
+            out.push(mcq(name + " · " + f.q, f.choices.slice(), f.answer));
         });
-        return mine.map(function (prod) {
-            var dist = shuffle(pool.filter(function (p) { return p !== prod; })).slice(0, 3);
-            while (dist.length < 3) dist.push("—");
-            return mcq(name + " ilinde / çevresinde hangisi yer alır?", [prod].concat(dist), prod);
-        });
+        return out;
     }
 
     function parseNoteTitle(html) {
@@ -388,21 +344,22 @@
         list.push(item);
     }
 
+    // Sorular yalnız seçilen ille ilgilidir: elle yazılmış il soruları, il sınırındaki harita hedefleri ve bölge sorusu.
+    // Eskiden notlarda ve soru kataloğunda il adı geçen her şey çekiliyordu: sorular ille alakasız kalıyor ve her
+    // dokunuşta bütün notları taramak telefonda donmaya yol açıyordu. kpssData artık kullanılmıyor.
     function quizForProvince(code, kpssData) {
         code = String(code || "").toUpperCase();
+        if (!names()[code]) return [];
         var b = bank();
-        var list = [];
-        catalogHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
-        noteHits(code, kpssData).forEach(function (q) { uniquePush(list, q); });
-        ((b.SPECIAL && b.SPECIAL[code]) || []).forEach(function (row) {
-            uniquePush(list, fromTriple(row));
-        });
-        localFeatureQs(code).forEach(function (q) { uniquePush(list, q); });
-        uniquePush(list, regionQ(code));
-        // Her denemede en fazla 6 soru (İstanbul'da 161 soruyu art arda bilmek gerekiyordu).
-        var picked = shuffle(list).slice(0, 6);
-        if (!picked.length) uniquePush(picked, regionQ(code));
-        return picked;
+        var special = [];
+        ((b.SPECIAL && b.SPECIAL[code]) || []).forEach(function (row) { uniquePush(special, fromTriple(row)); });
+        var rest = [];
+        localFollowQs(code).forEach(function (q) { uniquePush(rest, q); });
+        localFeatureQs(code).forEach(function (q) { uniquePush(rest, q); });
+        var picked = shuffle(special).slice(0, 3);
+        shuffle(rest).forEach(function (q) { if (picked.length < 4) uniquePush(picked, q); });
+        uniquePush(picked, regionQ(code));
+        return shuffle(picked);
     }
 
     function regionProgress(conquered) {
