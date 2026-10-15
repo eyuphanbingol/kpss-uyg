@@ -25,6 +25,10 @@ run supabase/patch-leaderboard-mask.sql
 leak=$(psql -d $DB -Atc "select count(*) from public.live_cohort c, jsonb_array_elements(c.top) e where e->>'nickname' not like '%**'")
 if [ "$leak" != "0" ]; then echo "TEST BAŞARISIZ: canlı deneme ilk 20 listesinde $leak maskesiz ad"; exit 1; fi
 echo "ok  canlı deneme ilk 20 listesi maskeli"
+# Gelir modeli (patch-monetization.sql): iki kez kurulur, deneme ödeme kontrolü ve hak durumu testleri
+run supabase/patch-monetization.sql
+run supabase/patch-monetization.sql
+psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/monetization-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null
 
 # Yönetim paneli veritabanı API'si (patch-admin-panel.sql): ayrı, temiz bir veritabanında
