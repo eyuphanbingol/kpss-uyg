@@ -1374,7 +1374,24 @@ function LiveExamCard(props) {
         C.rpc(name, args).then(function (r) { setBusy(false); if (done) done(r); load(); })
             .catch(function (x) { setBusy(false); setMsg(x.message); });
     }
-    function register() { act("live_register", { p_exam: e.id }, function (r) { setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı."); }); }
+    // Gelir modeli: ilk canlı deneme ücretsiz, sonrası mağazadan alınan kayıt hakkıyla (sunucu kontrol eder).
+    var liveEntry = window.Monetization ? window.Monetization.liveEntry() : { kind: "free", paywall: false };
+    var livePrice = (window.Monetization && window.Monetization.PRICES.live) || "50 TL";
+    var payMsg = "Bu deneme için kayıt hakkın yok. Her hesabın ilk denemesi ücretsiz; sonrakiler için kayıt hakkını Atanly uygulamasından " + livePrice + "'ye alabilirsin, aldıktan sonra burada da kayıt olabilirsin.";
+    function register() {
+        if (liveEntry.kind === "pay") { setMsg(payMsg); if (window.MonetWeb) window.MonetWeb.refresh(); return; }
+        setBusy(true); setMsg("");
+        C.rpc("live_register", { p_exam: e.id }).then(function (r) {
+            setBusy(false);
+            setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı.");
+            load();
+            if (window.MonetWeb) window.MonetWeb.refresh();
+        }).catch(function (x) {
+            setBusy(false);
+            setMsg(x && x.code === "payment_required" ? payMsg : x.message);
+            if (window.MonetWeb) window.MonetWeb.refresh();
+        });
+    }
     function unregister() { if (window.confirm("Kaydını silmek istiyor musun?")) act("live_unregister", { p_exam: e.id }); }
     function enter() { props.onOpen && props.onOpen("exam", e.id); }
     // kâğıtta çözme: optik form ve filigranlı kitapçık PDF'i, optik okutma
@@ -1550,7 +1567,7 @@ function LiveExamCard(props) {
                 <p className="text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">Canlı deneme · {L.TRACKS[e.track]}</p>
                 <h2 className="text-lg font-bold mt-0.5">{when}'te canlı deneme</h2>
                 <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">120 soru · 130 dakika · herkes aynı anda · başlamaya {L.fmtLeft(startT - now)}{dash.registered_count ? " · " + dash.registered_count + " kayıtlı" : ""}{e.capacity ? " / " + e.capacity : ""}</p>
-                <button type="button" className="quick-chip is-primary mt-3" disabled={busy} onClick={register}>Kayıt ol</button>
+                <button type="button" className="quick-chip is-primary mt-3" disabled={busy} onClick={register}>{!liveEntry.paywall ? "Kayıt ol" : liveEntry.kind === "free" ? "Kayıt ol · ilk deneme ücretsiz" : liveEntry.kind === "credit" ? "Kayıt ol · " + liveEntry.credits + " kayıt hakkın var" : "Kayıt ol · " + livePrice}</button>
             </div>
         );
     } else if (ph === "registered" || ph === "waitlist") {
@@ -1749,6 +1766,66 @@ function AlistirmaDersList(props) {
     );
 }
 
+// ---------- Gelir modeli: kilitler (js/monetization.js, sunucu: supabase/patch-monetization.sql) ----------
+// Sunucuda monet_settings.enabled kapalıyken hiçbir şey kilitlenmez.
+function useMonet() {
+    const [, setTick] = useState(0);
+    useEffect(function () {
+        var M = window.Monetization;
+        if (!M) return undefined;
+        return M.subscribe(function () { setTick(function (x) { return x + 1; }); });
+    }, []);
+    return window.Monetization || null;
+}
+
+function monetLocked(key, idx) {
+    var M = window.Monetization;
+    return !!(M && M.isLocked(key, idx));
+}
+
+function monetKey(kind, a, b) {
+    var M = window.Monetization;
+    return M ? M.keys[kind](a, b) : "";
+}
+
+function konuIdx(kpssData, ders, konu) {
+    return Object.keys((kpssData && kpssData[ders]) || {}).filter(function (k) { return k !== "_"; }).indexOf(konu);
+}
+
+// Harita oyununun kendi grubundaki sırası (her grubun ilk oyunları ücretsiz)
+function mapTopicIdx(topicId) {
+    var tree = (window.MapQuiz && window.MapQuiz.TREE) || [];
+    for (var i = 0; i < tree.length; i++) {
+        for (var j = 0; j < tree[i].kids.length; j++) if (tree[i].kids[j].id === topicId) return j;
+    }
+    return -1;
+}
+
+function MonetLockBadge() {
+    return <span className="monet-badge">🔒 Premium</span>;
+}
+
+function MonetLockScreen(props) {
+    var M = window.Monetization;
+    var n = M ? M.freeCount() : 3;
+    var h = M ? M.unlockHours() : 24;
+    return (
+        <Shell>
+            <div className="flex justify-between mb-4">
+                <BackBtn onClick={props.onBack} label={props.backLabel || "Geri"} />
+                <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
+            </div>
+            <div className="panel rounded-3xl p-6 text-center monet-lock">
+                <div className="text-4xl mb-3" aria-hidden="true">🔒</div>
+                <h2 className="text-xl font-black mb-2">{props.title}</h2>
+                <p className="text-sm text-stone-500 mb-5">Her bölümün ilk {n} başlığı ücretsiz. Bunu Atanly uygulamasında kısa bir reklam izleyerek {h} saat açabilir ya da Premium ile hepsini reklamsız açabilirsin.</p>
+                <button type="button" className="w-full py-3 rounded-2xl btn-primary text-white font-bold" onClick={props.onPremium}>Premium'u incele</button>
+                <p className="text-xs text-stone-400 mt-4">Uygulamada açtığın kilit ve aldığın Premium burada da geçerli.</p>
+            </div>
+        </Shell>
+    );
+}
+
 function AlistirmaKonuList(props) {
     const ders = props.ders;
     const t = themeFor(ders, props.isDark);
@@ -1813,7 +1890,7 @@ function AlistirmaKonuList(props) {
                                         <p className="text-xs text-slate-400 mt-1">{open ? (!ready ? "Boşluklar sayılıyor…" : st.n ? (st.left + " / " + st.n + " boşluk") : "Henüz alıştırma yok") : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
-                                {open ? <span className="text-stone-300 text-lg shrink-0">→</span> : null}
+                                {open ? (monetLocked(monetKey("cloze", ders, konu), idx) ? <MonetLockBadge /> : <span className="text-stone-300 text-lg shrink-0">→</span>) : null}
                             </div>
                         </button>
                     );
@@ -2038,15 +2115,16 @@ function MapTopics(props) {
                     <div key={g.id} className="mb-6">
                         <h2 className="text-sm font-black uppercase tracking-widest text-stone-400 mb-2">{g.icon} {g.title}</h2>
                         <div className="wide-grid is-tight">
-                            {g.kids.map(function (k) {
+                            {g.kids.map(function (k, ki) {
                                 var n = quiz ? quiz.countFor(k.id) : 0;
+                                var locked = monetLocked(monetKey("map", k.id), ki);
                                 var hoverImg = k.hoverImg;
                                 return (
                                     <button key={k.id} type="button" onClick={function () { props.onTopic(k.id); }}
                                         className={"text-left p-4 rounded-2xl glass card-hover" + (hoverImg ? " map-topic-card--photo" : "")}>
                                         {hoverImg ? <span className="map-topic-card-photo" aria-hidden="true" style={{ backgroundImage: "url(" + hoverImg + ")" }} /> : null}
                                         <div className="map-topic-card-fg relative z-10 font-bold">{hoverImg ? k.title : (k.icon + " " + k.title)}</div>
-                                        <div className="map-topic-card-meta relative z-10 text-xs text-stone-400 mt-1">{n} hedef</div>
+                                        <div className="map-topic-card-meta relative z-10 text-xs text-stone-400 mt-1">{n} hedef{locked ? <span className="ml-2"><MonetLockBadge /></span> : null}</div>
                                     </button>
                                 );
                             })}
@@ -2727,7 +2805,7 @@ function KonuList(props) {
                                         })() : "Önce önceki konunun testlerini bitir"}</p>
                                     </div>
                                 </div>
-                                {open ? (
+                                {open && monetLocked(monetKey("konu", ders, konu), idx) ? <MonetLockBadge /> : open ? (
                                     <div className="text-right shrink-0">
                                         <div className="font-black text-sm">{tp.lastPct == null ? "—" : "%" + tp.lastPct}</div>
                                         <span className={"text-[10px] font-bold px-2 py-0.5 rounded-full " + m.cls}>{m.text}</span>
@@ -3647,6 +3725,13 @@ function Ben(props) {
                     </div>
                 )}
             </div>
+            {window.Monetization && window.Monetization.enabled() ? (
+                <button type="button" onClick={function () { props.onOpen && props.onOpen("paywall"); }}
+                    className="w-full mb-4 p-3.5 rounded-2xl glass text-left card-hover">
+                    <span className="font-medium block">{window.Monetization.isPremium() ? "Premium açık" : "Premium'a geç"}</span>
+                    <span className="text-xs text-stone-400 font-normal mt-0.5 block">{window.Monetization.isPremium() ? "Bütün konular ve oyunlar açık, reklamsız" : "Bütün konular ve oyunlar · aylık 200 TL ya da yıllık 1000 TL"}</span>
+                </button>
+            ) : null}
             <button type="button" onClick={function () { props.onOpen && props.onOpen("leaderboard"); }}
                 className="w-full mb-4 p-3.5 rounded-2xl glass text-left card-hover">
                 <span className="font-medium block">Türkiye sıralaması</span>
@@ -3835,6 +3920,7 @@ function App() {
     }, [kpssData, student]);
 
     const [extra, setExtra] = useState(null);
+    useMonet();
     const [liveView, setLiveView] = useState({ view: "home" });
     const [LazyCmp, setLazyCmp] = useState(null);
     const [authReady, setAuthReady] = useState(false);
@@ -3897,7 +3983,7 @@ function App() {
             setExtra(null);
             return;
         }
-        if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
+        if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.enabled())) {
             setExtra(null);
             return;
         }
@@ -4378,6 +4464,11 @@ function App() {
                 body = <MapTopics isDark={isDark} toggleDark={toggleDark}
                     onBack={function () { setDrillKind(null); }}
                     onTopic={function (id) { setDrillMapTopic(id); setDrillSeed(Date.now()); }} />;
+            } else if (monetLocked(monetKey("map", drillMapTopic), mapTopicIdx(drillMapTopic))) {
+                var lockedMeta = window.MapQuiz && window.MapQuiz.topicMeta ? window.MapQuiz.topicMeta(drillMapTopic) : null;
+                body = <MonetLockScreen title={(lockedMeta ? lockedMeta.title : "Bu oyun") + " kilitli"} backLabel="Harita oyunları"
+                    isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillMapTopic(null); }} onPremium={function () { setExtra("paywall"); }} />;
             } else {
                 body = <MapPlay topicId={drillMapTopic} seed={drillSeed} isDark={isDark} toggleDark={toggleDark}
                     onBack={function () { setDrillMapTopic(null); }}
@@ -4424,6 +4515,9 @@ function App() {
                         if (!StudentStore.isKonuOpen(drillDers, clozeKeys, clozeKeys.indexOf(k), kpssData)) return;
                         setDrillKonu(k); setDrillSeed(Date.now());
                     }} />;
+            } else if (monetLocked(monetKey("cloze", drillDers, drillKonu), clozeKeys.indexOf(drillKonu))) {
+                body = <MonetLockScreen title={kLabel(drillKonu) + " kilitli"} backLabel="Konular" isDark={isDark} toggleDark={toggleDark}
+                    onBack={function () { setDrillKonu(null); }} onPremium={function () { setExtra("paywall"); }} />;
             } else {
                 body = <ClozePlay ders={drillDers} konu={drillKonu} konuData={drillData} seed={drillSeed}
                     isDark={isDark} toggleDark={toggleDark}
@@ -4440,6 +4534,9 @@ function App() {
                 const tp = StudentStore.getTopic(selectedDers, k);
                 setNoteIndex(tp.noteIndex || 0);
             }} />;
+    } else if (monetLocked(monetKey("konu", selectedDers, selectedKonu), konuIdx(kpssData, selectedDers, selectedKonu))) {
+        body = <MonetLockScreen title={kLabel(selectedKonu) + " kilitli"} backLabel="Konular" isDark={isDark} toggleDark={toggleDark}
+            onBack={function () { setSelectedKonu(null); }} onPremium={function () { setExtra("paywall"); }} />;
     } else if (viewMode === "notlar") {
         body = (
             <NotesView notlar={konuData.notlar || []} index={noteIndex} ders={selectedDers} konu={selectedKonu} isDark={isDark} toggleDark={toggleDark}

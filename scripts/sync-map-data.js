@@ -7,6 +7,7 @@
  *   mobile/src/lib/trSvgData.js <- svg/tr.svg (uygulamaya gömülü; açılışta internetten indirilmez)
  *   mobile/src/lib/optikHtml.js <- optik/optik.html + betikleri + optik-form.json (tek parça; WebView çevrimdışı çalışır)
  *   mobile/src/lib/cardHtml.js  <- js/shareCard.js (net kartı ve program görseli; gizli WebView'da çizilir)
+ *   mobile/src/lib/monetization.js <- js/monetization.js (kilitler, premium, canlı deneme hakkı)
  *   node scripts/sync-map-data.js          -> mobil dosyaları yazar
  *   node scripts/sync-map-data.js --check  -> farklıysa hata verir (yazmaz)
  */
@@ -110,7 +111,8 @@ var liveOutPath = path.join(root, "mobile", "src", "lib", "liveExam.js");
 var outputs = [[mobPath, build()], [planOutPath, buildModule("js/smartPlan.js", "SmartPlan")],
     [liveOutPath, buildModule("js/liveExam.js", "LiveExam")], [svgOutPath, buildSvg()],
     [path.join(root, "mobile", "src", "lib", "optikHtml.js"), buildOptikHtml()],
-    [path.join(root, "mobile", "src", "lib", "cardHtml.js"), buildCardHtml()]];
+    [path.join(root, "mobile", "src", "lib", "cardHtml.js"), buildCardHtml()],
+    [path.join(root, "mobile", "src", "lib", "monetization.js"), buildModule("js/monetization.js", "Monetization")]];
 if (process.argv.indexOf("--check") >= 0) {
     var stale = outputs.filter(function (o) {
         var cur = fs.existsSync(o[0]) ? fs.readFileSync(o[0], "utf8").replace(/\r\n?/g, "\n") : "";

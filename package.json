@@ -10,10 +10,10 @@
     "build:jsx": "node scripts/build-jsx.js && node scripts/build-css.js",
     "check:map": "node scripts/check-map-pins.js",
     "sync:map": "node scripts/sync-map-data.js",
-    "test:live": "node scripts/test-live-exam.js && node scripts/test-omr.js && node --no-warnings scripts/test-store-functions.mjs",
+    "test:live": "node scripts/test-live-exam.js && node scripts/test-omr.js && node --no-warnings scripts/test-store-functions.mjs && node scripts/test-monetization.js",
     "test:omr-synthetic": "node scripts/test-omr-synthetic.js",
     "build:css": "node scripts/build-css.js",
-    "test": "node scripts/test-core.js && node scripts/build-cloze.js --check && node scripts/check-map-pins.js && node scripts/test-live-exam.js && node scripts/test-omr.js && node --no-warnings scripts/test-store-functions.mjs",
+    "test": "node scripts/test-core.js && node scripts/build-cloze.js --check && node scripts/check-map-pins.js && node scripts/test-live-exam.js && node scripts/test-omr.js && node --no-warnings scripts/test-store-functions.mjs && node scripts/test-monetization.js",
     "test:sql": "bash scripts/test-live-exam-sql.sh"
   }
 }

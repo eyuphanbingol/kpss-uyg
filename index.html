@@ -118,7 +118,7 @@
     <script defer src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
 
     <!-- Önceden derlenmiş stiller (npm run build:css; kaynak: tailwind.config.js) -->
-    <link rel="stylesheet" href="css/tailwind.css?v=4">
+    <link rel="stylesheet" href="css/tailwind.css?v=5">
 
     <script>
         // Soru ve not dosyaları (≈2 MB). Ziyaretçide tanıtım sayfası çizildikten SONRA, daha önce giriş yapmış
@@ -392,7 +392,7 @@
     </script>
 
     <script defer src="data.js?v=38"></script>
-    <script defer src="js/config.js?v=28"></script>
+    <script defer src="js/config.js?v=29"></script>
     <script defer src="js/trError.js?v=2"></script>
     <script defer src="js/store.js?v=54"></script>
     <script defer src="js/planner.js?v=22"></script>
@@ -412,7 +412,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.86.0/dist/umd/supabase.js"></script>
     <script defer src="js/supabaseClient.js?v=21"></script>
     <script defer src="js/syncEngine.js?v=40"></script>
-    <script defer src="js/jsxLoader.js?v=113"></script>
+    <script defer src="js/monetization.js?v=1"></script>
+    <script defer src="js/monetWeb.js?v=1"></script>
+    <script defer src="js/jsxLoader.js?v=114"></script>
     <script defer src="js/icons.js?v=18"></script>
 
     <style>
@@ -2378,6 +2380,8 @@
         .cloze-verdict.is-bad { color: #be123c; }
         .cloze-explain { margin-top: 6px; padding: 10px 12px; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; color: #475569; font-weight: 500; line-height: 1.5; }
         html.dark .cloze-explain { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.08); color: #CBD5E1; }
+        .monet-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; background: #FEF3C7; color: #92400E; white-space: nowrap; flex-shrink: 0; }
+        html.dark .monet-badge { background: rgba(251,191,36,.15); color: #FCD34D; }
         html.dark .cloze-stem {
             background: linear-gradient(180deg, #2A2724 0%, #211F1D 100%);
             border-color: rgba(255,255,255,0.08);
@@ -3089,7 +3093,7 @@
     <script>
         // js/app.jsx derlenmiş hâliyle önbellekten açılır (bkz. js/jsxLoader.js). Değişince ?v= artır.
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=160");
+            if (window.JsxLoader && window.JsxLoader.boot) window.JsxLoader.boot("js/app.jsx?v=161");
         });
     </script>
     <script>

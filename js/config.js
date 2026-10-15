@@ -24,6 +24,11 @@
             email: "atanly10@gmail.com"
         },
         premiumEnabled: false,
+        // Uygulama mağaza sayfaları (Premium ekranındaki indirme bağlantıları; boşsa gösterilmez)
+        stores: {
+            play: "https://play.google.com/store/apps/details?id=app.atanly.mobile",
+            appStore: ""
+        },
         freeWeeklyExams: 2,
         freeDailyMixed: 3,
         examDateByLevel: {

@@ -1,333 +1,136 @@
-/*jsx:babel-7.29.9-react-classic:21493:xa14e5*/
+/*jsx:babel-7.29.9-react-classic:6468:14rqpli*/
 (function () {
   const {
     useState,
-    useEffect,
-    useRef
+    useEffect
   } = React;
   var BackBtn = window.KpssBackBtn;
 
-  // ============================================================
-  // YARDIMCI FONKSİYONLAR
-  // ============================================================
+  // Premium ekranı (web). Ödeme web'de alınmaz: Premium ve canlı deneme kaydı yalnız Google Play / App Store
+  // üzerinden uygulamadan satın alınır. Satın alınca hesap web'de de Premium olur (sunucu: monet_status).
+  // Mobil karşılığı: mobile/src/screens/ExtraScreens.js → PaywallScreen (satın alma orada).
 
-  function formatCurrency(amount) {
-    return new Intl.NumberFormat('tr-TR', {
-      style: 'currency',
-      currency: 'TRY',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
+  function fmtDate(iso) {
+    try {
+      return new Date(iso).toLocaleDateString("tr-TR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+    } catch (e) {
+      return "";
+    }
   }
-  function getPlanColor(plan) {
-    if (plan === "premium") return "from-indigo-600 to-purple-600";
-    return "from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-700";
-  }
-  function getPlanBorder(plan) {
-    if (plan === "premium") return "border-2 border-indigo-500 shadow-xl shadow-indigo-500/20";
-    return "border border-stone-200 dark:border-stone-700";
-  }
-  function getPlanBadge(plan) {
-    if (plan === "premium") return "bg-gradient-to-r from-amber-400 to-amber-500 text-white";
-    return "bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400";
-  }
-
-  // ============================================================
-  // ANA BİLEŞEN
-  // ============================================================
-
   function PaywallScreen(props) {
+    var M = window.Monetization;
+    const [, setTick] = useState(0);
     const [busy, setBusy] = useState(false);
-    const [selectedPlan, setSelectedPlan] = useState("premium");
-    const [billingCycle, setBillingCycle] = useState("monthly");
-    const [cardNumber, setCardNumber] = useState("");
-    const [cardName, setCardName] = useState("");
-    const [cardExpiry, setCardExpiry] = useState("");
-    const [cardCvv, setCardCvv] = useState("");
-    const [cardFocused, setCardFocused] = useState(null);
-    const [showCardForm, setShowCardForm] = useState(false);
-    const [error, setError] = useState("");
-    const mock = !window.PaymentClient || window.PaymentClient.mock;
-    const cardInputRef = useRef(null);
-
-    // ---------- Format Card Number ----------
-    function formatCardNumber(value) {
-      var cleaned = value.replace(/\D/g, '');
-      var groups = cleaned.match(/(.{1,4})/g);
-      return groups ? groups.join(' ') : '';
-    }
-    function formatExpiry(value) {
-      var cleaned = value.replace(/\D/g, '');
-      if (cleaned.length >= 2) {
-        return cleaned.slice(0, 2) + '/' + cleaned.slice(2, 4);
-      }
-      return cleaned;
-    }
-
-    // ---------- Handle Input ----------
-    function handleCardNumber(e) {
-      var formatted = formatCardNumber(e.target.value);
-      setCardNumber(formatted);
-      if (formatted.replace(/\s/g, '').length === 16) {
-        if (cardInputRef.current) {
-          // Focus next input
-        }
-      }
-    }
-    function handleExpiry(e) {
-      var formatted = formatExpiry(e.target.value);
-      setCardExpiry(formatted);
-    }
-
-    // ---------- Buy ----------
-    async function buy() {
-      if (!window.PaymentClient) {
-        setError("Ödeme sistemi bağlı değil.");
-        return;
-      }
-      if (!cardNumber.replace(/\s/g, '').length === 16) {
-        setError("Lütfen geçerli bir kart numarası girin.");
-        return;
-      }
-      setBusy(true);
-      setError("");
-      try {
-        var r = await window.PaymentClient.checkout("premium", {
-          cardNumber: cardNumber.replace(/\s/g, ''),
-          cardName: cardName,
-          cardExpiry: cardExpiry,
-          cardCvv: cardCvv
+    useEffect(function () {
+      if (!M) return undefined;
+      return M.subscribe(function () {
+        setTick(function (x) {
+          return x + 1;
         });
-        if (r.error || r.ok === false) {
-          setError(r.message || (window.trError ? window.trError(r, "Ödeme sırasında bir hata oluştu.") : "Ödeme sırasında bir hata oluştu."));
-        } else {
-          if (props.onDone) props.onDone();
-        }
-      } catch (e) {
-        setError(window.trError ? window.trError(e, "Beklenmeyen bir hata oluştu.") : "Beklenmeyen bir hata oluştu.");
-      } finally {
-        setBusy(false);
-      }
-    }
-
-    // ---------- Plans ----------
-    var plans = [{
-      id: "free",
-      name: "Ücretsiz",
-      price: 0,
-      currency: "₺",
-      period: "süresiz",
-      badge: "Başlangıç",
-      features: ["📚 GY-GK temel akış", "📝 Günde 3 karışık test", "📋 Haftada 2 tam deneme", "📊 Temel istatistikler", "👥 Liderlik tablosu"],
-      cta: "Mevcut Plan",
-      popular: false
-    }, {
-      id: "premium",
-      name: "Premium",
-      price: 149,
-      currency: "₺",
-      period: "/ ay",
-      badge: "En Popüler",
-      features: ["♾️ Sınırsız deneme", "📊 Detaylı branş analizi", "🎯 Akıllı tercih robotu", "🚫 Reklamsız çalışma", "🏆 Özel liderlik rozetleri", "📱 Öncelikli destek"],
-      cta: "Şimdi Başla",
-      popular: true
-    }];
-    if (!(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
+      });
+    }, []);
+    var cfg = window.KpssConfig || {};
+    var stores = cfg.stores || {};
+    var prices = M && M.PRICES || {
+      monthly: "200 TL",
+      yearly: "1000 TL",
+      live: "50 TL"
+    };
+    if (!M || !M.enabled()) {
       return /*#__PURE__*/React.createElement("div", {
         className: "max-w-lg mx-auto px-4 py-12 text-center"
       }, /*#__PURE__*/React.createElement("h1", {
         className: "text-xl font-black mb-2"
       }, "T\xFCm \xF6zellikler a\xE7\u0131k"), /*#__PURE__*/React.createElement("p", {
         className: "text-sm text-stone-400 mb-6"
-      }, "Abonelik \u015Fimdilik yok; deneme ve tercih listesi s\u0131n\u0131rl\u0131 de\u011Fil."), /*#__PURE__*/React.createElement(BackBtn, {
+      }, "\u015Eu an b\xFCt\xFCn konular ve oyunlar \xFCcretsiz."), /*#__PURE__*/React.createElement(BackBtn, {
         onClick: props.onBack,
         label: "Geri"
       }));
     }
-
-    // ============================================================
-    // RENDER
-    // ============================================================
-
+    function refresh() {
+      if (!window.MonetWeb) return;
+      setBusy(true);
+      window.MonetWeb.refresh().then(function () {
+        setBusy(false);
+      }, function () {
+        setBusy(false);
+      });
+    }
+    var premium = M.isPremium();
+    var until = M.premiumUntil();
+    var n = M.freeCount();
     return /*#__PURE__*/React.createElement("div", {
-      className: "app-page py-6 pb-10"
+      className: "app-page py-6 pb-10 max-w-2xl mx-auto"
     }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between items-center mb-6 slide-up"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+      className: "mb-6 slide-up"
+    }, /*#__PURE__*/React.createElement("h1", {
       className: "text-2xl md:text-3xl font-black gradient-text"
-    }, "\u2B50 Premium"), /*#__PURE__*/React.createElement("p", {
+    }, "Atanly Premium"), /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-stone-400 mt-0.5"
-    }, "Hedefine daha h\u0131zl\u0131 ula\u015Fmak i\xE7in")), /*#__PURE__*/React.createElement(BackBtn, {
-      onClick: props.onBack,
-      label: "Geri"
-    })), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-stone-400 dark:text-stone-500 mb-6"
-    }, "\uD83D\uDCB3 G\xFCvenli \xF6deme \xB7 \u0130stedi\u011Fin zaman iptal et"), /*#__PURE__*/React.createElement("div", {
-      className: "grid md:grid-cols-2 gap-4 mb-6"
-    }, plans.map(function (plan) {
-      var isSelected = selectedPlan === plan.id;
-      var isPremium = plan.id === "premium";
-      var color = getPlanColor(plan.id);
-      var border = getPlanBorder(plan.id);
-      var badge = getPlanBadge(plan.id);
-      return /*#__PURE__*/React.createElement("div", {
-        key: plan.id,
-        className: "rounded-3xl p-6 transition-all duration-300 relative " + (isSelected ? "scale-[1.02] " + border : "border border-stone-200 dark:border-stone-700 hover:border-indigo-300 dark:hover:border-indigo-700") + (isPremium ? " bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20" : " bg-white dark:bg-stone-900"),
-        onClick: function () {
-          setSelectedPlan(plan.id);
-        }
-      }, plan.badge && /*#__PURE__*/React.createElement("span", {
-        className: "absolute -top-2.5 right-4 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full " + badge
-      }, plan.badge), /*#__PURE__*/React.createElement("p", {
-        className: "text-sm font-medium text-stone-500 dark:text-stone-400"
-      }, plan.name), /*#__PURE__*/React.createElement("div", {
-        className: "mt-2"
-      }, /*#__PURE__*/React.createElement("span", {
-        className: "font-stat text-4xl font-bold text-stone-900 dark:text-white"
-      }, plan.price === 0 ? "0" : formatCurrency(plan.price)), /*#__PURE__*/React.createElement("span", {
-        className: "text-sm text-stone-400 dark:text-stone-500 ml-1"
-      }, plan.period)), /*#__PURE__*/React.createElement("ul", {
-        className: "mt-4 space-y-2 text-sm text-stone-600 dark:text-stone-300"
-      }, plan.features.map(function (f, idx) {
-        var isFree = plan.id === "free";
-        var isLocked = isPremium && isFree;
-        return /*#__PURE__*/React.createElement("li", {
-          key: idx,
-          className: "flex items-center gap-2 " + (isLocked ? "opacity-50" : "")
-        }, /*#__PURE__*/React.createElement("span", {
-          className: isPremium ? "text-indigo-500" : "text-stone-400"
-        }, isPremium ? "✓" : "•"), f);
-      })), /*#__PURE__*/React.createElement("button", {
-        onClick: function (e) {
-          e.stopPropagation();
-          if (plan.id === "premium" && mock) {
-            // Ödeme altyapısı bağlanana kadar kart bilgisi hiç istenmez
-            setError("Online ödeme çok yakında açılıyor. Şimdilik tüm temel özellikler ücretsiz; davet koduyla premium gün de kazanabilirsin.");
-            return;
-          }
-          if (plan.id === "premium") {
-            setShowCardForm(true);
-            setTimeout(function () {
-              if (cardInputRef.current) cardInputRef.current.focus();
-            }, 100);
-          }
-        },
-        className: "w-full mt-5 py-3 rounded-2xl font-semibold transition-all duration-200 " + (isPremium ? "btn-primary text-white hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-indigo-500/20" : "border-2 border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800")
-      }, plan.id === "premium" ? "🚀 " + plan.cta : plan.cta));
-    })), !showCardForm && error ? /*#__PURE__*/React.createElement("div", {
-      role: "status",
-      className: "rounded-2xl p-4 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-sm"
-    }, error) : null, showCardForm && /*#__PURE__*/React.createElement("div", {
-      className: "rounded-3xl glass p-6 slide-up"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between mb-4"
+    }, "B\xFCt\xFCn konular ve oyunlar, reklams\u0131z")), premium ? /*#__PURE__*/React.createElement("div", {
+      className: "rounded-3xl p-6 mb-6 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800"
     }, /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold"
-    }, "\uD83D\uDCB3 Kart Bilgileri"), /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
-    }, mock ? "🧪 Test Modu" : "🔒 Güvenli")), error && /*#__PURE__*/React.createElement("div", {
-      className: "mb-3 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-sm"
-    }, "\u26A0\uFE0F ", error), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-3"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: "block text-xs font-medium text-stone-500 dark:text-stone-400 mb-1"
-    }, "Kart \xDCzerindeki \u0130sim"), /*#__PURE__*/React.createElement("input", {
-      value: cardName,
-      onChange: function (e) {
-        setCardName(e.target.value);
-      },
-      placeholder: "Ad\u0131n\u0131z Soyad\u0131n\u0131z",
-      className: "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: "block text-xs font-medium text-stone-500 dark:text-stone-400 mb-1"
-    }, "Kart Numaras\u0131"), /*#__PURE__*/React.createElement("input", {
-      ref: cardInputRef,
-      value: cardNumber,
-      onChange: handleCardNumber,
-      placeholder: "4242 4242 4242 4242",
-      maxLength: "19",
-      className: "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm font-mono tracking-wider focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-    })), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-2 gap-3"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: "block text-xs font-medium text-stone-500 dark:text-stone-400 mb-1"
-    }, "Son Kullanma"), /*#__PURE__*/React.createElement("input", {
-      value: cardExpiry,
-      onChange: handleExpiry,
-      placeholder: "12/28",
-      maxLength: "5",
-      className: "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm font-mono focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: "block text-xs font-medium text-stone-500 dark:text-stone-400 mb-1"
-    }, "CVV"), /*#__PURE__*/React.createElement("input", {
-      value: cardCvv,
-      onChange: function (e) {
-        setCardCvv(e.target.value.replace(/\D/g, ''));
-      },
-      placeholder: "000",
-      maxLength: "4",
-      type: "password",
-      className: "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-sm font-mono focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
-    }))), /*#__PURE__*/React.createElement("div", {
-      className: "flex gap-3 pt-2"
-    }, /*#__PURE__*/React.createElement("button", {
+      className: "text-lg font-black text-emerald-800 dark:text-emerald-300"
+    }, "Premium a\xE7\u0131k"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-emerald-700 dark:text-emerald-400 mt-1"
+    }, until ? fmtDate(until) + " tarihine kadar geçerli." : "Süresiz.", " Aboneli\u011Fini sat\u0131n ald\u0131\u011F\u0131n ma\u011Fazadan (Google Play / App Store) y\xF6netebilir ya da iptal edebilirsin.")) : null, /*#__PURE__*/React.createElement("div", {
+      className: "grid md:grid-cols-2 gap-4 mb-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-3xl p-6 border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-sm font-medium text-stone-500"
+    }, "Ayl\u0131k"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-stat text-4xl font-bold"
+    }, prices.monthly), /*#__PURE__*/React.createElement("span", {
+      className: "text-sm text-stone-400 ml-1"
+    }, "/ ay"))), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-3xl p-6 border-2 border-indigo-500 relative bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "absolute -top-2.5 right-4 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-white"
+    }, "En avantajl\u0131"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm font-medium text-stone-500"
+    }, "Y\u0131ll\u0131k"), /*#__PURE__*/React.createElement("p", {
+      className: "mt-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-stat text-4xl font-bold"
+    }, prices.yearly), /*#__PURE__*/React.createElement("span", {
+      className: "text-sm text-stone-400 ml-1"
+    }, "/ y\u0131l")), /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-indigo-600 dark:text-indigo-300 mt-1"
+    }, "Ayda yakla\u015F\u0131k 83 TL"))), /*#__PURE__*/React.createElement("ul", {
+      className: "rounded-3xl glass p-5 mb-5 space-y-2 text-sm text-stone-600 dark:text-stone-300"
+    }, /*#__PURE__*/React.createElement("li", null, "\u2713 B\xFCt\xFCn konu notlar\u0131 ve testleri"), /*#__PURE__*/React.createElement("li", null, "\u2713 B\xFCt\xFCn harita oyunlar\u0131 ve bo\u015Fluk doldurma"), /*#__PURE__*/React.createElement("li", null, "\u2713 Reklam yok"), /*#__PURE__*/React.createElement("li", null, "\u2713 Telefonda ve web'de ayn\u0131 hesap")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-3xl p-5 mb-5 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-900 dark:text-amber-200"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "font-bold mb-1"
+    }, "Sat\u0131n alma uygulamadan yap\u0131l\u0131r"), /*#__PURE__*/React.createElement("p", null, "Premium'u Atanly uygulamas\u0131ndan Google Play ya da App Store ile alabilirsin; web'de kart bilgisi istenmez. Sat\u0131n ald\u0131ktan sonra burada otomatik a\xE7\u0131l\u0131r."), /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2 mt-3"
+    }, stores.play ? /*#__PURE__*/React.createElement("a", {
+      className: "px-4 py-2 rounded-xl bg-stone-900 text-white text-sm font-semibold",
+      href: stores.play,
+      target: "_blank",
+      rel: "noopener"
+    }, "Google Play'den indir") : null, stores.appStore ? /*#__PURE__*/React.createElement("a", {
+      className: "px-4 py-2 rounded-xl bg-stone-900 text-white text-sm font-semibold",
+      href: stores.appStore,
+      target: "_blank",
+      rel: "noopener"
+    }, "App Store'dan indir") : null, /*#__PURE__*/React.createElement("button", {
       type: "button",
-      onClick: function () {
-        setShowCardForm(false);
-        setError("");
-      },
-      className: "flex-1 py-3 rounded-xl border-2 border-stone-200 dark:border-stone-700 font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-    }, "Vazge\xE7"), /*#__PURE__*/React.createElement("button", {
-      disabled: busy || !cardNumber || !cardName || !cardExpiry || !cardCvv,
-      onClick: buy,
-      className: "flex-1 py-3 rounded-xl btn-primary text-white font-semibold disabled:opacity-40 transition-all hover:scale-[1.02] active:scale-[0.98]"
-    }, busy ? "⏳ İşleniyor..." : "💳 Ödemeyi Tamamla"))), mock && /*#__PURE__*/React.createElement("div", {
-      className: "mt-3 text-center text-[10px] text-stone-400"
-    }, "\uD83E\uDDEA Test modu: ger\xE7ek \xF6deme yap\u0131lmaz, kart bilgisi hi\xE7bir yere g\xF6nderilmez.")), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6 rounded-3xl glass p-5"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold mb-3"
-    }, "\u2728 Premium ile Kazanacaklar\u0131n"), /*#__PURE__*/React.createElement("div", {
-      className: "grid grid-cols-1 md:grid-cols-3 gap-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-center p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl mb-1"
-    }, "\u267E\uFE0F"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs font-medium"
-    }, "S\u0131n\u0131rs\u0131z Deneme"), /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400"
-    }, "40 soru \xB7 40 dakika")), /*#__PURE__*/React.createElement("div", {
-      className: "text-center p-3 rounded-xl bg-purple-50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl mb-1"
-    }, "\uD83D\uDCCA"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs font-medium"
-    }, "Detayl\u0131 Analiz"), /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400"
-    }, "Zay\u0131f noktalar\u0131n\u0131 bul")), /*#__PURE__*/React.createElement("div", {
-      className: "text-center p-3 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-800/30"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-2xl mb-1"
-    }, "\uD83C\uDFAF"), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs font-medium"
-    }, "Ak\u0131ll\u0131 Tercih"), /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400"
-    }, "En uygun kurumlar")))), /*#__PURE__*/React.createElement("div", {
-      className: "mt-4 text-center"
-    }, /*#__PURE__*/React.createElement("p", {
-      className: "text-[10px] text-stone-400 flex items-center justify-center gap-1"
-    }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDD12"), "G\xFCvenli \xF6deme \xB7 7 g\xFCn para iade garantisi", /*#__PURE__*/React.createElement("span", {
-      className: "mx-1"
-    }, "\xB7"), /*#__PURE__*/React.createElement("span", null, "\uD83D\uDCB3"), "Visa / Mastercard desteklenir")), /*#__PURE__*/React.createElement("div", {
-      className: "mt-6 text-center text-[10px] text-stone-400 border-t border-stone-100 dark:border-stone-800 pt-4"
-    }, /*#__PURE__*/React.createElement("p", null, "Premium \xFCyelik otomatik yenilenir. \u0130stedi\u011Fin zaman iptal edebilirsin.")));
+      disabled: busy,
+      onClick: refresh,
+      className: "px-4 py-2 rounded-xl border-2 border-amber-300 text-sm font-semibold disabled:opacity-50"
+    }, busy ? "Kontrol ediliyor…" : "Satın aldım, yenile"))), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-stone-400 space-y-1"
+    }, /*#__PURE__*/React.createElement("p", null, "Premium olmadan da her b\xF6l\xFCm\xFCn ilk ", n, " ba\u015Fl\u0131\u011F\u0131 \xFCcretsiz; di\u011Ferlerini uygulamada k\u0131sa bir reklam izleyerek ", M.unlockHours(), " saat a\xE7abilirsin."), /*#__PURE__*/React.createElement("p", null, "Canl\u0131 denemeler Premium'a dahil de\u011Fildir: her hesab\u0131n ilk canl\u0131 denemesi \xFCcretsiz, sonrakiler kay\u0131t ba\u015F\u0131na ", prices.live, "."), /*#__PURE__*/React.createElement("p", null, "Abonelik, ma\u011Faza hesab\u0131ndan iptal edilmedik\xE7e d\xF6nem sonunda otomatik yenilenir.")));
   }
-
-  // ============================================================
-  // EXPORT
-  // ============================================================
-
   window.KpssComponents = window.KpssComponents || {};
   window.KpssComponents.PaywallScreen = PaywallScreen;
 })();

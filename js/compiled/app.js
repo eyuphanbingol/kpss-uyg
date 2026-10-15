@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:272381:vkvmdt*/
+/*jsx:babel-7.29.9-react-classic:278417:9krzwl*/
 const {
   useState,
   useEffect,
@@ -2274,11 +2274,32 @@ function LiveExamCard(props) {
       setMsg(x.message);
     });
   }
+  // Gelir modeli: ilk canlı deneme ücretsiz, sonrası mağazadan alınan kayıt hakkıyla (sunucu kontrol eder).
+  var liveEntry = window.Monetization ? window.Monetization.liveEntry() : {
+    kind: "free",
+    paywall: false
+  };
+  var livePrice = window.Monetization && window.Monetization.PRICES.live || "50 TL";
+  var payMsg = "Bu deneme için kayıt hakkın yok. Her hesabın ilk denemesi ücretsiz; sonrakiler için kayıt hakkını Atanly uygulamasından " + livePrice + "'ye alabilirsin, aldıktan sonra burada da kayıt olabilirsin.";
   function register() {
-    act("live_register", {
+    if (liveEntry.kind === "pay") {
+      setMsg(payMsg);
+      if (window.MonetWeb) window.MonetWeb.refresh();
+      return;
+    }
+    setBusy(true);
+    setMsg("");
+    C.rpc("live_register", {
       p_exam: e.id
-    }, function (r) {
+    }).then(function (r) {
+      setBusy(false);
       setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı.");
+      load();
+      if (window.MonetWeb) window.MonetWeb.refresh();
+    }).catch(function (x) {
+      setBusy(false);
+      setMsg(x && x.code === "payment_required" ? payMsg : x.message);
+      if (window.MonetWeb) window.MonetWeb.refresh();
     });
   }
   function unregister() {
@@ -2565,7 +2586,7 @@ function LiveExamCard(props) {
       className: "quick-chip is-primary mt-3",
       disabled: busy,
       onClick: register
-    }, "Kay\u0131t ol"));
+    }, !liveEntry.paywall ? "Kayıt ol" : liveEntry.kind === "free" ? "Kayıt ol · ilk deneme ücretsiz" : liveEntry.kind === "credit" ? "Kayıt ol · " + liveEntry.credits + " kayıt hakkın var" : "Kayıt ol · " + livePrice));
   } else if (ph === "registered" || ph === "waitlist") {
     regBlock = /*#__PURE__*/React.createElement("div", {
       className: body ? "mt-4 pt-4 border-t border-stone-200/70 dark:border-stone-700" : ""
@@ -2858,6 +2879,78 @@ function AlistirmaDersList(props) {
     });
   })));
 }
+
+// ---------- Gelir modeli: kilitler (js/monetization.js, sunucu: supabase/patch-monetization.sql) ----------
+// Sunucuda monet_settings.enabled kapalıyken hiçbir şey kilitlenmez.
+function useMonet() {
+  const [, setTick] = useState(0);
+  useEffect(function () {
+    var M = window.Monetization;
+    if (!M) return undefined;
+    return M.subscribe(function () {
+      setTick(function (x) {
+        return x + 1;
+      });
+    });
+  }, []);
+  return window.Monetization || null;
+}
+function monetLocked(key, idx) {
+  var M = window.Monetization;
+  return !!(M && M.isLocked(key, idx));
+}
+function monetKey(kind, a, b) {
+  var M = window.Monetization;
+  return M ? M.keys[kind](a, b) : "";
+}
+function konuIdx(kpssData, ders, konu) {
+  return Object.keys(kpssData && kpssData[ders] || {}).filter(function (k) {
+    return k !== "_";
+  }).indexOf(konu);
+}
+
+// Harita oyununun kendi grubundaki sırası (her grubun ilk oyunları ücretsiz)
+function mapTopicIdx(topicId) {
+  var tree = window.MapQuiz && window.MapQuiz.TREE || [];
+  for (var i = 0; i < tree.length; i++) {
+    for (var j = 0; j < tree[i].kids.length; j++) if (tree[i].kids[j].id === topicId) return j;
+  }
+  return -1;
+}
+function MonetLockBadge() {
+  return /*#__PURE__*/React.createElement("span", {
+    className: "monet-badge"
+  }, "\uD83D\uDD12 Premium");
+}
+function MonetLockScreen(props) {
+  var M = window.Monetization;
+  var n = M ? M.freeCount() : 3;
+  var h = M ? M.unlockHours() : 24;
+  return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between mb-4"
+  }, /*#__PURE__*/React.createElement(BackBtn, {
+    onClick: props.onBack,
+    label: props.backLabel || "Geri"
+  }), /*#__PURE__*/React.createElement(ThemeBtn, {
+    isDark: props.isDark,
+    onClick: props.toggleDark
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "panel rounded-3xl p-6 text-center monet-lock"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-4xl mb-3",
+    "aria-hidden": "true"
+  }, "\uD83D\uDD12"), /*#__PURE__*/React.createElement("h2", {
+    className: "text-xl font-black mb-2"
+  }, props.title), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 mb-5"
+  }, "Her b\xF6l\xFCm\xFCn ilk ", n, " ba\u015Fl\u0131\u011F\u0131 \xFCcretsiz. Bunu Atanly uygulamas\u0131nda k\u0131sa bir reklam izleyerek ", h, " saat a\xE7abilir ya da Premium ile hepsini reklams\u0131z a\xE7abilirsin."), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "w-full py-3 rounded-2xl btn-primary text-white font-bold",
+    onClick: props.onPremium
+  }, "Premium'u incele"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-stone-400 mt-4"
+  }, "Uygulamada a\xE7t\u0131\u011F\u0131n kilit ve ald\u0131\u011F\u0131n Premium burada da ge\xE7erli.")));
+}
 function AlistirmaKonuList(props) {
   const ders = props.ders;
   const t = themeFor(ders, props.isDark);
@@ -2949,7 +3042,7 @@ function AlistirmaKonuList(props) {
       className: "font-bold text-slate-800 dark:text-slate-100"
     }, kLabel(konu)), /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-slate-400 mt-1"
-    }, open ? !ready ? "Boşluklar sayılıyor…" : st.n ? st.left + " / " + st.n + " boşluk" : "Henüz alıştırma yok" : "Önce önceki konunun testlerini bitir"))), open ? /*#__PURE__*/React.createElement("span", {
+    }, open ? !ready ? "Boşluklar sayılıyor…" : st.n ? st.left + " / " + st.n + " boşluk" : "Henüz alıştırma yok" : "Önce önceki konunun testlerini bitir"))), open ? monetLocked(monetKey("cloze", ders, konu), idx) ? /*#__PURE__*/React.createElement(MonetLockBadge, null) : /*#__PURE__*/React.createElement("span", {
       className: "text-stone-300 text-lg shrink-0"
     }, "\u2192") : null));
   })));
@@ -3212,8 +3305,9 @@ function MapTopics(props) {
       className: "text-sm font-black uppercase tracking-widest text-stone-400 mb-2"
     }, g.icon, " ", g.title), /*#__PURE__*/React.createElement("div", {
       className: "wide-grid is-tight"
-    }, g.kids.map(function (k) {
+    }, g.kids.map(function (k, ki) {
       var n = quiz ? quiz.countFor(k.id) : 0;
+      var locked = monetLocked(monetKey("map", k.id), ki);
       var hoverImg = k.hoverImg;
       return /*#__PURE__*/React.createElement("button", {
         key: k.id,
@@ -3232,7 +3326,9 @@ function MapTopics(props) {
         className: "map-topic-card-fg relative z-10 font-bold"
       }, hoverImg ? k.title : k.icon + " " + k.title), /*#__PURE__*/React.createElement("div", {
         className: "map-topic-card-meta relative z-10 text-xs text-stone-400 mt-1"
-      }, n, " hedef"));
+      }, n, " hedef", locked ? /*#__PURE__*/React.createElement("span", {
+        className: "ml-2"
+      }, /*#__PURE__*/React.createElement(MonetLockBadge, null)) : null));
     })));
   }));
 }
@@ -4197,7 +4293,7 @@ function KonuList(props) {
         return StudentStore.isPackComplete(tp, p.no);
       }).length;
       return nLen + " not · " + doneN + "/" + packs.length + " test";
-    }() : "Önce önceki konunun testlerini bitir"))), open ? /*#__PURE__*/React.createElement("div", {
+    }() : "Önce önceki konunun testlerini bitir"))), open && monetLocked(monetKey("konu", ders, konu), idx) ? /*#__PURE__*/React.createElement(MonetLockBadge, null) : open ? /*#__PURE__*/React.createElement("div", {
       className: "text-right shrink-0"
     }, /*#__PURE__*/React.createElement("div", {
       className: "font-black text-sm"
@@ -5596,7 +5692,17 @@ function Ben(props) {
       setEditing(false);
     },
     className: "px-4 py-3 rounded-xl border-2 border-stone-200 text-sm font-medium"
-  }, "Vazge\xE7")))), /*#__PURE__*/React.createElement("button", {
+  }, "Vazge\xE7")))), window.Monetization && window.Monetization.enabled() ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: function () {
+      props.onOpen && props.onOpen("paywall");
+    },
+    className: "w-full mb-4 p-3.5 rounded-2xl glass text-left card-hover"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-medium block"
+  }, window.Monetization.isPremium() ? "Premium açık" : "Premium'a geç"), /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-stone-400 font-normal mt-0.5 block"
+  }, window.Monetization.isPremium() ? "Bütün konular ve oyunlar açık, reklamsız" : "Bütün konular ve oyunlar · aylık 200 TL ya da yıllık 1000 TL")) : null, /*#__PURE__*/React.createElement("button", {
     type: "button",
     onClick: function () {
       props.onOpen && props.onOpen("leaderboard");
@@ -5884,6 +5990,7 @@ function App() {
     return StudyPlanner.buildPlan(kpssData, student);
   }, [kpssData, student]);
   const [extra, setExtra] = useState(null);
+  useMonet();
   const [liveView, setLiveView] = useState({
     view: "home"
   });
@@ -5945,7 +6052,7 @@ function App() {
       setExtra(null);
       return;
     }
-    if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled)) {
+    if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.enabled())) {
       setExtra(null);
       return;
     }
@@ -6624,6 +6731,20 @@ function App() {
             setDrillSeed(Date.now());
           }
         });
+      } else if (monetLocked(monetKey("map", drillMapTopic), mapTopicIdx(drillMapTopic))) {
+        var lockedMeta = window.MapQuiz && window.MapQuiz.topicMeta ? window.MapQuiz.topicMeta(drillMapTopic) : null;
+        body = /*#__PURE__*/React.createElement(MonetLockScreen, {
+          title: (lockedMeta ? lockedMeta.title : "Bu oyun") + " kilitli",
+          backLabel: "Harita oyunlar\u0131",
+          isDark: isDark,
+          toggleDark: toggleDark,
+          onBack: function () {
+            setDrillMapTopic(null);
+          },
+          onPremium: function () {
+            setExtra("paywall");
+          }
+        });
       } else {
         body = /*#__PURE__*/React.createElement(MapPlay, {
           topicId: drillMapTopic,
@@ -6716,6 +6837,19 @@ function App() {
             setDrillSeed(Date.now());
           }
         });
+      } else if (monetLocked(monetKey("cloze", drillDers, drillKonu), clozeKeys.indexOf(drillKonu))) {
+        body = /*#__PURE__*/React.createElement(MonetLockScreen, {
+          title: kLabel(drillKonu) + " kilitli",
+          backLabel: "Konular",
+          isDark: isDark,
+          toggleDark: toggleDark,
+          onBack: function () {
+            setDrillKonu(null);
+          },
+          onPremium: function () {
+            setExtra("paywall");
+          }
+        });
       } else {
         body = /*#__PURE__*/React.createElement(ClozePlay, {
           ders: drillDers,
@@ -6760,6 +6894,19 @@ function App() {
         setViewMode("hub");
         const tp = StudentStore.getTopic(selectedDers, k);
         setNoteIndex(tp.noteIndex || 0);
+      }
+    });
+  } else if (monetLocked(monetKey("konu", selectedDers, selectedKonu), konuIdx(kpssData, selectedDers, selectedKonu))) {
+    body = /*#__PURE__*/React.createElement(MonetLockScreen, {
+      title: kLabel(selectedKonu) + " kilitli",
+      backLabel: "Konular",
+      isDark: isDark,
+      toggleDark: toggleDark,
+      onBack: function () {
+        setSelectedKonu(null);
+      },
+      onPremium: function () {
+        setExtra("paywall");
       }
     });
   } else if (viewMode === "notlar") {
