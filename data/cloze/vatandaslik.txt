@@ -1,0 +1,158 @@
+# Boşluk doldurma bankası — Vatandaşlık (anayasa bilgileri 2017 değişikliğine göre)
+# "Genel Tekrar" konuları ayrıca yazılmaz; dersin bütün konularından karışık soru çeker.
+
+## Toplumsal Düzen ve Hukuk Kavramları
+Uyulmaması durumunda devlet zoruyla yaptırım uygulanan tek sosyal düzen kuralı ____ kurallarıdır. | hukuk | ahlak ; din ; görgü | Hukuk kurallarının yaptırımı maddi ve devlet gücüne dayalıdır.
+Ayıplanma ve dışlanma yaptırımı olan sosyal düzen kuralı ____ kurallarıdır. | görgü | hukuk ; din ; anayasa | Görgü kuralları toplumsal nezaket kurallarıdır.
+Yaptırımı vicdani rahatsızlık olan sosyal düzen kuralı ____ kurallarıdır. | ahlak | hukuk ; görgü ; örf | Ahlak kurallarının yaptırımı manevidir.
+Bir hukuki işlemin hiç doğmamış sayılmasına ____ denir. | yokluk | iptal ; tazminat ; cebri icra | Kurucu unsurlardan biri eksikse işlem yok hükmündedir.
+Hukuka aykırı davranışla verilen zararın giderilmesine ____ denir. | tazminat | ceza ; iptal ; hükümsüzlük | Tazminat maddi veya manevi olabilir.
+Kanunların sıralamasında en üstte yer alan norm ____'dır. | Anayasa | kanun ; yönetmelik ; Cumhurbaşkanlığı kararnamesi | Normlar hiyerarşisi: Anayasa, kanun, CB kararnamesi, yönetmelik.
+Hukukun yazılı olmayan kaynaklarından biri ____'tır. | örf ve adet hukuku | kanun ; yönetmelik ; tüzük | Örf ve adet hukuku yazısız asli kaynaktır.
+Mahkeme kararları ve bilimsel görüşler hukukun ____ kaynaklarıdır. | yardımcı | asli ; yazılı asli ; anayasal | Yargı kararları ve doktrin yardımcı kaynaktır.
+Kişinin hak ehliyetine sahip olması ____ başlar. | tam ve sağ doğumla | ergenlikle ; 18 yaşla ; evlilikle | Ana rahmine düştüğü andan itibaren sağ doğmak şartıyla hak ehliyeti vardır.
+Türk Medeni Kanunu'na göre ergenlik yaşı ____'dir. | 18 | 15 ; 17 ; 21 | Erginlik 18 yaşın doldurulmasıyla başlar; evlenmeyle de kazanılır.
+
+## Borçlar, Ticaret ve Devletler Özel Hukuku
+Borcun kaynakları sözleşme, haksız fiil ve ____'dir. | sebepsiz zenginleşme | tazminat ; miras ; vekâlet | Borçlar Kanunu üç kaynak sayar.
+Bir kimsenin hukuka aykırı ve kusurlu davranışla başkasına zarar vermesine ____ denir. | haksız fiil | sözleşme ; sebepsiz zenginleşme ; temerrüt | Haksız fiil tazminat borcu doğurur.
+Tacirlerin ve ticari işletmelerin işlemlerini düzenleyen hukuk dalı ____ hukukudur. | ticaret | borçlar ; idare ; ceza | Türk Ticaret Kanunu bu alanın temel kanunudur.
+Yabancı unsurlu özel hukuk ilişkilerinde hangi ülke hukukunun uygulanacağını belirleyen dal ____'dur. | devletler özel hukuku | devletler genel hukuku ; anayasa hukuku ; idare hukuku | Vatandaşlık ve yabancılar hukuku da bu alanda incelenir.
+Devletler arası ilişkileri düzenleyen hukuk dalı ____'dur. | devletler genel hukuku | devletler özel hukuku ; ticaret hukuku ; medeni hukuk | Uluslararası antlaşmalar bu dalın konusudur.
+Kambiyo senetleri poliçe, bono ve ____'tir. | çek | fatura ; tahvil ; hisse senedi | Kambiyo senetleri Türk Ticaret Kanunu'nda düzenlenir.
+Borcun ifa edilmemesi durumunda alacaklının devlet gücüyle alacağını tahsil etmesine ____ denir. | cebri icra | tazminat ; iptal ; hükümsüzlük | İcra ve İflas Kanunu cebri icrayı düzenler.
+Türk Borçlar Kanunu'nun yürürlüğe girdiği yıl ____'dir. | 2012 | 1926 ; 2001 ; 2016 | Yeni TBK 6098 sayılıdır, 1 Temmuz 2012'de yürürlüğe girdi.
+Türk Medeni Kanunu'nun yenisi ____ yılında yürürlüğe girmiştir. | 2002 | 1926 ; 1999 ; 2012 | 4721 sayılı TMK 1 Ocak 2002'de yürürlüğe girdi.
+Alım-satım, kira ve bağışlama ____ türleridir. | sözleşme | haksız fiil ; sebepsiz zenginleşme ; ceza | Sözleşmeler tarafların karşılıklı irade beyanıyla kurulur.
+
+## Hak Kavramı
+Herkese karşı ileri sürülebilen haklara ____ haklar denir. | mutlak | nispi ; yenilik doğuran ; siyasi | Mülkiyet hakkı mutlak haktır.
+Yalnızca belirli kişilere karşı ileri sürülebilen haklara ____ haklar denir. | nispi | mutlak ; kamu ; doğal | Alacak hakkı nispi haktır.
+Kişinin tek taraflı iradesiyle bir hukuki durumu değiştirmesini sağlayan haklara ____ haklar denir. | yenilik doğuran | mutlak ; nispi ; kişilik | Boşanma davası açma, sözleşmeyi feshetme örnektir.
+Seçme, seçilme ve dilekçe hakkı ____ haklardır. | siyasi | sosyal ; kişisel ; ekonomik | Siyasi haklar yalnızca vatandaşlara tanınır.
+Eğitim, sağlık ve sosyal güvenlik hakkı ____ haklardır. | sosyal ve ekonomik | kişisel ; siyasi ; negatif statü | Devletin olumlu edim yükümlülüğü doğurur.
+Kişi dokunulmazlığı ve konut dokunulmazlığı ____ haklardandır. | kişisel | sosyal ; ekonomik ; siyasi | Kişisel haklar negatif statü haklarıdır.
+Bir hakkın kullanılması sırasında başkalarının haklarına zarar verilmemesine ____ denir. | hakkın kötüye kullanılmaması | iyiniyet ; zamanaşımı ; hak düşürücü süre | Medeni Kanun hakkın kötüye kullanılmasını korumaz.
+Hakkın kazanılmasında kişinin iyi niyetli olduğunun kabul edilmesi ____ ilkesidir. | iyiniyet karinesi | dürüstlük kuralı ; masumiyet karinesi ; kanunilik | İyiniyet asıldır; aksini iddia eden ispatlar.
+Devletin kişiye karışmamasını gerektiren haklara ____ haklar denir. | negatif statü | pozitif statü ; aktif statü ; siyasi | Kişi hak ve özgürlükleri negatif statü haklarıdır.
+Vatandaşın devlet yönetimine katılmasını sağlayan haklara ____ haklar denir. | aktif statü | negatif statü ; pozitif statü ; kişisel | Seçme ve seçilme aktif statü hakkıdır.
+
+## Türk Anayasa Tarihi
+Padişahın yetkilerinin ilk kez sınırlandığı belge ____'dir. | Sened-i İttifak | Tanzimat Fermanı ; Islahat Fermanı ; Kanun-i Esasi | 1808'de II. Mahmut ile âyanlar arasında imzalandı.
+Osmanlı Devleti'nin ilk ve tek anayasası ____'dir. | Kanun-i Esasi | Teşkilat-ı Esasiye ; Sened-i İttifak ; Islahat Fermanı | Kanun-i Esasi 1876'da ilan edildi.
+Kanun-i Esasi'de yasama organı ____ meclisten oluşuyordu. | iki | bir ; üç ; dört | Meclis-i Umumi; Meclis-i Mebusan ve Meclis-i Âyan'dan oluşuyordu.
+"Egemenlik kayıtsız şartsız milletindir" ilkesine yer veren ilk anayasa ____'dir. | 1921 Anayasası | 1876 Anayasası ; 1924 Anayasası ; 1961 Anayasası | 1921 Teşkilat-ı Esasiye millî egemenliği esas aldı.
+Türkiye'nin en kısa anayasası ____'dir. | 1921 Anayasası | 1924 Anayasası ; 1961 Anayasası ; 1982 Anayasası | 1921 Anayasası 23 maddeden oluşur.
+Anayasa Mahkemesi'ni kuran ilk anayasa ____'dir. | 1961 Anayasası | 1924 Anayasası ; 1982 Anayasası ; 1921 Anayasası | 1961 Anayasası çift meclisli yapı da getirdi.
+Halkoylamasıyla kabul edilen ilk anayasa ____'dir. | 1961 Anayasası | 1924 Anayasası ; 1921 Anayasası ; 1876 Anayasası | 1961 Anayasası halkoylamasıyla kabul edildi; 1982 de halkoylamasına sunuldu.
+Laiklik ilkesi anayasaya ____ yılında girmiştir. | 1937 | 1924 ; 1928 ; 1961 | Atatürk ilkeleri 1937'de 1924 Anayasası'na eklendi.
+"Devletin dini İslam'dır" ifadesi anayasadan ____ yılında çıkarılmıştır. | 1928 | 1924 ; 1937 ; 1946 | 1928 değişikliğiyle bu madde kaldırıldı.
+1982 Anayasası'nda cumhurbaşkanlığı hükûmet sistemine geçişi sağlayan değişiklik ____ yılında halkoyuyla kabul edilmiştir. | 2017 | 2007 ; 2010 ; 2018 | 16 Nisan 2017 halkoylamasıyla kabul edildi.
+
+## Siyasi Hak ve Ödevler
+1982 Anayasası'na göre seçme yaşı ____'dir. | 18 | 21 ; 25 ; 16 | Seçme yaşı 18'dir.
+1982 Anayasası'na göre milletvekili seçilme yaşı ____'dir. | 18 | 21 ; 25 ; 30 | 2017 değişikliğiyle 25'ten 18'e indirildi.
+Cumhurbaşkanı seçilebilmek için gereken yaş ____'dır. | 40 | 30 ; 35 ; 45 | Yükseköğrenim yapmış ve 40 yaşını doldurmuş olmak gerekir.
+Seçimlerin genel yönetim ve denetimini yapan kurum ____'dur. | Yüksek Seçim Kurulu | Anayasa Mahkemesi ; Danıştay ; İçişleri Bakanlığı | YSK kararlarına karşı başka bir mercie başvurulamaz.
+Türkiye'de vatandaşların dilekçe hakkı kullanarak başvurabildiği yer ____'dir. | yetkili makamlar ve TBMM | yalnız mahkemeler ; yalnız valilikler ; yalnız Anayasa Mahkemesi | Dilekçe hakkı Anayasa'nın 74. maddesinde düzenlenir.
+Vatan hizmeti ve vergi ödevi ____ ödevlerdir. | siyasi | sosyal ; kişisel ; ekonomik olmayan özel | Anayasa vatandaşların siyasi ödevlerini sayar.
+Kamu Denetçiliği Kurumu'na başvurma hakkı ____ hakkıdır. | dilekçe ve şikâyet | seçilme ; sendika ; grev | Ombudsmanlık kurumu 2012'de kuruldu.
+Milletvekili genel seçimleri ____ yılda bir yapılır. | beş | dört ; altı ; yedi | 2017 değişikliğiyle TBMM ve Cumhurbaşkanı seçimleri beş yılda bir aynı gün yapılır.
+Siyasi partilerin kapatılmasına ____ karar verir. | Anayasa Mahkemesi | Yargıtay ; Danıştay ; YSK | Dava Yargıtay Cumhuriyet Başsavcısınca açılır.
+Seçimlerde oy kullanma ____ ilkesine göre yapılır. | serbest, eşit, gizli, tek dereceli | açık oy, gizli tasnif ; iki dereceli ; zorunlu ve açık | Anayasa'nın 67. maddesi seçim ilkelerini sayar.
+
+## 1982 Anayasası - Yasama
+TBMM ____ milletvekilinden oluşur. | 600 | 450 ; 550 ; 500 | 2017 değişikliğiyle sayı 550'den 600'e çıktı.
+Kanun koyma yetkisi ____'ye aittir. | TBMM | Cumhurbaşkanı ; Bakanlar ; Anayasa Mahkemesi | Yasama yetkisi devredilemez.
+Milletvekillerinin kürsüdeki sözleri nedeniyle sorumlu tutulamamasına ____ denir. | yasama sorumsuzluğu | yasama dokunulmazlığı ; temsil yetkisi ; muafiyet | Sorumsuzluk mutlak ve süreklidir.
+Milletvekilinin yargılanabilmesi için meclis kararı gerekmesine ____ denir. | yasama dokunulmazlığı | yasama sorumsuzluğu ; ağır cürüm ; meclis soruşturması | Ağır cezalık suçüstü hâli istisnadır.
+TBMM'nin bilgi edinme ve denetim yollarından biri ____'dır. | meclis araştırması | gensoru ; güvenoyu ; fesih | 2017'den sonra denetim yolları: meclis araştırması, genel görüşme, meclis soruşturması, yazılı soru.
+Cumhurbaşkanının TBMM'nin kabul ettiği kanunu bir daha görüşülmek üzere geri göndermesine ____ denir. | veto | fesih ; kanun hükmünde kararname ; yürürlük | Cumhurbaşkanı kanunu 15 gün içinde geri gönderebilir.
+Anayasa değişikliği teklifi en az ____ milletvekili tarafından yazıyla yapılabilir. | 200 | 100 ; 300 ; 400 | Teklif üye tamsayısının üçte biriyle yapılır.
+TBMM'nin seçimlerin yenilenmesine karar verebilmesi için ____ çoğunluğu gerekir. | beşte üç (360) | salt (301) ; üçte iki (400) ; üçte bir (200) | TBMM 360 oyla seçimleri yenileyebilir.
+Bütçe kanununu TBMM'ye sunma yetkisi ____'na aittir. | Cumhurbaşkanı | Maliye Bakanı ; TBMM Başkanı ; Sayıştay | Bütçe kanunu teklifi Cumhurbaşkanınca sunulur.
+TBMM adına kamu idarelerinin hesaplarını denetleyen kurum ____'dır. | Sayıştay | Danıştay ; Devlet Denetleme Kurulu ; Yargıtay | Sayıştay mali denetim yapar.
+
+## 1982 Anayasası - Yürütme
+Cumhurbaşkanı ____ seçilir. | halk tarafından | TBMM tarafından ; Bakanlar Kurulu tarafından ; YSK tarafından | 2007 değişikliğinden beri halk seçmektedir.
+Cumhurbaşkanının görev süresi ____ yıldır. | beş | yedi ; dört ; altı | Bir kişi en fazla iki defa seçilebilir.
+Cumhurbaşkanı yardımcıları ve bakanları ____ atar. | Cumhurbaşkanı | TBMM ; Başbakan ; YSK | 2017 değişikliğiyle başbakanlık kaldırıldı.
+Cumhurbaşkanının kişisel suçları ve görevle ilgili suçları için Yüce Divan olarak ____ yargılar. | Anayasa Mahkemesi | Yargıtay ; Danıştay ; Sayıştay | Soruşturma açılması TBMM üye tamsayısının beşte üçünün oyuyla olur.
+Cumhurbaşkanının yürütme yetkisine ilişkin konularda çıkarabildiği düzenleyici işlem ____'dir. | Cumhurbaşkanlığı kararnamesi | kanun hükmünde kararname ; tüzük ; genelge | KHK düzenlemesi 2017'de kaldırıldı.
+Cumhurbaşkanına bağlı olarak idarenin denetimini yapan kurul ____'dur. | Devlet Denetleme Kurulu | Sayıştay ; Danıştay ; Milli Güvenlik Kurulu | DDK idareyi ve dernekleri denetler.
+Milli güvenlik siyasetinin tayini için tavsiye kararları alan kurul ____'dur. | Milli Güvenlik Kurulu | Devlet Denetleme Kurulu ; Yüksek Askerî Şûra ; Kabine | MGK'ya Cumhurbaşkanı başkanlık eder.
+Olağanüstü hâl ilan etme yetkisi ____'na aittir. | Cumhurbaşkanı | TBMM Başkanı ; İçişleri Bakanı ; Genelkurmay Başkanı | OHAL kararı aynı gün TBMM onayına sunulur.
+Cumhurbaşkanlığı makamı boşalırsa ____ gün içinde seçim yapılır. | 45 | 30 ; 60 ; 90 | Seçime kadar Cumhurbaşkanı yardımcısı vekâlet eder.
+Silahlı Kuvvetlerin Başkomutanlığı ____'nın manevi varlığından ayrılamaz. | TBMM | Cumhurbaşkanlığı ; Genelkurmay ; Milli Savunma Bakanlığı | Başkomutanlığı Cumhurbaşkanı temsil eder.
+
+## İdare Hukuku
+İdarenin kamu yararı amacıyla özel mülkiyetteki taşınmazı bedelini ödeyerek almasına ____ denir. | kamulaştırma | devletleştirme ; özelleştirme ; müsadere | Kamulaştırmada bedel peşin ödenir.
+Özel teşebbüsün kamu hizmeti niteliği taşıyan işletmelerinin devlete geçirilmesine ____ denir. | devletleştirme | kamulaştırma ; özelleştirme ; vesayet | Devletleştirmede bedel ödenir.
+Merkezi idarenin yerinden yönetim kuruluşları üzerindeki denetim yetkisine ____ denir. | idari vesayet | hiyerarşi ; yetki genişliği ; yetki devri | Vesayet kanunla belirlenen sınırlar içinde kullanılır.
+Merkezi idarenin taşra teşkilatına geniş karar yetkisi tanınmasına ____ denir. | yetki genişliği | idari vesayet ; yerinden yönetim ; yetki devri | Valiler yetki genişliği ilkesine göre çalışır.
+İdari işlemlere karşı açılan davalara bakan yüksek mahkeme ____'dır. | Danıştay | Yargıtay ; Anayasa Mahkemesi ; Sayıştay | Danıştay idari yargının en üst mercisidir.
+İl özel idaresi, belediye ve köy ____ yerinden yönetim kuruluşlarıdır. | mahallî (yer bakımından) | hizmet bakımından ; merkezi ; meslek | Mahallî idareler halk tarafından seçilen organlara sahiptir.
+Üniversiteler ve TRT ____ yerinden yönetim kuruluşlarıdır. | hizmet bakımından | yer bakımından ; merkezi ; meslek | Belirli bir kamu hizmetini yürütmek için kurulurlar.
+Barolar ve tabip odaları ____'dır. | kamu kurumu niteliğindeki meslek kuruluşları | mahallî idareler ; merkezi idareler ; özel şirketler | Anayasa'nın 135. maddesinde düzenlenir.
+İdari işlemin hukuka uygun kabul edilmesi ilkesine ____ denir. | hukuka uygunluk karinesi | geçmişe yürümezlik ; kazanılmış hak ; vesayet | İdari işlemler aksi kanıtlanana kadar hukuka uygun sayılır.
+İdari yargıda dava açma süresi kural olarak ____ gündür. | 60 | 30 ; 15 ; 90 | Danıştay ve idare mahkemelerinde 60, vergi mahkemelerinde 30 gündür.
+
+## Devlet Memurları (657)
+657 sayılı Devlet Memurları Kanunu ____ yılında kabul edilmiştir. | 1965 | 1950 ; 1982 ; 1999 | Kanun 14 Temmuz 1965'te kabul edildi.
+657 sayılı Kanun'a göre en ağır disiplin cezası ____'dır. | devlet memurluğundan çıkarma | kademe ilerlemesinin durdurulması ; aylıktan kesme ; kınama | Bu cezayı alan bir daha memur olamaz.
+657 sayılı Kanun'a göre en hafif disiplin cezası ____'dır. | uyarma | kınama ; aylıktan kesme ; kademe ilerlemesinin durdurulması | Sıralama: uyarma, kınama, aylıktan kesme, kademe durdurma, memurluktan çıkarma.
+Memurun brüt aylığından 1/30-1/8 arasında kesinti yapılması ____ cezasıdır. | aylıktan kesme | kınama ; uyarma ; kademe ilerlemesinin durdurulması | Aylıktan kesme kusurun ağırlığına göre değişir.
+Memurların kademe ilerlemesinin 1-3 yıl durdurulması ____ cezasıdır. | kademe ilerlemesinin durdurulması | aylıktan kesme ; kınama ; memurluktan çıkarma | Bu ceza disiplin kurulu kararıyla verilir.
+Aday memurluk süresi en az ____ yıldır. | bir | iki ; üç ; altı ay | Aday memurluk en az bir, en fazla iki yıldır.
+Memurlara yıllık izin hizmet süresi 1-10 yıl arasında olanlar için ____ gündür. | 20 | 15 ; 30 ; 25 | 10 yıldan fazla hizmeti olanlara 30 gün verilir.
+657'ye göre memurların grev yapması ____. | yasaktır | serbesttir ; izne tabidir ; yalnız sendika üyelerine serbesttir | Memurlar grev yapamaz; sendika kurabilir.
+Uyarma ve kınama cezalarını vermeye yetkili olan ____'dir. | disiplin amiri | yüksek disiplin kurulu ; mahkeme ; bakan yardımcısı | Ağır cezalar kurullar tarafından verilir.
+Memurların hizmet sınıflarından biri ____'dır. | genel idare hizmetleri | özel sektör hizmetleri ; serbest meslek ; esnaf | 657'de 11 hizmet sınıfı sayılmıştır.
+
+## Türkiye'nin İdari Yapısı
+İlin genel idaresinden ____ sorumludur. | vali | belediye başkanı ; il genel meclisi ; kaymakam | Vali ilde Cumhurbaşkanının temsilcisidir.
+İlçenin genel idaresinden ____ sorumludur. | kaymakam | vali ; muhtar ; belediye başkanı | Kaymakam ilçede devletin temsilcisidir.
+Köyün yürütme organı ____'dır. | muhtar | köy derneği ; ihtiyar heyeti ; kaymakam | Muhtar halk tarafından seçilir.
+Belediye başkanları ____ yıl için seçilir. | beş | dört ; üç ; altı | Mahallî seçimler beş yılda bir yapılır.
+Belediyenin karar organı ____'dir. | belediye meclisi | belediye encümeni ; belediye başkanı ; il genel meclisi | Encümen yürütme, başkan yürütme organı başıdır.
+İl özel idaresinin karar organı ____'dir. | il genel meclisi | il encümeni ; vali ; belediye meclisi | İl özel idaresinin başı validir.
+Türkiye'de ____ büyükşehir belediyesi vardır. | 30 | 81 ; 25 ; 16 | 2012 düzenlemesiyle büyükşehir sayısı 30 oldu.
+Merkezi idarenin başkentteki kuruluşlarından biri ____'dır. | bakanlıklar | belediyeler ; il özel idareleri ; köyler | Cumhurbaşkanı ve bakanlıklar başkent teşkilatını oluşturur.
+Türkiye'de il sayısı ____'dir. | 81 | 80 ; 79 ; 82 | Son kurulan iller Düzce, Osmaniye, Kilis ve Karabük'tür.
+Merkezi idarenin taşra teşkilatı il ve ____'den oluşur. | ilçe | köy ; mahalle ; belde | Bucak teşkilatı da kanunda vardır ancak uygulanmamaktadır.
+
+## İnsan Hakları
+Birleşmiş Milletler İnsan Hakları Evrensel Beyannamesi ____ yılında kabul edilmiştir. | 1948 | 1945 ; 1950 ; 1966 | 10 Aralık 1948'de kabul edildi; 10 Aralık İnsan Hakları Günü'dür.
+Kralın yetkilerini sınırlayan 1215 İngiliz belgesi ____'dır. | Magna Carta | Haklar Bildirgesi (Bill of Rights) ; Habeas Corpus ; Virginia Bildirgesi | Magna Carta insan hakları tarihinin ilk belgelerinden biridir.
+Fransız İhtilali'nden sonra 1789'da yayımlanan belge ____'dir. | İnsan ve Yurttaş Hakları Bildirisi | Magna Carta ; Bill of Rights ; Petition of Rights | Bu bildiri özgürlük ve eşitlik ilkelerini yaydı.
+Avrupa İnsan Hakları Sözleşmesi'ni ihlal iddialarına bakan mahkeme ____'dir. | Avrupa İnsan Hakları Mahkemesi | Uluslararası Adalet Divanı ; Avrupa Adalet Divanı ; Uluslararası Ceza Mahkemesi | AİHM Strazburg'dadır.
+Avrupa İnsan Hakları Mahkemesi ____ şehrindedir. | Strazburg | Lahey ; Brüksel ; Cenevre | Uluslararası Adalet Divanı ise Lahey'dedir.
+Türkiye'de bireysel başvuru hakkı ____ mahkemesine yapılır. | Anayasa | Yargıtay ; Danıştay ; Sayıştay | Bireysel başvuru 2012'den itibaren mümkündür.
+Kişi hak ve özgürlüklerinin özüne dokunulmaması ilkesi hakların ____ sınırlamalarına getirilen güvencedir. | kanunla | yönetmelikle ; genelgeyle ; idari kararla | Hak ve özgürlükler ancak kanunla ve özüne dokunulmadan sınırlanabilir.
+Türkiye'de insan haklarını korumak için kurulan ulusal kurum ____'dur. | Türkiye İnsan Hakları ve Eşitlik Kurumu | Kamu Denetçiliği Kurumu ; Devlet Denetleme Kurulu ; RTÜK | TİHEK 2016'da kuruldu.
+Çocuk Haklarına Dair Sözleşme BM'de ____ yılında kabul edilmiştir. | 1989 | 1948 ; 1966 ; 1979 | Sözleşmeye göre 18 yaşın altındaki herkes çocuktur.
+Kadınlara karşı her türlü ayrımcılığın önlenmesi sözleşmesinin kısaltması ____'dır. | CEDAW | UNICEF ; UNESCO ; ILO | CEDAW BM'de 1979'da kabul edildi.
+
+## Genel Kültür - Ulusal Gelişmeler
+Türkiye'nin ilk yerli otomobili ____'dir. | Devrim | Anadol ; Murat ; Togg | Devrim otomobili 1961'de Eskişehir'de üretildi.
+Türkiye'nin yerli otomobil markası ____'dur. | Togg | Devrim ; Anadol ; Tofaş | Togg 2022'de banttan indi.
+Türkiye'nin ilk yerli uydusu ____'dır. | Türksat 6A | Göktürk-1 ; Rasat ; İmece | Türksat 6A 2024'te fırlatıldı; tamamen yerli ilk haberleşme uydusudur.
+Türkiye'nin uzaya giden ilk astronotu ____'dir. | Alper Gezeravcı | Tuva Cihangir Atasever ; Ali Gezer ; Murat Kurt | Alper Gezeravcı Ocak 2024'te Uluslararası Uzay İstasyonu'na gitti.
+Türk İnsansız Hava Aracı Bayraktar TB2'yi üreten firma ____'tir. | Baykar | Aselsan ; Roketsan ; TUSAŞ | TB2 birçok ülkeye ihraç edilmiştir.
+Türkiye'nin ilk milli muharip uçağı projesi ____'dır. | KAAN | Hürjet ; Hürkuş ; Akıncı | KAAN TUSAŞ tarafından geliştirilmektedir.
+Türkiye'nin ilk uçak gemisi niteliğindeki gemisi ____'dir. | TCG Anadolu | TCG Heybeliada ; TCG Barbaros ; TCG Gökova | TCG Anadolu 2023'te hizmete girdi.
+Türkiye'nin uzay programını yürüten kurum ____'dır. | Türkiye Uzay Ajansı | TÜBİTAK ; ASELSAN ; MTA | Türkiye Uzay Ajansı 2018'de kuruldu.
+Karadeniz'de keşfedilen en büyük doğal gaz sahası ____ sahasıdır. | Sakarya | Tuna ; Akçakoca ; Kırklareli | Sakarya Gaz Sahası 2020'de keşfedildi, 2023'te üretime başladı.
+Türkiye'nin ilk nükleer santrali ____'dur. | Akkuyu | Sinop ; İğneada ; Gökova | Akkuyu Mersin'dedir.
+
+## Önemli Düşünür ve Bilim İnsanları
+Cebir biliminin kurucusu kabul edilen Türk-İslam bilgini ____'dir. | Harezmi | Biruni ; Farabi ; İbn-i Sina | Harezmi'nin adından "algoritma" kavramı türemiştir.
+"El-Kanun fi't-Tıb" adlı tıp eserinin yazarı ____'dır. | İbn-i Sina | Farabi ; Harezmi ; Biruni | Eser yüzyıllarca Avrupa'da ders kitabı olarak okutuldu.
+"Muallim-i Sani" (ikinci öğretmen) olarak bilinen düşünür ____'dir. | Farabi | İbn-i Sina ; Gazali ; İbn-i Rüşd | Birinci öğretmen Aristo kabul edilir.
+Dünyanın çevresini ölçen ve Hindistan üzerine eser yazan bilgin ____'dir. | Biruni | Uluğ Bey ; Ali Kuşçu ; Piri Reis | Biruni'nin Hindistan kitabı ünlüdür.
+Kitab-ı Bahriye adlı denizcilik eserinin yazarı ____'dir. | Piri Reis | Seydi Ali Reis ; Barbaros Hayreddin ; Katip Çelebi | Piri Reis'in dünya haritası da ünlüdür.
+Semerkant'ta rasathane kuran Türk hükümdar ve gökbilimci ____'dir. | Uluğ Bey | Ali Kuşçu ; Takiyüddin ; Biruni | Uluğ Bey Timur'un torunudur.
+İstanbul'da 16. yüzyılda rasathane kuran gökbilimci ____'dir. | Takiyüddin | Ali Kuşçu ; Uluğ Bey ; Piri Reis | Takiyüddin Rasathanesi III. Murat döneminde kuruldu.
+Keşfü'z-Zünun adlı bibliyografya eserinin yazarı ____'dir. | Katip Çelebi | Evliya Çelebi ; Naima ; Peçevi | Katip Çelebi Cihannüma adlı coğrafya eserini de yazdı.
+Seyahatname'nin yazarı ____'dir. | Evliya Çelebi | Katip Çelebi ; Seydi Ali Reis ; Piri Reis | Seyahatname on ciltlik bir gezi eseridir.
+"Mukaddime" adlı eserle sosyolojinin öncüsü sayılan düşünür ____'dur. | İbn-i Haldun | İbn-i Rüşd ; Gazali ; Farabi | İbn-i Haldun toplumların doğuş ve çöküşünü inceledi.

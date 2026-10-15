@@ -1,0 +1,315 @@
+# Boşluk doldurma bankası — Coğrafya
+# Biçim: "## Konu adı", ardından: cümle (____) | cevap | çeldirici ; çeldirici ; çeldirici | açıklama
+
+## Türkiye'nin Coğrafi Konumu
+Türkiye ____ kuzey paralelleri arasında yer alır. | 36°-42° | 26°-45° ; 30°-38° ; 40°-48° | 36°-42° kuzey paralelleri; 26°-45° doğu meridyenleri.
+Türkiye ____ doğu meridyenleri arasında yer alır. | 26°-45° | 36°-42° ; 20°-35° ; 30°-50° | Doğu ile batı uçları arasında 19 meridyen vardır.
+Türkiye'nin doğusu ile batısı arasındaki yerel saat farkı ____ dakikadır. | 76 | 60 ; 19 ; 90 | 19 meridyen × 4 dakika = 76 dakika.
+Türkiye'nin en doğu ucu ____ ilindedir. | Iğdır | Hakkari ; Kars ; Ağrı | En doğu nokta Iğdır'daki Dilucu yakınlarıdır.
+Türkiye'nin en batı ucu ____'dır. | Avlaka Burnu (Gökçeada) | Baba Burnu ; Sinop Burnu ; Kerpe Burnu | Avlaka Burnu Gökçeada'dadır; karada en batı Baba Burnu'dur.
+Türkiye'nin en kuzey noktası ____'dur. | Sinop İnceburun | Kerpe Burnu ; Baba Burnu ; Anamur Burnu | İnceburun Karadeniz kıyısındadır.
+Türkiye'nin en güney noktası ____'dur. | Anamur Burnu | Sinop İnceburun ; Gelidonya Burnu ; Avlaka Burnu | Anamur Burnu Mersin'dedir.
+Türkiye'nin en uzun kara sınırı ____ iledir. | Suriye | İran ; Irak ; Gürcistan | Suriye sınırı yaklaşık 900 km'dir.
+Türkiye'nin en kısa kara sınırı ____ iledir. | Nahçıvan (Azerbaycan) | Bulgaristan ; Gürcistan ; Ermenistan | Nahçıvan sınırı yaklaşık 10 km'dir.
+Türkiye'nin kuzey yarım kürede yer alması sonucu dağların ____ yamaçları daha fazla güneş alır. | güney | kuzey ; doğu ; batı | Kuzey yarım kürede güneşe bakan yamaçlar güney yamaçlarıdır.
+Türkiye'de güneş ışınlarının yıl içinde en dik açıyla düştüğü tarih ____'dir. | 21 Haziran | 21 Aralık ; 21 Mart ; 23 Eylül | 21 Haziran'da Yengeç Dönencesi'ne dik açıyla gelir; kuzey yarım kürede en uzun gündür.
+
+## İç Kuvvetler
+Yer kabuğunun geniş alanlarda alçalıp yükselmesine ____ denir. | epirojenez | orojenez ; volkanizma ; deprem | Epirojenezle transgresyon (deniz ilerlemesi) ve regresyon (deniz çekilmesi) olur.
+Yer kabuğunun kıvrılıp kırılarak dağ oluşturmasına ____ denir. | orojenez | epirojenez ; erozyon ; volkanizma | Orojenezde kıvrılma ve kırılma ile dağlar oluşur.
+Esnek tabakaların yan basınçla bükülmesiyle oluşan dağlara ____ denir. | kıvrım dağları | kırık dağları ; volkanik dağlar ; aşınım dağları | Kuzey Anadolu ve Toros Dağları kıvrım dağlarıdır.
+Fay hatları boyunca yükselen bloklara ____ denir. | horst | graben ; plato ; kaldera | Batı Anadolu'da Bozdağlar ve Aydın Dağları horsttur.
+Fay hatları boyunca çöken bloklara ____ denir. | graben | horst ; vadi ; delta | Gediz, Küçük Menderes ve Büyük Menderes ovaları grabendir.
+Türkiye'nin en yüksek dağı olan volkanik dağ ____'dır. | Ağrı Dağı | Erciyes Dağı ; Süphan Dağı ; Hasan Dağı | Ağrı Dağı 5137 metredir.
+Volkanik bir krater çanağının sularla dolmasıyla oluşan göle ____ denir. | krater gölü | tektonik göl ; karstik göl ; set gölü | Nemrut Krater Gölü bu türdendir.
+Türkiye'nin en büyük gölü olan ve volkanik set gölü olan göl ____'dür. | Van Gölü | Tuz Gölü ; Beyşehir Gölü ; Eğirdir Gölü | Van Gölü'nün önünü Nemrut'un lavları kapatmıştır.
+Türkiye'de deprem riskinin en az olduğu bölgelerden biri ____'dir. | Konya-Karaman çevresi | Marmara Bölgesi ; Kuzey Anadolu Fay Hattı çevresi ; Ege kıyıları | Deprem riski fay hatlarından uzak İç Anadolu'nun güneyi ile Güneydoğu'nun bazı kesimlerinde azdır.
+Türkiye'nin en uzun ve en aktif fay hattı ____'dır. | Kuzey Anadolu Fay Hattı | Doğu Anadolu Fay Hattı ; Batı Anadolu Fay Sistemi ; Ölü Deniz Fayı | 1999 Gölcük depremi bu fay üzerinde oldu.
+
+## Dış Kuvvetler
+Kayaçların yerinde parçalanıp ayrışmasına ____ denir. | çözünme ve ufalanma | erozyon ; birikim ; aşındırma | Mekanik ufalanma ve kimyasal çözünme dış kuvvetlerin ilk aşamasıdır.
+Sıcaklık farkının büyük olduğu karasal alanlarda etkili olan ayrışma türü ____'dır. | mekanik çözülme | kimyasal çözünme ; biyolojik ayrışma ; karstlaşma | Gece-gündüz sıcaklık farkı kayaları parçalar.
+Akarsuların taşıdığı malzemeyi denize döküldüğü yerde biriktirmesiyle oluşan şekle ____ denir. | delta | haliç ; menderes ; kanyon | Bafra, Çarşamba, Göksu ve Seyhan-Ceyhan deltaları örnektir.
+Akarsuyun eğimin azaldığı düzlüklerde kıvrılarak akmasına ____ denir. | menderes | delta ; şelale ; dev kazanı | Büyük ve Küçük Menderes nehirleri bu ada kaynaklık etmiştir.
+Rüzgârın taşıdığı kumların biriktirdiği tepelere ____ denir. | kumul | barkan ; mantar kaya ; peribacası | Hilal biçimli kumullara barkan denir.
+Akarsu, rüzgâr, buzul gibi dış kuvvetlerin yeryüzünü aşındırmasına ____ denir. | erozyon | birikim ; tortulanma ; orojenez | Erozyon özellikle eğimli ve bitki örtüsü zayıf alanlarda artar.
+Dış kuvvetlerin genel olarak yeryüzündeki yükseltileri ____ yönünde çalışır. | azaltma | artırma ; değiştirmeme ; ikiye katlama | Dış kuvvetler aşındırıp biriktirerek yeryüzünü düzleştirmeye çalışır.
+Peribacaları en çok ____ yöresinde görülür. | Nevşehir (Kapadokya) | Pamukkale ; Konya ; Ağrı | Peribacaları volkanik tüflerin sel suları ve rüzgârla aşınmasıyla oluşmuştur.
+Dalgaların kıyıda oluşturduğu dik yamaçlara ____ denir. | falez | kıyı oku ; tombolo ; lagün | Falezler aşındırma sonucu oluşur.
+Türkiye'de kimyasal çözünmenin en fazla görüldüğü yerler ____ ve sıcak olan yerlerdir. | nemli | kurak ; soğuk ; rüzgârlı | Kimyasal çözünme sıcak ve nemli iklimlerde etkilidir.
+
+## Türkiyenin Platoları
+Akarsularla derin yarılmış yüksek düzlüklere ____ denir. | plato | ova ; havza ; delta | Platolar çevresine göre yüksekte kalan, akarsularla yarılmış düzlüklerdir.
+Volkanik bir plato olan ve Doğu Anadolu'da bulunan plato ____'dur. | Erzurum-Kars Platosu | Haymana Platosu ; Obruk Platosu ; Taşeli Platosu | Erzurum-Kars Platosu lavların yayılmasıyla oluşmuştur; hayvancılık yaygındır.
+Karstik bir plato olan ve Akdeniz Bölgesi'nde bulunan plato ____'dur. | Taşeli Platosu | Obruk Platosu ; Ardahan Platosu ; Uzunyayla Platosu | Taşeli Platosu kalkerli yapıdadır.
+Tahıl tarımının yaygın olduğu İç Anadolu platosu ____'dur. | Haymana Platosu | Erzurum-Kars Platosu ; Taşeli Platosu ; Bozok Platosu | Haymana Ankara'nın güneyindedir.
+Obrukların bulunduğu ve Konya çevresindeki plato ____'dur. | Obruk Platosu | Cihanbeyli Platosu ; Haymana Platosu ; Uzunyayla Platosu | Obruklar karstik çökme sonucu oluşur.
+Türkiye'de platoların en yaygın olduğu bölge ____'dir. | Doğu Anadolu | Karadeniz ; Ege ; Marmara | Doğu Anadolu'da volkanik platolar geniş yer kaplar.
+Güneydoğu Anadolu'da bulunan ve tahıl tarımı yapılan plato ____'dur. | Gaziantep Platosu | Ardahan Platosu ; Taşeli Platosu ; Teke Platosu | Gaziantep ve Şanlıurfa platoları geniştir.
+Akdeniz Bölgesi'nin batısında bulunan karstik plato ____'dur. | Teke Platosu | Taşeli Platosu ; Haymana Platosu ; Bozok Platosu | Teke Platosu Antalya-Burdur arasındadır.
+Yozgat çevresindeki plato ____'dur. | Bozok Platosu | Uzunyayla Platosu ; Haymana Platosu ; Cihanbeyli Platosu | Bozok Platosu İç Anadolu'dadır.
+Kayseri-Sivas arasında bulunan ve hayvancılığın yaygın olduğu plato ____'dır. | Uzunyayla Platosu | Bozok Platosu ; Obruk Platosu ; Teke Platosu | Uzunyayla geniş otlaklara sahiptir.
+
+## Türkiyenin Ovaları
+Akarsuların denize döküldüğü yerde biriktirdiği malzemeden oluşan ovalara ____ ovası denir. | delta | karstik ; tektonik ; volkanik | Çukurova delta ovasıdır.
+Türkiye'nin en büyük delta ovası ____'dır. | Çukurova | Bafra Ovası ; Çarşamba Ovası ; Silifke Ovası | Seyhan ve Ceyhan nehirleri Çukurova'yı oluşturmuştur.
+Gediz, Küçük Menderes ve Büyük Menderes ovaları ____ ovalardır. | tektonik | delta ; karstik ; volkanik | Batı Anadolu'nun çöken blokları (graben) bu ovaları oluşturur.
+Karadeniz'de Kızılırmak'ın oluşturduğu delta ovası ____'dır. | Bafra Ovası | Çarşamba Ovası ; Düzce Ovası ; Erbaa Ovası | Çarşamba Ovası ise Yeşilırmak'ın deltasıdır.
+Yeşilırmak'ın oluşturduğu delta ovası ____'dır. | Çarşamba Ovası | Bafra Ovası ; Silifke Ovası ; Bursa Ovası | Çarşamba Ovası Samsun'dadır.
+Karstik arazilerde oluşan geniş düzlüklere ____ denir. | polye | dolin ; uvala ; obruk | Polyeler karstik ovalardır; Muğla ve Antalya çevresinde görülür.
+Göksu Nehri'nin oluşturduğu delta ovası ____'dir. | Silifke Ovası | Çukurova ; Bafra Ovası ; Antalya Ovası | Silifke Ovası Mersin'dedir.
+Doğu Anadolu'da kırılma ve çökmeyle oluşmuş tektonik ovalardan biri ____'dir. | Muş Ovası | Çukurova ; Bafra Ovası ; Çarşamba Ovası | Muş, Erzurum ve Malatya ovaları tektonik kökenlidir.
+Ege'de ovaların iç kesimlere kadar sokulmasının nedeni dağların kıyıya ____ uzanmasıdır. | dik | paralel ; çapraz ; dairesel | Dik uzanan dağlar arasındaki çöküntü ovaları denizden içeri sokulur.
+Konya Ovası ____ bir ovadır. | eski göl tabanı | delta ; volkanik ; karstik | Konya Ovası eski bir göl yatağıdır.
+
+## Akarsu Vadileri ve Şelaleler
+Türkiye'nin en uzun akarsuyu ____'dır. | Kızılırmak | Fırat ; Sakarya ; Yeşilırmak | Kızılırmak yaklaşık 1355 km'dir ve Karadeniz'e dökülür.
+Kaynağı ve döküldüğü yer Türkiye sınırları içinde olan en uzun akarsu ____'dır. | Kızılırmak | Fırat ; Dicle ; Aras | Fırat ve Dicle Basra Körfezi'ne dökülür.
+Akarsuyun yatağını derine aşındırmasıyla oluşan dar ve derin vadilere ____ denir. | boğaz vadi | geniş tabanlı vadi ; U vadi ; çentik vadi | Boğaz vadiler sert kayaçlarda oluşur.
+Buzulların oluşturduğu vadilere ____ denir. | U vadi | V vadi ; boğaz vadi ; kanyon | Buzul vadileri kesitinde U şeklindedir.
+Basamaklı yamaçları olan derin vadilere ____ denir. | kanyon | delta ; menderes ; dev kazanı | Kanyonlar farklı sertlikteki tabakaların aşınmasıyla oluşur.
+Karabük'te Safranbolu yakınında bulunan kanyon ____'dur. | Tokatlı Kanyonu | Ihlara Vadisi ; Saklıkent Kanyonu ; Köprülü Kanyon | Tokatlı Kanyonu Safranbolu yakınındadır.
+Düden Şelalesi ____ ilindedir. | Antalya | Muğla ; Mersin ; Denizli | Düden ve Manavgat şelaleleri Antalya'dadır.
+Türkiye'nin en yüksek debili akarsuyu ____'tır. | Fırat | Kızılırmak ; Sakarya ; Seyhan | Fırat Atatürk ve Keban gibi büyük barajlarla değerlendirilir.
+Türkiye'deki akarsuların genel özelliği ____ olmalarıdır. | düzensiz rejimli | düzenli rejimli ; ulaşıma elverişli ; çok derin | Yağış rejimine bağlı olduğundan akımları yıl içinde değişir.
+Akarsuların kaynaktan denize kadar aşındırarak indiği en alt seviyeye ____ denir. | taban seviyesi | denge profili ; kaynak seviyesi ; kıyı çizgisi | Akarsuyun genel taban seviyesi denizdir.
+
+## Rüzgar Şekilleri
+Rüzgâr aşındırmasının en etkili olduğu yerler ____ alanlardır. | kurak | nemli ; ormanlık ; soğuk | Bitki örtüsü cılız kurak alanlarda rüzgâr etkilidir.
+Rüzgârın taşıdığı kumların kayaları alttan aşındırmasıyla oluşan şekle ____ denir. | mantar kaya | peribacası ; kumul ; tafoni | Mantar kayalar rüzgâr aşındırmasıyla oluşur.
+Hilal biçimli kumullara ____ denir. | barkan | lös ; tafoni ; yardang | Barkanların iç bükey yüzü rüzgârın estiği yöne bakar.
+Rüzgârın taşıyıp biriktirdiği ince tozlardan oluşan verimli topraklara ____ denir. | lös | kumul ; alüvyon ; terra rossa | Lös toprakları Çin'de yaygındır.
+Türkiye'de rüzgâr aşındırmasının en etkili olduğu bölge ____'dir. | İç Anadolu (Karapınar çevresi) | Karadeniz kıyıları ; Doğu Karadeniz ; Yıldız Dağları | Karapınar'da kumulları durdurmak için çalışmalar yapılmıştır.
+Kayalarda rüzgâr aşındırmasıyla oluşan küçük oyuklara ____ denir. | tafoni | lapya ; dolin ; obruk | Tafoniler peteğe benzer.
+Rüzgâr aşındırmasını azaltmak için ağaçlandırma yapılan Konya ilçesi ____'dır. | Karapınar | Cihanbeyli ; Ereğli ; Ilgın | Karapınar'da rüzgâr erozyonu önleme çalışmaları örnek gösterilir.
+Rüzgâr aşındırmasında etkili olan unsur, rüzgârın taşıdığı ____'dır. | kum ve çakıl | su ; buz ; tuz | Taşınan kum taneleri kayaları aşındırır.
+Kıyılarda rüzgârla taşınıp biriken kumlar ____ oluşturur. | kıyı kumulu | lagün ; delta ; falez | Akdeniz kıyılarında kıyı kumulları görülür.
+Rüzgâr şekilleri dünyada en yaygın olarak ____ iklim bölgelerinde görülür. | çöl | ekvatoral ; okyanusal ; muson | Çöllerde bitki örtüsü yok denecek kadar azdır.
+
+## Buzul Şekilleri
+Buzulların dağ yamaçlarında aşındırarak oluşturduğu çanaklara ____ denir. | sirk | moren ; drumlin ; fiyort | Sirklerin içine su dolarsa sirk gölü oluşur.
+Buzulların taşıyıp biriktirdiği malzemeye ____ denir. | moren | sirk ; hörgüç kaya ; lös | Morenler buzulun kenarında ve önünde birikir.
+Buzul vadilerinin denizle dolmasıyla oluşan kıyı tipine ____ denir. | fiyort | ria ; dalmaçya ; limanlı | Fiyortlar Norveç kıyılarında yaygındır.
+Türkiye'de günümüzde buzulların görüldüğü dağlardan biri ____'dır. | Ağrı Dağı | Uludağ ; Erciyes Dağı ; Kaz Dağları | Ağrı, Süphan, Erciyes ve Cilo-Sat dağlarında takke ve vadi buzulları vardır.
+Türkiye'nin en büyük vadi buzulları ____ dağlarındadır. | Cilo-Sat | Kaçkar ; Toros ; Uludağ | Cilo-Sat dağları Hakkari'dedir.
+Buzulların aşındırdığı yuvarlak kaya tümseklerine ____ denir. | hörgüç kaya | mantar kaya ; peribacası ; barkan | Hörgüç kayalar buzul aşındırma şeklidir.
+Sirk çanaklarına su dolmasıyla oluşan göllere ____ denir. | buzul (sirk) gölü | krater gölü ; karstik göl ; tektonik göl | Kaçkar ve Uludağ'da sirk gölleri vardır.
+Buzulların oluştuğu sınıra ____ sınırı denir. | daimi kar | orman ; ağaç ; bulut | Daimi kar sınırı ekvatordan kutuplara doğru alçalır.
+Türkiye'de daimi kar sınırı ____ doğru alçalır. | kuzeye | güneye ; doğuya ; batıya | Sıcaklık kuzeye doğru azaldığından kar sınırı da alçalır.
+Kuzey Avrupa'da buzulların biriktirdiği düzlükler ve göller ____ dönemin izleridir. | IV. zaman (Kuaterner) buzul | I. zaman ; II. zaman ; III. zaman | Buzul çağları IV. zamanda yaşanmıştır.
+
+## Karstik Şekiller
+Karstik şekillerin oluştuğu başlıca kayaç ____'dir. | kalker | granit ; bazalt ; kil | Kalker, jips ve kaya tuzu suda çözünebilen kayaçlardır.
+Kalkerli arazilerde yüzeyde oluşan küçük oluklara ____ denir. | lapya | dolin ; uvala ; polye | Lapyalar karstik aşınım şeklidir.
+Karstik arazilerde oluşan küçük çukurlara ____ denir. | dolin | polye ; lapya ; traverten | Dolinlerin birleşmesiyle uvalalar oluşur.
+Mağara tavanından damlayan sularla oluşan sarkıtlara ____ denir. | sarkıt | dikit ; sütun ; traverten | Tabandan yükselenlere dikit, birleşenlere sütun denir.
+Pamukkale'deki beyaz basamaklar karstik birikim şekli olan ____'dir. | traverten | dikit ; lapya ; obruk | Kalsiyum karbonatlı suların çökeltmesiyle oluşur.
+Konya ve Karaman çevresinde tavanın çökmesiyle oluşan derin çukurlara ____ denir. | obruk | polye ; dolin ; sirk | Obruk Gölü bunlardan biridir.
+Türkiye'de karstik şekillerin en yaygın olduğu bölge ____'dir. | Akdeniz | Karadeniz ; Doğu Anadolu ; Marmara | Toroslar'da kalker geniş yer kaplar.
+Karstik arazilerdeki en büyük düzlüklere ____ denir. | polye | uvala ; dolin ; lapya | Polyeler karstik ovalardır.
+Karstik şekiller en fazla ____ etkisiyle oluşur. | yer altı ve yer üstü sularının | rüzgârın ; buzulların ; dalgaların | Kalker karbondioksitli suda çözünür.
+Damlataş Mağarası ____ ilindedir. | Antalya (Alanya) | Mersin ; Muğla ; Burdur | Alanya'daki Damlataş Mağarası ünlü bir karstik mağaradır.
+
+## Kıyı Şekilleri
+Dağların kıyıya paralel uzandığı kıyı tipine ____ kıyı denir. | boyuna | enine ; ria ; dalmaçya | Karadeniz ve Akdeniz kıyıları boyuna kıyıdır.
+Dağların kıyıya dik uzandığı kıyı tipine ____ kıyı denir. | enine | boyuna ; fiyort ; limanlı | Ege kıyıları enine kıyıdır; girinti çıkıntı fazladır.
+Akarsu vadilerinin deniz suları altında kalmasıyla oluşan kıyı tipine ____ denir. | ria | fiyort ; dalmaçya ; skyer | İstanbul ve Çanakkale boğazları ria kıyıya örnektir.
+Kıyıya paralel dağların denize gömülmesiyle oluşan, adaların kıyıya paralel dizildiği kıyı tipi ____'dır. | dalmaçya | ria ; fiyort ; limanlı | Antalya'nın batısında, Kaş çevresinde görülür.
+Bir koyun önünün kıyı okuyla kapanmasıyla oluşan göle ____ denir. | lagün | haliç ; delta ; tombolo | Köyceğiz ve Bafa gölleri bu tür göllerdendir.
+Adayı karaya bağlayan kum dili ____'dur. | tombolo | kıyı oku ; falez ; delta | Kapıdağ Yarımadası tombolo ile karaya bağlanmıştır.
+Akarsu ağızlarının dalgalarla genişlemesi ve denizin içeri sokulmasıyla oluşan koylara ____ denir. | haliç | delta ; lagün ; falez | İstanbul'daki Haliç bu şekle örnektir.
+Türkiye'nin en girintili çıkıntılı kıyıları ____ kıyılarıdır. | Ege | Karadeniz ; Akdeniz ; Marmara | Enine kıyı yapısı nedeniyle Ege kıyıları girintilidir.
+Kıyı çizgisinin uzunluğu bakımından Türkiye'de ilk sırada olan deniz ____'dir. | Ege Denizi | Karadeniz ; Akdeniz ; Marmara Denizi | Ege'de girinti çıkıntı ve adalar fazladır.
+Akıntıların taşıdığı malzemenin kıyıdan denize doğru uzanan dil biçiminde birikmesine ____ denir. | kıyı oku | tombolo ; lagün ; falez | Kıyı okları uzayıp birleşirse lagün oluşur.
+
+## Harita Bilgisi ve Engebe
+Harita üzerindeki uzunluğun gerçek uzunluğa oranına ____ denir. | ölçek | eş yükselti ; projeksiyon ; lejant | Ölçek kesir veya çizgi ile gösterilir.
+Paydası küçük olan ölçeklere ____ ölçek denir. | büyük | küçük ; orta ; çizgi | Büyük ölçekli haritalarda ayrıntı fazladır.
+Aynı yükseltideki noktaları birleştiren çizgilere ____ denir. | eş yükselti eğrisi | izobar ; izoterm ; eş derinlik eğrisi | Eğriler sıklaştıkça eğim artar.
+Aynı sıcaklıktaki noktaları birleştiren çizgilere ____ denir. | izoterm | izobar ; izohips ; izobat | İzobar basınç, izohips yükselti çizgisidir.
+Haritada kullanılan işaretlerin açıklandığı bölüme ____ denir. | lejant | ölçek ; profil ; projeksiyon | Lejant harita anahtarıdır.
+Eş yükselti eğrilerinin birbirine yaklaştığı yerlerde eğim ____. | fazladır | azdır ; değişmez ; sıfırdır | Sık eğriler dik yamaçları gösterir.
+Bir yerin deniz seviyesinden yüksekliğine ____ denir. | mutlak yükselti | göreceli yükselti ; eğim ; derinlik | Göreceli yükselti iki nokta arasındaki yükseklik farkıdır.
+Haritada iki nokta arasındaki gerçek uzaklık hesaplanırken ____ kullanılır. | ölçek | lejant ; izobar ; pusula | Gerçek uzunluk = harita uzunluğu × ölçek paydası.
+Türkiye'nin ortalama yükseltisi yaklaşık ____ metredir. | 1132 | 330 ; 2500 ; 680 | Türkiye ortalama yükselti bakımından Avrupa'nın üstündedir.
+Türkiye'de yükselti genel olarak ____ doğru artar. | batıdan doğuya | doğudan batıya ; kuzeyden güneye ; güneyden kuzeye | Doğu Anadolu en yüksek bölgemizdir.
+
+## Türkiyenin İklimi
+Yazları sıcak ve kurak, kışları ılık ve yağışlı iklime ____ iklimi denir. | Akdeniz | Karadeniz ; karasal ; muson | Akdeniz ikliminde bitki örtüsü makidir.
+Her mevsim yağışlı olan iklime ____ iklimi denir. | Karadeniz | Akdeniz ; karasal ; çöl | Karadeniz ikliminde bitki örtüsü ormandır.
+Yazları sıcak ve kurak, kışları soğuk ve kar yağışlı iklim ____ iklimdir. | karasal | Akdeniz ; Karadeniz ; ılıman okyanus | Karasal iklimde bitki örtüsü bozkırdır.
+Türkiye'nin en fazla yağış alan yeri ____'dir. | Rize | Antalya ; Muğla ; Artvin | Rize'de orografik yağışlar yıl boyunca görülür.
+Türkiye'nin en az yağış alan yeri ____ çevresidir. | Tuz Gölü | Iğdır Ovası ; Konya Ovası ; Malatya | Tuz Gölü çevresi çevresine göre alçak ve kapalı bir havzadır.
+Nemli havanın dağ yamaçlarına çarpıp yükselmesiyle oluşan yağışa ____ yağış denir. | orografik | konveksiyonel ; cephesel ; frontal | Karadeniz kıyılarında orografik yağış yaygındır.
+İç Anadolu'da ilkbaharda görülen ve kırkikindi yağmurları olarak bilinen yağış ____ yağıştır. | konveksiyonel | orografik ; cephesel ; muson | Isınan havanın yükselmesiyle oluşur.
+Akdeniz ikliminde görülen bodur ve sık çalılardan oluşan bitki örtüsüne ____ denir. | maki | bozkır ; garig ; tundra | Maki tahrip edilirse garig oluşur.
+Kışın Türkiye'ye soğuk ve kuru havayı getiren rüzgâr ____'dır. | poyraz | lodos ; keşişleme ; samyeli | Poyraz kuzeydoğudan eser.
+Güneybatıdan esen ve sıcaklığı artıran rüzgâr ____'tur. | lodos | poyraz ; yıldız ; karayel | Lodos kışın kar erimelerine neden olabilir.
+
+## Türkiyenin Su Toprak ve Bitki Varlığı
+Akdeniz iklim bölgesinde kalker üzerinde oluşan kırmızı topraklara ____ denir. | terra rossa | podzol ; laterit ; çernozyom | Terra rossa Akdeniz kıyılarında yaygındır.
+Bozkırlarda oluşan ve tahıl tarımına elverişli koyu renkli toprağa ____ denir. | kahverengi bozkır toprağı | podzol ; laterit ; terra rossa | Kahverengi bozkır toprakları İç Anadolu'da yaygındır.
+Akarsuların taşıyıp ovalarda biriktirdiği taşınmış topraklara ____ denir. | alüvyon | lös ; moren ; kolüvyon | Alüvyal topraklar en verimli topraklardandır.
+Türkiye'nin en büyük gölü ____'dür. | Van Gölü | Tuz Gölü ; Beyşehir Gölü ; Eğirdir Gölü | Van Gölü sodalı bir göldür.
+Türkiye'nin en büyük tatlı su gölü ____'dir. | Beyşehir Gölü | Eğirdir Gölü ; Van Gölü ; İznik Gölü | Beyşehir Gölü karstik-tektonik kökenlidir.
+Bozkırların başlıca bitki örtüsü ____'dır. | ot topluluğu | maki ; kızılçam ormanı ; garig | Bozkır ilkbaharda yeşerip yazın kuruyan otlardır.
+Karadeniz kıyılarında deniz seviyesinden itibaren görülen ormanlar ____ ormanlarıdır. | geniş yapraklı | iğne yapraklı ; kızılçam ; mangrov | Yükseldikçe karışık ve iğne yapraklı ormanlar başlar.
+Akdeniz kıyılarında 1000 metreye kadar görülen orman ağacı ____'dır. | kızılçam | ladin ; kayın ; sarıçam | Maki ile birlikte kızılçam ormanları yaygındır.
+Türkiye'de akarsuların en çok kullanıldığı alan ____'dir. | sulama ve enerji üretimi | ulaşım ; balıkçılık ; turizm | Akarsular düzensiz rejimli olduğundan ulaşıma elverişsizdir.
+Kızılırmak ve Yeşilırmak gibi akarsular ____ Denizi'ne dökülür. | Karadeniz | Akdeniz ; Ege ; Marmara | Kızılırmak Bafra'da, Yeşilırmak Çarşamba'da denize dökülür.
+
+## Türkiyede Çevre ve Doğal Afetler
+Türkiye'de en fazla can kaybına neden olan doğal afet ____'dir. | deprem | sel ; heyelan ; çığ | Türkiye'nin büyük bölümü aktif fay hatları üzerindedir.
+Eğimli yamaçlardaki toprak ve kayaların kaymasına ____ denir. | heyelan | çığ ; erozyon ; sel | Heyelan en çok Karadeniz Bölgesi'nde görülür.
+Heyelanın en sık görüldüğü bölge ____'dir. | Karadeniz | İç Anadolu ; Güneydoğu Anadolu ; Ege | Eğim, killi zemin ve bol yağış heyelanı artırır.
+Çığ olaylarının en sık görüldüğü bölge ____'dir. | Doğu Anadolu | Akdeniz ; Ege ; Marmara | Yüksek ve karlı dağlık alanlarda çığ görülür.
+Türkiye'de erozyon en çok bitki örtüsünün ____ eğimli alanlarda görülür. | zayıf olduğu | gür olduğu ; sık olduğu ; korunduğu | Erozyonu önlemenin en etkili yolu ağaçlandırmadır.
+Kuraklık ve erozyonla toprağın verimsizleşmesine ____ denir. | çölleşme | tuzlanma ; heyelan ; sel | Çölleşmeyle mücadelede TEMA Vakfı gibi kuruluşlar çalışır.
+Türkiye'de afet yönetiminden sorumlu kurum ____'dır. | AFAD | TEMA ; DSİ ; MTA | Afet ve Acil Durum Yönetimi Başkanlığı 2009'da kuruldu.
+Bilinçsiz sulama sonucu toprakta tuz birikmesine ____ denir. | tuzlanma | erozyon ; asitlenme ; heyelan | Salma sulama Harran Ovası'nda tuzlanmaya neden olmuştur.
+Türkiye'de sel olaylarının en sık görüldüğü bölge ____'dir. | Karadeniz | İç Anadolu ; Doğu Anadolu ; Güneydoğu Anadolu | Sağanak yağışlar ve dar vadiler sel riskini artırır.
+1999'daki büyük Marmara Depremi'nin merkez üssü ____'tür. | Gölcük | Düzce ; Adapazarı ; Yalova | 17 Ağustos 1999 depremi Kocaeli Gölcük merkezlidir.
+
+## Türkiyenin Beşeri Coğrafyası
+Türkiye'de ilk nüfus sayımı ____ yılında yapılmıştır. | 1927 | 1923 ; 1935 ; 1950 | Cumhuriyet'in ilk nüfus sayımı 1927'dedir.
+Türkiye'de nüfusun en hızlı arttığı dönem ____ yılları arasıdır. | 1955-1960 | 1927-1935 ; 1940-1945 ; 2000-2010 | Savaş sonrası doğum oranları yüksek, ölüm oranları düşüktü.
+Türkiye'de nüfus artış hızının en düşük olduğu dönem ____ yılları arasıdır. | 1940-1945 | 1927-1935 ; 1955-1960 ; 1980-1985 | II. Dünya Savaşı yıllarında erkek nüfusun büyük kısmı askerdeydi; doğumlar azaldı.
+Türkiye'nin en kalabalık ili ____'dur. | İstanbul | Ankara ; İzmir ; Bursa | İstanbul nüfusu 15 milyonu aşar.
+Türkiye'de nüfus yoğunluğunun en fazla olduğu bölge ____'dır. | Marmara | Karadeniz ; Ege ; Akdeniz | Sanayi ve ticaret Marmara'da yoğunlaşmıştır.
+Türkiye'de nüfus yoğunluğunun en az olduğu bölge ____'dur. | Doğu Anadolu | İç Anadolu ; Karadeniz ; Güneydoğu Anadolu | Yükselti ve sert iklim yerleşmeyi sınırlar.
+Türkiye'de nüfus yoğunluğunun en az olduğu il ____'dir. | Tunceli | Ardahan ; Bayburt ; Hakkari | Tunceli dağlık ve engebelidir.
+Bir ülkede doğum oranının ölüm oranından fazla olmasıyla ortaya çıkan artışa ____ denir. | doğal nüfus artışı | göç ; nüfus yoğunluğu ; bağımlı nüfus | Doğal artış = doğum oranı - ölüm oranı.
+Türkiye'de kırdan kente göçün temel nedeni ____'dir. | tarımda makineleşme ve iş imkânı | iklim değişikliği ; savaş ; turizm | 1950'lerden sonra makineleşme kırsal iş gücünü azalttı.
+0-14 ve 65 yaş üstü nüfusa ____ denir. | bağımlı nüfus | aktif nüfus ; kırsal nüfus ; genç nüfus | Çalışma çağındaki nüfus 15-64 yaş grubudur.
+
+## Türkiyede Yerleşim
+Türkiye'de kırsal yerleşmenin en büyük birimi ____'dür. | köy | mezra ; yayla ; oba | Köyün altında mezra, kom, oba gibi geçici yerleşmeler vardır.
+Doğu Karadeniz'de dağınık yerleşmenin nedeni ____'dir. | engebeli arazi ve bol su | kuraklık ; sanayi ; turizm | Su her yerde bulunabildiği için evler dağınık kurulur.
+İç Anadolu'da toplu yerleşmenin nedeni ____'dır. | su kaynaklarının kıt olması | bol yağış ; engebeli arazi ; ormanlar | Halk su kaynaklarının çevresinde toplanır.
+Yaz aylarında hayvanların otlatıldığı yüksek yerlerdeki geçici yerleşmelere ____ denir. | yayla | mezra ; dalyan ; çiftlik | Yayla turizmi Karadeniz'de yaygındır.
+Doğu Anadolu'da hayvancılıkla uğraşanların kurduğu geçici yerleşmelere ____ denir. | kom | oba ; dalyan ; ağıl | Kom, hayvancılığa dayalı geçici yerleşmedir.
+Göçebe Yörüklerin kurduğu çadır yerleşmelerine ____ denir. | oba | kom ; mezra ; divan | Obalar Toroslar'da görülür.
+Balık tutmak için kurulan geçici yerleşmelere ____ denir. | dalyan | kom ; yayla ; çiftlik | Dalyanlar Ege ve Akdeniz'de yaygındır.
+Ekonomik faaliyeti turizm olan şehirlere örnek ____'dır. | Antalya | Zonguldak ; Batman ; Karabük | Antalya Türkiye'nin turizm merkezidir.
+Madencilik faaliyetleriyle gelişmiş şehirlere örnek ____'dır. | Zonguldak | Antalya ; Nevşehir ; Muğla | Zonguldak taş kömürüyle gelişmiştir.
+Sanayi ve liman şehri olarak gelişen şehirlere örnek ____'dir. | Kocaeli | Nevşehir ; Kars ; Muş | Kocaeli Türkiye'nin önemli sanayi şehridir.
+
+## Türkiyenini Ekonomik Coğrafyası (Ekonomi Politikaları)
+Cumhuriyet'in ilk yıllarında ekonomi politikasını belirlemek için 1923'te toplanan kongre ____'dir. | İzmir İktisat Kongresi | Erzurum Kongresi ; Sivas Kongresi ; Afyon Kongresi | İzmir İktisat Kongresi 17 Şubat 1923'te toplandı.
+Türkiye'de devletçilik politikasına geçilen yıllar ____'lardır. | 1930 | 1920 ; 1950 ; 1980 | 1929 Dünya Ekonomik Bunalımı'ndan sonra devletçiliğe geçildi.
+Türkiye'nin ilk beş yıllık sanayi planı ____ yılında uygulamaya konmuştur. | 1934 | 1923 ; 1946 ; 1963 | I. Beş Yıllık Sanayi Planı Sovyet uzmanlarının desteğiyle hazırlandı.
+Türkiye'de dışa açık ekonomi modeline geçişi sağlayan kararlar ____ kararlarıdır. | 24 Ocak 1980 | 5 Nisan 1994 ; 1 Mayıs 1977 ; 27 Mayıs 1960 | 24 Ocak kararları ihracata dayalı büyümeyi hedefledi.
+Türkiye'de 1963'ten itibaren uygulanan planlar ____ planlarıdır. | Beş Yıllık Kalkınma | Marshall ; Truman ; Dawes | DPT 1960'ta kuruldu; planlı dönem 1963'te başladı.
+Devlet Planlama Teşkilatı ____ yılında kurulmuştur. | 1960 | 1950 ; 1963 ; 1971 | DPT 2011'de Kalkınma Bakanlığına dönüştü.
+Kamu kuruluşlarının özel sektöre devredilmesine ____ denir. | özelleştirme | millîleştirme ; devletleştirme ; kamulaştırma | Özelleştirme 1980'lerden sonra hız kazandı.
+Teşvik-i Sanayi Kanunu ____ yılında çıkarılmıştır. | 1927 | 1923 ; 1933 ; 1950 | Bu kanun özel sanayiciyi teşvik etmeyi amaçladı.
+Türkiye'de 1950'lerde ağırlık verilen sektör ____'dır. | tarım ve karayolu | demiryolu ; ağır sanayi ; turizm | Marshall yardımlarıyla tarımda makineleşme ve karayolu yapımı öne çıktı.
+Sümerbank ve Etibank gibi kuruluşlar ____ politikasının ürünüdür. | devletçilik | liberalizm ; özelleştirme ; dışa açılma | 1930'larda devlet sanayi yatırımlarını üstlendi.
+
+## Türkiyenini Ekonomik Coğrafyası (TARIM-1)
+Türkiye'de en fazla ekim alanına sahip ürün ____'dır. | buğday | arpa ; mısır ; pamuk | Buğday karasal iklime uygundur; İç Anadolu başlıca üretim alanıdır.
+Türkiye'de en fazla buğday üretilen bölge ____'dır. | İç Anadolu | Karadeniz ; Ege ; Akdeniz | Konya Ovası "tahıl ambarı" olarak bilinir.
+Çay tarımının yapıldığı tek bölge ____'dir. | Doğu Karadeniz | Ege ; Akdeniz ; Marmara | Çay her mevsim yağış ister; Rize başlıca üretim alanıdır.
+Türkiye'nin en fazla fındık üretilen bölgesi ____'dir. | Karadeniz | Ege ; Marmara ; Akdeniz | Ordu ve Giresun fındık üretiminde öndedir.
+Pamuk üretiminde öne çıkan bölgeler ____'dir. | Güneydoğu Anadolu, Ege ve Akdeniz | Karadeniz ve Doğu Anadolu ; Marmara ve Karadeniz ; İç Anadolu ve Doğu Anadolu | Şanlıurfa (Harran) ilk sıradadır.
+Zeytin üretiminin en fazla olduğu bölge ____'dir. | Ege | Karadeniz ; İç Anadolu ; Doğu Anadolu | Zeytin Akdeniz iklimine özgüdür.
+Muz tarımının yapıldığı yer Akdeniz'de ____ çevresidir. | Anamur ve Alanya | Rize ve Trabzon ; Konya ve Karaman ; Edirne ve Tekirdağ | Muz sıcak ve nemli koşulları sever; mikroklima alanlarda yetişir.
+Şeker pancarının en fazla üretildiği bölge ____'dır. | İç Anadolu | Akdeniz ; Ege ; Güneydoğu Anadolu | Konya, Eskişehir ve Kayseri başlıca alanlardır.
+Ayçiçeği üretiminde ilk sırada olan bölge ____'dır. | Marmara (Trakya) | Ege ; Akdeniz ; Karadeniz | Tekirdağ, Edirne ve Kırklareli başlıca alanlardır.
+Haşhaş tarımı devlet izniyle ____ çevresinde yapılır. | Afyonkarahisar | Rize ; Hatay ; Kars | Haşhaş ekimi izne bağlıdır.
+
+## Türkiyenini Ekonomik Coğrafyası (TARIM-2)
+Kuru incir üretiminde dünyada ilk sırada olan ülke Türkiye'dir; en çok ____'da yetişir. | Aydın | Rize ; Konya ; Erzurum | Büyük Menderes vadisi incir üretiminde öndedir.
+Kayısı üretiminde Türkiye'nin en önemli ili ____'dır. | Malatya | Isparta ; Amasya ; Manisa | Malatya dünyada kuru kayısıda öndedir.
+Gül yağı üretimiyle ünlü il ____'dır. | Isparta | Manisa ; Bursa ; Aydın | Isparta gülü dünyaca ünlüdür.
+Çekirdeksiz kuru üzüm üretiminde öne çıkan il ____'dır. | Manisa | Rize ; Kars ; Ordu | Gediz Ovası üzüm bağlarıyla ünlüdür.
+Turunçgillerin (narenciye) en çok yetiştiği bölge ____'dir. | Akdeniz | Karadeniz ; İç Anadolu ; Doğu Anadolu | Portakal, mandalina ve limon sıcak kış ister.
+Tütün tarımı ağırlıklı olarak ____ bölgelerinde yapılır. | Ege ve Karadeniz | İç ve Doğu Anadolu ; Akdeniz ve Marmara ; Güneydoğu ve Doğu Anadolu | Ege'de Manisa, Karadeniz'de Samsun öne çıkar.
+Pirinç (çeltik) tarımı en çok ____ ilinde yapılır. | Edirne | Rize ; Konya ; Malatya | Çeltik bol su ister; Meriç ve Ergene ovaları uygundur.
+Antep fıstığı üretiminde öne çıkan bölge ____'dur. | Güneydoğu Anadolu | Karadeniz ; Marmara ; Ege | Gaziantep ve Şanlıurfa başlıca üreticidir.
+Türkiye'de seracılığın en yaygın olduğu il ____'dır. | Antalya | Erzurum ; Kars ; Sivas | Ilık kışlar seracılığa uygundur.
+Mısır üretiminin en fazla olduğu bölgelerden biri ____'dir. | Karadeniz | İç Anadolu ; Doğu Anadolu ; Güneydoğu Anadolu | Mısır nem ve sıcaklık ister; Akdeniz'de de yaygındır.
+
+## Türkiyenini Ekonomik Coğrafyası (HAYVANCILIK)
+Türkiye'de en fazla yetiştirilen küçükbaş hayvan ____'dır. | koyun | keçi ; tiftik keçisi ; manda | Koyun bozkır alanlarında yaygındır.
+Tiftik keçisi en çok ____ yöresinde yetiştirilir. | Ankara | Rize ; Antalya ; Edirne | Tiftik keçisi Ankara keçisi olarak da bilinir.
+Kıl keçisi en çok ____ bölgesinde yetiştirilir. | Akdeniz (Toroslar) | Karadeniz ; Marmara ; Doğu Anadolu | Kıl keçisi makilik alanlarda beslenir.
+Büyükbaş hayvancılığın en yaygın olduğu bölge ____'dur. | Doğu Anadolu | İç Anadolu ; Ege ; Akdeniz | Yaz yağışları gür çayırlar oluşturur.
+Manda yetiştiriciliği daha çok ____ bölgelerinde yapılır. | Karadeniz ve Marmara | İç Anadolu ve Ege ; Akdeniz ve Doğu Anadolu ; Güneydoğu Anadolu | Manda sulak ve nemli ortamları sever.
+İpek böcekçiliği en çok ____ ilinde yapılır. | Bursa | Rize ; Kars ; Muğla | İpek böceği dut yaprağıyla beslenir.
+Çam balı üretimiyle ünlü il ____'dır. | Muğla | Rize ; Konya ; Kars | Muğla çam balı üretiminde dünyada öndedir.
+Kümes hayvancılığı en çok ____ bölgelerinde gelişmiştir. | büyük şehirlere yakın | dağlık ve kırsal ; çöl ; buzullu | Kümes hayvancılığı pazara yakınlık ister.
+Türkiye'de balıkçılığın en fazla yapıldığı deniz ____'dir. | Karadeniz | Ege Denizi ; Akdeniz ; Marmara Denizi | Karadeniz'de hamsi avcılığı yaygındır.
+Hamsi en çok ____ Denizi'nde avlanır. | Karadeniz | Ege ; Akdeniz ; Marmara | Hamsi göçmen bir balıktır.
+
+## Türkiyenini Ekonomik Coğrafyası (MADENLER)
+Türkiye'nin dünyada en büyük rezervine sahip olduğu maden ____'dur. | bor | krom ; demir ; bakır | Bor rezervlerinin yaklaşık %70'i Türkiye'dedir.
+Bor madeni en çok ____ çevresinde çıkarılır. | Eskişehir (Kırka) ve Balıkesir | Zonguldak ve Bartın ; Rize ve Artvin ; Hatay ve Adana | Kütahya da önemli bor yatakları içerir.
+Taş kömürü (maden kömürü) Türkiye'de yalnızca ____ havzasında çıkarılır. | Zonguldak | Afşin-Elbistan ; Soma ; Tunçbilek | Ereğli Demir-Çelik Fabrikası taş kömürüne yakın kurulmuştur.
+Türkiye'nin en büyük linyit yatağı ____'dir. | Afşin-Elbistan | Zonguldak ; Soma ; Seyitömer | Afşin-Elbistan Kahramanmaraş'tadır.
+Demir madeni Türkiye'de en çok ____ çevresinden çıkarılır. | Divriği (Sivas) | Ergani ; Murgul ; Keban | Karabük ve İskenderun fabrikaları Divriği demirini kullanır.
+Bakır madeninin çıkarıldığı yerlerden biri ____'dir. | Murgul (Artvin) | Divriği ; Kırka ; Seydişehir | Bakır Ergani, Murgul ve Küre'de çıkarılır.
+Alüminyum (boksit) tesislerinin bulunduğu Konya ilçesi ____'dir. | Seydişehir | Divriği ; Murgul ; Kırka | Seydişehir Eti Alüminyum tesisleri buradadır.
+Krom madeninin en çok çıkarıldığı yerlerden biri ____'dir. | Guleman (Elazığ) | Kırka ; Divriği ; Zonguldak | Krom ayrıca Fethiye ve Bursa çevresinde çıkarılır.
+Türkiye'de petrolün en çok çıkarıldığı il ____'dır. | Batman | Zonguldak ; Kırklareli ; İzmir | Batman, Adıyaman ve Diyarbakır başlıca üretim alanlarıdır.
+Türkiye'de maden aramalarından sorumlu kurum ____'dır. | MTA | TPAO ; DSİ ; TKİ | Maden Tetkik ve Arama Genel Müdürlüğü 1935'te kuruldu.
+
+## Türkiyenini Ekonomik Coğrafyası (ENERJİ KAYNAKLARI)
+Türkiye'de elektrik üretiminde en büyük paya sahip kaynak grubu ____'dır. | fosil yakıtlar (doğal gaz ve kömür) | rüzgâr ; jeotermal ; güneş | Termik santraller elektriğin önemli kısmını üretir.
+Türkiye'nin en büyük barajı ____'dır. | Atatürk Barajı | Keban Barajı ; Karakaya Barajı ; Ilısu Barajı | Atatürk Barajı Fırat üzerindedir.
+Türkiye'nin ilk jeotermal santrali ____ ilinde kurulmuştur. | Denizli (Sarayköy) | Afyonkarahisar ; Aydın ; İzmir | Kızıldere Jeotermal Santrali 1984'te üretime başladı.
+Rüzgâr enerjisi potansiyelinin en yüksek olduğu bölge ____'dır. | Marmara ve Ege kıyıları | Doğu Anadolu ; İç Anadolu ; Güneydoğu Anadolu | Çanakkale, İzmir ve Balıkesir rüzgâr santralleriyle öne çıkar.
+Güneş enerjisi potansiyelinin en yüksek olduğu bölge ____'dur. | Güneydoğu Anadolu | Karadeniz ; Marmara ; Doğu Karadeniz | Bulutluluk az, güneşlenme süresi uzundur.
+Türkiye'nin ilk nükleer santrali ____'tedir. | Akkuyu (Mersin) | Sinop ; İğneada ; Sarayköy | Akkuyu Nükleer Santrali Rusya ile işbirliğiyle kuruluyor.
+Fırat üzerine kurulan ilk büyük baraj ____'dır. | Keban Barajı | Atatürk Barajı ; Karakaya Barajı ; Birecik Barajı | Keban 1974'te tamamlandı.
+Jeotermal enerjiyle konut ısıtmasının yaygın olduğu illerden biri ____'dir. | Afyonkarahisar | Erzurum ; Rize ; Trabzon | Afyon, Kütahya ve Kırşehir'de jeotermal ısıtma yaygındır.
+GAP projesinin ana akarsuları ____'dir. | Fırat ve Dicle | Kızılırmak ve Yeşilırmak ; Seyhan ve Ceyhan ; Sakarya ve Gediz | GAP sulama ve enerji amaçlı bölgesel kalkınma projesidir.
+Türkiye'nin petrol ve doğal gaz aramalarını yapan kurum ____'dır. | TPAO | MTA ; BOTAŞ ; TKİ | Türkiye Petrolleri Anonim Ortaklığı Karadeniz'de Sakarya gaz sahasını buldu.
+
+## Türkiyenini Ekonomik Coğrafyası (SANAYİ)
+Türkiye'nin ilk demir-çelik fabrikası ____'tedir. | Karabük | Ereğli ; İskenderun ; Kırıkkale | Karabük Demir-Çelik 1939'da kuruldu.
+Türkiye'de sanayinin en gelişmiş olduğu bölge ____'dır. | Marmara | Ege ; İç Anadolu ; Akdeniz | Ulaşım, sermaye ve pazar avantajı vardır.
+Türkiye'nin ilk şeker fabrikalarından biri ____'dadır. | Uşak | Konya ; Erzurum ; Adana | Uşak ve Alpullu şeker fabrikaları 1926'da kuruldu.
+Çay fabrikalarının bulunduğu il ____'dir. | Rize | Ordu ; Trabzon ; Artvin | Çay işleme tesisleri üretim alanında kurulur.
+Hammaddesi bozulabilir ürünler işleyen fabrikalar ____ kurulur. | hammaddeye yakın | pazara yakın ; limana yakın ; enerji kaynağına yakın | Şeker, çay ve süt fabrikaları buna örnektir.
+Türkiye'nin en büyük otomotiv sanayi merkezlerinden biri ____'dır. | Bursa | Rize ; Kars ; Nevşehir | Bursa ve Kocaeli otomotivde öndedir.
+Petrol rafinerilerinden biri ____'dedir. | İzmit (Tüpraş) | Rize ; Muş ; Nevşehir | İzmit, İzmir, Kırıkkale ve Batman'da rafineri vardır.
+Türkiye'de pamuklu dokuma sanayinin geliştiği illerden biri ____'dır. | Adana | Erzurum ; Rize ; Kars | Pamuk üretim alanlarına yakın kurulmuştur.
+İskenderun Demir-Çelik Fabrikası ____ ilindedir. | Hatay | Adana ; Mersin ; Osmaniye | İskenderun'da limana yakın kurulmuştur.
+Ereğli Demir-Çelik Fabrikası ____ ilindedir. | Zonguldak | Konya ; Karabük ; Bartın | Ereğli taş kömürüne ve limana yakındır.
+
+## Türkiyenini Ekonomik Coğrafyası (ULAŞIM)
+Türkiye'de yük ve yolcu taşımacılığında en çok kullanılan ulaşım türü ____'dur. | karayolu | demiryolu ; denizyolu ; havayolu | Karayolu 1950'lerden sonra hızla gelişti.
+Türkiye'nin ilk demiryolu ____ arasında yapılmıştır. | İzmir-Aydın | İstanbul-Ankara ; Ankara-Sivas ; Haydarpaşa-İzmit | İzmir-Aydın hattı 1856'da İngilizlerce başlatıldı.
+Türkiye'nin en işlek limanı ____ çevresindedir. | Marmara (İstanbul-Kocaeli) | Karadeniz (Rize) ; Doğu Akdeniz (Taşucu) ; Ege (Dikili) | Ambarlı ve Kocaeli limanları yük taşımacılığında öndedir.
+Türkiye'nin ilk hızlı tren hattı ____ arasında açılmıştır. | Ankara-Eskişehir | Ankara-Konya ; İstanbul-Ankara ; Ankara-Sivas | Ankara-Eskişehir YHT 2009'da hizmete girdi.
+Asya ile Avrupa'yı demiryoluyla deniz altından bağlayan proje ____'dır. | Marmaray | Avrasya Tüneli ; Osmangazi Köprüsü ; Yavuz Sultan Selim Köprüsü | Marmaray 2013'te açıldı.
+İzmit Körfezi'ni geçen asma köprü ____'dür. | Osmangazi Köprüsü | 1915 Çanakkale Köprüsü ; Yavuz Sultan Selim Köprüsü ; Boğaziçi Köprüsü | Osmangazi Köprüsü 2016'da açıldı.
+Dünyanın en uzun orta açıklıklı asma köprüsü ____'dür. | 1915 Çanakkale Köprüsü | Osmangazi Köprüsü ; Boğaziçi Köprüsü ; Fatih Sultan Mehmet Köprüsü | Köprü 2022'de açıldı.
+Türkiye'de boru hattıyla petrol taşınan hatlardan biri ____'dır. | Bakü-Tiflis-Ceyhan | Mavi Akım ; TürkAkım ; TANAP | Mavi Akım, TürkAkım ve TANAP doğal gaz hatlarıdır.
+Karadeniz'in altından Rusya'dan Samsun'a doğal gaz taşıyan hat ____'dır. | Mavi Akım | TürkAkım ; TANAP ; Bakü-Tiflis-Ceyhan | Mavi Akım 2003'te tamamlandı.
+Türkiye'de demiryolu yapımına en çok önem verilen dönem ____'dır. | 1923-1950 | 1950-1980 ; 1980-2000 ; 1876-1908 | Cumhuriyet'in ilk yıllarında "demir ağlarla örme" politikası izlendi.
+
+## Türkiye'de Turizm
+Türkiye'ye en fazla turist çeken il ____'dır. | Antalya | İzmir ; Muğla ; Nevşehir | Antalya deniz-kum-güneş turizminin merkezidir.
+Peribacaları ve yer altı şehirleriyle ünlü turizm merkezi ____'dır. | Kapadokya | Pamukkale ; Efes ; Truva | Kapadokya Nevşehir, Kayseri, Niğde ve Aksaray'ı kapsar.
+Travertenleriyle ünlü ve UNESCO listesinde olan yer ____'dir. | Pamukkale | Kapadokya ; Göbeklitepe ; Nemrut Dağı | Pamukkale Denizli'dedir; Hierapolis antik kenti de buradadır.
+Dünyanın bilinen en eski tapınak alanı olan ören yeri ____'dir. | Göbeklitepe | Çatalhöyük ; Efes ; Truva | Göbeklitepe Şanlıurfa'dadır ve yaklaşık 12 bin yıllıktır.
+Kommagene Krallığı'na ait dev heykelleriyle ünlü dağ ____'dır. | Nemrut Dağı | Erciyes Dağı ; Ağrı Dağı ; Hasan Dağı | Nemrut Dağı Adıyaman'dadır.
+Artemis Tapınağı'nın bulunduğu antik kent ____'dir. | Efes | Truva ; Bergama ; Afrodisias | Efes İzmir Selçuk'tadır.
+Yayla turizminin en çok geliştiği bölge ____'dir. | Karadeniz | Ege ; Akdeniz ; İç Anadolu | Uzungöl ve Ayder yaylaları ünlüdür.
+Kış turizminin geliştiği merkezlerden biri ____'dır. | Palandöken (Erzurum) | Pamukkale ; Bodrum ; Alanya | Uludağ, Erciyes ve Sarıkamış da önemli kayak merkezleridir.
+Neolitik dönemin en önemli yerleşmelerinden biri olan Çatalhöyük ____ ilindedir. | Konya | Şanlıurfa ; Çorum ; Kayseri | Çatalhöyük UNESCO Dünya Mirası listesindedir.
+Hititlerin başkenti Hattuşaş ____ ilindedir. | Çorum | Kayseri ; Ankara ; Konya | Hattuşaş Boğazköy'dedir.
+
+## Türkiye'nin Jeopolitik Konumu ve Bölgesel Projeler
+Türkiye'nin en büyük bölgesel kalkınma projesi ____'dir. | GAP (Güneydoğu Anadolu Projesi) | DAP ; DOKAP ; KOP | GAP sulama, enerji ve sosyal kalkınmayı hedefler.
+Doğu Anadolu'nun kalkınması için hazırlanan proje ____'dir. | DAP | GAP ; ZBK ; YHGP | DAP Doğu Anadolu Projesi'dir.
+Doğu Karadeniz'in kalkınması için hazırlanan proje ____'dir. | DOKAP | DAP ; KOP ; GAP | DOKAP Doğu Karadeniz Bölgesel Gelişme Planı'dır.
+Konya Ovası'nın kalkınması için hazırlanan proje ____'dir. | KOP | DOKAP ; GAP ; ZBK | KOP Konya Ovası Projesi'dir.
+Türkiye'nin Boğazlar üzerinde egemenliğini düzenleyen sözleşme ____'dir. | Montrö Boğazlar Sözleşmesi | Lozan Antlaşması ; Londra Sözleşmesi ; Paris Antlaşması | Montrö 1936'da imzalandı.
+Türkiye'yi Avrupa'ya bağlayan doğal gaz boru hattı ____'dır. | TANAP | Mavi Akım ; Kerkük-Yumurtalık ; Bakü-Tiflis-Ceyhan | TANAP Azerbaycan gazını Avrupa'ya taşır.
+Türkiye'nin jeopolitik önemini artıran en önemli su yolları ____'dır. | İstanbul ve Çanakkale Boğazları | Süveyş ve Panama Kanalları ; Cebelitarık ve Hürmüz Boğazları ; Dicle ve Fırat | Boğazlar Karadeniz'i Akdeniz'e bağlar.
+Atatürk Barajı ve Şanlıurfa Tünelleri ____ projesinin parçasıdır. | GAP | DAP ; DOKAP ; KOP | Şanlıurfa Tünelleri Harran Ovası'nı sular.
+Asya ile Avrupa arasında karayolu bağlantısı sağlayan deniz altı tüneli ____'dür. | Avrasya Tüneli | Marmaray ; Kanal İstanbul ; Osmangazi Tüneli | Avrasya Tüneli 2016'da açıldı.
+Türkiye'nin enerji koridoru olmasının temel nedeni ____'dur. | üretici ülkelerle tüketici Avrupa arasında bulunması | petrol üretiminin fazla olması ; nükleer enerjide öncü olması ; kömür ihracatı | Türkiye Hazar ve Ortadoğu kaynaklarını Avrupa'ya bağlar.

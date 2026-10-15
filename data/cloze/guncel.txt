@@ -1,0 +1,111 @@
+# Boşluk doldurma bankası — Güncel Bilgiler
+# Yalnızca zamanla değişmeyen bilgiler yazılır (tarihî ilkler, eserler, kuruluş merkezleri, UNESCO listesine giriş).
+# Her yıl değişen gündem bilgileri (ekonomi verileri, son şampiyonlar, vefatlar) bilerek yazılmadı.
+
+## Savunma, Bilim ve Uzay
+Uzaya giden ilk Türk astronot ____'dır. | Alper Gezeravcı | Tuva Cihangir Atasever ; Aziz Sancar ; Cahit Arf | Alper Gezeravcı Ocak 2024'te Axiom-3 göreviyle Uluslararası Uzay İstasyonu'na gitti.
+Uzaya giden ikinci Türk ____'dır. | Tuva Cihangir Atasever | Alper Gezeravcı ; Selçuk Bayraktar ; Gazi Yaşargil | Atasever Haziran 2024'te Virgin Galactic ile alt yörünge uçuşu yaptı.
+Türkiye'nin ilk yerli ve millî haberleşme uydusu ____'dır. | Türksat 6A | Türksat 1B ; Göktürk-2 ; RASAT | Türksat 6A Temmuz 2024'te fırlatıldı.
+Türkiye'de tamamen yerli olarak tasarlanan ilk yer gözlem uydusu ____'tır. | RASAT | Türksat 6A ; Türksat 3A ; İMECE | RASAT 2011'de fırlatıldı; TÜBİTAK UZAY tarafından geliştirildi.
+Türkiye Uzay Ajansı ____ yılında kuruldu. | 2018 | 2010 ; 2021 ; 1994 | Türkiye Uzay Ajansı 2018'de Cumhurbaşkanlığı kararnamesiyle kuruldu.
+Türkiye'nin ilk amfibi hücum gemisi TCG ____'dur. | Anadolu | Heybeliada ; Barbaros ; Gökçeada | TCG Anadolu 2023'te hizmete girdi.
+Türkiye'nin millî muharip uçağı ____'dır. | KAAN | HÜRJET ; HÜRKUŞ ; ANKA | KAAN ilk uçuşunu Şubat 2024'te yaptı.
+TUSAŞ tarafından geliştirilen jet eğitim ve hafif taarruz uçağı ____'tir. | HÜRJET | KAAN ; AKINCI ; GÖKBEY | HÜRJET ilk uçuşunu 2023'te yaptı.
+Türk Deniz Kuvvetleri için geliştirilen millî korvet projesinin adı ____'dir. | MİLGEM | ALTAY ; HİSAR ; SİPER | İlk MİLGEM gemisi TCG Heybeliada'dır.
+Baykar tarafından geliştirilen insansız savaş uçağı ____'dır. | Kızılelma | Hürkuş ; Altay ; Gökbey | Kızılelma ilk uçuşunu 2022'de yaptı.
+
+## Nobel, Oscar ve UNESCO
+Nobel Ödülü alan ilk Türk ____'tır. | Orhan Pamuk | Aziz Sancar ; Yaşar Kemal ; Nazım Hikmet | Orhan Pamuk 2006'da Nobel Edebiyat Ödülü'nü aldı.
+Aziz Sancar 2015 yılında Nobel ____ Ödülü'nü aldı. | Kimya | Tıp ; Fizik ; Barış | DNA onarımı üzerine çalışmalarıyla ödül aldı.
+Nobel ödülleri adını İsveçli bilim insanı ____'dan alır. | Alfred Nobel | Albert Einstein ; Marie Curie ; Niels Bohr | Dinamitin mucidi Alfred Nobel'in vasiyetiyle verilir.
+Nobel Barış Ödülü ____ kentinde verilir. | Oslo | Stockholm ; Cenevre ; Kopenhag | Diğer Nobel ödülleri Stockholm'de verilir.
+Nuri Bilge Ceylan Cannes'da Altın Palmiye'yi ____ filmiyle kazandı. | Kış Uykusu | Ahlat Ağacı ; Üç Maymun ; Uzak | Ödül 2014'te verildi.
+Cannes'da Altın Palmiye alan ilk Türk filmi ____'dur. | Yol | Kış Uykusu ; Susuz Yaz ; Sürü | Yılmaz Güney'in Yol filmi 1982'de ödülü paylaştı.
+UNESCO'nun merkezi ____'tir. | Paris | Cenevre ; New York ; Brüksel | UNESCO 1945'te kuruldu, merkezi Paris'tedir.
+Türkiye'den UNESCO Dünya Mirası Listesi'ne ilk alınan alanlar 1985'te İstanbul'un tarihi alanları, Göreme ve Kapadokya ile ____'dir. | Divriği Ulu Camii ve Darüşşifası | Selimiye Camii ; Nemrut Dağı ; Hattuşa | Divriği Ulu Camii Sivas'tadır.
+Göbeklitepe UNESCO Dünya Mirası Listesi'ne ____ yılında alındı. | 2018 | 2011 ; 2015 ; 2021 | Göbeklitepe Şanlıurfa'dadır.
+Arslantepe Höyüğü'nün bulunduğu il ____'dır. | Malatya | Elazığ ; Adıyaman ; Kahramanmaraş | Arslantepe 2021'de UNESCO listesine girdi.
+Gordion antik kenti ____ ilindedir. | Ankara | Eskişehir ; Afyonkarahisar ; Kütahya | Gordion 2023'te UNESCO listesine alındı.
+Afrodisias antik kenti ____ ilindedir. | Aydın | Denizli ; Muğla ; İzmir | Afrodisias 2017'de UNESCO listesine girdi.
+Ani arkeolojik alanı ____ ilindedir. | Kars | Ardahan ; Iğdır ; Erzurum | Ani 2016'da UNESCO listesine alındı.
+Hattuşa ____ ilinde yer alır. | Çorum | Yozgat ; Kırıkkale ; Amasya | Hitit başkenti Hattuşa 1986'da UNESCO listesine girdi.
+Çatalhöyük Neolitik Kenti ____ ilindedir. | Konya | Karaman ; Aksaray ; Niğde | Çatalhöyük 2012'de UNESCO listesine alındı.
+
+## Spor, Kuruluşlar ve Zirveler
+Birleşmiş Milletler'in merkezi ____'tır. | New York | Cenevre ; Paris ; Viyana | BM 1945'te kuruldu; Türkiye kurucu üyedir.
+NATO'nun merkezi ____'tir. | Brüksel | Lahey ; Strazburg ; Londra | Türkiye 1952'de NATO'ya katıldı.
+Avrupa Konseyi'nin merkezi ____'dır. | Strazburg | Brüksel ; Lüksemburg ; Lahey | Türkiye 1949'da Avrupa Konseyi'ne katıldı.
+Türkiye NATO'ya ____ yılında üye oldu. | 1952 | 1949 ; 1945 ; 1963 | Türkiye ve Yunanistan 1952'de birlikte katıldı.
+İslam İşbirliği Teşkilatı'nın merkezi ____'dir. | Cidde | Riyad ; Kahire ; Tahran | Teşkilat 1969'da kuruldu.
+Türk Devletleri Teşkilatı'nın sekretarya merkezi ____'dur. | İstanbul | Ankara ; Bakü ; Astana | Teşkilat 2009 Nahçıvan Anlaşması ile Türk Konseyi adıyla kuruldu.
+Karadeniz Ekonomik İşbirliği Teşkilatı'nın merkezi ____'dur. | İstanbul | Bükreş ; Sofya ; Tiflis | KEİ 1992'de Türkiye'nin öncülüğüyle kuruldu.
+Ekonomik İşbirliği Teşkilatı'nın (EİT) merkezi ____'dır. | Tahran | İstanbul ; İslamabad ; Bakü | EİT Türkiye, İran ve Pakistan tarafından kuruldu.
+Dünya Sağlık Örgütü'nün merkezi ____'dir. | Cenevre | New York ; Paris ; Roma | DSÖ (WHO) 1948'de kuruldu.
+Uluslararası Olimpiyat Komitesi'nin merkezi ____'dır. | Lozan | Cenevre ; Zürih ; Atina | IOC 1894'te kuruldu.
+FIFA'nın merkezi ____'tir. | Zürih | Nyon ; Lozan ; Paris | FIFA 1904'te kuruldu.
+Modern olimpiyat oyunları ilk kez 1896'da ____'da yapıldı. | Atina | Paris ; Londra ; Roma | Modern olimpiyatları Pierre de Coubertin başlattı.
+Türkiye millî futbol takımı 2002 Dünya Kupası'nda ____ oldu. | üçüncü | ikinci ; dördüncü ; çeyrek finalist | Kupa Güney Kore ve Japonya'da düzenlendi.
+Türkiye'nin kurucu üyesi olduğu ve 1961'de kurulan ekonomik örgüt ____'dir. | OECD | AB ; EFTA ; NAFTA | OECD'nin merkezi Paris'tir.
+
+## Türk Edebiyatı
+Türk edebiyatının ilk yerli tiyatro eseri ____'dir. | Şair Evlenmesi | Vatan yahut Silistre ; Zavallı Çocuk ; Akif Bey | Şair Evlenmesi'ni Şinasi yazdı.
+Türk edebiyatının ilk yerli romanı ____'tir. | Taaşşuk-ı Talat ve Fitnat | Araba Sevdası ; İntibah ; Mai ve Siyah | Romanı Şemsettin Sami yazdı.
+İlk özel Türk gazetesi Tercüman-ı Ahval'i Şinasi ile birlikte ____ çıkardı. | Agah Efendi | Namık Kemal ; Ziya Paşa ; Ali Suavi | Gazete 1860'ta yayımlandı.
+İlk resmî Türk gazetesi ____'dir. | Takvim-i Vekayi | Tercüman-ı Ahval ; Tasvir-i Efkâr ; Ceride-i Havadis | Gazete II. Mahmut döneminde 1831'de çıktı.
+Çalıkuşu romanının yazarı ____'dir. | Reşat Nuri Güntekin | Halide Edib Adıvar ; Yakup Kadri Karaosmanoğlu ; Peyami Safa | Çalıkuşu 1922'de yayımlandı.
+İnce Memed romanının yazarı ____'dir. | Yaşar Kemal | Orhan Kemal ; Kemal Tahir ; Fakir Baykurt | Roman Çukurova'yı anlatır.
+Tutunamayanlar romanının yazarı ____'dır. | Oğuz Atay | Yusuf Atılgan ; Orhan Pamuk ; Sait Faik | Roman 1972'de yayımlandı.
+Saatleri Ayarlama Enstitüsü romanının yazarı ____'dır. | Ahmet Hamdi Tanpınar | Peyami Safa ; Oğuz Atay ; Halit Ziya Uşaklıgil | Tanpınar'ın Huzur adlı romanı da vardır.
+Kuyucaklı Yusuf ve Kürk Mantolu Madonna romanlarının yazarı ____'dir. | Sabahattin Ali | Sait Faik Abasıyanık ; Orhan Kemal ; Refik Halit Karay | Sabahattin Ali toplumcu gerçekçi bir yazardır.
+Sinekli Bakkal romanının yazarı ____'dır. | Halide Edib Adıvar | Reşat Nuri Güntekin ; Nezihe Muhiddin ; Fatma Aliye | Halide Edib'in Ateşten Gömlek adlı romanı da vardır.
+Yaban romanının yazarı ____'dur. | Yakup Kadri Karaosmanoğlu | Reşat Nuri Güntekin ; Peyami Safa ; Memduh Şevket Esendal | Yaban, Kurtuluş Savaşı yıllarında Anadolu köyünü anlatır.
+Aşk-ı Memnu ve Mai ve Siyah romanlarının yazarı ____'dır. | Halit Ziya Uşaklıgil | Mehmet Rauf ; Namık Kemal ; Ahmet Mithat Efendi | Halit Ziya Servetifünun döneminin romancısıdır.
+Araba Sevdası romanının yazarı ____'dir. | Recaizade Mahmut Ekrem | Namık Kemal ; Ahmet Mithat Efendi ; Samipaşazade Sezai | Roman alafranga züppe tipini işler.
+İstiklal Marşı'nın şairi ____'dir. | Mehmet Akif Ersoy | Ziya Gökalp ; Mehmet Emin Yurdakul ; Yahya Kemal Beyatlı | Marş 12 Mart 1921'de TBMM'de kabul edildi.
+Garip akımını Orhan Veli, Melih Cevdet Anday ve ____ başlattı. | Oktay Rifat | Cemal Süreya ; Attila İlhan ; Necip Fazıl Kısakürek | Akımın adı 1941'de çıkan Garip kitabından gelir.
+Memleketimden İnsan Manzaraları adlı eserin şairi ____'dir. | Nazım Hikmet | Ahmet Arif ; Attila İlhan ; Enis Behiç Koryürek | Eser serbest nazımla yazılmış destansı bir şiirdir.
+
+## İlkler, Düşünce, Resim ve Müzik
+Türkiye'nin ilk kadın savaş pilotu ____'tir. | Sabiha Gökçen | Bedriye Tahir ; Halide Edib Adıvar ; Nezihe Muhiddin | Sabiha Gökçen 1937'de askerî harekâta katıldı.
+Türk kadınları milletvekili seçme ve seçilme hakkını ____ yılında kazandı. | 1934 | 1930 ; 1933 ; 1946 | Belediye seçimlerinde 1930, muhtarlıkta 1933'te bu hak tanındı.
+Türkiye'nin ilk kadın valisi ____'dır. | Lale Aytaman | Tansu Çiller ; Türkan Saylan ; Süreyya Ağaoğlu | Lale Aytaman 1991'de Muğla valisi oldu.
+Türkiye'nin ilk kadın başbakanı ____'dir. | Tansu Çiller | Lale Aytaman ; Meral Akşener ; Türkan Akyol | Tansu Çiller 1993'te başbakan oldu.
+Kaplumbağa Terbiyecisi tablosunun ressamı ____'dir. | Osman Hamdi Bey | Şeker Ahmet Paşa ; İbrahim Çallı ; Hoca Ali Rıza | Osman Hamdi Bey İstanbul Arkeoloji Müzesi'nin kurucusudur.
+Guernica tablosunun ressamı ____'dur. | Pablo Picasso | Salvador Dali ; Henri Matisse ; Claude Monet | Tablo İspanya İç Savaşı'nda Guernica'nın bombalanmasını anlatır.
+Yıldızlı Gece tablosunun ressamı ____'dur. | Vincent van Gogh | Claude Monet ; Paul Cézanne ; Rembrandt | Van Gogh ekspresyonizmin öncülerindendir.
+Çığlık tablosunun ressamı ____'tır. | Edvard Munch | Gustav Klimt ; Pablo Picasso ; Salvador Dali | Munch Norveçli bir ressamdır.
+Mona Lisa tablosunun ressamı ____'dir. | Leonardo da Vinci | Michelangelo ; Raffaello ; Botticelli | Tablo Paris'teki Louvre Müzesi'ndedir.
+Türk Beşleri'nden olup Yunus Emre Oratoryosu'nu besteleyen sanatçı ____'dur. | Ahmet Adnan Saygun | Cemal Reşit Rey ; Ulvi Cemal Erkin ; Necil Kazım Akses | Saygun ilk Türk operası Özsoy'u da besteledi.
+İstiklal Marşı'nın bestecisi ____'dür. | Osman Zeki Üngör | Ahmet Adnan Saygun ; Cemal Reşit Rey ; Hasan Ferit Alnar | Üngör'ün bestesi 1930'da resmî beste olarak kabul edildi.
+"Türkleşmek, İslamlaşmak, Muasırlaşmak" eserinin yazarı ____'dir. | Ziya Gökalp | Yusuf Akçura ; Mehmet Akif Ersoy ; Namık Kemal | Gökalp Türkçülük akımının önemli düşünürüdür.
+Kanunların Ruhu eserinde kuvvetler ayrılığını savunan düşünür ____'dür. | Montesquieu | Rousseau ; Voltaire ; John Locke | Eser 1748'de yayımlandı.
+Toplum Sözleşmesi eserinin yazarı ____'dur. | Rousseau | Montesquieu ; Hobbes ; Machiavelli | Rousseau egemenliğin halka ait olduğunu savundu.
+Mukaddime adlı eserin yazarı ____'dur. | İbn Haldun | Farabi ; İbn Sina ; Gazali | İbn Haldun sosyolojinin öncülerinden sayılır.
+"İkinci Öğretmen" olarak anılan İslam filozofu ____'dir. | Farabi | İbn Sina ; Kindi ; İbn Rüşd | Birinci öğretmen Aristoteles'tir.
+
+## Dünya Edebiyatı
+Suç ve Ceza romanının yazarı ____'dir. | Dostoyevski | Tolstoy ; Çehov ; Gogol | Dostoyevski'nin Karamazov Kardeşler adlı romanı da vardır.
+Savaş ve Barış romanının yazarı ____'tur. | Tolstoy | Dostoyevski ; Turgenyev ; Puşkin | Tolstoy'un Anna Karenina adlı romanı da vardır.
+Sefiller romanının yazarı ____'dur. | Victor Hugo | Balzac ; Émile Zola ; Alexandre Dumas | Hugo'nun Notre-Dame'ın Kamburu adlı romanı da vardır.
+Don Kişot romanının yazarı ____'tir. | Cervantes | Dante ; Shakespeare ; Boccaccio | Don Kişot modern romanın ilk örneklerinden sayılır.
+Yüzyıllık Yalnızlık romanının yazarı ____'dır. | Gabriel García Márquez | Jorge Luis Borges ; Pablo Neruda ; Mario Vargas Llosa | Márquez büyülü gerçekçiliğin temsilcisidir.
+Dönüşüm adlı eserin yazarı ____'dır. | Franz Kafka | Thomas Mann ; Hermann Hesse ; Stefan Zweig | Eserde Gregor Samsa bir sabah böceğe dönüşür.
+1984 ve Hayvan Çiftliği romanlarının yazarı ____'dur. | George Orwell | Aldous Huxley ; Charles Dickens ; H. G. Wells | Orwell totaliter rejimleri eleştirir.
+İlahi Komedya'nın yazarı ____'dir. | Dante | Petrarca ; Boccaccio ; Cervantes | Eser Cehennem, Araf ve Cennet bölümlerinden oluşur.
+Hamlet ve Romeo ve Juliet oyunlarının yazarı ____'dir. | Shakespeare | Molière ; Goethe ; Cervantes | Shakespeare İngiliz edebiyatının en ünlü oyun yazarıdır.
+Madame Bovary romanının yazarı ____'dir. | Gustave Flaubert | Stendhal ; Balzac ; Victor Hugo | Flaubert realizmin önemli temsilcisidir.
+Faust adlı eserin yazarı ____'dir. | Goethe | Schiller ; Heine ; Kafka | Goethe Alman edebiyatının en büyük şairi sayılır.
+Küçük Prens adlı eserin yazarı ____'dir. | Antoine de Saint-Exupéry | Jules Verne ; Albert Camus ; Victor Hugo | Saint-Exupéry aynı zamanda pilottu.
+Yabancı romanının yazarı ____'dür. | Albert Camus | Jean-Paul Sartre ; André Gide ; Marcel Proust | Camus 1957'de Nobel Edebiyat Ödülü aldı.
+
+## Coğrafya, Millî Parklar ve Vefatlar
+Türkiye'nin ilk millî parkı ____'dır. | Yozgat Çamlığı | Uludağ ; Kuşcenneti ; Karagöl-Sahara | Yozgat Çamlığı 1958'de millî park ilan edildi.
+Kuşcenneti Millî Parkı ____ ilindedir. | Balıkesir | Bursa ; Çanakkale ; Sakarya | Park Manyas (Kuş) Gölü kıyısındadır.
+Köprülü Kanyon Millî Parkı ____ ilindedir. | Antalya | Mersin ; Isparta ; Burdur | Kanyon Köprüçay üzerindedir.
+Altındere Vadisi Millî Parkı ____ ilindedir. | Trabzon | Rize ; Artvin ; Giresun | Sümela Manastırı bu park içindedir.
+Munzur Vadisi Millî Parkı ____ ilindedir. | Tunceli | Erzincan ; Bingöl ; Elazığ | Türkiye'nin en geniş millî parklarındandır.
+Karagöl-Sahara Millî Parkı ____ ilindedir. | Artvin | Ardahan ; Rize ; Kars | Park Şavşat ilçesindedir.
+Dilek Yarımadası-Büyük Menderes Deltası Millî Parkı ____ ilindedir. | Aydın | İzmir ; Muğla ; Denizli | Park Kuşadası yakınındadır.
+Spil Dağı Millî Parkı ____ ilindedir. | Manisa | İzmir ; Uşak ; Aydın | Spil Dağı lalesiyle tanınır.
+Uludağ Millî Parkı ____ ilindedir. | Bursa | Bilecik ; Kocaeli ; Balıkesir | Uludağ Marmara Bölgesi'nin en yüksek dağıdır.
+Nemrut Dağı Millî Parkı ____ ilindedir. | Adıyaman | Malatya ; Şanlıurfa ; Bitlis | Kommagene Krallığı'nın heykelleri buradadır.

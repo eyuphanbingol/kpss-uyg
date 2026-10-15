@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:272143:ais3h9*/
+/*jsx:babel-7.29.9-react-classic:272381:vkvmdt*/
 const {
   useState,
   useEffect,
@@ -2846,10 +2846,8 @@ function AlistirmaDersList(props) {
       return k !== "_";
     });
     if (!konular.length) return null;
-    // Boşluklar notlardan üretilir: notu olmayan ders (ör. Matematik) listede boş görünmesin
-    if (!konular.some(function (k) {
-      return ((kpssData[ders][k] || {}).notlar || []).length > 0;
-    })) return null;
+    // Yalnız boşluk bankasında sorusu olan dersler
+    if (window.ClozeEngine && !window.ClozeEngine.hasDers(ders)) return null;
     return /*#__PURE__*/React.createElement(AccentRow, {
       key: ders,
       title: ders,
@@ -2883,10 +2881,10 @@ function AlistirmaKonuList(props) {
         var konu = konular[i];
         var kd = props.kpssData[ders][konu] || {};
         var tp = topics[konu] || {};
-        var n = engine ? engine.countForKonu(kd) : 0;
+        var n = engine ? engine.countForKonu(kd, ders, konu) : 0;
         acc[konu] = {
           n: n,
-          left: n && engine ? engine.remainingCount(kd, tp.solvedCloze) : 0,
+          left: n && engine ? engine.remainingCount(kd, tp.solvedCloze, ders, konu) : 0,
           open: StudentStore.isKonuOpen(ders, konular, i, props.kpssData),
           done: StudentStore.topicComplete(tp, kd)
         };
@@ -2930,6 +2928,7 @@ function AlistirmaKonuList(props) {
       open: true,
       done: false
     };
+    if (ready && !st.n) return null; // bu konu için henüz soru yazılmamış
     const open = st.open !== false;
     return /*#__PURE__*/React.createElement("button", {
       key: konu,
@@ -3020,14 +3019,14 @@ function ClozePlay(props) {
         setItems([]);
         return;
       }
-      setItems(window.ClozeEngine.buildForKonu(props.konuData, 12, StudentStore.solvedClozeIds(props.ders, props.konu)) || []);
+      setItems(window.ClozeEngine.buildForKonu(props.konuData, 10, StudentStore.solvedClozeIds(props.ders, props.konu), props.ders, props.konu) || []);
     });
     return function () {
       cancelAnimationFrame(id);
     };
   }, [props.ders, props.konu, props.seed]);
-  var totalCloze = window.ClozeEngine ? window.ClozeEngine.countForKonu(props.konuData) : 0;
-  var leftCloze = window.ClozeEngine ? window.ClozeEngine.remainingCount(props.konuData, StudentStore.solvedClozeIds(props.ders, props.konu)) : 0;
+  var totalCloze = window.ClozeEngine ? window.ClozeEngine.countForKonu(props.konuData, props.ders, props.konu) : 0;
+  var leftCloze = window.ClozeEngine ? window.ClozeEngine.remainingCount(props.konuData, StudentStore.solvedClozeIds(props.ders, props.konu), props.ders, props.konu) : 0;
   if (items == null) {
     return /*#__PURE__*/React.createElement(Shell, null, /*#__PURE__*/React.createElement("div", {
       className: "flex justify-between mb-4"
@@ -3163,9 +3162,13 @@ function ClozePlay(props) {
       },
       className: cls
     }, clozeChoiceLabel(c));
-  })), picked ? /*#__PURE__*/React.createElement("p", {
+  })), picked ? /*#__PURE__*/React.createElement("div", {
     className: "cloze-verdict " + (ok ? "is-ok" : "is-bad")
-  }, ok ? "Doğru." : "Doğrusu: " + it.answer) : null), /*#__PURE__*/React.createElement("footer", {
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-bold"
+  }, ok ? "Doğru." : "Doğrusu: " + it.answer), it.explain ? /*#__PURE__*/React.createElement("p", {
+    className: "cloze-explain"
+  }, it.explain) : null) : null), /*#__PURE__*/React.createElement("footer", {
     className: "study-card-foot",
     ref: footRef,
     style: {

@@ -1,0 +1,242 @@
+# Boşluk doldurma bankası — Türkçe
+# Biçim: "## Konu adı", ardından: cümle (____) | cevap | çeldirici ; çeldirici ; çeldirici | açıklama
+
+## Sözcükte Anlam
+Bir sözcüğün akla gelen ilk anlamına ____ anlam denir. | gerçek | mecaz ; yan ; terim | "Sıcak çay" ifadesindeki "sıcak" gerçek anlamlıdır.
+Bir sözcüğün gerçek anlamından tamamen uzaklaşarak kazandığı anlama ____ anlam denir. | mecaz | gerçek ; yan ; somut | "Sıcak bir karşılama" ifadesinde "sıcak" mecazdır.
+Bir sözcüğün gerçek anlamıyla ilgili olarak kazandığı yeni anlama ____ anlam denir. | yan | mecaz ; terim ; soyut | "Masanın ayağı" ifadesindeki "ayak" yan anlamlıdır.
+Bir bilim, sanat ya da meslek alanına özgü sözcüklere ____ denir. | terim | deyim ; atasözü ; ikileme | "Açı", "nota", "çekim eki" terimdir.
+Yazılışları aynı, anlamları farklı sözcüklere ____ sözcükler denir. | eş sesli | eş anlamlı ; zıt anlamlı ; yakın anlamlı | "Yüz" (sayı, surat, yüzmek) eş seslidir.
+Yazılışları farklı, anlamları aynı sözcüklere ____ sözcükler denir. | eş anlamlı | eş sesli ; zıt anlamlı ; yansıma | "Siyah-kara", "beyaz-ak" eş anlamlıdır.
+Doğadaki seslerin taklidiyle oluşan sözcüklere ____ denir. | yansıma sözcük | ikileme ; deyim ; terim | "Şırıl", "hışırtı", "miyavlamak" yansımadır.
+Bir varlığa ait özelliği başka bir varlığa aktaran söz sanatı ____'dır. | kişileştirme | benzetme ; abartma ; konuşturma | İnsana özgü niteliklerin insan dışı varlıklara verilmesidir.
+Duyu organlarından biriyle algılanan sözcük ____ anlamlıdır. | somut | soyut ; mecaz ; terim | "Masa, rüzgâr, ses" somuttur; "sevgi, akıl" soyuttur.
+Bir sözü güçlendirmek için aynı ya da benzer sözcüklerin yan yana kullanılmasına ____ denir. | ikileme | yansıma ; deyim ; terim | "Yavaş yavaş", "eğri büğrü" ikilemedir.
+
+## Cümlede Anlam
+Bir olayın gerçekleşme gerekçesini bildiren cümlelere ____ cümlesi denir. | neden-sonuç | amaç-sonuç ; koşul-sonuç ; karşılaştırma | "Yağmur yağdığı için maç ertelendi." neden-sonuç cümlesidir.
+Bir eylemin hangi amaçla yapıldığını bildiren cümlelere ____ cümlesi denir. | amaç-sonuç | neden-sonuç ; koşul-sonuç ; tanım | "Sınavı kazanmak için çalışıyor." amaç-sonuç cümlesidir.
+Gerçekleşmesi bir şarta bağlı olan cümlelere ____ cümlesi denir. | koşul-sonuç | amaç-sonuç ; neden-sonuç ; öznel | "Erken gelirsen birlikte gideriz." koşul-sonuç cümlesidir.
+Kanıtlanabilen, kişiden kişiye değişmeyen yargılara ____ yargı denir. | nesnel | öznel ; kesin olmayan ; varsayımsal | "Ankara Türkiye'nin başkentidir." nesnel yargıdır.
+Kişisel görüş bildiren, kanıtlanamayan yargılara ____ yargı denir. | öznel | nesnel ; kesin ; olgusal | "Bu kitap çok sıkıcı." öznel yargıdır.
+Bir durumun gerçekleşeceğinin kesin olmadığını bildiren cümlelere ____ cümlesi denir. | olasılık | kesinlik ; tanım ; karşılaştırma | "Yarın yağmur yağabilir." olasılık bildirir.
+Bir kavramın ne olduğunu açıklayan cümlelere ____ cümlesi denir. | tanım | olasılık ; öneri ; varsayım | "Deyim, kalıplaşmış söz öbeğidir." tanım cümlesidir.
+Olmayan bir durumu varmış gibi kabul eden cümlelere ____ cümlesi denir. | varsayım | tanım ; kesinlik ; neden-sonuç | "Diyelim ki sınavı kazandın." varsayım bildirir.
+İki ya da daha fazla varlığı benzerlik veya farklılık yönünden ele alan cümlelere ____ cümlesi denir. | karşılaştırma | tanım ; öneri ; olasılık | "Bu roman öncekinden daha akıcı." karşılaştırmadır.
+Bir eserin değerini belirlemek için yazılan yazıların dile getirdiği yargılara ____ denir. | eleştiri | özeleştiri ; tanım ; varsayım | Eleştiri bir eserin güçlü ve zayıf yönlerini ortaya koyar.
+
+## Paragraf
+Paragrafta yazarın okura vermek istediği temel mesaja ____ denir. | ana düşünce | yardımcı düşünce ; konu ; başlık | Ana düşünce paragrafın özüdür.
+Paragrafta üzerinde durulan olay, durum ya da kavrama ____ denir. | konu | ana düşünce ; sonuç ; anlatıcı | Konu "ne anlatılıyor?" sorusunun cevabıdır.
+Ana düşünceyi destekleyen öteki düşüncelere ____ denir. | yardımcı düşünce | konu ; başlık ; giriş | Yardımcı düşünceler ana fikri açıklar ve destekler.
+Bir düşünceyi başka bir kişinin sözüyle destekleme yoluna ____ denir. | tanık gösterme | örneklendirme ; karşılaştırma ; sayısal veri | Ünlü birinin sözüne başvurmak tanık göstermedir.
+Bir düşünceyi istatistik ve rakamlarla destekleme yoluna ____ denir. | sayısal verilerden yararlanma | tanık gösterme ; benzetme ; tanımlama | Oran ve rakamlar inandırıcılığı artırır.
+Olayların zaman sırasıyla anlatıldığı anlatım biçimine ____ denir. | öyküleyici anlatım | betimleyici anlatım ; tartışmacı anlatım ; açıklayıcı anlatım | Öyküleyici anlatımda olay, kişi, yer ve zaman vardır.
+Bir varlığın ayırt edici özelliklerini gözle görülür biçimde anlatmaya ____ anlatım denir. | betimleyici | öyküleyici ; tartışmacı ; açıklayıcı | Betimlemede duyu ayrıntılarına yer verilir.
+Okuru bir düşünceye inandırmaya çalışan anlatım biçimine ____ anlatım denir. | tartışmacı | betimleyici ; öyküleyici ; açıklayıcı | Tartışmacı anlatımda karşı görüş çürütülür.
+Paragrafın ilk cümlesi genellikle paragrafın ____ cümlesidir. | giriş | sonuç ; geçiş ; özet | Giriş cümlesi bağlayıcı ifade içermez.
+Bir konuyu bilgi vermek amacıyla anlatan anlatım biçimine ____ anlatım denir. | açıklayıcı (bilgilendirici) | tartışmacı ; betimleyici ; öyküleyici | Ders kitapları açıklayıcı anlatım kullanır.
+
+## İsim – Zamir
+Varlıkları, kavramları karşılayan sözcüklere ____ denir. | isim | fiil ; zarf ; edat | İsimler varlıkların adıdır.
+Tek bir varlığı karşılayan, büyük harfle başlayan isimlere ____ denir. | özel isim | cins isim ; topluluk ismi ; soyut isim | "Ankara, Ahmet, Fırat" özel isimdir.
+Aynı türden varlıkların ortak adına ____ denir. | cins isim | özel isim ; topluluk ismi ; soyut isim | "Kalem, kitap, şehir" cins isimdir.
+Tekil biçimde olduğu hâlde birden çok varlığı karşılayan isimlere ____ denir. | topluluk ismi | çoğul isim ; cins isim ; soyut isim | "Ordu, sürü, orman" topluluk ismidir.
+İsimlerin yerini tutan sözcüklere ____ denir. | zamir | sıfat ; zarf ; edat | "Ben, sen, bu, kimse" zamirdir.
+"Ben, sen, o, biz, siz, onlar" ____ zamiridir. | kişi | işaret ; belgisiz ; soru | Kişi zamirleri şahıs adılıdır.
+"Bu, şu, o" sözcükleri isim yerine kullanıldığında ____ zamiridir. | işaret | kişi ; belgisiz ; dönüşlülük | İsimden önce gelirlerse işaret sıfatı olurlar.
+"Herkes, kimse, birkaçı" ____ zamiridir. | belgisiz | işaret ; soru ; kişi | Belgisiz zamirler kimin kastedildiğini belli etmez.
+"Kendi" sözcüğü ____ zamiridir. | dönüşlülük | belgisiz ; işaret ; ilgi | "Kendim yaptım" cümlesinde dönüşlülük zamiri vardır.
+"Benimki, seninki" sözcüklerindeki "-ki" eki ____ ekidir. | ilgi zamiri | sıfat yapım ; bağlaç ; iyelik | İlgi zamiri "-ki" ismin yerini tutar ve ayrı yazılmaz.
+
+## Sıfat
+İsimleri niteleyen ya da belirten sözcüklere ____ denir. | sıfat | zarf ; zamir ; edat | Sıfat isimden önce gelir.
+Varlıkların rengini, biçimini, durumunu bildiren sıfatlara ____ sıfatı denir. | niteleme | belirtme ; işaret ; sayı | "Kırmızı elma" niteleme sıfatıdır.
+"Bu ev, şu kitap" örneklerindeki sıfatlar ____ sıfatıdır. | işaret | belgisiz ; soru ; niteleme | İşaret sıfatları varlığı göstererek belirtir.
+"Üç kitap, beşinci sınıf" örneklerindeki sıfatlar ____ sıfatıdır. | sayı | işaret ; belgisiz ; niteleme | Asıl, sıra, üleştirme ve kesir sayı sıfatları vardır.
+"Her öğrenci, bazı insanlar" örneklerindeki sıfatlar ____ sıfatıdır. | belgisiz | işaret ; soru ; sayı | Belgisiz sıfatlar sayıyı kesin belirtmez.
+"Kaç kişi, hangi kitap" örneklerindeki sıfatlar ____ sıfatıdır. | soru | belgisiz ; işaret ; niteleme | Soru sıfatı isme soru yoluyla yöneltir.
+Sıfatın niteliğini derecelendiren "en, daha, pek" sözcükleri ____ zarfıdır. | miktar | durum ; yer-yön ; zaman | "En güzel" ifadesinde "en" miktar zarfıdır.
+Sıfatların isim yerine kullanılmasına ____ denir. | adlaşmış sıfat | sıfat tamlaması ; zarf ; belgisiz zamir | "Yaşlılara yer verin" cümlesinde "yaşlılar" adlaşmış sıfattır.
+"Yeşil yaprak" bir ____ tamlamasıdır. | sıfat | isim ; belirtili isim ; zincirleme isim | Sıfat + isimden oluşan öbek sıfat tamlamasıdır.
+"Üçer elma" örneğindeki sayı sıfatı ____ sayı sıfatıdır. | üleştirme | sıra ; asıl ; kesir | Üleştirme sıfatları -er/-ar ekiyle yapılır.
+
+## Tamlamalar
+"Evin kapısı" bir ____ isim tamlamasıdır. | belirtili | belirtisiz ; takısız ; zincirleme | Tamlayan (-in) ve tamlanan (-ı) ekini almıştır.
+"Okul bahçesi" bir ____ isim tamlamasıdır. | belirtisiz | belirtili ; takısız ; sıfat | Yalnız tamlanan ek almıştır.
+"Demir kapı" bir ____ isim tamlamasıdır. | takısız | belirtili ; belirtisiz ; zincirleme | Takısız tamlamada iki öğe de ek almaz; tamlayan tamlananın neyden yapıldığını bildirir.
+"Okulun bahçe kapısı" bir ____ isim tamlamasıdır. | zincirleme | takısız ; belirtisiz ; sıfat | Tamlayanı veya tamlananı tamlama olan tamlamadır.
+İsim tamlamasında ilk öğeye ____ denir. | tamlayan | tamlanan ; yüklem ; sıfat | İkinci öğe tamlanandır.
+"Kırmızı elbise" ____ tamlamasıdır. | sıfat | isim ; zincirleme isim ; takısız isim | Niteleme sıfatı + isimdir.
+Belirtili isim tamlamasında tamlayan ____ ekini alır. | ilgi (-in) | iyelik (-i) ; belirtme (-i) ; çoğul (-ler) | Tamlanan ise iyelik ekini alır.
+"Türk dili" örneği ____ isim tamlamasıdır. | belirtisiz | belirtili ; takısız ; zincirleme | Tamlayan ek almamış, tamlanan iyelik eki almıştır.
+"Benim kitabım" örneğinde tamlayan bir ____'dir. | zamir | sıfat ; zarf ; fiil | Zamirle kurulmuş belirtili isim tamlamasıdır.
+Tamlama öğeleri arasına başka sözcük girebilen tamlama ____ tamlamadır. | belirtili | belirtisiz ; takısız ; sıfat | "Evin büyük kapısı" diyebiliriz.
+
+## Zarf
+Fiilleri, fiilimsileri, sıfatları ya da başka zarfları niteleyen sözcüklere ____ denir. | zarf | sıfat ; edat ; zamir | Zarflar eylemin nasıl, ne zaman, nereye yapıldığını bildirir.
+"Ne zaman?" sorusunun cevabını veren zarflar ____ zarfıdır. | zaman | durum ; miktar ; yer-yön | "Yarın gelecek." zaman zarfıdır.
+"Nasıl?" sorusunun cevabını veren zarflar ____ zarfıdır. | durum | zaman ; miktar ; yer-yön | "Hızlı koştu." durum zarfıdır.
+"Ne kadar?" sorusunun cevabını veren zarflar ____ zarfıdır. | miktar | durum ; zaman ; soru | "Çok çalıştı." miktar zarfıdır.
+Yer-yön zarfı olarak kullanılan sözcükler "içeri, dışarı, ileri, geri, aşağı, yukarı, ____" sözcükleridir. | beri | yarın ; çok ; nasıl | Bu sözcükler hâl eki almadan kullanılırsa yer-yön zarfıdır.
+"Nasıl, niçin, ne zaman" sözcükleri fiili sorduğunda ____ zarfıdır. | soru | durum ; zaman ; miktar | Soru zarfları eylemi soru yoluyla belirtir.
+"İçeri girdi." cümlesinde "içeri" ____ zarfıdır. | yer-yön | durum ; zaman ; miktar | Hâl eki almadığı için yer-yön zarfıdır.
+"İçeriye girdi." cümlesinde "içeriye" sözcüğü ____ olarak kullanılmıştır. | isim | yer-yön zarfı ; sıfat ; edat | Hâl eki alan yer-yön sözcükleri isim olur.
+"Az konuştu." cümlesinde "az" sözcüğü ____ zarfıdır. | miktar | durum ; zaman ; yer-yön | Miktar zarfı eylemin derecesini bildirir.
+"Koşa koşa geldi." cümlesindeki ikileme ____ zarfı olarak kullanılmıştır. | durum | zaman ; miktar ; yer-yön | "Nasıl geldi?" sorusunun cevabıdır.
+
+## Edat – Bağlaç – Ünlem
+Tek başına anlamı olmayan, cümlede anlam ilgisi kuran sözcüklere ____ denir. | edat (ilgeç) | bağlaç ; ünlem ; zarf | "Gibi, için, kadar, ile" edattır.
+Eş görevli sözcükleri veya cümleleri bağlayan sözcüklere ____ denir. | bağlaç | edat ; ünlem ; zamir | "Ve, ama, fakat, ancak" bağlaçtır.
+Sevinç, korku, şaşırma gibi duyguları anlatan sözcüklere ____ denir. | ünlem | bağlaç ; edat ; zarf | "Eyvah, oh, ah" ünlemdir.
+"De/da" bağlacı her zaman ____ yazılır. | ayrı | bitişik ; kesme işaretiyle ; tire ile | Bulunma hâl eki olan -de/-da bitişik yazılır.
+"Ki" bağlacı ____ yazılır. | ayrı | bitişik ; kesme işaretiyle ; büyük harfle | "Biliyorum ki gelecek." "Ki" bağlacı ayrı yazılır.
+"Mi" soru eki her zaman ____ yazılır. | ayrı | bitişik ; tire ile ; kesme işaretiyle | Kendinden sonraki ekler soru ekine bitişik yazılır: geliyor musun.
+"Ile" sözcüğü "ve" anlamında kullanıldığında ____ olur. | bağlaç | edat ; ünlem ; zarf | "Ali ile Ayşe geldi." bağlaçtır; "Kalemle yazdı." edattır.
+"Gibi" sözcüğü cümlede genellikle ____ olarak kullanılır. | edat | bağlaç ; ünlem ; zamir | Benzerlik ilgisi kurar.
+"Ama, fakat, lakin" bağlaçları ____ anlamı katar. | karşıtlık | neden ; sonuç ; benzerlik | Bu bağlaçlar zıtlık bildirir.
+"Hey! Buraya gel." cümlesindeki "hey" ____ bildiren ünlemdir. | seslenme | sevinç ; acıma ; korku | Ünlemler seslenme amacıyla da kullanılır.
+
+## Fiil
+İş, oluş, hareket bildiren sözcüklere ____ denir. | fiil | isim ; sıfat ; zarf | Fiillerin kök ve gövdesi "-mek/-mak" ile mastar hâline getirilir.
+Bir nesne alabilen fiillere ____ fiil denir. | geçişli | geçişsiz ; oluş ; durum | "Kitabı okudu." geçişlidir.
+Nesne alamayan fiillere ____ fiil denir. | geçişsiz | geçişli ; ettirgen ; işteş | "Uyudu, güldü" geçişsizdir.
+Kendiliğinden gerçekleşen, zamanla oluşan fiillere ____ fiili denir. | oluş | kılış ; durum ; işteş | "Sarardı, büyüdü" oluş fiilidir.
+"Geliyor" fiilindeki zaman ____'dır. | şimdiki zaman | geniş zaman ; gelecek zaman ; görülen geçmiş zaman | "-yor" şimdiki zaman ekidir.
+"Gelir" fiilindeki zaman ____'dır. | geniş zaman | şimdiki zaman ; gelecek zaman ; öğrenilen geçmiş zaman | "-r, -ar, -er" geniş zaman ekidir.
+"Gelmiş" fiilindeki zaman ____'dır. | öğrenilen geçmiş zaman | görülen geçmiş zaman ; şimdiki zaman ; geniş zaman | "-mış" duyulan (öğrenilen) geçmiş zamandır.
+"Gelse" fiilindeki kip ____ kipidir. | dilek-şart | gereklilik ; istek ; emir | "-sa/-se" şart kipidir.
+"Gelmeli" fiilindeki kip ____ kipidir. | gereklilik | istek ; şart ; emir | "-malı/-meli" gereklilik ekidir.
+Bir fiilin birden fazla zaman ve kip eki almasına ____ denir. | birleşik çekim | basit çekim ; fiilimsi ; çatı | "Geliyordu, gelmişti" birleşik zamanlı fiillerdir.
+
+## Eylemsi
+Fiilden türeyen ancak cümlede isim, sıfat ya da zarf görevinde kullanılan sözcüklere ____ denir. | fiilimsi (eylemsi) | birleşik fiil ; yardımcı fiil ; ek fiil | Fiilimsiler çekimli fiil değildir.
+"-mak, -ış, -ma" ekleriyle yapılan fiilimsilere ____ denir. | isim-fiil | sıfat-fiil ; zarf-fiil ; ek fiil | "Okumak güzeldir." isim-fiil örneğidir.
+"-an, -ası, -mez, -ar, -dik, -ecek, -miş" ekleriyle yapılan fiilimsilere ____ denir. | sıfat-fiil (ortaç) | isim-fiil ; zarf-fiil ; yardımcı fiil | "Gelen misafir" sıfat-fiil örneğidir.
+"-ıp, -arak, -ınca, -madan" ekleriyle yapılan fiilimsilere ____ denir. | zarf-fiil (bağ-fiil) | isim-fiil ; sıfat-fiil ; birleşik fiil | "Koşarak geldi." zarf-fiil örneğidir.
+"Okuyan çocuk" örneğindeki "okuyan" sözcüğü bir ____'dir. | sıfat-fiil | isim-fiil ; zarf-fiil ; çekimli fiil | Çocuğu nitelemektedir.
+"Eve gelince aradı." cümlesindeki "gelince" bir ____'dir. | zarf-fiil | sıfat-fiil ; isim-fiil ; çekimli fiil | Zaman bildirir.
+"Yüzmeyi severim." cümlesindeki "yüzmeyi" bir ____'dir. | isim-fiil | sıfat-fiil ; zarf-fiil ; zamir | Nesne görevindedir.
+Kalıcı isim olmuş fiilimsiye örnek ____'tır. | dondurma | koşmak ; gelen ; giderek | "Dondurma, çakmak, kazma" kalıcı isim olmuştur; fiilimsi sayılmaz.
+Fiilimsiler cümlede ____ olarak kullanılmaz. | yüklem | özne ; nesne ; dolaylı tümleç | Fiilimsi çekimli fiil değildir; ancak ek fiil alarak yüklem olabilir.
+"Koşup oynadılar." cümlesindeki "koşup" bir ____'dir. | zarf-fiil | sıfat-fiil ; isim-fiil ; bağlaç | "-ıp" eki zarf-fiil yapar.
+
+## Ekler
+Sözcüğe yeni anlam kazandıran eklere ____ ekleri denir. | yapım | çekim ; ek fiil ; hâl | "Göz-lük" yapım ekidir.
+Sözcüğün anlamını değiştirmeden cümledeki görevini belirleyen eklere ____ ekleri denir. | çekim | yapım ; türetme ; birleştirme | Hâl, iyelik, çoğul ekleri çekim ekidir.
+"Kitaplar" sözcüğündeki "-lar" eki ____ ekidir. | çoğul | iyelik ; hâl ; yapım | Çoğul eki çekim ekidir.
+"Kitabım" sözcüğündeki "-ım" eki ____ ekidir. | iyelik | hâl ; çoğul ; yapım | İyelik eki sahiplik bildirir.
+"Evde" sözcüğündeki "-de" eki ____ hâl ekidir. | bulunma | yönelme ; ayrılma ; belirtme | Bulunma hâl eki bitişik yazılır.
+"Evden" sözcüğündeki "-den" eki ____ hâl ekidir. | ayrılma | bulunma ; yönelme ; belirtme | Ayrılma hâl eki "-den/-dan, -ten/-tan"dır.
+"Eve" sözcüğündeki "-e" eki ____ hâl ekidir. | yönelme | ayrılma ; bulunma ; belirtme | Yönelme hâl eki "-e/-a"dır.
+İsimden isim yapan eke örnek ____'dir. | -lık (gözlük) | -ma (yazma) ; -gı (sevgi) ; -mek (gelmek) | "Göz + lük" isimden isim yapar.
+Fiilden isim yapan eke örnek ____'dir. | -gı (sevgi) | -lık (gözlük) ; -cı (balıkçı) ; -daş (arkadaş) | "Sev + gi" fiilden isim yapar.
+"Güzelim" sözcüğündeki "-im" eki "güzelim" (ben güzelim) anlamında ____ ekidir. | ek fiil (kişi eki) | iyelik ; yapım ; hâl | İsimleri yüklem yapan ek fiildir.
+
+## Sözcükte Yapı
+Hiç ek almamış sözcüklere ____ sözcük denir. | basit | türemiş ; birleşik ; gövde | "Ev, göz, gel" basit sözcüktür.
+Yapım eki almış sözcüklere ____ sözcük denir. | türemiş | basit ; birleşik ; köken | "Gözlük, sevgi" türemiştir.
+İki ya da daha fazla sözcüğün birleşip yeni anlam kazanmasıyla oluşan sözcüklere ____ sözcük denir. | birleşik | türemiş ; basit ; yansıma | "Hanımeli, Kuşadası" birleşiktir.
+Sözcüğün en küçük anlamlı parçasına ____ denir. | kök | gövde ; ek ; hece | "Gözlükçü" sözcüğünün kökü "göz"dür.
+Kök ile yapım ekinin birleşmesinden oluşan yapıya ____ denir. | gövde | kök ; çekim eki ; tamlama | "Gözlük" bir gövdedir.
+"Gözlükçü" sözcüğünde ____ yapım eki vardır. | iki | bir ; üç ; hiç | -lük ve -çü yapım ekidir.
+"Hanımeli" sözcüğü anlam kayması yoluyla oluşmuş ____ sözcüktür. | birleşik | türemiş ; basit ; ikileme | Bitki adlarında anlam kayması görülür.
+"Kahverengi" sözcüğü ____ yazılır. | bitişik | ayrı ; tire ile ; kesme ile | Renk adları birleşikse bitişik yazılır.
+Fiil köklerine örnek ____'dir. | gel | göz ; ev ; taş | "Gel-" fiil köküdür.
+"Yazar" sözcüğü hem isim hem fiil olarak kullanılabildiği için ____ sözcüktür. | sesteş görünümlü | birleşik ; ikileme ; yansıma | "Kitabın yazarı" isim, "Mektup yazar" fiildir.
+
+## Cümlenin Ögeleri
+Cümlede yargı bildiren temel öğeye ____ denir. | yüklem | özne ; nesne ; tümleç | Yüklem cümlenin olmazsa olmaz öğesidir.
+Yüklemin bildirdiği işi yapana ____ denir. | özne | nesne ; dolaylı tümleç ; zarf tümleci | "Kim?" ya da "Ne?" sorusuyla bulunur.
+Öznenin yaptığı işten etkilenen öğeye ____ denir. | nesne | özne ; dolaylı tümleç ; edat tümleci | "Neyi, kimi, ne?" sorularıyla bulunur.
+"-e, -de, -den" hâl eklerinden birini alan ve yüklemi yer-yön yönünden tamamlayan öğeye ____ denir. | dolaylı tümleç (yer tamlayıcısı) | belirtili nesne ; zarf tümleci ; özne | "Okula gitti." cümlesinde "okula" dolaylı tümleçtir.
+Yüklemi zaman, durum, miktar yönünden tamamlayan öğeye ____ denir. | zarf tümleci | dolaylı tümleç ; nesne ; özne | "Sabah geldi." cümlesinde "sabah" zarf tümlecidir.
+Edatla kurulan öbeklerin oluşturduğu öğeye ____ denir. | edat tümleci | zarf tümleci ; dolaylı tümleç ; nesne | "Arkadaşıyla geldi." cümlesinde "arkadaşıyla" edat tümlecidir.
+"Kitabı okudum." cümlesinde "kitabı" ____'dir. | belirtili nesne | belirtisiz nesne ; özne ; dolaylı tümleç | Belirtme hâl eki "-ı" almıştır.
+"Kitap okudum." cümlesinde "kitap" ____'dir. | belirtisiz nesne | belirtili nesne ; özne ; zarf tümleci | Ek almamış nesnedir.
+Cümle dışı öğelere örnek ____'dır. | ünlemler ve hitaplar | özne ; nesne ; yüklem | "Ahmet, buraya gel." cümlesinde "Ahmet" hitaptır.
+Cümlede öğeler bulunurken önce ____ bulunur. | yüklem | özne ; nesne ; tümleç | Diğer öğeler yükleme sorulan sorularla bulunur.
+
+## Fiilde Çatı
+Öznesi belli olmayan, öznesi gizlenen fiillere ____ fiil denir. | edilgen | etken ; dönüşlü ; işteş | "Kapı açıldı." edilgendir.
+Öznesi belli olan fiillere ____ fiil denir. | etken | edilgen ; dönüşlü ; işteş | "Ali kapıyı açtı." etkendir.
+İşin özne tarafından kendine yapıldığını bildiren fiillere ____ fiil denir. | dönüşlü | işteş ; edilgen ; ettirgen | "Yıkandı, giyindi" dönüşlüdür.
+İşin birden fazla kişi tarafından karşılıklı ya da birlikte yapıldığını bildiren fiillere ____ fiil denir. | işteş | dönüşlü ; edilgen ; ettirgen | "Görüştüler, yarıştılar" işteştir.
+Bir işin başkasına yaptırıldığını bildiren fiillere ____ fiil denir. | ettirgen | oldurgan ; işteş ; dönüşlü | "Yaptırdı, okuttu" ettirgendir.
+Geçişsiz bir fiilin geçişli yapılmasıyla oluşan fiillere ____ fiil denir. | oldurgan | ettirgen ; dönüşlü ; işteş | "Öldü → öldürdü" oldurgandır.
+Edilgen fiiller ____ ekleriyle yapılır. | -l, -n | -ş ; -t, -dir ; -r | "Yazıldı, okundu" edilgendir.
+İşteş fiiller ____ ekiyle yapılır. | -ş | -l ; -n ; -dir | "Bakıştılar" işteştir.
+Ettirgen fiiller ____ ekleriyle yapılır. | -t, -dir, -tir | -ş ; -l ; -n | "Yazdırdı" ettirgendir.
+Nesneye göre çatıda fiiller ____ olarak ikiye ayrılır. | geçişli ve geçişsiz | etken ve edilgen ; dönüşlü ve işteş ; basit ve birleşik | Özneye göre çatıda etken ve edilgen ayrımı yapılır.
+
+## Cümle Türleri
+Yüklemi çekimli fiil olan cümlelere ____ cümle denir. | fiil | isim ; basit ; birleşik | "Okula gitti." fiil cümlesidir.
+Yüklemi isim soylu sözcük olan cümlelere ____ cümle denir. | isim | fiil ; devrik ; eksiltili | "Hava güzel." isim cümlesidir.
+Yüklemi sonda olan cümlelere ____ cümle denir. | kurallı | devrik ; eksiltili ; bağlı | Türkçede olağan dizilişte yüklem sondadır.
+Yüklemi sonda olmayan cümlelere ____ cümle denir. | devrik | kurallı ; eksiltili ; isim | "Gittim okula." devrik cümledir.
+Yüklemi söylenmemiş, okura bırakılmış cümlelere ____ cümle denir. | eksiltili | devrik ; kurallı ; bağlı | Eksiltili cümleler genellikle üç noktayla biter.
+Tek yargı bildiren cümlelere ____ cümle denir. | basit | birleşik ; sıralı ; bağlı | "Kardeşim okula gitti." basit cümledir.
+Birden fazla bağımsız cümlenin virgül ya da noktalı virgülle sıralanmasıyla oluşan cümlelere ____ cümle denir. | sıralı | bağlı ; basit ; birleşik | "Geldi, oturdu, konuştu." sıralı cümledir.
+Bağımsız cümlelerin bağlaçla bağlanmasıyla oluşan cümlelere ____ cümle denir. | bağlı | sıralı ; basit ; devrik | "Çalıştı ama kazanamadı." bağlı cümledir.
+Bir temel cümle ile ona bağlı yan cümleden oluşan cümlelere ____ cümle denir. | birleşik | basit ; sıralı ; eksiltili | Şartlı, ki'li ve iç içe birleşik cümle türleri vardır.
+"Yarın gelirsen görüşürüz." cümlesi ____ birleşik cümledir. | şartlı | ki'li ; iç içe ; girişik | Şart ekiyle kurulan yan cümle vardır.
+
+## Ses Bilgisi
+Türkçe bir sözcüğün ilk hecesinde kalın ünlü varsa sonraki hecelerde de kalın ünlü bulunmasına ____ denir. | büyük ünlü uyumu | küçük ünlü uyumu ; ünsüz benzeşmesi ; ünlü düşmesi | Büyük ünlü uyumu kalınlık-incelik uyumudur.
+Düz ünlülerden sonra düz, yuvarlak ünlülerden sonra dar-yuvarlak ya da düz-geniş ünlü gelmesine ____ denir. | küçük ünlü uyumu | büyük ünlü uyumu ; ünsüz yumuşaması ; ünlü daralması | Küçük ünlü uyumu düzlük-yuvarlaklık uyumudur.
+Sert ünsüzle biten sözcüğe ünlüyle başlayan ek gelince sondaki ünsüzün yumuşamasına ____ denir. | ünsüz yumuşaması | ünsüz benzeşmesi ; ünlü düşmesi ; ünlü daralması | "Kitap → kitabı" örnektir.
+Sert ünsüzle biten sözcüğe c, d, g ile başlayan ek gelince bu ünsüzlerin ç, t, k olmasına ____ denir. | ünsüz benzeşmesi (sertleşmesi) | ünsüz yumuşaması ; ünlü düşmesi ; ses türemesi | "Kitapçı, sokakta" örnektir.
+"Ağız → ağzı" örneğinde görülen ses olayı ____'dür. | ünlü düşmesi | ünlü daralması ; ünsüz yumuşaması ; ses türemesi | İkinci hecedeki dar ünlü düşmüştür.
+"Başla- → başlıyor" örneğinde görülen ses olayı ____'dır. | ünlü daralması | ünlü düşmesi ; ünsüz benzeşmesi ; kaynaştırma | "-yor" ekinden önce geniş ünlü daralır.
+İki ünlü arasına "y, ş, s, n" ünsüzlerinin girmesine ____ denir. | kaynaştırma | ses türemesi ; ünsüz düşmesi ; ulama | "Masa-y-a" kaynaştırmadır.
+"Hak → hakkı" örneğinde görülen ses olayı ____'dir. | ünsüz türemesi | ünsüz düşmesi ; ünlü düşmesi ; ünlü daralması | Arapçadan gelen bazı sözcüklerde ünsüz ikizleşir.
+"Küçük → küçülmek" örneğinde görülen ses olayı ____'dür. | ünsüz düşmesi | ünsüz türemesi ; ünlü düşmesi ; kaynaştırma | "-k" ünsüzü düşmüştür.
+Türkçede ____ ünlü vardır. | sekiz | altı ; dokuz ; on | a, e, ı, i, o, ö, u, ü.
+
+## Yazım Kuralları
+Cümleler ____ harfle başlar. | büyük | küçük ; italik ; kalın | Cümle başındaki ilk harf büyük yazılır.
+Kişi adlarına gelen ekler ____ ile ayrılır. | kesme işareti | virgül ; tire ; noktalı virgül | "Ahmet'in kitabı" örnektir.
+Kurum adlarına gelen ekler kesme işaretiyle ____. | ayrılmaz | ayrılır ; tireyle ayrılır ; bitişik yazılmaz | "Türk Dil Kurumunun" örnektir.
+"Her şey" sözcüğü ____ yazılır. | ayrı | bitişik ; tireyle ; kesmeyle | "Herkes" ise bitişik yazılır.
+"Hiçbir" sözcüğü ____ yazılır. | bitişik | ayrı ; tireyle ; kesmeyle | "Hiçbir, birkaç, birçok" bitişiktir.
+Sayılar yazıyla yazılırken her sayı ____ yazılır. | ayrı | bitişik ; tireyle ; kesmeyle | "Üç yüz kırk beş" ayrı yazılır.
+Ay ve gün adları belirli bir tarih bildirirse ____ harfle başlar. | büyük | küçük ; italik ; eğik | "29 Ekim 1923 Pazartesi" örnektir.
+Saat ve dakika gösteren rakamlar arasına ____ konur. | nokta | virgül ; iki nokta ; tire | "Saat 14.30" örnektir.
+Yön adları özel isimden önce gelip onun parçası olursa ____ harfle başlar. | büyük | küçük ; italik ; kalın | "Doğu Anadolu" örnektir.
+"Yalnız" sözcüğü ____ yazılır. | yalnız (yanlız değil) | yanlız ; yalınız ; yanız | Sık yapılan bir yazım yanlışıdır.
+
+## Sıkça Yapılan Yazım Yanlışları
+"Herkes" sözcüğünün doğru yazımı ____'tir. | herkes | herkez ; her kes ; herkeş | Sık karıştırılan yazımlardandır.
+"Yanlış" sözcüğünün doğru yazımı ____'tır. | yanlış | yalnış ; yanılış ; yannış | "Yanılmak" kökünden gelir.
+"Şoför" sözcüğünün doğru yazımı ____'dür. | şoför | şöför ; şöfor ; şofor | Fransızca kökenlidir.
+"Orijinal" sözcüğünün doğru yazımı ____'dir. | orijinal | orjinal ; orijinel ; orjinel | Sık yapılan yazım yanlışıdır.
+"Eşofman" sözcüğünün doğru yazımı ____'dır. | eşofman | eşortman ; eşoftman ; eşortmen | Fransızca "échauffement" kökenlidir.
+"Kirpik" sözcüğünün doğru yazımı ____'tir. | kirpik | kirbik ; kırpık ; kirpig | Doğru yazım "kirpik"tir.
+"Kılavuz" sözcüğünün doğru yazımı ____'dur. | kılavuz | klavuz ; kılavız ; kulavuz | Doğru yazım "kılavuz"dur.
+"Laboratuvar" sözcüğünün doğru yazımı ____'dır. | laboratuvar | labaratuvar ; laboratuar ; labratuar | TDK yazımı "laboratuvar"dır.
+"Sürpriz" sözcüğünün doğru yazımı ____'dir. | sürpriz | süpriz ; sürpiz ; süpürüz | Doğru yazım "sürpriz"dir.
+"Antrenman" sözcüğünün doğru yazımı ____'dır. | antrenman | antreman ; antremen ; andrenman | Doğru yazım "antrenman"dır.
+
+## Noktalama İşaretleri
+Tamamlanmış cümlenin sonuna ____ konur. | nokta | virgül ; noktalı virgül ; iki nokta | Nokta yargısı tamamlanmış cümlenin sonuna konur.
+Eş görevli sözcükler arasına ____ konur. | virgül | nokta ; noktalı virgül ; ünlem | "Elma, armut, kiraz aldım." örnektir.
+Açıklama yapılacak cümleden sonra ____ konur. | iki nokta | noktalı virgül ; virgül ; kısa çizgi | "Şunu unutma: Sabır her şeyin anahtarıdır." örnektir.
+Ögeleri arasında virgül bulunan sıralı cümleleri ayırmak için ____ kullanılır. | noktalı virgül | iki nokta ; nokta ; tırnak | Noktalı virgül türlü ögeleri ayırır.
+Soru bildiren cümlelerin sonuna ____ konur. | soru işareti | ünlem işareti ; nokta ; üç nokta | Soru eki olan cümlelerin sonuna konur.
+Tamamlanmamış cümlelerin sonuna ____ konur. | üç nokta | nokta ; virgül ; iki nokta | Eksiltili cümleler üç noktayla biter.
+Başkasından olduğu gibi aktarılan sözler ____ içinde yazılır. | tırnak işareti | yay ayraç ; köşeli ayraç ; kısa çizgi | Alıntılar tırnak içinde verilir.
+Cümle içinde açıklama yapmak için ____ kullanılır. | yay ayraç | tırnak işareti ; noktalı virgül ; ünlem | "Yunus Emre (1240-1320)" örnektir.
+Satır sonunda bölünen sözcüklerde ____ kullanılır. | kısa çizgi | uzun çizgi ; eğik çizgi ; virgül | Hece bölünmesinde kısa çizgi konur.
+Konuşma çizgisi olarak ____ kullanılır. | uzun çizgi | kısa çizgi ; eğik çizgi ; tırnak | Diyaloglarda konuşan kişinin sözünden önce uzun çizgi konur.
+
+## Anlatım Bozuklukları
+Aynı anlamdaki sözcüklerin bir arada kullanılmasından doğan bozukluğa ____ denir. | gereksiz sözcük kullanımı | sözcüğün yanlış anlamda kullanımı ; özne-yüklem uyumsuzluğu ; ek eksikliği | "Geri iade etti" ifadesinde "geri" gereksizdir.
+"Hiç kimse gelmedi." cümlesi anlatım bakımından ____'dur. | doğru | gereksiz sözcüklü ; çelişkili ; özne eksik | Olumsuz anlamlı "hiç kimse" ile olumsuz yüklem uyumludur.
+"Kesinlikle belki gelir." cümlesindeki bozukluğun nedeni ____'dir. | anlamca çelişen sözcüklerin kullanımı | ek eksikliği ; tamlama yanlışlığı ; çatı uyumsuzluğu | "Kesinlikle" ile "belki" çelişir.
+"Yaklaşık yüz kişi kadar geldi." cümlesindeki bozukluk ____'dır. | gereksiz sözcük kullanımı | özne eksikliği ; yüklem eksikliği ; ek yanlışlığı | "Yaklaşık" ile "kadar" aynı anlamdadır.
+"Öğrenciler sınava hazırlandı ve başardı." cümlesinde ____ uyumsuzluğu vardır. | özne-yüklem (teklik-çokluk) | çatı ; tamlama ; zaman | Çoğul özne ile tekil yüklem kullanılmıştır; "başardılar" olmalıdır.
+"Bu konuyu tartışıp karara bağlanacak." cümlesinde ____ uyumsuzluğu vardır. | çatı | zaman ; kişi ; tamlama | Etken ve edilgen fiiller aynı özneye bağlanmıştır.
+"Tahminen herkes kesin gelecek." cümlesinde ____ vardır. | anlam çelişkisi | ek eksikliği ; özne eksikliği ; tamlama yanlışlığı | "Tahminen" ile "kesin" çelişir.
+"Okula ve kütüphaneye gidip kitap aldı." cümlesi ____'dur. | anlatım bakımından doğru | özne eksik ; yüklem eksik ; gereksiz sözcüklü | Ortak öğeler doğru kullanılmıştır.
+"Seni seviyor ve özlüyorum." cümlesindeki bozukluğun nedeni ____ uyumsuzluğudur. | kişi (özne-yüklem) | çatı ; zaman ; tamlama | "Seviyorum ve özlüyorum" olmalıdır.
+"Sorunu çözmek için konuyu araştırdı ve çözüldü." cümlesinde ____ vardır. | çatı uyumsuzluğu | anlam çelişkisi ; gereksiz sözcük ; ek eksikliği | Etken fiilden sonra edilgen fiil kullanılmıştır.

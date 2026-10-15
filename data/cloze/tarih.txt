@@ -1,0 +1,344 @@
+# Boşluk doldurma bankası — Tarih
+# Biçim: "## Konu adı" (katalogdaki konu adıyla aynı), ardından her satır bir soru:
+#   cümle (boşluk ____ ile) | doğru cevap | çeldirici 1 ; çeldirici 2 ; çeldirici 3 | kısa açıklama
+# Çeldiriciler cevapla aynı türden olmalı (kişi→kişi, yer→yer, yıl→yıl).
+
+## İslamiyet Öncesi Türk Tarihi
+Bilinen ilk Türk devleti, Mete Han döneminde en güçlü hâline ulaşan ____'dır. | Asya Hun Devleti | Göktürk Devleti ; Uygur Devleti ; Avar Kağanlığı | Asya Hun Devleti MÖ 220 civarında kuruldu; Mete döneminde Türk boylarını tek çatı altında topladı.
+Mete Han'ın kurduğu ve Türk ordularının temel teşkilatı olan sisteme ____ denir. | onlu sistem | ikili teşkilat ; ikta sistemi ; tımar sistemi | Onlu sistem (onluk, yüzlük, binlik, tümen) bugün de birçok ordunun temelidir.
+Türk adının devlet adı olarak kullanıldığı ilk Türk devleti ____'dır. | Göktürk Devleti | Asya Hun Devleti ; Uygur Devleti ; Hazar Kağanlığı | Göktürkler (552) Türk adını resmî devlet adı olarak kullanan ilk devlettir.
+Türk adının geçtiği ilk Türkçe yazılı belgeler ____'dır. | Orhun Yazıtları | Yenisey Yazıtları ; Divânu Lügati't-Türk ; Kutadgu Bilig | Orhun (Göktürk) Yazıtları Bilge Kağan, Kül Tigin ve Tonyukuk adına dikilmiştir.
+Yerleşik hayata geçen ilk Türk devleti ____'dır. | Uygur Devleti | Göktürk Devleti ; Asya Hun Devleti ; Kırgız Devleti | Uygurlar Mani dinini benimsedikten sonra yerleşik hayata geçti; şehirler kurdular.
+Uygurların benimsediği ve yerleşik hayata geçmelerinde etkili olan din ____'dir. | Maniheizm | Budizm ; Şamanizm ; Zerdüştlük | Uygur Kağanı Bögü Kağan Maniheizmi benimsemiştir.
+Kavimler Göçü'nü başlatarak Avrupa'nın siyasi yapısını değiştiren Türk topluluğu ____'dır. | Avrupa Hunları | Avarlar ; Hazarlar ; Peçenekler | Avrupa Hunlarının 375'te batıya ilerlemesi Kavimler Göçü'nü başlattı.
+Avrupa Hun Hükümdarı Attila'nın Doğu Roma ile yaptığı ve vergiye bağladığı antlaşma ____'dır. | Margos Antlaşması | Anatolios Antlaşması ; Talas Antlaşması ; Pasarofça Antlaşması | Margos Antlaşması (435) Doğu Roma'yı Hunlara vergi ödemeye bağladı.
+Yahudiliği benimseyen Türk devleti ____'dır. | Hazar Kağanlığı | Uygur Devleti ; Avar Kağanlığı ; Peçenekler | Hazarlar Musevîliği resmî din olarak kabul etmiştir.
+İslamiyet öncesi Türklerde devletin yönetim hakkının hanedan üyelerine ait olduğu anlayışına ____ denir. | kut | töre ; kurultay ; ülüş | Kut anlayışına göre hükümdarlık yetkisi Tanrı tarafından verilir.
+İslamiyet öncesi Türklerde devlet işlerinin görüşüldüğü meclise ____ denir. | kurultay | divan ; ayukı ; meşveret | Kurultay (toy) hükümdarın başkanlığında toplanan danışma meclisidir.
+Türklerin yazılı olmayan hukuk kurallarına ____ denir. | töre | kut ; yasa ; kanunname | Töre; adalet, eşitlik ve iyilik ilkelerine dayanır, hükümdar da töreye uymak zorundadır.
+
+## İlk Türk-İslam Devletleri
+Türklerle Araplar arasındaki ilk büyük yakınlaşmayı sağlayan 751 savaşı ____'dır. | Talas Savaşı | Dandanakan Savaşı ; Malazgirt Savaşı ; Katvan Savaşı | Talas'ta Türkler Abbasilere destek verdi; Türkler arasında İslamiyet hızla yayıldı.
+İslamiyeti devlet dini olarak kabul eden ilk Türk devleti ____'dır. | Karahanlılar | Gazneliler ; Büyük Selçuklular ; Tolunoğulları | Karahanlılar 10. yüzyılda Satuk Buğra Han döneminde İslamiyeti kabul etti.
+Kaşgarlı Mahmut'un Türkçenin zenginliğini göstermek için yazdığı eser ____'dir. | Divânu Lügati't-Türk | Kutadgu Bilig ; Atabetü'l-Hakayık ; Divân-ı Hikmet | Divânu Lügati't-Türk ilk Türkçe sözlük kabul edilir; Araplara Türkçe öğretmek için yazılmıştır.
+Yusuf Has Hacib'in yazdığı ve "mutluluk veren bilgi" anlamına gelen eser ____'dir. | Kutadgu Bilig | Divânu Lügati't-Türk ; Atabetü'l-Hakayık ; Siyasetname | Kutadgu Bilig devlet yönetimini anlatan ilk Türk-İslam eseridir.
+Sultan unvanını kullanan ilk Türk hükümdarı ____'dır. | Gazneli Mahmut | Tuğrul Bey ; Alparslan ; Satuk Buğra Han | Gazneli Mahmut Hindistan'a 17 sefer düzenlemiştir.
+Büyük Selçuklu Devleti'nin kuruluşunu kesinleştiren 1040 savaşı ____'dır. | Dandanakan Savaşı | Pasinler Savaşı ; Malazgirt Savaşı ; Katvan Savaşı | Dandanakan'da Selçuklular Gaznelileri yendi.
+Türklerle Bizans arasındaki ilk savaş olan 1048 savaşı ____'dır. | Pasinler Savaşı | Malazgirt Savaşı ; Miryokefalon Savaşı ; Dandanakan Savaşı | Pasinler Savaşı Türklerle Bizans'ın ilk karşılaşmasıdır.
+Anadolu'nun kapılarını Türklere açan 1071 savaşı ____'dır. | Malazgirt Savaşı | Pasinler Savaşı ; Miryokefalon Savaşı ; Kösedağ Savaşı | Alparslan Bizans İmparatoru Romen Diyojen'i Malazgirt'te yendi.
+Büyük Selçuklu veziri Nizamülmülk'ün yazdığı devlet yönetimi eseri ____'dir. | Siyasetname | Kutadgu Bilig ; Mukaddime ; Kabusname | Siyasetname devlet yönetimi üzerine öğütler içerir; Nizamiye Medreselerini de Nizamülmülk kurmuştur.
+Büyük Selçuklu Devleti'nin yıkılış sürecini başlatan 1141 savaşı ____'dır. | Katvan Savaşı | Dandanakan Savaşı ; Kösedağ Savaşı ; Talas Savaşı | Sultan Sencer Katvan'da Karahitaylara yenildi.
+Haçlı Seferleri sırasında Kudüs'ü Haçlılardan geri alan hükümdar ____'dir. | Selahaddin Eyyubi | Nureddin Zengi ; Baybars ; Kılıç Arslan | Selahaddin Eyyubi 1187 Hıttin Savaşı'yla Kudüs'ü aldı.
+Mısır'da kurulan ilk Türk-İslam devleti ____'dır. | Tolunoğulları | İhşidiler ; Memlükler ; Eyyubiler | Tolunoğulları 868'de Ahmet bin Tolun tarafından kuruldu.
+
+## Anadolu Selçuklu Devleti
+Anadolu Selçuklu Devleti'nin kurucusu ____'dır. | Kutalmışoğlu Süleyman Şah | Tuğrul Bey ; I. Kılıç Arslan ; Alparslan | Süleyman Şah 1075'te İznik merkezli devleti kurdu.
+Anadolu'nun Türk yurdu olduğunu kesinleştiren 1176 savaşı ____'dır. | Miryokefalon Savaşı | Malazgirt Savaşı ; Kösedağ Savaşı ; Pasinler Savaşı | II. Kılıç Arslan Miryokefalon'da Bizans'ı yendi; Bizans Anadolu'yu geri alma umudunu yitirdi.
+Anadolu Selçuklu Devleti'nin Moğollara yenilerek dağılma sürecine girdiği 1243 savaşı ____'dır. | Kösedağ Savaşı | Miryokefalon Savaşı ; Yassıçemen Savaşı ; Malazgirt Savaşı | Kösedağ yenilgisiyle Anadolu Selçukluları İlhanlı (Moğol) egemenliğine girdi.
+Anadolu Selçuklularının Harzemşahları yendiği 1230 savaşı ____'dır. | Yassıçemen Savaşı | Kösedağ Savaşı ; Katvan Savaşı ; Dandanakan Savaşı | Yassıçemen'de Alaaddin Keykubat Harzemşahları yendi; Moğollarla komşu olundu.
+Anadolu Selçuklu Devleti'nin en parlak dönemini yaşatan hükümdar ____'dır. | I. Alaaddin Keykubat | II. Kılıç Arslan ; II. Gıyaseddin Keyhüsrev ; Süleyman Şah | Alaaddin Keykubat döneminde ticaret gelişti, Alaiye (Alanya) alındı.
+Selçuklularda yolları ve kervanları korumak için kurulan konaklama yapılarına ____ denir. | kervansaray | külliye ; bedesten ; arasta | Sultanhanı ve Ağzıkarahan önemli Selçuklu kervansaraylarıdır.
+Anadolu Selçuklularında tüccarın uğradığı zararı devletin karşılamasını sağlayan uygulama ____'dır. | devlet sigortası | iltizam ; ikta ; müsadere | Bu uygulama dünyada devlet eliyle yapılan ilk sigortacılık örneklerinden kabul edilir.
+Anadolu'da Türk egemenliğine karşı başlatılan ilk büyük dinî-siyasi ayaklanma ____'dır. | Babai İsyanı | Celali İsyanları ; Şeyh Bedreddin İsyanı ; Patrona Halil İsyanı | Babai İsyanı (1240) II. Gıyaseddin Keyhüsrev döneminde çıktı ve devleti zayıflattı.
+Malazgirt'ten sonra Anadolu'da kurulan ilk Türk beyliklerinden biri olan ve Erzurum merkezli beylik ____'dır. | Saltuklular | Danişmentliler ; Mengücekliler ; Artuklular | Saltuklular Erzurum ve çevresinde hüküm sürdü.
+Anadolu Selçuklu Devleti'nin ikinci başkenti olan şehir ____'dır. | Konya | İznik ; Kayseri ; Sivas | İznik Birinci Haçlı Seferi'nde kaybedilince başkent Konya'ya taşındı.
+
+## Osmanlı Kültür ve Medeniyeti
+Osmanlı Devleti'nde padişah adına devlet işlerinin görüşüldüğü kurula ____ denir. | Divan-ı Hümayun | Meclis-i Mebusan ; Encümen-i Daniş ; Meclis-i Vala | Divan-ı Hümayun Fatih döneminden itibaren veziriazam başkanlığında toplandı.
+Divan-ı Hümayun'da hukuki ve dinî davalara bakan üyeye ____ denir. | kazasker | nişancı ; defterdar ; reisülküttap | Kazaskerler Rumeli ve Anadolu olmak üzere ikiye ayrılırdı.
+Divan-ı Hümayun'da padişah fermanlarına tuğra çeken üyeye ____ denir. | nişancı | defterdar ; kazasker ; kaptan-ı derya | Nişancı tapu-tahrir işlerine de bakardı.
+Osmanlı'da devlet hazinesinin gelir-giderinden sorumlu üyeye ____ denir. | defterdar | nişancı ; kazasker ; şeyhülislam | Defterdar bugünkü maliye bakanına benzer.
+Toprağın gelirinin hizmet karşılığı devlet görevlilerine bırakıldığı Osmanlı toprak sistemine ____ denir. | tımar sistemi | iltizam sistemi ; malikâne sistemi ; ikta sistemi | Tımar sistemi atlı asker (tımarlı sipahi) yetiştirmeyi sağlıyordu.
+Hıristiyan ailelerin çocuklarının devlet hizmetine alınması uygulamasına ____ denir. | devşirme sistemi | müsadere ; iltizam ; kul sistemi | Devşirme yoluyla yetişenler Kapıkulu ocaklarında görev aldı.
+Osmanlı'da saray okulu olup devlet adamı yetiştiren kuruma ____ denir. | Enderun | Sıbyan Mektebi ; Medrese ; Darülfünun | Enderun'da yetenekli devşirmeler yüksek görevlere hazırlanırdı.
+Şehzadelerin yönetim deneyimi kazanmak için sancaklara gönderilmesine ____ denir. | sancağa çıkma | kafes usulü ; ekber ve erşed ; lala sistemi | III. Mehmet son sancağa çıkan şehzadedir.
+Fatih Sultan Mehmet'in devlet teşkilatını düzenleyen kanunnamesi ____'dir. | Kanunname-i Âl-i Osman | Mecelle ; Kanun-i Esasi ; Teşkilat-ı Esasiye | Fatih'in kanunnamesi Osmanlı'nın ilk yazılı anayasa benzeri metni kabul edilir.
+Osmanlı'da ilk düzenli ordunun kurulduğu padişah dönemi ____ dönemidir. | Orhan Bey | Osman Bey ; I. Murat ; Yıldırım Bayezid | Orhan Bey döneminde yaya ve müsellem adlı ilk düzenli ordu kuruldu.
+
+## Osmanlı Devleti Kuruluş Dönemi
+Osmanlı Devleti'nin Bizans'la yaptığı ilk savaş olan 1302 savaşı ____'dır. | Koyunhisar Savaşı | Maltepe (Palekanon) Savaşı ; Sırpsındığı Savaşı ; Çirmen Savaşı | Osman Bey Koyunhisar'da Bizans'ı yendi.
+Orhan Bey döneminde Bizans'la yapılan ve Bizans'ın Anadolu'dan atılma sürecini hızlandıran 1329 savaşı ____'dır. | Maltepe (Palekanon) Savaşı | Koyunhisar Savaşı ; Sırpsındığı Savaşı ; Varna Savaşı | Bu savaş Osmanlı'nın Bizans'la yaptığı ilk meydan savaşıdır.
+Osmanlıların Rumeli'ye geçişini sağlayan ilk toprak kazanımı ____'dır. | Çimpe Kalesi | Edirne ; Gelibolu ; İznik | Orhan Bey döneminde 1353'te Çimpe Kalesi alındı.
+Osmanlı Devleti'nin Haçlılarla yaptığı ilk savaş ____'dır. | Sırpsındığı Savaşı | Niğbolu Savaşı ; Varna Savaşı ; I. Kosova Savaşı | 1364 Sırpsındığı Savaşı'nı I. Murat döneminde Hacı İlbey kazandı.
+Anadolu Türk birliğini bozan ve Osmanlı'yı fetret devrine sokan 1402 savaşı ____'dır. | Ankara Savaşı | Niğbolu Savaşı ; I. Kosova Savaşı ; Varna Savaşı | Yıldırım Bayezid Ankara'da Timur'a yenildi.
+Fetret Devri'ni sona erdirerek Osmanlı birliğini yeniden sağlayan padişah ____'dir. | Çelebi Mehmet | II. Murat ; Musa Çelebi ; Yıldırım Bayezid | Çelebi Mehmet 1413'te kardeşlerini yenerek tek başına padişah oldu.
+Yıldırım Bayezid'in Haçlıları büyük bir yenilgiye uğrattığı 1396 savaşı ____'dır. | Niğbolu Savaşı | Varna Savaşı ; Sırpsındığı Savaşı ; II. Kosova Savaşı | Niğbolu zaferinden sonra Abbasi halifesi Bayezid'e "Sultan-ı İklim-i Rum" unvanını verdi.
+Osmanlı'da ilk defa İstanbul'u kuşatan padişah ____'dır. | Yıldırım Bayezid | Fatih Sultan Mehmet ; II. Murat ; Çelebi Mehmet | Yıldırım Bayezid kuşatma sırasında Anadolu Hisarı'nı yaptırdı.
+Balkanlardaki Türk egemenliğini kesinleştiren 1448 savaşı ____'dır. | II. Kosova Savaşı | Varna Savaşı ; Niğbolu Savaşı ; Sırpsındığı Savaşı | II. Murat Haçlıları II. Kosova'da kesin olarak yendi.
+Osmanlı Devleti'nin ilk başkenti ____'dır. | Bursa | Edirne ; İznik ; Söğüt | Bursa 1326'da Orhan Bey döneminde alınarak başkent yapıldı.
+
+## Osmanlı Devleti Yükselme Dönemi
+İstanbul 1453'te ____ tarafından fethedildi. | Fatih Sultan Mehmet | II. Murat ; Yavuz Sultan Selim ; Yıldırım Bayezid | İstanbul'un fethi Orta Çağ'ı kapatıp Yeni Çağ'ı başlatan olay kabul edilir.
+Fatih'in Akkoyunlu Hükümdarı Uzun Hasan'ı yendiği 1473 savaşı ____'dır. | Otlukbeli Savaşı | Çaldıran Savaşı ; Mercidabık Savaşı ; Ridaniye Savaşı | Otlukbeli ile Anadolu Türk birliği büyük ölçüde sağlandı.
+Yavuz Sultan Selim'in Safevileri yendiği 1514 savaşı ____'dır. | Çaldıran Savaşı | Mercidabık Savaşı ; Otlukbeli Savaşı ; Ridaniye Savaşı | Çaldıran'da Şah İsmail yenildi; Doğu Anadolu güvenceye alındı.
+Halifeliğin Osmanlı'ya geçmesini sağlayan sefer ____'dir. | Mısır Seferi | İran Seferi ; Rodos Seferi ; Belgrat Seferi | Yavuz'un 1517 Ridaniye zaferiyle Memlükler yıkıldı, halifelik Osmanlı'ya geçti.
+Kanuni döneminde Macaristan'ı Osmanlı'ya bağlayan 1526 savaşı ____'dır. | Mohaç Meydan Muharebesi | Preveze Deniz Savaşı ; Çaldıran Savaşı ; Zigetvar Seferi | Mohaç iki saatte kazanılan ve Macar ordusunun dağıldığı bir meydan savaşıdır.
+Akdeniz'i bir Türk gölü hâline getiren 1538 deniz zaferi ____'dir. | Preveze Deniz Savaşı | İnebahtı Deniz Savaşı ; Çeşme Baskını ; Cerbe Deniz Savaşı | Barbaros Hayreddin Paşa Preveze'de Haçlı donanmasını yendi.
+Kanuni döneminde Fransa'ya verilen ilk kapitülasyonlar ____ yılında verilmiştir. | 1535 | 1453 ; 1569 ; 1740 | Kapitülasyonlar ticari ayrıcalıklardı; 1740'ta sürekli hâle getirildi.
+Osmanlı'nın Avusturya'yı kendine eşit saydığı ilk antlaşma ____'dır. | Zitvatorok Antlaşması | İstanbul Antlaşması ; Pasarofça Antlaşması ; Karlofça Antlaşması | 1606 Zitvatorok ile Avusturya Arşidükü Osmanlı padişahına eşit sayıldı.
+Kanuni döneminde Osmanlı ordusunun 1529'da kuşattığı Avrupa şehri ____'dır. | Viyana | Belgrat ; Budin ; Prag | I. Viyana Kuşatması kış şartları nedeniyle kaldırıldı.
+Fatih'in İtalya'da aldığı ve Roma'yı fethetme hedefinin parçası olan şehir ____'dur. | Otranto | Venedik ; Napoli ; Cenova | Otranto 1480'de Gedik Ahmet Paşa tarafından alındı.
+
+## Osmanlı Devleti Duraksama Dönemi
+Osmanlı Devleti'nin batıda en geniş sınırlarına ulaştığı antlaşma ____'dır. | Bucaş Antlaşması | Karlofça Antlaşması ; Zitvatorok Antlaşması ; Pasarofça Antlaşması | 1672 Bucaş ile Podolya alındı; batıda en geniş sınırlara ulaşıldı.
+Osmanlı-İran sınırını büyük ölçüde bugünkü şekliyle belirleyen 1639 antlaşması ____'dır. | Kasr-ı Şirin Antlaşması | Serav Antlaşması ; Ferhat Paşa Antlaşması ; Amasya Antlaşması | Kasr-ı Şirin ile Bağdat Osmanlı'da kaldı; bugünkü Türkiye-İran sınırı büyük ölçüde çizildi.
+İran'la yapılan ve Osmanlı'nın doğuda en geniş sınırlara ulaştığı antlaşma ____'dır. | Ferhat Paşa Antlaşması | Kasr-ı Şirin Antlaşması ; Serav Antlaşması ; Nasuh Paşa Antlaşması | 1590 Ferhat Paşa Antlaşması ile Osmanlı doğuda en geniş sınırlarına ulaştı.
+Duraksama döneminde ıslahat yapan ve "kılıç ıslahatlarıyla" bilinen padişah ____'dır. | IV. Murat | II. Osman ; I. Ahmet ; IV. Mehmet | IV. Murat sert yöntemlerle düzeni sağlamaya çalıştı, Revan ve Bağdat seferlerine çıktı.
+Yeniçeri Ocağı'nı kaldırmayı düşünen ancak bir isyanla öldürülen padişah ____'dır. | Genç Osman (II. Osman) | IV. Murat ; III. Selim ; I. Ahmet | II. Osman yeniçerilerce öldürülen ilk padişahtır.
+Padişahlık sistemini değiştirip "ekber ve erşed" usulünü getiren padişah ____'dir. | I. Ahmet | IV. Murat ; III. Mehmet ; II. Osman | I. Ahmet ile tahta hanedanın en yaşlı ve olgun üyesinin geçmesi esası getirildi.
+Anadolu'da 16. ve 17. yüzyıllarda çıkan ve genellikle ekonomik nedenli ayaklanmalara ____ denir. | Celali İsyanları | Babai İsyanı ; Patrona Halil İsyanı ; Kabakçı Mustafa İsyanı | Celali İsyanları tımar sisteminin bozulması ve vergi yükünün artmasıyla çıktı.
+Köprülü Mehmet Paşa'nın sadrazamlığı kabul ederken padişahtan geniş yetki istemesi ____ döneminde olmuştur. | IV. Mehmet | IV. Murat ; I. Ahmet ; II. Mustafa | Köprülüler döneminde devlet kısa süreli toparlanma yaşadı.
+Osmanlı'nın 1683'te ikinci kez kuşattığı ve başarısız olduğu şehir ____'dır. | Viyana | Budapeşte ; Belgrat ; Varşova | Merzifonlu Kara Mustafa Paşa'nın II. Viyana yenilgisi geri çekilmenin başlangıcıdır.
+Duraksama döneminde Osmanlı'nın mali yapısını bozan uygulama, vergi toplama hakkının açık artırmayla satılmasıdır; buna ____ denir. | iltizam | tımar ; müsadere ; devşirme | İltizamda vergi toplayan mültezim halktan fazla vergi alabiliyordu.
+
+## Osmanlı Devleti Gerileme Dönemi
+Osmanlı Devleti'nin ilk büyük toprak kaybettiği antlaşma ____'dır. | Karlofça Antlaşması | Pasarofça Antlaşması ; Küçük Kaynarca Antlaşması ; Belgrat Antlaşması | 1699 Karlofça ile Macaristan Avusturya'ya bırakıldı; gerileme dönemi başladı.
+Osmanlı'nın Ruslara karşı kazandığı ve Karlofça'nın etkilerini kısmen azaltan 1711 antlaşması ____'dır. | Prut Antlaşması | Belgrat Antlaşması ; Yaş Antlaşması ; Ziştovi Antlaşması | Baltacı Mehmet Paşa Prut'ta Rusları kuşattı; Azak geri alındı.
+Lale Devri'nin başlamasına neden olan 1718 antlaşması ____'dır. | Pasarofça Antlaşması | Karlofça Antlaşması ; Belgrat Antlaşması ; İstanbul Antlaşması | Pasarofça sonrası barış ortamında Lale Devri (1718-1730) yaşandı.
+Lale Devri'ni sona erdiren isyan ____'dir. | Patrona Halil İsyanı | Kabakçı Mustafa İsyanı ; Celali İsyanları ; Vaka-i Hayriye | Patrona Halil İsyanı 1730'da III. Ahmet'in tahttan indirilmesiyle sonuçlandı.
+Rusya'ya Osmanlı'daki Ortodoksların koruyuculuğu hakkını veren 1774 antlaşması ____'dır. | Küçük Kaynarca Antlaşması | Yaş Antlaşması ; Belgrat Antlaşması ; Edirne Antlaşması | Küçük Kaynarca ile Kırım bağımsız oldu; Müslüman nüfus ilk kez Osmanlı yönetimi dışında kaldı.
+Osmanlı'nın 18. yüzyılda son kazançlı antlaşması ____'dır. | Belgrat Antlaşması | Pasarofça Antlaşması ; Prut Antlaşması ; Ziştovi Antlaşması | 1739 Belgrat Antlaşması'nda Fransa'nın arabuluculuğu karşılığında 1740'ta kapitülasyonlar sürekli hâle getirildi.
+Kırım'ın Rusya'ya ait olduğunu kabul eden 1792 antlaşması ____'dır. | Yaş Antlaşması | Ziştovi Antlaşması ; Küçük Kaynarca Antlaşması ; Bükreş Antlaşması | Yaş Antlaşması ile Kırım'ın Rusya'ya katılması tanındı.
+Lale Devri'nde İbrahim Müteferrika'nın kurduğu ve Türklerin ilk kez kullandığı yenilik ____'dır. | matbaa | gazete ; telgraf ; posta | Türklere ait ilk matbaa 1727'de kuruldu.
+III. Selim'in yeni düzenli ordusuna ____ adı verilmiştir. | Nizam-ı Cedit | Asakir-i Mansure-i Muhammediye ; Sekban-ı Cedit ; Kapıkulu | Nizam-ı Cedit, Kabakçı Mustafa İsyanı ile kaldırıldı.
+Osmanlı'da sürekli elçilikler ilk kez ____ döneminde açılmıştır. | III. Selim | III. Ahmet ; II. Mahmut ; I. Abdülhamit | III. Selim Londra, Paris, Viyana ve Berlin'de sürekli elçilik açtırdı.
+
+## 19.YY Osmanlı Devleti Dağılma Dönemi
+Osmanlı'dan ilk bağımsızlığını kazanan millet ____'dır. | Yunanlılar | Sırplar ; Bulgarlar ; Romenler | Yunanistan 1829 Edirne Antlaşması ile bağımsızlığını kazandı.
+Osmanlı'dan ilk özerkliği alan millet ____'dır. | Sırplar | Yunanlılar ; Bulgarlar ; Arnavutlar | Sırplar 1812 Bükreş Antlaşması ile ilk özerkliği kazandı.
+Mısır Valisi Mehmet Ali Paşa ile Osmanlı arasında 1833'te yapılan antlaşma ____'dır. | Kütahya Antlaşması | Hünkâr İskelesi Antlaşması ; Londra Antlaşması ; Edirne Antlaşması | Kütahya Antlaşması ile Mehmet Ali Paşa'ya Suriye ve Adana verildi.
+Rusya'nın Boğazlar üzerinde etkili olduğu 1833 antlaşması ____'dır. | Hünkâr İskelesi Antlaşması | Londra Boğazlar Sözleşmesi ; Paris Antlaşması ; Ayastefanos Antlaşması | Hünkâr İskelesi ile Boğazlar Rusya'ya karşı savaşanlara kapatılacaktı.
+Osmanlı'nın Avrupa devleti sayıldığı antlaşma ____'dır. | Paris Antlaşması (1856) | Berlin Antlaşması ; Londra Antlaşması ; Ayastefanos Antlaşması | 1856 Paris Antlaşması Kırım Savaşı'nı bitirdi; Osmanlı Avrupa devleti kabul edildi.
+93 Harbi olarak bilinen Osmanlı-Rus Savaşı'nı bitiren ön antlaşma ____'dır. | Ayastefanos Antlaşması | Berlin Antlaşması ; Paris Antlaşması ; Edirne Antlaşması | Ayastefanos (1878) ağır şartlar içerdiği için Berlin'de yeniden düzenlendi.
+1878 Berlin Antlaşması'na destek karşılığında İngiltere'ye geçici olarak bırakılan ada ____'tir. | Kıbrıs | Girit ; Rodos ; Sakız | Kıbrıs 1878'de İngiltere'ye üs olarak bırakıldı.
+Boğazların savaş gemilerine kapalı olduğunu uluslararası düzeyde kabul eden 1841 sözleşmesi ____'dır. | Londra Boğazlar Sözleşmesi | Hünkâr İskelesi Antlaşması ; Montrö Sözleşmesi ; Paris Antlaşması | Londra Boğazlar Sözleşmesi ile Boğazlar konusu uluslararası bir sorun hâline geldi.
+1838 Balta Limanı Antlaşması Osmanlı ile ____ arasında yapılan bir ticaret antlaşmasıdır. | İngiltere | Fransa ; Rusya ; Avusturya | Balta Limanı ile İngiliz tüccara geniş ayrıcalıklar tanındı; yerli sanayi zarar gördü.
+Osmanlı Devleti'nin ilk dış borcu ____ Savaşı sırasında alınmıştır. | Kırım | 93 Harbi ; Trablusgarp ; Balkan | İlk dış borç 1854'te Kırım Savaşı sırasında İngiltere'den alındı.
+
+## 19.YY Osmanlı Devleti Islahatları
+Yeniçeri Ocağı'nın kaldırılmasına ____ denir. | Vaka-i Hayriye | Kabakçı Mustafa İsyanı ; Patrona Halil İsyanı ; Sened-i İttifak | Vaka-i Hayriye 1826'da II. Mahmut döneminde gerçekleşti.
+II. Mahmut'un yeniçerilerin yerine kurduğu yeni ordu ____'dir. | Asakir-i Mansure-i Muhammediye | Nizam-ı Cedit ; Sekban-ı Cedit ; Kuva-yı Milliye | Bu ordu Vaka-i Hayriye'den sonra kuruldu.
+Padişahın yetkilerinin ilk kez âyanlarla paylaşıldığı 1808 belgesi ____'dir. | Sened-i İttifak | Tanzimat Fermanı ; Islahat Fermanı ; Kanun-i Esasi | Sened-i İttifak II. Mahmut ile âyanlar arasında imzalandı.
+Hukukun üstünlüğü ilkesini ilk kez kabul eden 1839 belgesi ____'dır. | Tanzimat Fermanı | Islahat Fermanı ; Sened-i İttifak ; Kanun-i Esasi | Tanzimat Fermanı Mustafa Reşit Paşa tarafından Gülhane Parkı'nda okundu.
+Gayrimüslimlere geniş haklar tanıyan 1856 fermanı ____'dır. | Islahat Fermanı | Tanzimat Fermanı ; Sened-i İttifak ; Muharrem Kararnamesi | Islahat Fermanı Avrupa devletlerinin baskısıyla ilan edildi.
+Osmanlı Devleti'nin ilk anayasası ____'dir. | Kanun-i Esasi | Teşkilat-ı Esasiye ; Kanunname-i Âl-i Osman ; Mecelle | Kanun-i Esasi 1876'da ilan edildi; I. Meşrutiyet başladı.
+Duyun-u Umumiye İdaresi'nin kurulmasını sağlayan 1881 kararnamesi ____'dir. | Muharrem Kararnamesi | Islahat Fermanı ; Tanzimat Fermanı ; Takrir-i Sükûn | Duyun-u Umumiye Osmanlı'nın borçlarını tahsil etmek için gelirlerine el koydu.
+Osmanlı'da ilk resmî gazete ____'dir. | Takvim-i Vekayi | Tasvir-i Efkâr ; Tercüman-ı Ahval ; Ceride-i Havadis | Takvim-i Vekayi 1831'de II. Mahmut döneminde çıkarıldı.
+Osmanlı'da ilk nüfus sayımı ____ döneminde yapılmıştır. | II. Mahmut | III. Selim ; Abdülmecit ; II. Abdülhamit | İlk nüfus sayımı 1831'de asker ve vergi tespiti amacıyla yapıldı.
+Kanun-i Esasi'nin ilanında etkili olan ve meşrutiyet yanlısı aydın grubuna ____ denir. | Genç Osmanlılar | İttihat ve Terakki ; Jön Türkler ; Ahrar Fırkası | Namık Kemal ve Ziya Paşa Genç Osmanlıların önde gelenleridir.
+
+## 20.YY Başlarında Osmanlı Devleti
+II. Meşrutiyet ____ yılında ilan edilmiştir. | 1908 | 1876 ; 1912 ; 1923 | II. Meşrutiyet İttihat ve Terakki'nin baskısıyla ilan edildi.
+II. Meşrutiyet'e karşı İstanbul'da çıkan 1909 ayaklanması ____'dir. | 31 Mart Olayı | Kabakçı Mustafa İsyanı ; Patrona Halil İsyanı ; Bâb-ı Âli Baskını | 31 Mart Olayı Hareket Ordusu tarafından bastırıldı; II. Abdülhamit tahttan indirildi.
+31 Mart Olayı'nı bastıran ordu ____'dur. | Hareket Ordusu | Kuva-yı Milliye ; Yıldırım Orduları ; Düzenli Ordu | Hareket Ordusu Selanik'ten İstanbul'a geldi; kurmay başkanı Mustafa Kemal'di.
+Osmanlı'nın Kuzey Afrika'daki son toprağını kaybettiği savaş ____'dır. | Trablusgarp Savaşı | Balkan Savaşları ; Kırım Savaşı ; 93 Harbi | Trablusgarp 1912 Uşi Antlaşması ile İtalya'ya bırakıldı.
+Trablusgarp Savaşı'nı sona erdiren antlaşma ____'dır. | Uşi Antlaşması | Londra Antlaşması ; Bükreş Antlaşması ; İstanbul Antlaşması | Uşi Antlaşması 1912'de İtalya ile imzalandı; Oniki Ada geçici olarak İtalya'ya bırakıldı.
+İttihat ve Terakki'nin yönetimi tamamen ele geçirdiği 1913 olayı ____'dır. | Bâb-ı Âli Baskını | 31 Mart Olayı ; Vaka-i Hayriye ; Hürriyet ve İtilaf Baskını | Bâb-ı Âli Baskını ile İttihat ve Terakki tek başına iktidar oldu.
+Osmanlı'nın I. Dünya Savaşı'nda zafer kazandığı ve Mustafa Kemal'in ün kazandığı cephe ____'dir. | Çanakkale Cephesi | Kafkas Cephesi ; Kanal Cephesi ; Irak Cephesi | Çanakkale'de 1915'te İtilaf devletleri durduruldu.
+Osmanlı'nın I. Dünya Savaşı'nda Ruslara karşı savaştığı cephe ____'dir. | Kafkas Cephesi | Kanal Cephesi ; Galiçya Cephesi ; Çanakkale Cephesi | Sarıkamış Harekâtı bu cephede ağır kayıplarla sonuçlandı.
+I. Dünya Savaşı'nda Osmanlı'nın İngilizlerin sömürge yolunu kesmek için açtığı cephe ____'dir. | Kanal Cephesi | Irak Cephesi ; Kafkas Cephesi ; Hicaz Cephesi | Kanal Cephesi Süveyş Kanalı'nı ele geçirmeyi amaçlıyordu.
+Osmanlı Devleti I. Dünya Savaşı'na ____ saflarında katılmıştır. | İttifak Devletleri | İtilaf Devletleri ; Balkan Paktı ; Sadabat Paktı | Osmanlı Almanya ile ittifak yaparak savaşa girdi.
+
+## Mondros Ateşkes Antlaşması ve Cemiyetler
+Osmanlı'nın I. Dünya Savaşı'ndan çekildiği ateşkes antlaşması ____'dır. | Mondros Ateşkes Antlaşması | Mudanya Ateşkes Antlaşması ; Sevr Antlaşması ; Brest-Litovsk Antlaşması | Mondros 30 Ekim 1918'de imzalandı.
+Mondros'un İtilaf devletlerine "güvenliklerini tehdit eden durumda" her yeri işgal hakkı veren maddesi ____. maddedir. | 7 | 24 ; 5 ; 1 | 7. madde işgallere hukuki dayanak oluşturdu.
+Mondros'ta "Vilayet-i Sitte"de karışıklık çıkarsa işgal hakkı veren madde ____. maddedir. | 24 | 7 ; 16 ; 5 | 24. madde Doğu Anadolu'daki altı vilayette Ermeni devleti kurulmasına zemin hazırlamayı amaçlıyordu.
+Milli varlığa düşman cemiyetlerden biri olan ve İngiliz mandasını savunan cemiyet ____'dır. | İngiliz Muhipleri Cemiyeti | Wilson Prensipleri Cemiyeti ; Kilikyalılar Cemiyeti ; Redd-i İlhak Cemiyeti | İngiliz Muhipleri (Sevenler) Cemiyeti İngiliz himayesini istedi.
+Amerikan mandasını savunan cemiyet ____'dır. | Wilson Prensipleri Cemiyeti | İngiliz Muhipleri Cemiyeti ; Teali-i İslam Cemiyeti ; Mavri Mira | Halide Edip Adıvar bu cemiyetin üyelerindendir.
+İzmir'in işgaline karşı kurulan ve ilhaka karşı çıkan cemiyet ____'dir. | Redd-i İlhak Cemiyeti | Trakya Paşaeli Cemiyeti ; Kilikyalılar Cemiyeti ; Milli Kongre Cemiyeti | Redd-i İlhak Cemiyeti İzmir'de kuruldu.
+Rumların Bizans'ı yeniden kurmak amacıyla kurduğu cemiyet ____'dır. | Mavri Mira | Etnik-i Eterya ; Taşnak ; Pontus Cemiyeti | Mavri Mira İstanbul'da Rum Patrikhanesi'nin desteğiyle kuruldu.
+Mondros'tan sonra Yunanistan'ın işgal ettiği ilk büyük şehir ____'dir. | İzmir | Bursa ; Edirne ; Manisa | Yunanlılar 15 Mayıs 1919'da İzmir'i işgal etti; Hasan Tahsin ilk kurşunu attı.
+İzmir'in işgalini araştırmak için gönderilen uluslararası heyet ____'dir. | Amiral Bristol Heyeti | Harbord Heyeti ; King-Crane Heyeti ; Milner Heyeti | Bristol Heyeti işgalin haksız olduğunu raporladı.
+Ermenilerin bağımsız devlet kurmak için kurduğu cemiyetlerden biri ____'dur. | Taşnak | Mavri Mira ; Pontus ; Alyans İsrail | Taşnak ve Hınçak Ermeni cemiyetleridir.
+
+## Milli Mücadeler Hazırlık Dönemi
+Mustafa Kemal Samsun'a ____ tarihinde çıkmıştır. | 19 Mayıs 1919 | 23 Nisan 1920 ; 22 Haziran 1919 ; 4 Eylül 1919 | Samsun'a çıkış Milli Mücadele'nin başlangıcı kabul edilir.
+Milli Mücadele'nin amacının, gerekçesinin ve yönteminin ilk kez belirtildiği belge ____'dir. | Amasya Genelgesi | Havza Genelgesi ; Erzurum Kongresi kararları ; Misak-ı Milli | Amasya Genelgesi'nde "Milletin istiklalini yine milletin azim ve kararı kurtaracaktır" denildi.
+Mustafa Kemal'in mitingler düzenlenmesini istediği ilk genelge ____'dir. | Havza Genelgesi | Amasya Genelgesi ; Sivas Genelgesi ; Erzurum Genelgesi | Havza Genelgesi işgallerin protesto edilmesini istedi.
+Toplanış bakımından bölgesel, alınan kararlar bakımından ulusal olan kongre ____'dir. | Erzurum Kongresi | Sivas Kongresi ; Balıkesir Kongresi ; Alaşehir Kongresi | Erzurum Kongresi 23 Temmuz 1919'da toplandı.
+Manda ve himayenin kesin olarak reddedildiği kongre ____'dir. | Sivas Kongresi | Erzurum Kongresi ; Pozantı Kongresi ; Balıkesir Kongresi | Sivas Kongresi'nde cemiyetler Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti adıyla birleştirildi.
+Heyet-i Temsiliye'nin İstanbul Hükûmeti ile yaptığı ve onu ilk kez tanımasını sağlayan görüşme ____'dır. | Amasya Görüşmesi | Havza Görüşmesi ; Mudanya Görüşmesi ; Londra Konferansı | Amasya Görüşmesi'nde İstanbul Hükûmeti Heyet-i Temsiliye'yi muhatap aldı.
+Son Osmanlı Mebusan Meclisi'nin kabul ettiği ve Milli Mücadele'nin hedeflerini belirleyen belge ____'dir. | Misak-ı Milli | Amasya Genelgesi ; Erzurum Kongresi kararları ; Teşkilat-ı Esasiye | Misak-ı Milli 28 Ocak 1920'de kabul edildi.
+Misak-ı Milli'nin kabulü üzerine İstanbul'un resmen işgal edildiği tarih ____'dir. | 16 Mart 1920 | 30 Ekim 1918 ; 15 Mayıs 1919 ; 23 Nisan 1920 | İstanbul'un resmen işgali ve Meclis'in dağıtılması TBMM'nin açılmasını hızlandırdı.
+Kuva-yı Milliye'nin ilk kez düşmana karşı silahlı direniş gösterdiği yer ____'dir. | Dörtyol | Ödemiş ; Urfa ; Antep | Kuva-yı Milliye ilk kurşunu Dörtyol'da Fransızlara karşı attı.
+Heyet-i Temsiliye'nin Sivas'tan sonra merkez yaptığı şehir ____'dır. | Ankara | Erzurum ; Eskişehir ; Kayseri | Heyet-i Temsiliye 27 Aralık 1919'da Ankara'ya geldi.
+
+## I. TBMM Dönemi ve Gelişmeleri
+TBMM ____ tarihinde açılmıştır. | 23 Nisan 1920 | 19 Mayıs 1919 ; 29 Ekim 1923 ; 1 Kasım 1922 | TBMM'nin açılmasıyla millî egemenliğe dayalı yeni bir yönetim kuruldu.
+TBMM'nin ilk anayasası ____'dir. | 1921 Teşkilat-ı Esasiye | 1924 Anayasası ; Kanun-i Esasi ; 1961 Anayasası | 1921 Anayasası'nda "Egemenlik kayıtsız şartsız milletindir" ilkesi yer aldı.
+I. TBMM'nin benimsediği yönetim sistemine ____ denir. | meclis hükûmeti sistemi | parlamenter sistem ; başkanlık sistemi ; meşruti monarşi | Bu sistemde yasama ve yürütme yetkileri mecliste toplanır.
+Milli Mücadele döneminde kaçakları ve isyancıları yargılamak için kurulan mahkemeler ____'dir. | İstiklal Mahkemeleri | Divan-ı Harp ; Ahkâm-ı Adliye ; Yargıtay | İstiklal Mahkemeleri 1920'de Hıyanet-i Vataniye Kanunu ile birlikte kuruldu.
+Vatana ihanet edenlerin cezalandırılması için çıkarılan kanun ____'dir. | Hıyanet-i Vataniye Kanunu | Takrir-i Sükûn Kanunu ; Firariler Hakkında Kanun ; Teşvik-i Sanayi Kanunu | Hıyanet-i Vataniye Kanunu TBMM'nin çıkardığı ilk önemli kanunlardandır.
+Mustafa Kemal'e Sakarya Savaşı öncesinde Meclis'in yetkilerini kullanma hakkı veren kanun ____'dur. | Başkomutanlık Kanunu | Tekâlif-i Milliye ; Hıyanet-i Vataniye Kanunu ; Takrir-i Sükûn | Başkomutanlık Kanunu 5 Ağustos 1921'de üç ay süreyle çıkarıldı.
+Ordunun ihtiyaçlarını halktan karşılamak için yayımlanan emirler ____'dir. | Tekâlif-i Milliye Emirleri | Teşvik-i Sanayi Kanunu ; Muharrem Kararnamesi ; Ağnam Vergisi | Tekâlif-i Milliye 7-8 Ağustos 1921'de Sakarya öncesi yayımlandı.
+TBMM'ye karşı çıkan ve Kuva-yı Seyyare lideri olan kişinin ayaklanması ____'dir. | Çerkez Ethem Ayaklanması | Delibaş Mehmet Ayaklanması ; Şeyh Said İsyanı ; Koçgiri Ayaklanması | Çerkez Ethem düzenli orduya katılmayı reddederek ayaklandı.
+Saltanatın kaldırıldığı tarih ____'dir. | 1 Kasım 1922 | 29 Ekim 1923 ; 3 Mart 1924 ; 24 Temmuz 1923 | Saltanatın kaldırılmasıyla Osmanlı Devleti hukuken sona erdi.
+Halifeliğin kaldırıldığı tarih ____'dir. | 3 Mart 1924 | 1 Kasım 1922 ; 29 Ekim 1923 ; 17 Şubat 1926 | Aynı gün Tevhid-i Tedrisat Kanunu da kabul edildi.
+
+## Milli Mücadeele Muharabeler Dönemi:
+Düzenli ordunun Yunanlılara karşı kazandığı ilk zafer ____'dür. | I. İnönü Savaşı | II. İnönü Savaşı ; Sakarya Meydan Muharebesi ; Kütahya-Eskişehir Savaşları | I. İnönü (Ocak 1921) sonrası Teşkilat-ı Esasiye kabul edildi.
+I. İnönü Savaşı'ndan sonra İtilaf devletlerinin TBMM'yi ilk kez resmen muhatap aldığı toplantı ____'dır. | Londra Konferansı | Lozan Konferansı ; Mudanya Konferansı ; Paris Konferansı | Londra Konferansı'na TBMM ve İstanbul hükûmetleri birlikte çağrıldı.
+İstiklal Marşı'nın kabul edildiği yıl ____'dir. | 1921 | 1920 ; 1922 ; 1923 | İstiklal Marşı 12 Mart 1921'de TBMM'de kabul edildi.
+Türk ordusunun geri çekilerek Sakarya'nın doğusuna gittiği savaşlar ____'dır. | Kütahya-Eskişehir Savaşları | I. İnönü Savaşı ; Sakarya Meydan Muharebesi ; Büyük Taarruz | Kütahya-Eskişehir yenilgisi sonrası Başkomutanlık Kanunu çıkarıldı.
+Türk ordusunun savunmadan taarruza geçtiği dönüm noktası savaşı ____'dır. | Sakarya Meydan Muharebesi | II. İnönü Savaşı ; Büyük Taarruz ; Kütahya-Eskişehir Savaşları | Sakarya sonrası Mustafa Kemal'e gazilik unvanı ve mareşallik rütbesi verildi.
+Sakarya Savaşı'ndan sonra Fransa ile imzalanan ve Güney Cephesi'ni kapatan antlaşma ____'dır. | Ankara Antlaşması | Moskova Antlaşması ; Kars Antlaşması ; Gümrü Antlaşması | Ankara Antlaşması (20 Ekim 1921) bir İtilaf devletinin TBMM'yi tanıdığı ilk belgedir.
+Doğu Cephesi'nde Ermenilerle imzalanan antlaşma ____'dır. | Gümrü Antlaşması | Kars Antlaşması ; Moskova Antlaşması ; Ankara Antlaşması | Gümrü (1920) TBMM'nin uluslararası alanda imzaladığı ilk antlaşmadır.
+Büyük Taarruz ____ tarihinde başlamıştır. | 26 Ağustos 1922 | 30 Ağustos 1922 ; 9 Eylül 1922 ; 23 Ağustos 1921 | Büyük Taarruz Afyon Kocatepe'den başladı.
+Büyük Taarruz'un son aşaması olan ve 30 Ağustos'ta kazanılan savaş ____'dır. | Başkomutan Meydan Muharebesi | Sakarya Meydan Muharebesi ; II. İnönü Savaşı ; Dumlupınar Savunması | 30 Ağustos Zafer Bayramı olarak kutlanır.
+Türk ordusu İzmir'e ____ tarihinde girmiştir. | 9 Eylül 1922 | 30 Ağustos 1922 ; 11 Ekim 1922 ; 1 Kasım 1922 | İzmir'in kurtuluşuyla Batı Anadolu düşmandan temizlendi.
+
+## Milli Mücadele Diplomatik Dönem
+Kurtuluş Savaşı'nın askerî safhasını sona erdiren ateşkes antlaşması ____'dır. | Mudanya Ateşkes Antlaşması | Mondros Ateşkes Antlaşması ; Lozan Barış Antlaşması ; Ankara Antlaşması | Mudanya (11 Ekim 1922) ile Doğu Trakya savaş yapılmadan kurtarıldı.
+Lozan Barış Antlaşması ____ tarihinde imzalanmıştır. | 24 Temmuz 1923 | 11 Ekim 1922 ; 29 Ekim 1923 ; 1 Kasım 1922 | Lozan, Türkiye'nin bağımsızlığını uluslararası alanda tescil etti.
+Lozan Konferansı'nda Türk heyetine başkanlık eden kişi ____'dür. | İsmet İnönü | Rauf Orbay ; Fethi Okyar ; Yusuf Kemal Tengirşenk | İsmet Paşa'nın yardımcıları Rıza Nur ve Hasan Saka idi.
+Lozan'da çözülemeyip sonraya bırakılan sınır sorunu ____'dur. | Musul | Hatay ; Boğazlar ; Batı Trakya | Musul sorunu 1926 Ankara Antlaşması ile İngiltere lehine sonuçlandı.
+TBMM'nin 1921'de Sovyet Rusya ile imzaladığı antlaşma ____'dır. | Moskova Antlaşması | Kars Antlaşması ; Gümrü Antlaşması ; Ankara Antlaşması | Moskova Antlaşması (16 Mart 1921) ile Batum Gürcistan'a bırakıldı.
+Doğu sınırımızı kesinleştiren 1921 antlaşması ____'dır. | Kars Antlaşması | Gümrü Antlaşması ; Moskova Antlaşması ; Lozan Antlaşması | Kars Antlaşması Kafkas cumhuriyetleriyle imzalandı.
+Lozan'da kapitülasyonlar ____. | kaldırıldı | sürekli hâle getirildi ; azaltıldı ; ertelendi | Lozan ile kapitülasyonlar tamamen kaldırıldı.
+Lozan'da Türkiye ile Yunanistan arasında kararlaştırılan ve halkların karşılıklı yer değiştirmesini öngören uygulama ____'dır. | nüfus mübadelesi | iskân politikası ; vatandaşlık değişimi ; tehcir | Mübadele 30 Ocak 1923 sözleşmesiyle kararlaştırıldı.
+Lozan'da Boğazların yönetimi ____ bırakıldı. | uluslararası bir komisyona | Türkiye'ye ; İngiltere'ye ; Yunanistan'a | Boğazlar sorunu 1936 Montrö ile Türkiye lehine çözüldü.
+Lozan'da Osmanlı borçları ____. | taksitlendirilerek paylaştırıldı | tamamen silindi ; İngiltere'ye devredildi ; Yunanistan'a yüklendi | Borçlar Osmanlı'dan ayrılan devletler arasında paylaştırıldı; Türkiye payını taksitle ödedi.
+
+## Atatürk'ün Hayatı
+Mustafa Kemal ____ yılında doğmuştur. | 1881 | 1876 ; 1889 ; 1893 | Mustafa Kemal Selanik'te doğdu.
+Mustafa Kemal'e "Kemal" adını veren matematik öğretmeni ____'dir. | Mustafa Sabri Bey | Ömer Naci ; Ziya Gökalp ; Ali Fuat Bey | Selanik Askerî Rüştiyesi'ndeki matematik öğretmeni bu adı vermiştir.
+Mustafa Kemal'in ilk görev yeri ____'tır. | Şam | Selanik ; Trablusgarp ; Sofya | 1905'te Şam'daki 5. Ordu'ya atandı.
+Mustafa Kemal'in "Anafartalar Kahramanı" olarak ün kazandığı cephe ____'dir. | Çanakkale Cephesi | Kafkas Cephesi ; Suriye Cephesi ; Trablusgarp Cephesi | 1915 Anafartalar ve Conkbayırı zaferleri onu tanıttı.
+Mustafa Kemal'e "Gazi" unvanı ve mareşallik rütbesi verilmesine neden olan savaş ____'dır. | Sakarya Meydan Muharebesi | Büyük Taarruz ; I. İnönü Savaşı ; Çanakkale Savaşı | Bu unvan 19 Eylül 1921'de TBMM tarafından verildi.
+Mustafa Kemal'in 1927'de CHP kurultayında okuduğu büyük nutkun adı ____'tur. | Nutuk | Gençliğe Hitabe ; Onuncu Yıl Nutku ; Medeni Bilgiler | Nutuk 1919-1927 arasındaki olayları anlatır.
+Mustafa Kemal'e Atatürk soyadı ____ yılında verilmiştir. | 1934 | 1923 ; 1926 ; 1938 | Soyadı Kanunu ile birlikte TBMM bu soyadını verdi.
+Atatürk'ün vatandaşlık eğitimi için yazdığı eser ____'dir. | Medeni Bilgiler | Nutuk ; Zabit ve Kumandan ile Hasbıhal ; Geometri | Medeni Bilgiler 1930'da yazıldı; Afet İnan adıyla yayımlandı.
+Atatürk'ün geometri terimlerini Türkçeleştirdiği eser ____'dir. | Geometri | Medeni Bilgiler ; Nutuk ; Takımın Muharebe Talimi | Açı, üçgen, kenar gibi terimleri Atatürk türetti.
+Atatürk ____ tarihinde İstanbul'da vefat etmiştir. | 10 Kasım 1938 | 29 Ekim 1938 ; 10 Kasım 1937 ; 19 Mayıs 1938 | Atatürk Dolmabahçe Sarayı'nda vefat etti.
+
+## Atatürk Dönemi İç Politikalar ve Gelişmeler
+Cumhuriyet ____ tarihinde ilan edilmiştir. | 29 Ekim 1923 | 23 Nisan 1920 ; 1 Kasım 1922 ; 3 Mart 1924 | Cumhuriyet'in ilanıyla devlet başkanlığı sorunu çözüldü.
+Türkiye'de çok partili hayata geçiş denemesi olan ilk muhalefet partisi ____'dır. | Terakkiperver Cumhuriyet Fırkası | Serbest Cumhuriyet Fırkası ; Demokrat Parti ; Ahali Cumhuriyet Fırkası | 1924'te kuruldu; Şeyh Said İsyanı sonrası 1925'te kapatıldı.
+Atatürk'ün isteğiyle kurulan ve kendi kendini kapatan ikinci muhalefet partisi ____'dır. | Serbest Cumhuriyet Fırkası | Terakkiperver Cumhuriyet Fırkası ; Ahrar Fırkası ; Halk Fırkası | 1930'da Fethi Okyar tarafından kuruldu.
+Şeyh Said İsyanı'ndan sonra çıkarılan ve hükûmete olağanüstü yetkiler veren kanun ____'dur. | Takrir-i Sükûn Kanunu | Hıyanet-i Vataniye Kanunu ; Başkomutanlık Kanunu ; Teşvik-i Sanayi Kanunu | Takrir-i Sükûn 1925'te çıkarıldı.
+Serbest Cumhuriyet Fırkası kapandıktan sonra Menemen'de çıkan gericilik olayı ____'dır. | Kubilay Olayı | Şeyh Said İsyanı ; 31 Mart Olayı ; İzmir Suikastı | 1930'da Menemen'de yedek subay öğretmen Kubilay şehit edildi.
+Atatürk'e karşı düzenlenen ve ortaya çıkarılan 1926 suikast girişimi ____'dır. | İzmir Suikastı | Menemen Olayı ; Bâb-ı Âli Baskını ; Şeyh Said İsyanı | İzmir Suikastı girişimi sonrası birçok muhalif yargılandı.
+Türkiye'nin ilk Cumhurbaşkanı ____'dür. | Mustafa Kemal Atatürk | İsmet İnönü ; Celal Bayar ; Fethi Okyar | Atatürk 29 Ekim 1923'te cumhurbaşkanı seçildi.
+Cumhuriyet'in ilk başbakanı ____'dür. | İsmet İnönü | Fethi Okyar ; Rauf Orbay ; Celal Bayar | İsmet İnönü 1923'te ilk başbakan oldu.
+Türkiye'nin başkenti Ankara ____ tarihinde olmuştur. | 13 Ekim 1923 | 23 Nisan 1920 ; 29 Ekim 1923 ; 1 Kasım 1922 | Başkent Ankara kararı Cumhuriyet'in ilanından önce alındı.
+Kadınlara milletvekili seçme ve seçilme hakkı ____ yılında verilmiştir. | 1934 | 1930 ; 1933 ; 1926 | 1930'da belediye, 1933'te muhtarlık, 1934'te milletvekilliği hakkı verildi.
+
+## Atatürk İlkeleri
+Millî egemenliği esas alan Atatürk ilkesi ____'tir. | cumhuriyetçilik | halkçılık ; milliyetçilik ; devletçilik | Cumhuriyetin ilanı ve 1921 Anayasası bu ilkenin yansımalarıdır.
+Toplumda sınıf ayrıcalığını reddeden ve eşitliği esas alan ilke ____'tır. | halkçılık | cumhuriyetçilik ; laiklik ; inkılapçılık | Aşar vergisinin kaldırılması ve Soyadı Kanunu halkçılıkla ilgilidir.
+Din ve devlet işlerinin birbirinden ayrılmasını esas alan ilke ____'tir. | laiklik | halkçılık ; milliyetçilik ; devletçilik | Halifeliğin kaldırılması ve Medeni Kanun laiklikle ilgilidir.
+Özel sektörün yetersiz kaldığı alanlarda devletin ekonomiye girmesini öngören ilke ____'tir. | devletçilik | halkçılık ; inkılapçılık ; milliyetçilik | Sümerbank ve Etibank'ın kurulması devletçiliğin örnekleridir.
+Yapılan inkılapların korunmasını ve gerektiğinde yenilerinin yapılmasını öngören ilke ____'tır. | inkılapçılık | cumhuriyetçilik ; laiklik ; devletçilik | İnkılapçılık diğer ilkelerin bekçisi kabul edilir.
+Türk Tarih Kurumu ve Türk Dil Kurumu'nun kurulması en çok ____ ilkesiyle ilgilidir. | milliyetçilik | laiklik ; devletçilik ; halkçılık | Millî kültürü araştırmak ve korumak milliyetçiliğin gereğidir.
+Atatürk ilkeleri 1937'de ____ girmiştir. | anayasaya | Nutuk'a ; Medeni Kanun'a ; Lozan'a | Altı ilke 1937'de 1924 Anayasası'na eklendi.
+Aşar vergisinin kaldırılması en çok ____ ilkesiyle ilgilidir. | halkçılık | devletçilik ; cumhuriyetçilik ; inkılapçılık | Köylünün üzerindeki ağır yük kaldırılmıştır.
+Kabotaj Kanunu'nun çıkarılması en çok ____ ilkesiyle ilgilidir. | milliyetçilik | laiklik ; halkçılık ; cumhuriyetçilik | Kara sularımızda ticaret hakkı Türk gemilerine verilerek ekonomik bağımsızlık sağlandı.
+Saltanatın kaldırılması doğrudan ____ ilkesiyle ilgilidir. | cumhuriyetçilik | halkçılık ; devletçilik ; milliyetçilik | Saltanatın kaldırılması millî egemenliğin önündeki engeli kaldırdı.
+
+## Atatürk İnkılapları
+Öğretimin tek elden yürütülmesini sağlayan 1924 kanunu ____'dır. | Tevhid-i Tedrisat Kanunu | Medeni Kanun ; Şapka Kanunu ; Soyadı Kanunu | Medreseler kapatıldı, okullar Maarif Vekâleti'ne bağlandı.
+Kadına boşanma ve miras hakkı tanıyan, tek eşliliği getiren kanun ____'dır. | Türk Medeni Kanunu | Soyadı Kanunu ; Tevhid-i Tedrisat Kanunu ; Ticaret Kanunu | Medeni Kanun 17 Şubat 1926'da kabul edildi; İsviçre'den uyarlandı.
+Yeni Türk harfleri ____ yılında kabul edilmiştir. | 1928 | 1926 ; 1924 ; 1932 | Harf İnkılabı 1 Kasım 1928'de kabul edildi; Millet Mektepleri açıldı.
+Okuma yazma bilmeyen halka yeni harfleri öğretmek için açılan kurumlar ____'dir. | Millet Mektepleri | Halkevleri ; Köy Enstitüleri ; Darülfünun | Millet Mektepleri 1929'da açıldı.
+Tekke, zaviye ve türbelerin kapatıldığı yıl ____'dir. | 1925 | 1924 ; 1928 ; 1934 | Tekke ve zaviyelerin kapatılması laikleşmenin önemli adımıdır.
+Takvim, saat ve ölçülerde yapılan değişikliklerin amacı ____ uyum sağlamaktır. | Batı ile | Doğu ile ; İslam dünyası ile ; Sovyetler ile | Miladi takvim, uluslararası saat ve metre sistemi kabul edildi.
+Lakap ve unvanların kaldırılmasını sağlayan kanun ____'dur. | Soyadı Kanunu | Medeni Kanun ; Kılık Kıyafet Kanunu ; Şapka Kanunu | Soyadı Kanunu 1934'te çıkarıldı.
+Darülfünun'un kapatılıp yerine kurulan üniversite ____'dir. | İstanbul Üniversitesi | Ankara Üniversitesi ; İstanbul Teknik Üniversitesi ; Gazi Üniversitesi | 1933 Üniversite Reformu ile İstanbul Üniversitesi kuruldu.
+Hafta tatilinin Cuma'dan Pazar'a alındığı yıl ____'tır. | 1935 | 1925 ; 1928 ; 1934 | Bu düzenleme ekonomik ve ticari ilişkilerde Batı ile uyumu sağladı.
+Türk tarihini araştırmak için 1931'de kurulan kurum ____'dur. | Türk Tarih Kurumu | Türk Dil Kurumu ; Halkevleri ; Türk Ocakları | Türk Tarih Kurumu'nun ilk adı Türk Tarihi Tetkik Cemiyeti'dir.
+
+## Atatürk Dönemi Türk Dış Politikası
+Musul sorununun İngiltere lehine sonuçlandığı 1926 antlaşması ____'dır. | Ankara Antlaşması | Montrö Sözleşmesi ; Lozan Antlaşması ; Londra Antlaşması | Musul Irak'a bırakıldı; petrol gelirinin %10'u 25 yıl Türkiye'ye verilecekti.
+Boğazların denetimini tamamen Türkiye'ye veren sözleşme ____'dir. | Montrö Boğazlar Sözleşmesi | Lozan Antlaşması ; Londra Boğazlar Sözleşmesi ; Paris Antlaşması | Montrö 1936'da imzalandı; Boğazlar komisyonu kaldırıldı.
+Türkiye'nin Milletler Cemiyeti'ne üye olduğu yıl ____'dir. | 1932 | 1923 ; 1926 ; 1936 | Türkiye Milletler Cemiyeti'ne davet üzerine katıldı.
+Türkiye, Yunanistan, Romanya ve Yugoslavya arasında 1934'te kurulan pakt ____'dır. | Balkan Antantı | Sadabat Paktı ; Bağdat Paktı ; Kellogg Paktı | Balkan Antantı İtalya'nın yayılmacılığına karşı kuruldu.
+Türkiye, İran, Irak ve Afganistan arasında 1937'de kurulan pakt ____'dır. | Sadabat Paktı | Balkan Antantı ; Bağdat Paktı ; CENTO | Sadabat Paktı Ortadoğu'da güvenliği amaçladı.
+Atatürk döneminde çözülemeyip sonra Türkiye'ye katılan il ____'dır. | Hatay | Musul ; Kerkük ; Batum | Hatay 1938'de bağımsız devlet oldu, 1939'da Türkiye'ye katıldı.
+Türkiye ile Yunanistan arasında 1930'da imzalanan ve mübadele sorunlarını çözen belge ____'dır. | Türk-Yunan Dostluk Antlaşması | Montrö Boğazlar Sözleşmesi ; Balkan Antantı ; Sadabat Paktı | Antlaşma Ankara'da imzalandı; iki ülke Balkan Antantı'na birlikte girdi.
+Lozan'dan sonra İngiltere ile en önemli sorun ____ sorunudur. | Musul | Hatay ; Boğazlar ; Yabancı okullar | Musul Lozan'da çözülemedi, İngiltere ile ikili görüşmelere kaldı.
+Hatay sorunu Türkiye ile ____ arasındaki bir sorundur. | Fransa | İngiltere ; İtalya ; Yunanistan | Hatay Fransız mandasındaki Suriye sınırları içinde kalmıştı.
+Atatürk'ün dış politika ilkesini özetleyen söz "____" sözüdür. | Yurtta sulh, cihanda sulh | Ya istiklal ya ölüm ; Hayatta en hakiki mürşit ilimdir ; Egemenlik kayıtsız şartsız milletindir | Barışçı dış politika Atatürk döneminin temel ilkesidir.
+
+## Cumhuriyet Dönemi Kültür ve Medeniyeti
+Öğretmen yetiştirmek amacıyla 1940'ta açılan kurumlar ____'dir. | Köy Enstitüleri | Millet Mektepleri ; Halkevleri ; Darülmuallimin | Köy Enstitüleri Hasan Âli Yücel döneminde açıldı.
+Türk Dil Kurumu'nun kurulduğu yıl ____'dir. | 1932 | 1928 ; 1931 ; 1935 | TDK'nin ilk adı Türk Dili Tetkik Cemiyeti'dir.
+Kültürel faaliyetleri halka yaymak için 1932'de açılan kurumlar ____'dir. | Halkevleri | Köy Enstitüleri ; Türk Ocakları ; Millet Mektepleri | Halkevleri Türk Ocakları'nın yerine kuruldu.
+Cumhuriyet döneminde Türk tarihini Orta Asya'ya dayandıran görüşe ____ denir. | Türk Tarih Tezi | Güneş Dil Teorisi ; Turancılık ; Osmanlıcılık | Türk Tarih Tezi Türklerin dünya medeniyetine katkılarını vurgular.
+Türkçenin dünya dillerinin kaynağı olduğunu savunan görüş ____'dir. | Güneş Dil Teorisi | Türk Tarih Tezi ; Ural-Altay Teorisi ; Dil Devrimi | Güneş Dil Teorisi 1930'larda ortaya atıldı.
+Ankara'da kurulan ilk üniversite niteliğindeki fakülte ____'dir. | Dil ve Tarih-Coğrafya Fakültesi | Hukuk Fakültesi ; Ziraat Fakültesi ; Siyasal Bilgiler Fakültesi | DTCF 1936'da açıldı.
+Cumhuriyet'in ilk yıllarında yabancı uzmanlar arasında üniversite reformu için raporu istenen kişi ____'dir. | Albert Malche | John Dewey ; Kemmerer ; Hines | İsviçreli Albert Malche'nin raporuyla 1933 reformu yapıldı.
+Türkiye'ye eğitim sistemi hakkında rapor hazırlamak için 1924'te davet edilen Amerikalı eğitimci ____'dir. | John Dewey | Albert Malche ; Kühne ; Nansen | Dewey köy okulları ve öğretmen yetiştirme üzerine öneriler verdi.
+Cumhuriyet döneminde kadınlara seçme ve seçilme hakkının ilk kez verildiği seçim türü ____'dir. | belediye seçimleri | milletvekili seçimleri ; muhtarlık seçimleri ; cumhurbaşkanlığı seçimi | 1930'da belediye seçimlerinde kadınlara oy hakkı verildi.
+1926'da kabul edilen ve hukukta Batı'ya uyumu sağlayan, İtalya'dan uyarlanan kanun ____'dur. | Türk Ceza Kanunu | Medeni Kanun ; Ticaret Kanunu ; Borçlar Kanunu | Medeni Kanun İsviçre'den, Ceza Kanunu İtalya'dan, Ticaret Kanunu Almanya'dan alındı.
+
+## XX. Yüzyıl Başlarında Dünya
+I. Dünya Savaşı'nı başlatan olay ____'dır. | Saraybosna Suikastı | Fransız İhtilali ; Bolşevik İhtilali ; Pearl Harbor Baskını | Avusturya veliahdı Franz Ferdinand 1914'te Saraybosna'da öldürüldü.
+I. Dünya Savaşı'nda İngiltere, Fransa ve Rusya'nın oluşturduğu bloğa ____ denir. | İtilaf Devletleri | İttifak Devletleri ; Mihver Devletleri ; Müttefikler | Rusya 1917'de savaştan çekildi; ABD İtilaf safında savaşa katıldı.
+Rusya'nın I. Dünya Savaşı'ndan çekilmesine yol açan olay ____'dir. | Bolşevik İhtilali | Saraybosna Suikastı ; Fransız İhtilali ; Paris Komünü | 1917 Bolşevik İhtilali ile Çarlık yıkıldı.
+Rusya'nın savaştan çekildiği antlaşma ____'dır. | Brest-Litovsk Antlaşması | Versay Antlaşması ; Sevr Antlaşması ; Mondros Ateşkesi | Brest-Litovsk 1918'de Almanya ile imzalandı.
+I. Dünya Savaşı sonunda Almanya ile imzalanan antlaşma ____'dır. | Versay Antlaşması | Sen Jermen Antlaşması ; Nöyyi Antlaşması ; Triyanon Antlaşması | Versay Almanya'ya ağır şartlar getirdi; II. Dünya Savaşı'nın nedenlerinden oldu.
+I. Dünya Savaşı sonunda Osmanlı ile imzalanan ama yürürlüğe girmeyen antlaşma ____'dır. | Sevr Antlaşması | Versay Antlaşması ; Lozan Antlaşması ; Nöyyi Antlaşması | Sevr Osmanlı Meclis-i Mebusanı'nda onaylanmadığı için yürürlüğe girmedi.
+Dünya barışını korumak amacıyla 1920'de kurulan örgüt ____'dir. | Milletler Cemiyeti | Birleşmiş Milletler ; NATO ; Avrupa Konseyi | Milletler Cemiyeti ABD Başkanı Wilson'un önerisiyle kuruldu.
+ABD'de 1929'da başlayan ve dünyayı etkileyen kriz ____'dır. | Büyük Buhran | Petrol Krizi ; Küba Krizi ; Asya Krizi | 1929 Dünya Ekonomik Bunalımı devletçi politikaları güçlendirdi.
+İtalya'da Mussolini'nin kurduğu totaliter rejim ____'dir. | faşizm | nazizm ; komünizm ; liberalizm | Faşist Parti 1922'de iktidara geldi.
+Almanya'da Hitler'in önderliğindeki rejim ____'dir. | nazizm | faşizm ; komünizm ; monarşi | Hitler 1933'te iktidara geldi.
+
+## II. Dünya Savaşı
+II. Dünya Savaşı'nı başlatan olay Almanya'nın ____'yı işgalidir. | Polonya | Fransa ; Çekoslovakya ; Avusturya | Almanya 1 Eylül 1939'da Polonya'ya saldırdı.
+II. Dünya Savaşı'nda Almanya, İtalya ve Japonya'nın oluşturduğu bloğa ____ denir. | Mihver Devletleri | Müttefik Devletler ; İtilaf Devletleri ; İttifak Devletleri | Mihver devletleri savaşı kaybetti.
+ABD'nin II. Dünya Savaşı'na girmesine neden olan olay ____'dır. | Pearl Harbor Baskını | Normandiya Çıkarması ; Stalingrad Savaşı ; Hiroşima Saldırısı | Japonya 7 Aralık 1941'de Pearl Harbor'a saldırdı.
+II. Dünya Savaşı'nda Almanya'nın Doğu Cephesi'nde büyük yenilgiye uğradığı savaş ____'dır. | Stalingrad Savaşı | El Alameyn Savaşı ; Midway Savaşı ; Normandiya Çıkarması | Stalingrad (1942-1943) savaşın dönüm noktalarındandır.
+Müttefiklerin Batı Avrupa'yı kurtarmak için 1944'te yaptığı harekât ____'dır. | Normandiya Çıkarması | Pearl Harbor Baskını ; Dunkirk Tahliyesi ; Sicilya Çıkarması | 6 Haziran 1944'te Fransa kıyılarına çıkarma yapıldı.
+Atom bombası atılan ilk şehir ____'dır. | Hiroşima | Nagazaki ; Tokyo ; Osaka | 6 Ağustos 1945'te Hiroşima'ya, 9 Ağustos'ta Nagazaki'ye atom bombası atıldı.
+II. Dünya Savaşı'nın ardından 1945'te kurulan uluslararası örgüt ____'dir. | Birleşmiş Milletler | Milletler Cemiyeti ; NATO ; Varşova Paktı | BM Şartı 1945'te San Francisco Konferansı'nda kabul edildi.
+Savaştan sonra Nazi liderlerinin yargılandığı mahkeme ____'dir. | Nürnberg Mahkemesi | Lahey Adalet Divanı ; İstiklal Mahkemesi ; Tokyo Mahkemesi | Nürnberg'de savaş suçları yargılandı.
+Savaş sırasında Müttefik liderlerin Kırım'da yaptığı 1945 konferansı ____'dır. | Yalta Konferansı | Potsdam Konferansı ; Tahran Konferansı ; Kahire Konferansı | Yalta'da savaş sonrası düzen ve BM konuları görüşüldü.
+Almanya'nın 1939'da Sovyetler Birliği ile yaptığı saldırmazlık antlaşması ____'dır. | Molotov-Ribbentrop Paktı | Münih Antlaşması ; Atlantik Bildirisi ; Kellogg-Briand Paktı | Bu pakt Polonya'nın paylaşılmasını da öngörüyordu.
+
+## II. Dünya Savaşı'nda Türkiye
+II. Dünya Savaşı sırasında Türkiye'nin cumhurbaşkanı ____'dür. | İsmet İnönü | Celal Bayar ; Mustafa Kemal Atatürk ; Adnan Menderes | İnönü savaşın dışında kalma politikası izledi.
+Türkiye'nin 1939'da İngiltere ve Fransa ile imzaladığı antlaşma ____'dır. | Üçlü İttifak (Türk-İngiliz-Fransız Antlaşması) | Balkan Antantı ; Sadabat Paktı ; Bağdat Paktı | Antlaşma Türkiye'yi Akdeniz'de saldırıya uğrarsa destek altına alıyordu.
+Türkiye'nin 1941'de Almanya ile imzaladığı antlaşma ____'dır. | Türk-Alman Saldırmazlık Antlaşması | Molotov-Ribbentrop Paktı ; Ankara Antlaşması ; Montrö Sözleşmesi | Türkiye bu antlaşmayla savaş dışı kalmaya çalıştı.
+İnönü'nün Churchill ile görüştüğü 1943 konferansı ____'dır. | Adana Görüşmesi | Kahire Konferansı ; Yalta Konferansı ; Potsdam Konferansı | Adana'da Türkiye'nin savaşa girmesi istendi.
+Savaş yıllarında olağanüstü durum gerekçesiyle hükûmete ekonomik yetkiler veren kanun ____'dur. | Millî Korunma Kanunu | Varlık Vergisi Kanunu ; Toprak Mahsulleri Vergisi ; Takrir-i Sükûn | Millî Korunma Kanunu 1940'ta çıkarıldı.
+Savaş zenginlerinden alınan olağanüstü vergi ____'dir. | Varlık Vergisi | Toprak Mahsulleri Vergisi ; Aşar ; Ağnam Vergisi | Varlık Vergisi 1942'de çıkarıldı.
+Türkiye'nin Almanya ve Japonya'ya savaş ilan ettiği yıl ____'tir. | 1945 | 1941 ; 1943 ; 1939 | Şubat 1945'te BM kurucu konferansına katılabilmek için savaş ilan edildi.
+Savaştan sonra Sovyetler Birliği'nin Türkiye'den istediği bölgeler ____'dir. | Kars ve Ardahan | Hatay ve İskenderun ; Trakya ve Edirne ; Musul ve Kerkük | SSCB ayrıca Boğazlarda üs istedi; Türkiye Batı'ya yöneldi.
+Türkiye'nin savaş sonrası yararlandığı ABD ekonomik yardım programı ____'dır. | Marshall Planı | Truman Doktrini ; Eisenhower Doktrini ; Kellogg Paktı | Marshall Planı 1948'de başladı.
+ABD'nin Türkiye ve Yunanistan'a askerî yardımı öngören 1947 politikası ____'dir. | Truman Doktrini | Marshall Planı ; Eisenhower Doktrini ; Monroe Doktrini | Truman Doktrini Sovyet yayılmacılığına karşı ilan edildi.
+
+## Soğuk Savaş Dönemi
+Soğuk Savaş'ta ABD öncülüğünde 1949'da kurulan askerî örgüt ____'dur. | NATO | Varşova Paktı ; SEATO ; CENTO | Türkiye 1952'de NATO'ya üye oldu.
+Sovyetler Birliği öncülüğünde 1955'te kurulan askerî örgüt ____'dır. | Varşova Paktı | NATO ; COMECON ; Bağdat Paktı | Varşova Paktı NATO'ya karşı kuruldu.
+Türkiye'nin NATO'ya girmesinde etkili olan ve asker gönderdiği savaş ____'dır. | Kore Savaşı | Vietnam Savaşı ; Körfez Savaşı ; Afganistan Savaşı | Türkiye 1950'de Kore'ye asker gönderdi.
+Doğu ile Batı Berlin'i ayırmak için 1961'de yapılan yapı ____'dır. | Berlin Duvarı | Demir Perde ; Maginot Hattı ; Siegfried Hattı | Berlin Duvarı 1989'da yıkıldı.
+ABD ile SSCB'yi nükleer savaşın eşiğine getiren 1962 krizi ____'dır. | Küba Füze Krizi | Berlin Krizi ; Süveyş Krizi ; Kore Krizi | Kriz sonrasında Türkiye'deki Jüpiter füzeleri de kaldırıldı.
+Türkiye'nin 1955'te Irak ile kurduğu ve sonra İngiltere, İran, Pakistan'ın katıldığı pakt ____'dır. | Bağdat Paktı | Sadabat Paktı ; Balkan Paktı ; Varşova Paktı | Irak çekilince adı CENTO oldu.
+ABD Başkanı Johnson'ın Kıbrıs'a müdahaleye karşı Türkiye'ye yazdığı 1964 mektubu ____'dır. | Johnson Mektubu | Truman Doktrini ; Eisenhower Mektubu ; Kennedy Bildirisi | Johnson Mektubu Türk-Amerikan ilişkilerini olumsuz etkiledi.
+Türkiye'nin Kıbrıs'a 1974'te yaptığı harekât ____'dır. | Kıbrıs Barış Harekâtı | Kore Harekâtı ; Çekiç Güç ; Atilla Hattı | Harekât 20 Temmuz 1974'te başladı.
+Mısır'ın Süveyş Kanalı'nı millîleştirmesiyle başlayan 1956 krizi ____'dır. | Süveyş Krizi | Küba Krizi ; Berlin Krizi ; Petrol Krizi | İngiltere, Fransa ve İsrail Mısır'a müdahale etti.
+Avrupa Ekonomik Topluluğu'nu kuran 1957 antlaşması ____'dır. | Roma Antlaşması | Maastricht Antlaşması ; Paris Antlaşması ; Lizbon Antlaşması | Türkiye 1959'da AET'ye ortaklık başvurusu yaptı, 1963 Ankara Antlaşması imzalandı.
+
+## Yumuşama Dönemi
+ABD ile SSCB arasında stratejik silahların sınırlandırılması için yapılan görüşmeler ____'dir. | SALT görüşmeleri | START görüşmeleri ; Helsinki Nihai Senedi ; Kellogg Paktı | SALT I 1972'de imzalandı.
+Avrupa'da güvenlik ve işbirliği için 1975'te imzalanan belge ____'dir. | Helsinki Nihai Senedi | Paris Şartı ; Maastricht Antlaşması ; Roma Antlaşması | Helsinki Senedi AGİK sürecinin temel belgesidir.
+1973'te Arap-İsrail Savaşı sonrası petrol fiyatlarının artmasıyla yaşanan kriz ____'dir. | Petrol Krizi | Büyük Buhran ; Süveyş Krizi ; Asya Krizi | OPEC ülkeleri petrol ambargosu uyguladı.
+İsrail ile Mısır arasında 1978'de imzalanan barış anlaşması ____'dir. | Camp David Antlaşması | Oslo Antlaşması ; Dayton Antlaşması ; Taif Antlaşması | Camp David ile Sina Yarımadası Mısır'a iade edildi.
+İran'da 1979'da şahlık rejimini yıkan olay ____'dir. | İran İslam Devrimi | Ekim Devrimi ; Kadife Devrim ; Turuncu Devrim | Humeyni önderliğinde İslam cumhuriyeti kuruldu.
+SSCB'nin 1979'da müdahale ettiği ülke ____'dır. | Afganistan | Irak ; Pakistan ; İran | Afganistan işgali yumuşama dönemini sona erdirdi.
+Türkiye'de ABD'nin silah ambargosu uygulamasına neden olan olay ____'dır. | Kıbrıs Barış Harekâtı | Kore Savaşı ; Johnson Mektubu ; Küba Krizi | ABD 1975-1978 arasında Türkiye'ye silah ambargosu uyguladı.
+Türkiye'nin AET ile ortaklık ilişkisini kuran 1963 antlaşması ____'dır. | Ankara Antlaşması | Roma Antlaşması ; Gümrük Birliği Kararı ; Katma Protokol | Ankara Antlaşması ile Türkiye AET'ye ortak üye oldu.
+Kuzey Kıbrıs Türk Cumhuriyeti ____ yılında ilan edilmiştir. | 1983 | 1974 ; 1975 ; 1991 | KKTC 15 Kasım 1983'te kuruldu.
+Yumuşama döneminde Batı Almanya'nın Doğu Bloku ile ilişkileri geliştirme politikası ____'dır. | Ostpolitik | Truman Doktrini ; Glasnost ; Perestroyka | Ostpolitik Willy Brandt döneminde uygulandı.
+
+## Küreselleşen Dünya
+SSCB lideri Gorbaçov'un açıklık politikasına ____ denir. | glasnost | perestroyka ; Ostpolitik ; détente | Glasnost açıklık, perestroyka yeniden yapılanma anlamına gelir.
+Gorbaçov'un ekonomik ve siyasi yeniden yapılanma politikası ____'dır. | perestroyka | glasnost ; NEP ; Ostpolitik | Perestroyka SSCB'nin dağılma sürecini hızlandırdı.
+Berlin Duvarı ____ yılında yıkılmıştır. | 1989 | 1991 ; 1985 ; 1961 | Almanya 1990'da birleşti.
+Sovyetler Birliği ____ yılında dağılmıştır. | 1991 | 1989 ; 1993 ; 1985 | SSCB'nin dağılmasıyla Soğuk Savaş sona erdi.
+Avrupa Birliği'ni kuran 1992 antlaşması ____'dır. | Maastricht Antlaşması | Roma Antlaşması ; Lizbon Antlaşması ; Nice Antlaşması | Maastricht ile AET Avrupa Birliği'ne dönüştü.
+Türkiye'nin AB ile Gümrük Birliği'ne girdiği yıl ____'dir. | 1996 | 1987 ; 1999 ; 2005 | Gümrük Birliği 1 Ocak 1996'da yürürlüğe girdi.
+Türkiye'ye AB adaylık statüsünün verildiği zirve ____'dir. | Helsinki Zirvesi | Kopenhag Zirvesi ; Lüksemburg Zirvesi ; Brüksel Zirvesi | Türkiye 1999 Helsinki Zirvesi'nde aday ülke oldu.
+Bosna Savaşı'nı sona erdiren 1995 antlaşması ____'dır. | Dayton Antlaşması | Camp David Antlaşması ; Oslo Antlaşması ; Lizbon Antlaşması | Dayton ile Bosna-Hersek'in bugünkü yapısı oluştu.
+Irak'ın Kuveyt'i işgal etmesiyle başlayan 1991 savaşı ____'dır. | Körfez Savaşı | İran-Irak Savaşı ; Kore Savaşı ; Afganistan Savaşı | ABD öncülüğündeki koalisyon Kuveyt'i kurtardı.
+ABD'de 11 Eylül 2001 saldırılarının ardından ABD'nin müdahale ettiği ilk ülke ____'dır. | Afganistan | Irak ; Libya ; Suriye | ABD 2001'de Afganistan'a, 2003'te Irak'a müdahale etti.

@@ -127,11 +127,8 @@ export function AlistirmaDersListScreen({ navigation }) {
                 right={null}
             />
             {Object.keys(kpssData).filter(function (ders) {
-                if (!ClozeEngine.dersEnabled(ders)) return false;
-                // Boşluklar notlardan üretilir: notu olmayan ders (ör. Matematik) listede boş görünmesin
-                return Object.keys(kpssData[ders] || {}).some(function (k) {
-                    return k !== "_" && ((kpssData[ders][k] || {}).notlar || []).length > 0;
-                });
+                // Yalnız boşluk bankasında sorusu olan dersler
+                return ClozeEngine.dersEnabled(ders) && ClozeEngine.hasDers(ders);
             }).map(function (ders) {
                 var konular = Object.keys(kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
                 return (
@@ -173,10 +170,10 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
         function one(konu, idx) {
             var kd = app.kpssData[ders][konu] || {};
             var tp = ((app.student.topics && app.student.topics[ders]) || {})[konu] || {};
-            var n = ClozeEngine.countForKonu(kd);
+            var n = ClozeEngine.countForKonu(kd, ders, konu);
             acc[konu] = {
                 n: n,
-                left: n ? ClozeEngine.remainingCount(kd, tp.solvedCloze) : 0,
+                left: n ? ClozeEngine.remainingCount(kd, tp.solvedCloze, ders, konu) : 0,
                 open: StudentStore.isKonuOpen(ders, konular, idx, app.kpssData),
                 done: StudentStore.topicComplete(tp, kd)
             };
@@ -206,6 +203,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
             {konular.map(function (konu) {
                 var ready = !!(stats && stats[konu]);
                 var st = ready ? stats[konu] : { n: 0, left: 0, open: true, done: false };
+                if (ready && !st.n) return null; // bu konu için henüz soru yazılmamış
                 var open = st.open !== false;
                 return (
                     <AccentCard
@@ -269,7 +267,7 @@ export function ClozePlayScreen({ route, navigation }) {
         var id = requestAnimationFrame(function () {
             var built = [];
             try {
-                built = ClozeEngine.buildForKonu(kd, 12, StudentStore.solvedClozeIds(ders, konu)) || [];
+                built = ClozeEngine.buildForKonu(kd, 10, StudentStore.solvedClozeIds(ders, konu), ders, konu) || [];
             } catch (e) {
                 built = [];
             }
@@ -299,8 +297,8 @@ export function ClozePlayScreen({ route, navigation }) {
     }
 
     if (!list.length) {
-        var totalCloze = ClozeEngine.countForKonu(kd);
-        var leftCloze = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu));
+        var totalCloze = ClozeEngine.countForKonu(kd, ders, konu);
+        var leftCloze = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu), ders, konu);
         var allSolved = totalCloze > 0 && leftCloze === 0;
         return (
             <ScrollScreen dark={isDark}>
@@ -317,7 +315,7 @@ export function ClozePlayScreen({ route, navigation }) {
     }
 
     if (done) {
-        var leftAfter = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu));
+        var leftAfter = ClozeEngine.remainingCount(kd, StudentStore.solvedClozeIds(ders, konu), ders, konu);
         return (
             <ScrollScreen dark={isDark}>
                 <BackChip dark={isDark} label="Konular" onPress={function () { navigation.goBack(); }} />
@@ -384,9 +382,12 @@ export function ClozePlayScreen({ route, navigation }) {
                     );
                 })}
                 {picked ? (
-                    <Text style={{ marginTop: 10, fontWeight: "700", color: ok ? "#059669" : "#E11D48" }}>
-                        {ok ? "Doğru" : "Doğrusu: " + it.answer}
-                    </Text>
+                    <View style={[styles.clozeExplain, isDark && styles.clozeExplainDark]}>
+                        <Text style={{ fontWeight: "800", color: ok ? "#059669" : "#E11D48" }}>
+                            {ok ? "Doğru" : "Doğrusu: " + it.answer}
+                        </Text>
+                        {it.explain ? <Text style={[styles.clozeExplainTxt, isDark && styles.textMuted]}>{it.explain}</Text> : null}
+                    </View>
                 ) : null}
             </Card>
             <PrimaryButton
@@ -852,6 +853,9 @@ var styles = StyleSheet.create({
     clozeStemDark: { backgroundColor: colors.navyDeep, borderColor: "rgba(255,255,255,0.08)" },
     clozeBar: { position: "absolute", left: 0, top: 12, bottom: 12, width: 4, borderRadius: 4, backgroundColor: "#C5A059" },
     clozeText: { fontSize: 17, lineHeight: 28, color: colors.text, fontWeight: "600", paddingLeft: 8 },
+    clozeExplain: { marginTop: 12, padding: 12, borderRadius: 12, backgroundColor: "#F8FAFC", borderWidth: 1, borderColor: "#E2E8F0" },
+    clozeExplainDark: { backgroundColor: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.08)" },
+    clozeExplainTxt: { marginTop: 4, fontSize: 14, lineHeight: 20, color: "#475569" },
     clozeBlank: { textDecorationLine: "underline", color: "#127880", fontWeight: "800" },
     clozeBlankFilled: { color: "#047857", textDecorationLine: "none" },
     choice: { borderWidth: 1, borderRadius: 14, padding: 12, marginTop: 8 },
