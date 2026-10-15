@@ -2,3 +2,14 @@ project_id = "feblrqillsrfsbmrkjyc"
 
 [functions.admin-action]
 verify_jwt = true
+
+# Gelir modeli (supabase/patch-monetization.sql)
+[functions.store-sync]
+verify_jwt = true
+
+# RevenueCat ve AdMob kendi doğrulamasıyla çağırır (Authorization sırrı / Google imzası); Supabase JWT'si taşımazlar.
+[functions.store-webhook]
+verify_jwt = false
+
+[functions.admob-ssv]
+verify_jwt = false
