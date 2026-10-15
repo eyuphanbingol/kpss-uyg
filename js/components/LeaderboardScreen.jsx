@@ -59,6 +59,14 @@
     // ANA BİLEŞEN
     // ============================================================
 
+    // KVKK: sıralamada adın yalnız ilk iki harfi görünür ("Eyüphan Bingöl" → "Ey**"). Asıl gizleme sunucuda
+    // (supabase/patch-leaderboard-mask.sql); burada da uygulanır ki yama çalıştırılmadan önce de tam ad görünmesin.
+    function maskName(name) {
+        var s = String(name || "").trim().replace(/\s+/g, " ");
+        if (!s) return "Öğ**";
+        return Array.from(s).slice(0, 2).join("") + "**";
+    }
+
     function LeaderboardScreen(props) {
         const [week, setWeek] = useState([]);
         const [err, setErr] = useState("");
@@ -79,11 +87,15 @@
             }
 
             function loadRows() {
-                return sb.from("leaderboard_public").select("nickname,questions,kind").limit(200).then(function (res) {
+                return sb.from("leaderboard_public").select("*").limit(200).then(function (res) {
                     if (res.error) {
                         setErr("📊 Sıralama şu an yok.");
                     } else {
-                        var rows = (res.data || []).filter(function (x) { return x.kind !== "exam"; });
+                        var rows = (res.data || []).filter(function (x) { return x.kind !== "exam"; }).map(function (x) {
+                            // is_me sunucudan gelir; eski görünümde yoksa adla eşleştirilir
+                            var mine = x.is_me === true || (x.is_me == null && !!me && x.nickname === me);
+                            return { nickname: maskName(x.nickname), questions: x.questions, kind: x.kind, me: mine };
+                        });
                         rows.sort(function (a, b) {
                             return (Number(b.questions) || 0) - (Number(a.questions) || 0);
                         });
@@ -112,7 +124,7 @@
         }
         var myIdx = -1;
         list.forEach(function (r, i) {
-            if (!me || r.nickname !== me) return;
+            if (!r.me) return;
             if (myIdx < 0) myIdx = i;
             if (Number(r.questions) === myScore) myIdx = i;
         });
@@ -155,7 +167,7 @@
 
                 {/* Info */}
                 <p className="text-xs text-stone-400 dark:text-stone-500 mb-5">
-                    📊 Sıra: profildeki net ile aynı toplam doğru · Takma ad görünür
+                    📊 Sıra: profildeki net ile aynı toplam doğru · Gizlilik için adların yalnız ilk iki harfi görünür
                 </p>
 
                 {/* Loading */}
@@ -257,7 +269,7 @@
                         <div className="divide-y divide-stone-100 dark:divide-stone-800 max-h-96 overflow-y-auto">
                             {(rest.length ? rest : []).map(function (r, i) {
                                 var rank = i + 4;
-                                var isMe = me && r.nickname === me;
+                                var isMe = !!r.me;
                                 var medalEmoji = getMedalEmoji(rank - 1);
                                 var rankEmoji = getRankEmoji(rank - 1);
                                 

@@ -20,6 +20,11 @@ for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done
 for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done   # iki kez çalıştırmak güvenli olmalı
 run supabase/patch-security-2026-10.sql   # güvenlik yaması canlı deneme akışını bozmamalı
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/live-exam-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
+# Ad gizleme yaması: kohorttaki ilk 20 listesinde tam ad kalmamalı
+run supabase/patch-leaderboard-mask.sql
+leak=$(psql -d $DB -Atc "select count(*) from public.live_cohort c, jsonb_array_elements(c.top) e where e->>'nickname' not like '%**'")
+if [ "$leak" != "0" ]; then echo "TEST BAŞARISIZ: canlı deneme ilk 20 listesinde $leak maskesiz ad"; exit 1; fi
+echo "ok  canlı deneme ilk 20 listesi maskeli"
 psql -d $DB -Atc "select 1" >/dev/null
 
 # Yönetim paneli veritabanı API'si (patch-admin-panel.sql): ayrı, temiz bir veritabanında
@@ -33,4 +38,8 @@ for f in schema patch-saas patch-hardening patch-privilege-lock patch-admin-loca
   run supabase/$f.sql   # yönetim yaması iki kez: tekrar çalıştırmak güvenli olmalı
 done
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/admin-panel-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
+# Sıralama ad gizleme (KVKK): yama iki kez çalıştırılır, ardından testler
+run supabase/patch-leaderboard-mask.sql
+run supabase/patch-leaderboard-mask.sql
+psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/leaderboard-mask-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null

@@ -14,6 +14,15 @@ export { AiScreen } from "./AiScreen";
 // LEADERBOARD SCREEN
 // ============================================================
 
+
+// KVKK: sıralamada adın yalnız ilk iki harfi görünür ("Eyüphan Bingöl" → "Ey**"). Asıl gizleme sunucuda
+// (supabase/patch-leaderboard-mask.sql); burada da uygulanır ki yama çalıştırılmadan önce de tam ad görünmesin.
+function maskName(name) {
+    var s = String(name || "").trim().replace(/\s+/g, " ");
+    if (!s) return "Öğ**";
+    return Array.from(s).slice(0, 2).join("") + "**";
+}
+
 export function LeaderboardScreen({ navigation }) {
     var app = useApp();
     var isDark = app.dark;
@@ -29,12 +38,14 @@ export function LeaderboardScreen({ navigation }) {
 
     useEffect(function () {
         supabase.from("leaderboard_public")
-            .select("nickname,questions,kind")
+            .select("*")
             .limit(200)
             .then(function (r) {
                 if (r.error) setErr(trError(r.error, "Sıralama yüklenemedi."));
                 else {
-                    var list = (r.data || []).filter(function (x) { return x.kind !== "exam"; });
+                    var list = (r.data || []).filter(function (x) { return x.kind !== "exam"; }).map(function (x) {
+                        return { nickname: maskName(x.nickname), questions: x.questions, kind: x.kind, me: x.is_me === true };
+                    });
                     list.sort(function (a, b) {
                         return (Number(b.questions) || 0) - (Number(a.questions) || 0);
                     });
@@ -50,7 +61,7 @@ export function LeaderboardScreen({ navigation }) {
     return (
         <ScrollScreen dark={isDark}>
             {/* Back */}
-            <PageHeader dark={isDark} title="Türkiye Sıralaması" subtitle="En çok doğru çözenler" onBack={function () { navigation.goBack(); }} right={null} />
+            <PageHeader dark={isDark} title="Türkiye Sıralaması" subtitle="En çok doğru çözenler · adların yalnız ilk iki harfi görünür" onBack={function () { navigation.goBack(); }} right={null} />
 
             {/* Error */}
             {err ? (
@@ -78,7 +89,7 @@ export function LeaderboardScreen({ navigation }) {
                                     <Text style={styles.podiumMedal}>{medal}</Text>
                                 </View>
                                 <Text style={[styles.podiumName, isDark && styles.textLight]} numberOfLines={1}>
-                                    {r.nickname}
+                                    {r.nickname}{r.me ? " (Sen)" : ""}
                                 </Text>
                                 <Text style={[styles.podiumScore, isDark && styles.textLight]}>
                                     {r.questions}
@@ -104,7 +115,7 @@ export function LeaderboardScreen({ navigation }) {
                                     {rank}
                                 </Text>
                                 <Text style={[styles.listName, isDark && styles.textLight]}>
-                                    {r.nickname}
+                                    {r.nickname}{r.me ? " (Sen)" : ""}
                                 </Text>
                                 <Text style={[styles.listScore, isDark && styles.textLight]}>
                                     {r.questions}

@@ -145,7 +145,7 @@
         global.KpssComponents = global.KpssComponents || {};
         if (global.KpssComponents[name]) return Promise.resolve(global.KpssComponents[name]);
         if (cache[name]) return cache[name];
-        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=111";
+        var url = new URL(path, window.location.href).href.replace(/(\?.*)?$/, "") + "?v=112";
         var file = path.replace(/\?.*$/, "");
         cache[name] = codeFor(file, url).then(function (code) {
             var runner = new Function("React", "ReactDOM", code);
