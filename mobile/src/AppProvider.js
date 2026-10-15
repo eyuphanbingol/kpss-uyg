@@ -3,6 +3,7 @@ import { StudentStore } from "./lib/store";
 import { hydrateLocalStorage } from "./lib/storage";
 import { supabase } from "./lib/supabase";
 import { SyncEngine } from "./lib/syncEngine";
+import { startMonet } from "./lib/monet";
 import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
 import { AppState, InteractionManager, Platform } from "react-native";
@@ -128,6 +129,11 @@ export function AppProvider(props) {
             }).catch(function () {});
         } catch (e) {}
     }
+
+    // ---------- Gelir modeli (kilit durumu, mağaza, reklam): src/lib/monet.js ----------
+    useEffect(function () {
+        try { startMonet(); } catch (e) {}
+    }, []);
 
     // ---------- Network Kontrol ----------
     useEffect(function () {

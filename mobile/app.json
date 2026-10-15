@@ -97,7 +97,16 @@
           }
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "delayAppMeasurementInit": true,
+          "userTrackingUsageDescription": "Reklamları sana uygun göstermek için kullanılır; izin vermesen de uygulama tamamen çalışır."
+        }
+      ]
     ],
     "owner": "eyuphan.bingol"
   }

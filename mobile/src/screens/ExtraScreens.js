@@ -142,64 +142,8 @@ export function LeaderboardScreen({ navigation }) {
 // PAYWALL SCREEN
 // ============================================================
 
-export function PaywallScreen({ navigation }) {
-    var app = useApp();
-    var isDark = app.dark;
-    var isPremium = StudentStore.isPremium();
-
-    if (!StudentStore.premiumOfferEnabled()) {
-        return (
-            <ScrollScreen dark={isDark}>
-                <PageHeader dark={isDark} title="Tüm özellikler açık" subtitle="Abonelik şimdilik yok; deneme ve tercih listesi sınırlı değil." onBack={function () { navigation.goBack(); }} right={null} />
-            </ScrollScreen>
-        );
-    }
-
-    return (
-        <ScrollScreen dark={isDark}>
-            <PageHeader dark={isDark} title="Premium" subtitle="Tüm özelliklerin kilidini aç" onBack={function () { navigation.goBack(); }} right={null} />
-
-            {isPremium ? (
-                <Card style={[styles.premiumActiveCard, isDark && styles.cardDark]}>
-                    <Text style={styles.premiumActiveIcon}>⭐</Text>
-                    <Text style={[styles.premiumActiveTitle, isDark && styles.textLight]}>
-                        Premium Aktif
-                    </Text>
-                    <Text style={[styles.premiumActiveDesc, isDark && styles.textMuted]}>
-                        Sınırsız deneme ve tüm özellikler kullanımda.
-                    </Text>
-                </Card>
-            ) : (
-                <Card style={[styles.premiumCard, isDark && styles.cardDark]}>
-                    <Text style={styles.premiumPrice}>149 ₺</Text>
-                    <Text style={[styles.premiumPeriod, isDark && styles.textMuted]}>/ ay</Text>
-                    <View style={styles.premiumFeatures}>
-                        <Text style={[styles.premiumFeature, isDark && styles.textLight]}>
-                            ✅ Sınırsız deneme
-                        </Text>
-                        <Text style={[styles.premiumFeature, isDark && styles.textLight]}>
-                            ✅ Tam tercih listesi
-                        </Text>
-                        <Text style={[styles.premiumFeature, isDark && styles.textLight]}>
-                            ✅ Detaylı analiz
-                        </Text>
-                        <Text style={[styles.premiumFeature, isDark && styles.textLight]}>
-                            ✅ Reklamsız çalışma
-                        </Text>
-                    </View>
-                    <PrimaryButton
-                        title="Online ödeme çok yakında"
-                        disabled
-                        onPress={function () {}}
-                    />
-                    <Text style={[styles.premiumNote, isDark && styles.textMuted]}>
-                        Şimdilik tüm temel özellikler ücretsiz; davet koduyla premium gün kazanabilirsin.
-                    </Text>
-                </Card>
-            )}
-        </ScrollScreen>
-    );
-}
+// Premium ekranı: src/screens/PremiumScreens.js (mağaza satın alması)
+export { PaywallScreen } from "./PremiumScreens";
 
 // ============================================================
 // STILLER

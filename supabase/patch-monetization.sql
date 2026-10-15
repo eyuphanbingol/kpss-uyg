@@ -92,6 +92,7 @@ create index if not exists monet_free_claims_user on public.monet_free_claims (u
 create index if not exists monet_free_claims_email on public.monet_free_claims (email_hash);
 create index if not exists monet_free_claims_ip on public.monet_free_claims (ip_hash, created_at);
 create index if not exists monet_free_claims_dev on public.monet_free_claims using gin (device_hashes);
+create index if not exists monet_free_claims_at on public.monet_free_claims (created_at);
 
 create table if not exists public.store_entitlements (
   user_id uuid primary key references auth.users(id) on delete cascade,
@@ -267,6 +268,8 @@ declare
 begin
   if not coalesce(st.live_paywall, false) then return new; end if;
   if new.status not in ('registered', 'waitlist') then return new; end if;
+  -- gizlilik politikası: özetler en fazla 2 yıl saklanır
+  delete from public.monet_free_claims where created_at < now() - interval '2 years';
   if TG_OP = 'UPDATE' and old.status in ('registered', 'waitlist', 'blocked') then return new; end if;
   if role_claim = 'service_role' or public.live_is_admin() then return new; end if;
   -- bu deneme için daha önce hak kullanıldıysa (kaydını silip yeniden alan) tekrar ücret alınmaz

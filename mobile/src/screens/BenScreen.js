@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Monetization } from "../lib/monetization";
+import { useMonet } from "./PremiumScreens";
 import { Alert, Linking, Modal, Text, TextInput, View, StyleSheet } from "react-native";
 import { useApp } from "../AppProvider";
 import { StudentStore } from "../lib/store";
@@ -17,6 +19,7 @@ import { KpssConfig } from "../lib/config";
 
 export default function BenScreen({ navigation }) {
     var app = useApp();
+    useMonet();
     var st = app.student;
     var isDark = app.dark;
 
@@ -299,6 +302,13 @@ export default function BenScreen({ navigation }) {
                     </View>
                 )}
             </Card>
+
+            {Monetization.enabled() ? (
+                <Card dark={isDark} onPress={function () { go(navigation, "Paywall"); }}>
+                    <Text style={[styles.toolName, isDark && styles.textLight]}>{Monetization.isPremium() ? "Premium açık" : "Premium'a geç"}</Text>
+                    <Text style={[styles.toolDesc, isDark && styles.textMuted]}>{Monetization.isPremium() ? "Bütün konular ve oyunlar açık, reklamsız" : "Bütün konular ve oyunlar · aylık 200 TL ya da yıllık 1000 TL"}</Text>
+                </Card>
+            ) : null}
 
             <Card dark={isDark} onPress={function () { go(navigation, "Leaderboard"); }}>
                 <Text style={[styles.toolName, isDark && styles.textLight]}>Türkiye sıralaması</Text>

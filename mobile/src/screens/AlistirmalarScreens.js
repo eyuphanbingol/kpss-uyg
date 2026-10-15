@@ -1,4 +1,6 @@
 import React, { memo, useEffect, useMemo, useRef, useState } from "react";
+import { Monetization } from "../lib/monetization";
+import { LockBadge, useMonet } from "./PremiumScreens";
 import { ActivityIndicator, Image, Pressable, ScrollView, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "../AppProvider";
@@ -149,6 +151,7 @@ export function AlistirmaDersListScreen({ navigation }) {
 
 export function AlistirmaKonuListScreen({ route, navigation }) {
     var ders = route.params.ders;
+    useMonet();
     var app = useApp();
     var isDark = app.dark;
     useEffect(function () {
@@ -200,7 +203,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                 onBack={function () { navigation.goBack(); }}
                 right={null}
             />
-            {konular.map(function (konu) {
+            {konular.map(function (konu, idx) {
                 var ready = !!(stats && stats[konu]);
                 var st = ready ? stats[konu] : { n: 0, left: 0, open: true, done: false };
                 if (ready && !st.n) return null; // bu konu için henüz soru yazılmamış
@@ -221,7 +224,7 @@ export function AlistirmaKonuListScreen({ route, navigation }) {
                                 <Text style={[styles.dersName, isDark && styles.textLight]} numberOfLines={2}>{konuLabel(konu)}</Text>
                                 <Text style={styles.meta}>{open ? (!ready ? "Boşluklar sayılıyor…" : st.n ? (st.left + " / " + st.n + " boşluk") : "Henüz yok") : "Önce önceki konunun testlerini bitir"}</Text>
                             </View>
-                            {st.done ? <PctBadge label="Tamam" /> : null}
+                            {open && Monetization.isLocked(Monetization.keys.cloze(ders, konu), idx) ? <LockBadge /> : st.done ? <PctBadge label="Tamam" /> : null}
                         </View>
                     </AccentCard>
                 );
@@ -417,8 +420,11 @@ var MapTopicRow = memo(function MapTopicRow(props) {
                 )}
                 <View style={styles.mapRowBody}>
                     <Text style={[styles.dersName, props.dark && styles.textLight]} numberOfLines={2}>{props.title}</Text>
-                    <View style={styles.targetBadge}>
-                        <Text style={styles.targetBadgeTxt}>{props.count} hedef</Text>
+                    <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+                        <View style={styles.targetBadge}>
+                            <Text style={styles.targetBadgeTxt}>{props.count} hedef</Text>
+                        </View>
+                        {props.locked ? <LockBadge /> : null}
                     </View>
                 </View>
                 <ChevronRight size={18} color="#94A3B8" />
@@ -429,6 +435,7 @@ var MapTopicRow = memo(function MapTopicRow(props) {
 
 export function MapTopicsScreen({ navigation }) {
     var app = useApp();
+    useMonet();
     var isDark = app.dark;
     var tree = MapQuiz.TREE || [];
     return (
@@ -444,11 +451,12 @@ export function MapTopicsScreen({ navigation }) {
                 return (
                     <View key={g.id} style={styles.sectionBlock}>
                         <Text style={[styles.sectionHead, isDark && styles.textMuted]}>{g.title}</Text>
-                        {g.kids.map(function (k) {
+                        {g.kids.map(function (k, ki) {
                             return (
                                 <MapTopicRow
                                     key={k.id}
                                     dark={isDark}
+                                    locked={Monetization.isLocked(Monetization.keys.map(k.id), ki)}
                                     title={k.title}
                                     count={MapQuiz.countFor(k.id)}
                                     imgKey={k.hoverImg}

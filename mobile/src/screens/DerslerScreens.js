@@ -1,4 +1,6 @@
 import React from "react";
+import { Monetization } from "../lib/monetization";
+import { LockBadge, useMonet } from "./PremiumScreens";
 import { Text, View, StyleSheet, Alert } from "react-native";
 import { BookOpen, FileText } from "lucide-react-native";
 import { useApp } from "../AppProvider";
@@ -120,6 +122,7 @@ export function DersHomeScreen({ navigation }) {
 export function KonuListScreen({ route, navigation }) {
     var ders = route.params.ders;
     var app = useApp();
+    useMonet();
     var isDark = app.dark;
     var konular = Object.keys(app.kpssData[ders] || {}).filter(function (k) { return k !== "_"; });
     var topics = (app.student.topics && app.student.topics[ders]) || {};
@@ -164,7 +167,7 @@ export function KonuListScreen({ route, navigation }) {
                                 <Text style={[styles.konuName, isDark && styles.textLight]} numberOfLines={2}>{konuLabel(konu)}</Text>
                                 <Text style={styles.konuMeta}>{meta}</Text>
                             </View>
-                            {open ? (
+                            {open && Monetization.isLocked(Monetization.keys.konu(ders, konu), idx) ? <LockBadge /> : open ? (
                                 <PctBadge label={tp.lastPct == null ? "—" : "%" + tp.lastPct} />
                             ) : null}
                         </View>

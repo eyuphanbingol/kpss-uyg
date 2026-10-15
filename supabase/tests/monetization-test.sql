@@ -167,6 +167,14 @@ select t_ok(monet_status()->'ad_unlocks' ? 'map:gol-tektonik' and not (monet_sta
 select t_err($$select monet_register_device('kisa', 'web')$$, 'bad_device', 'geçersiz cihaz kimliği reddedilir');
 reset role;
 
+-- ---------- 10. 2 yıldan eski özetler silinir ----------
+insert into monet_free_claims (user_id, email_hash, created_at) values ('00000000-0000-4000-8000-0000000000d1', 'eski', now() - interval '3 years');
+set role authenticated;
+select t_user('00000000-0000-4000-8000-0000000000c3', '7.7.7.7');
+select t_reg(current_setting('t.e2'), auth.uid()::text);
+reset role;
+select t_ok(not exists (select 1 from monet_free_claims where email_hash = 'eski'), '2 yıldan eski özet silinir');
+
 -- kapatınca deneme yine serbest
 update monet_settings set live_paywall = false, ip_free_limit = 3;
 select 'TÜM GELİR MODELİ TESTLERİ GEÇTİ';

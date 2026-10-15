@@ -236,13 +236,53 @@ test aboneliklerinde 1 ay ≈ 5 dakika sürer.
    "Cihaz veya diğer kimlikler (reklam kimliği) — reklam amaçlı, üçüncü tarafla paylaşılır (Google)" eklenir;
    `yasal/gizlilik` sayfasına AdMob bölümü eklenir (kod tarafında yapılacak).
 
+### 8.6.1 Reklam kimliği beyanı (1.0.13'ten itibaren zorunlu)
+Uygulama AdMob paketini içerdiği için Android paketi `AD_ID` iznini taşır. Play Console → **Politika → Uygulama içeriği →
+Reklam kimliği**: "Uygulamanız reklam kimliği kullanıyor mu?" → **Evet** → amaç: **Reklam veya pazarlama**.
+(Reklamlar sunucudaki anahtar açılana kadar gösterilmez; beyan yine de pakete göre istenir.)
+
 ### 8.7 Veri güvenliği formuna eklenecekler (satın alma ile)
 | Kategori | Tür | Toplanıyor | Paylaşılıyor | Amaç |
 |---|---|---|---|---|
 | Finansal bilgiler | **Satın alma geçmişi** | Evet | Hayır (RevenueCat hizmet sağlayıcıdır) | Uygulama işlevselliği |
 | Cihaz veya diğer kimlikler | **Cihaz kimliği** | Evet | Hayır | Dolandırıcılığı önleme (ücretsiz denemenin kötüye kullanımı) |
 
+| Cihaz veya diğer kimlikler | **Reklam kimliği** (AdMob) | Evet | **Evet** (Google AdMob) | Reklam |
+
 Kart bilgisi uygulamaya hiç gelmez; ödeme ekranı Google'ındır.
+
+### 8.8 Altyapıyı açma (kod tarafı hazır; anahtarlar kapalı başlar)
+Hepsi bir kez yapılır; hiçbirinde şifre ya da gizli anahtar depoya yazılmaz.
+
+1. **Veritabanı:** Supabase → SQL Editor → `supabase/patch-monetization.sql` dosyasını çalıştır (tekrar çalıştırmak güvenli).
+   Hiçbir şeyi açmaz; sonunda `enabled = false, live_paywall = false` satırı görünmeli.
+2. **Sunucu fonksiyonları** (kendi bilgisayarında, depo kökünde):
+   ```bash
+   npx supabase login
+   npx supabase functions deploy store-sync
+   npx supabase functions deploy store-webhook --no-verify-jwt
+   npx supabase functions deploy admob-ssv --no-verify-jwt
+   ```
+3. **Sırlar** (Supabase → Edge Functions → Secrets; değerleri kimseyle paylaşma):
+   - `REVENUECAT_SECRET_KEY` → RevenueCat → API keys → **Secret** key (`sk_…`)
+   - `REVENUECAT_WEBHOOK_AUTH` → kendin uydur (uzun rastgele bir metin); aynı değeri RevenueCat → Integrations →
+     Webhooks → "Authorization header value" alanına yaz. Webhook URL: `https://<proje>.supabase.co/functions/v1/store-webhook`
+   - `ADMOB_REWARDED_UNIT_IDS` (isteğe bağlı) → ödüllü reklam biriminin numarası (`ca-app-pub-…/` sonrasındaki sayı)
+4. **AdMob sunucu doğrulaması:** AdMob → Uygulamalar → Ödüllü birim → Sunucu tarafı doğrulama → URL:
+   `https://<proje>.supabase.co/functions/v1/admob-ssv` → "URL'yi doğrula".
+5. **Uygulamadaki kimlikler** (gizli değildir, depoya yazılabilir) — bana gönder, ben girerim:
+   - RevenueCat **public** Google Play anahtarı (`goog_…`) → `mobile/src/lib/config.js → monetization.revenueCat.androidKey`
+   - AdMob uygulama kimliği (`ca-app-pub-…~…`) → `mobile/app.json` (şu an Google test kimliği yazılı)
+   - AdMob ödüllü birim kimliği (`ca-app-pub-…/…`) → `config.js → monetization.admob.rewardedAndroid`
+   Bunlar değişince yeni paket (AAB) gerekir.
+6. **Açma** (Supabase SQL Editor; yönetici hesabıyla uygulamadan da açılabilir):
+   ```sql
+   update public.monet_settings set enabled = true;        -- kilitler + Premium
+   update public.monet_settings set live_paywall = true;   -- canlı deneme: ilki ücretsiz, sonrası 50 TL
+   ```
+   Kapatmak için aynı satırları `false` ile çalıştır; kimsenin verisi silinmez.
+7. **Test:** Lisans test hesabınla (8.4) dahili test sürümünde Premium al → uygulamada ve web'de kilitlerin açıldığını gör;
+   mağazadan iptal et → süre bitince kilitlerin döndüğünü gör. Ödüllü reklamı izle → bölüm 24 saat açık, web'de de açık.
 
 ---
 

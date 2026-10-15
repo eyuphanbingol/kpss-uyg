@@ -4,6 +4,13 @@ export const KpssConfig = {
     appName: "Atanly",
     productionUrl: "https://kpss-uyg.vercel.app",
     premiumEnabled: false,
+    // Gelir modeli: mağaza ve reklam kimlikleri (gizli değildir). RevenueCat anahtarı boşsa satın alma düğmeleri
+    // gizlenir; AdMob birimi boşsa Google'ın test reklamı gösterilir (gelir yok). Ayrıntı: docs/play-store.md §8.
+    // Kilitlerin açık/kapalı olduğu sunucudadır (monet_settings), burada değil.
+    monetization: {
+        revenueCat: { androidKey: "", iosKey: "" },
+        admob: { rewardedAndroid: "", rewardedIos: "" }
+    },
     freeWeeklyExams: 2,
     freeDailyMixed: 3,
     examDateByLevel: {

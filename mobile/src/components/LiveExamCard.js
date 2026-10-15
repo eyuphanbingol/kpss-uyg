@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { Monetization } from "../lib/monetization";
+import { Monet } from "../lib/monet";
+import { useMonet } from "../screens/PremiumScreens";
+import { Alert, Platform, StyleSheet, Text, View } from "react-native";
 import { LiveExam as L } from "../lib/liveExam";
 import { LiveClient as C } from "../lib/liveClient";
 import { StudentStore } from "../lib/store";
@@ -27,6 +30,7 @@ function Btn({ label, onPress, primary, disabled, dark }) {
 
 export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     var track = C.trackOf(student);
+    useMonet();
     var [dash, setDash] = useState(null);
     var [busy, setBusy] = useState(false);
     var [msg, setMsg] = useState("");
@@ -88,7 +92,49 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
         C.rpc(name, args).then(function (r) { setBusy(false); if (done) done(r); load(); })
             .catch(function (x) { setBusy(false); setMsg(x.message); });
     }
-    function register() { act("live_register", { p_exam: e.id }, function (r) { setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı."); }); }
+    // Gelir modeli: ilk canlı deneme ücretsiz, sonrası mağazadan alınan kayıt hakkıyla (sunucu kontrol eder).
+    var liveEntry = Monetization.liveEntry();
+    var livePrice = Monetization.PRICES.live;
+    function doRegister(afterPurchase) {
+        setBusy(true); setMsg("");
+        C.rpc("live_register", { p_exam: e.id }).then(function (r) {
+            setBusy(false);
+            setMsg(r && r.status === "waitlist" ? "Kontenjan dolu; yedek listesine alındın." : "Kaydın alındı.");
+            load();
+            Monet.refresh();
+        }).catch(function (x) {
+            setBusy(false);
+            Monet.refresh();
+            if (x && x.code === "payment_required") {
+                if (afterPurchase) setMsg("Ödemen alındı; hesabına işlenmesi birkaç dakika sürebilir. Biraz sonra yeniden \"Kayıt ol\"a bas.");
+                else askBuy();
+            } else {
+                setMsg(x.message);
+            }
+        });
+    }
+    function buyThenRegister() {
+        setBusy(true); setMsg("");
+        Monet.buyLiveCredit().then(function (r) {
+            if (r.ok) { doRegister(true); return; }
+            setBusy(false);
+            if (!r.cancelled) setMsg(r.message);
+        });
+    }
+    function askBuy() {
+        if (!Monet.canPurchase()) {
+            setMsg("Bu deneme için kayıt hakkın yok. Her hesabın ilk denemesi ücretsiz; sonrakiler için kayıt hakkı satışı yakında açılacak.");
+            return;
+        }
+        Alert.alert("Deneme kaydı", "Her hesabın ilk canlı denemesi ücretsiz. Bu deneme için kayıt hakkını " + livePrice + "'ye alabilirsin. Ödeme " + (Platform.OS === "ios" ? "App Store" : "Google Play") + " hesabından alınır.", [
+            { text: "Vazgeç", style: "cancel" },
+            { text: livePrice + " · Satın al", onPress: buyThenRegister }
+        ]);
+    }
+    function register() {
+        if (liveEntry.kind === "pay") askBuy();
+        else doRegister(false);
+    }
     function unregister() {
         Alert.alert("Kaydı sil", "Kaydını silmek istiyor musun?", [
             { text: "Vazgeç", style: "cancel" },
@@ -263,7 +309,7 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
                 <Text style={[s.kicker, { color: "#4338ca" }]}>CANLI DENEME · {L.trUpper(L.TRACKS[e.track])}</Text>
                 <Text style={[s.title, dark && s.light]}>{when}'te canlı deneme</Text>
                 <Text style={[s.body, dark && s.lightMuted]}>120 soru · 130 dakika · herkes aynı anda · başlamaya {L.fmtLeft(startT - now)}{dash.registered_count ? " · " + dash.registered_count + " kayıtlı" : ""}</Text>
-                <View style={s.btns}><Btn primary disabled={busy} label="Kayıt ol" onPress={register} /></View>
+                <View style={s.btns}><Btn primary disabled={busy} label={!liveEntry.paywall ? "Kayıt ol" : liveEntry.kind === "free" ? "Kayıt ol · ilk deneme ücretsiz" : liveEntry.kind === "credit" ? "Kayıt ol · " + liveEntry.credits + " kayıt hakkın var" : "Kayıt ol · " + livePrice} onPress={register} /></View>
             </View>
         );
     } else if (ph === "registered" || ph === "waitlist") {

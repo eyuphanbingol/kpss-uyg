@@ -10,6 +10,10 @@ import ProgramScreen from "./screens/ProgramScreen";
 import { DersHomeScreen, KonuHubScreen, KonuListScreen } from "./screens/DerslerScreens";
 import { AlistirmalarHomeScreen, AlistirmaDersListScreen, AlistirmaKonuListScreen, ClozePlayScreen, MapTopicsScreen, MapPlayScreen } from "./screens/AlistirmalarScreens";
 import { ConquerPlayScreen, TabuPlayScreen, PanicPlayScreen } from "./screens/DrillGameScreens";
+import { withMonetGate } from "./screens/PremiumScreens";
+import { Monetization } from "./lib/monetization";
+import { konuLabel } from "./lib/konuLabels";
+import { MapQuiz } from "./lib/mapQuiz";
 import EksiklerScreen from "./screens/EksiklerScreen";
 import BenScreen from "./screens/BenScreen";
 import NotesScreen from "./screens/NotesScreen";
@@ -24,6 +28,33 @@ import { colors } from "./lib/theme";
 import { hapticTap } from "./ui";
 
 var Stack = createNativeStackNavigator();
+
+// Gelir modeli kilitleri (src/lib/monetization.js): her bölümün ilk 3 başlığı açık, gerisi premium ya da
+// reklamla. Ekran hangi yoldan açılırsa açılsın (liste, plan kartı, arama) aynı kontrolden geçer.
+// Sunucuda monet_settings.enabled kapalıyken hiçbir şey kilitlenmez.
+function konuIndex(app, ders, konu) {
+    return Object.keys((app.kpssData && app.kpssData[ders]) || {}).filter(function (k) { return k !== "_"; }).indexOf(konu);
+}
+function mapIndex(topicId) {
+    var tree = MapQuiz.TREE || [];
+    for (var i = 0; i < tree.length; i++) {
+        for (var j = 0; j < tree[i].kids.length; j++) if (tree[i].kids[j].id === topicId) return j;
+    }
+    return -1;
+}
+var GatedKonuHub = withMonetGate(KonuHubScreen, function (p, app) {
+    if (!p.ders || !p.konu) return null;
+    return { key: Monetization.keys.konu(p.ders, p.konu), index: konuIndex(app, p.ders, p.konu), title: konuLabel(p.konu) };
+});
+var GatedClozePlay = withMonetGate(ClozePlayScreen, function (p, app) {
+    if (!p.ders || !p.konu) return null;
+    return { key: Monetization.keys.cloze(p.ders, p.konu), index: konuIndex(app, p.ders, p.konu), title: konuLabel(p.konu) };
+});
+var GatedMapPlay = withMonetGate(MapPlayScreen, function (p) {
+    if (!p.topicId) return null;
+    var meta = MapQuiz.topicMeta(p.topicId);
+    return { key: Monetization.keys.map(p.topicId), index: mapIndex(p.topicId), title: meta ? meta.title : "Harita oyunu" };
+});
 var Tab = createBottomTabNavigator();
 
 var TAB_SCREENS = [
@@ -182,12 +213,12 @@ export default function MainStack() {
                 <Stack.Screen name="Tabs" component={Tabs} />
                 <Stack.Screen name="Program" component={ProgramScreen} />
                 <Stack.Screen name="KonuList" component={KonuListScreen} />
-                <Stack.Screen name="KonuHub" component={KonuHubScreen} />
+                <Stack.Screen name="KonuHub" component={GatedKonuHub} />
                 <Stack.Screen name="AlistirmaDersList" component={AlistirmaDersListScreen} />
                 <Stack.Screen name="AlistirmaKonuList" component={AlistirmaKonuListScreen} />
-                <Stack.Screen name="ClozePlay" component={ClozePlayScreen} />
+                <Stack.Screen name="ClozePlay" component={GatedClozePlay} />
                 <Stack.Screen name="MapTopics" component={MapTopicsScreen} />
-                <Stack.Screen name="MapPlay" component={MapPlayScreen} />
+                <Stack.Screen name="MapPlay" component={GatedMapPlay} />
                 <Stack.Screen name="ConquerPlay" component={ConquerPlayScreen} />
                 <Stack.Screen name="TabuPlay" component={TabuPlayScreen} />
                 <Stack.Screen name="PanicPlay" component={PanicPlayScreen} />
