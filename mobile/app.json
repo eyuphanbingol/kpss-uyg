@@ -3,7 +3,7 @@
     "name": "Atanly",
     "slug": "atanly",
     "scheme": "atanly",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "platforms": [
       "ios",
       "android"
@@ -67,7 +67,8 @@
         }
       ],
       "permissions": [
-        "android.permission.CAMERA"
+        "android.permission.CAMERA",
+        "com.android.vending.BILLING"
       ],
       "allowBackup": false
     },

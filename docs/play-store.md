@@ -106,7 +106,9 @@ Atanly, KPSS Genel Yetenek – Genel Kültür'e hazırlanan lisans, ön lisans v
 • Haftalık sıralama
 
 Hesabın web (atanly.com) ve telefon arasında eşitlenir; kaldığın yerden devam edersin.
-Reklam yok. Verilerin satılmaz ve paylaşılmaz.
+Verilerin satılmaz.
+
+Atanly ücretsizdir. İsteğe bağlı Premium üyelik (aylık / yıllık) ve canlı deneme kaydı uygulama içi satın alma ile alınır.
 ```
 
 **Görseller** (`docs/play-store/`):
@@ -129,8 +131,8 @@ Tablet görselleri isteğe bağlı; boş bırakılabilir.
 |---|---|
 | **Gizlilik politikası** | `https://www.atanly.com/yasal/gizlilik` |
 | **Uygulama erişimi** | "Bazı işlevler kısıtlı" → giriş bilgisi ver: inceleme için ayrı bir **test hesabı** aç (e-posta + şifre), buraya yaz. Kendi hesabını verme. |
-| **Reklamlar** | Hayır, reklam içermiyor |
-| **İçerik derecelendirmesi** | Anket → Kategori: *Eğitim / referans*. Şiddet, cinsellik, kumar, uyuşturucu: hayır. Kullanıcılar arası iletişim: **hayır** (sohbet yok; sıralamada yalnızca takma ad görünür). Konum paylaşımı: hayır. Dijital satın alma: hayır. → Sonuç **3+ / Herkes** |
+| **Reklamlar** | İlk sürüm: **Hayır**. Ödüllü reklam eklenen sürümü yüklemeden önce **Evet** yapılacak (bkz. 8.5) |
+| **İçerik derecelendirmesi** | Anket → Kategori: *Eğitim / referans*. Şiddet, cinsellik, kumar, uyuşturucu: hayır. Kullanıcılar arası iletişim: **hayır** (sohbet yok; sıralamada adın yalnız ilk iki harfi görünür). Konum paylaşımı: hayır. Dijital satın alma: **evet** (Premium ve deneme kaydı). → Sonuç **3+ / Herkes** |
 | **Hedef kitle** | **18 yaş ve üstü** (ortaöğretim KPSS adayları da 18+'dır). "Çocuklara hitap ediyor mu": Hayır |
 | **Haber uygulaması** | Hayır |
 | **Devlet uygulaması** | Hayır (ÖSYM ile bağlantısı yok; açıklamada resmî kurum izlenimi verme) |
@@ -177,6 +179,72 @@ Yeni **bireysel** hesaplarda zorunlu:
 - Site ile uygulamayı bağla: mağaza bağlantısı belli olunca (`https://play.google.com/store/apps/details?id=app.atanly.mobile`)
   tanıtım sayfasına "Google Play'den indir" düğmesi eklenebilir.
 - Her yeni sürümde: `mobile/app.json → expo.version` (örn. 1.0.13) artır → `eas build … --auto-submit`.
+
+## 8. Para kazanma: abonelik ve uygulama içi ürünler
+
+Ödemelerin hepsi Google Play üzerinden alınır; kendi ödeme altyapımız yoktur. Satın almaları RevenueCat
+doğrular ve Supabase'e yazar; böylece telefonda alınan Premium web'de de geçerli olur.
+
+Ürünler ancak **ödeme izni (BILLING) olan bir paket yüklendikten sonra** oluşturulabilir. 1.0.13 sürümünden
+itibaren paket bu izni içerir: önce adım 2–3 ile bu sürümü dahili teste yükle, sonra aşağıdakileri yap.
+
+### 8.1 Ödeme profili (bir kez)
+Play Console → **Ayarlar → Ödeme profili** (Payments profile) → profili oluştur.
+- Hesap türü bireysel ise ad-soyad ve adres; ödemelerin yatacağı **banka hesabı (IBAN, TRY)**.
+- Vergi bilgileri formunu doldur. Google, Türkiye'deki satışlar için KDV'yi kendisi tahsil edip öder.
+- Profil onaylanana kadar ürünleri "etkin" yapamazsın (taslak oluşturabilirsin).
+
+### 8.2 Abonelik: Premium
+Para kazanma → **Ürünler → Abonelikler** → Abonelik oluştur
+- Ürün kimliği: `atanly_premium` (sonradan değiştirilemez)
+- Ad: `Atanly Premium`
+- Avantajlar: `Tüm konu ve oyunlar açık` · `Reklamsız`
+- **Temel plan 1:** kimlik `aylik` · Otomatik yenilenen · Faturalandırma dönemi **1 ay** · Fiyat **200 TL** (Türkiye) ·
+  Ek süre (grace period) 3 gün · Etkinleştir
+- **Temel plan 2:** kimlik `yillik` · Otomatik yenilenen · **1 yıl** · Fiyat **1000 TL** · Etkinleştir
+- Diğer ülkeler için fiyatı Google'ın döviz çevirisine bırakabilir ya da yalnız Türkiye'de satabilirsin.
+- Ücretsiz deneme süresi şimdilik ekleme (istersen sonra "teklif" olarak eklenir).
+
+### 8.3 Uygulama içi ürün: canlı deneme kaydı
+Para kazanma → **Ürünler → Uygulama içi ürünler** → Ürün oluştur
+- Ürün kimliği: `deneme_kaydi` · Ad: `Canlı deneme kaydı` · Açıklama: `Bir canlı denemeye kayıt hakkı`
+- Fiyat: **50 TL** · Etkinleştir. (Tekrar tekrar alınabilir: uygulama her kayıtta "tüketir".)
+- Her hesabın ilk denemesi ücretsizdir; bunu sunucu kontrol eder, mağazada ayrıca ayar gerekmez.
+
+### 8.4 Test satın alımları (para çekilmez)
+Play Console (ana sayfa) → **Ayarlar → Lisans testi** → kendi Gmail adresini ve test edenleri ekle →
+Lisans yanıtı: `RESPOND_NORMALLY`. Bu hesaplarla dahili test sürümünde yapılan satın alımlar ücretsizdir;
+test aboneliklerinde 1 ay ≈ 5 dakika sürer.
+
+### 8.5 RevenueCat bağlantısı
+1. https://app.revenuecat.com → hesap aç → Proje: `Atanly` → **Google Play** uygulaması ekle, paket adı `app.atanly.mobile`.
+2. Google Cloud'da bir **hizmet hesabı** oluştur (adım 3'teki EAS hizmet hesabından **ayrı** olsun), JSON anahtarını
+   indir, Play Console → **Kullanıcılar ve izinler** → hizmet hesabını davet et → izinler: *Uygulama bilgilerini görüntüle*,
+   *Finansal verileri görüntüle*, *Siparişleri ve abonelikleri yönet*. JSON'u **yalnız RevenueCat'e** yükle
+   (depoya, sohbete, e-postaya koyma).
+3. RevenueCat'te **Gerçek zamanlı geliştirici bildirimleri** (RTDN) için verdiği Pub/Sub konusunu kopyala →
+   Play Console → Para kazanma kurulumu → Google Play Faturalandırma → **Konu adı**na yapıştır → Test bildirimi gönder.
+4. RevenueCat → **Products**: `atanly_premium:aylik`, `atanly_premium:yillik`, `deneme_kaydi` ürünlerini içe aktar.
+   **Entitlements**: `premium` (iki abonelik planı buna bağlı). **Offerings**: `default` (aylık + yıllık paketler).
+5. RevenueCat → API keys → **Google Play public SDK key** (`goog_` ile başlar) uygulamaya girer; bu anahtar gizli değildir.
+   Gizli anahtarlar (secret key, webhook şifresi) yalnız Supabase sunucu sırlarına girer.
+
+### 8.6 Ödüllü reklam (AdMob) — ayrı sürümde
+1. https://admob.google.com → uygulama ekle (Android, Play'de yayımlanmış/yayımlanacak `app.atanly.mobile`).
+2. **Reklam birimi → Ödüllü** → ad: `kilit_ac_24s`. Uygulama kimliği (`ca-app-pub-…~…`) ve birim kimliği (`ca-app-pub-…/…`) gerekir.
+3. Reklam içeren sürümü yüklemeden **önce**: Uygulama içeriği → Reklamlar: **Evet**; Veri güvenliği formuna
+   "Cihaz veya diğer kimlikler (reklam kimliği) — reklam amaçlı, üçüncü tarafla paylaşılır (Google)" eklenir;
+   `yasal/gizlilik` sayfasına AdMob bölümü eklenir (kod tarafında yapılacak).
+
+### 8.7 Veri güvenliği formuna eklenecekler (satın alma ile)
+| Kategori | Tür | Toplanıyor | Paylaşılıyor | Amaç |
+|---|---|---|---|---|
+| Finansal bilgiler | **Satın alma geçmişi** | Evet | Hayır (RevenueCat hizmet sağlayıcıdır) | Uygulama işlevselliği |
+| Cihaz veya diğer kimlikler | **Cihaz kimliği** | Evet | Hayır | Dolandırıcılığı önleme (ücretsiz denemenin kötüye kullanımı) |
+
+Kart bilgisi uygulamaya hiç gelmez; ödeme ekranı Google'ındır.
+
+---
 
 ## Sık reddedilme nedenleri (kontrol listesi)
 - [ ] Gizlilik ve hesap silme bağlantıları açılıyor mu (çıkış yapılmış bir tarayıcıda dene)
