@@ -8,7 +8,7 @@ export const KpssConfig = {
     // gizlenir; AdMob birimi boşsa Google'ın test reklamı gösterilir (gelir yok). Ayrıntı: docs/play-store.md §8.
     // Kilitlerin açık/kapalı olduğu sunucudadır (monet_settings), burada değil.
     monetization: {
-        revenueCat: { androidKey: "", iosKey: "" },
+        revenueCat: { androidKey: "goog_oFAsruSqlSTzxQKZVkrrnDyzWca", iosKey: "" },
         admob: { rewardedAndroid: "", rewardedIos: "" }
     },
     freeWeeklyExams: 2,
