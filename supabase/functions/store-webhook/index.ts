@@ -28,20 +28,29 @@ Deno.serve(async (req) => {
   for (const v of [ev.app_user_id, ev.original_app_user_id].concat(ev.aliases || [], ev.transferred_from || [], ev.transferred_to || [])) {
     if (isUuid(v)) ids.add(String(v).toLowerCase());
   }
+  // RevenueCat panelindeki "Send test event": bağlantı ve şifre doğruysa buraya gelir
+  if (ev.type === "TEST") return new Response(JSON.stringify({ ok: true, type: "TEST" }), { status: 200 });
   if (!ids.size) return new Response(JSON.stringify({ ok: true, skipped: "no_user" }), { status: 200 });
   const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
   const results: Record<string, string> = {};
   for (const id of ids) {
+    // Hesabı silinmiş (ya da hiç olmamış) kullanıcı: yazılacak yer yok. 200 ile atlanır; 500 dönersek
+    // RevenueCat aynı bildirimi günlerce yeniden dener.
+    const u = await admin.auth.admin.getUserById(id);
+    if (u.error || !u.data || !u.data.user) {
+      results[id] = "no_account";
+      continue;
+    }
     try {
       await syncUser(admin, id);
       results[id] = "ok";
     } catch (e) {
-      // silinmiş hesap vb.: RevenueCat tekrar denemesin diye 200 döneriz, hatayı kayda yazarız
       results[id] = "error";
       console.error("store-webhook", ev.type, id, String(e && (e as Error).message || e));
     }
   }
-  const failed = Object.values(results).every((r) => r === "error");
+  // yalnız gerçek hesaplarda yazma başarısızsa 500: RevenueCat bildirimi daha sonra yeniden dener
+  const failed = Object.values(results).some((r) => r === "error") && !Object.values(results).some((r) => r === "ok");
   // hepsi başarısızsa 500: RevenueCat bildirimi daha sonra yeniden dener
   return new Response(JSON.stringify({ ok: !failed, type: ev.type || null }), { status: failed ? 500 : 200 });
 });
