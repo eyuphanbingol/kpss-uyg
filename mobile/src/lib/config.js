@@ -9,7 +9,7 @@ export const KpssConfig = {
     // Kilitlerin açık/kapalı olduğu sunucudadır (monet_settings), burada değil.
     monetization: {
         revenueCat: { androidKey: "goog_oFAsruSqlSTzxQKZVkrrnDyzWca", iosKey: "" },
-        admob: { rewardedAndroid: "", rewardedIos: "" }
+        admob: { rewardedAndroid: "ca-app-pub-9741954794885426/8960848768", rewardedIos: "" }
     },
     freeWeeklyExams: 2,
     freeDailyMixed: 3,
