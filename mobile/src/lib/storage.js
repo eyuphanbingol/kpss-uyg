@@ -1,18 +1,50 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { AppState } from "react-native";
 
 var mem = {};
 var sess = {};
+
+// Öğrenci durumu (≈300 KB) her cevapta kaydediliyor. Her seferinde diske yazmak dokunmaları
+// geciktiriyordu: büyük kayıtlar bellekte hemen güncellenir, diske kısa bir beklemeyle tek seferde
+// yazılır. Uygulama arka plana geçerken bekleyen her şey hemen yazılır.
+var BIG = 16 * 1024;
+var WRITE_DELAY_MS = 1500;
+var pending = {};
+var timer = null;
+
+export function flushStorage() {
+    if (timer) { clearTimeout(timer); timer = null; }
+    var keys = Object.keys(pending);
+    if (!keys.length) return;
+    var pairs = keys.map(function (k) { return [k, pending[k]]; });
+    pending = {};
+    AsyncStorage.multiSet(pairs).catch(function () {
+        pairs.forEach(function (p) { AsyncStorage.setItem(p[0], p[1]).catch(function () {}); });
+    });
+}
+
+AppState.addEventListener("change", function (st) {
+    if (st !== "active") flushStorage();
+});
 
 export var localStorageShim = {
     getItem: function (k) {
         return Object.prototype.hasOwnProperty.call(mem, k) ? mem[k] : null;
     },
     setItem: function (k, v) {
-        mem[k] = String(v);
-        AsyncStorage.setItem(k, String(v)).catch(function () {});
+        var s = String(v);
+        mem[k] = s;
+        if (s.length < BIG) {
+            delete pending[k];
+            AsyncStorage.setItem(k, s).catch(function () {});
+            return;
+        }
+        pending[k] = s;
+        if (!timer) timer = setTimeout(flushStorage, WRITE_DELAY_MS);
     },
     removeItem: function (k) {
         delete mem[k];
+        delete pending[k];
         AsyncStorage.removeItem(k).catch(function () {});
     }
 };
