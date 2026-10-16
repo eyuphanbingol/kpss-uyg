@@ -36,3 +36,36 @@ export function parseAuthUrl(url) {
 export function isRecoveryUrl(url) {
     return parseAuthUrl(url).isRecovery;
 }
+
+// Google dönüşü (…/auth/callback?code=… ya da #access_token=…) için tek seferlik oturum açma.
+// Aynı bağlantı hem giriş ekranına hem uygulamanın genel bağlantı dinleyicisine gelebilir; kod tek
+// kullanımlık olduğu için ikinci çağrı ilkinin sonucunu bekler, yeniden denemez.
+var oauthSeen = {};
+
+// exchangeCodeForSession tam bağlantıyı değil yalnız kodu ister. sb_flow_id varsa doğrulayıcı o akışın
+// kaydından okunur (supabase-js aynı anda birden çok giriş akışı tutabiliyor).
+export function exchangeCode(client, parsed) {
+    var flowId = parsed.params.sb_flow_id;
+    return flowId
+        ? client.auth.exchangeCodeForSession(parsed.code, { flowId: flowId })
+        : client.auth.exchangeCodeForSession(parsed.code);
+}
+export function isOAuthReturnUrl(url) {
+    var p = parseAuthUrl(url);
+    return !p.isRecovery && !p.params.token_hash && !!(p.code || (p.access_token && p.refresh_token) || p.error);
+}
+export function sessionFromOAuthUrl(client, url) {
+    var p = parseAuthUrl(url);
+    if (p.error) return Promise.reject(new Error(p.error_description || p.error));
+    var key = p.code || p.access_token;
+    if (!key) return Promise.resolve(false);
+    if (oauthSeen[key]) return oauthSeen[key];
+    var run = p.code
+        ? exchangeCode(client, p)
+        : client.auth.setSession({ access_token: p.access_token, refresh_token: p.refresh_token });
+    oauthSeen[key] = Promise.resolve(run).then(function (r) {
+        if (r && r.error) throw r.error;
+        return true;
+    });
+    return oauthSeen[key];
+}

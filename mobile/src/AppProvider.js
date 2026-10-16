@@ -8,7 +8,7 @@ import { StudyPlanner } from "./lib/planner";
 import { filterCatalog } from "./lib/alan";
 import { AppState, InteractionManager, Platform } from "react-native";
 import * as Linking from "expo-linking";
-import { parseAuthUrl } from "./lib/authLinks";
+import { parseAuthUrl, isOAuthReturnUrl, sessionFromOAuthUrl } from "./lib/authLinks";
 import { fetchRemoteCatalog, readCachedCatalog, looksCatalog } from "./lib/catalog";
 import BUNDLED_CATALOG from "./content/catalog.json";
 
@@ -264,6 +264,14 @@ export function AppProvider(props) {
     useEffect(function () {
         function handleUrl(url) {
             if (!url) return;
+            // Google dönüşü (atanly://auth/callback?code=…): giriş ekranı açık olmasa ya da uygulama
+            // tarayıcıdayken kapanıp yeniden başlasa bile oturum burada açılır.
+            if (isOAuthReturnUrl(url)) {
+                sessionFromOAuthUrl(supabase, url).catch(function () {
+                    setAuthLinkError("Google girişi tamamlanamadı. Tekrar dene.");
+                });
+                return;
+            }
             var p = parseAuthUrl(url);
             if (p.isRecovery) beginRecovery();
             var th = p.params.token_hash;

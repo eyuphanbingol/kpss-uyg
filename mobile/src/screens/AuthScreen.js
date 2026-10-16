@@ -12,7 +12,7 @@ import { StudentStore } from "../lib/store";
 import { KpssConfig } from "../lib/config";
 import { sessionStorageShim } from "../lib/storage";
 import { SITE } from "../lib/media";
-import { parseAuthUrl } from "../lib/authLinks";
+import { parseAuthUrl, exchangeCode, sessionFromOAuthUrl } from "../lib/authLinks";
 import { useApp } from "../AppProvider";
 import { Field, GhostButton, PrimaryButton, Tap, ThemeToggle } from "../ui";
 import { useKeyboardHeight, useKeyboardScroller } from "../lib/keyboard";
@@ -263,26 +263,13 @@ export default function AuthScreen() {
                 return true;
             }
             if (p.code) {
-                var recEx = await supabase.auth.exchangeCodeForSession(url);
+                var recEx = await exchangeCode(supabase, p);
                 if (recEx.error) throw recEx.error;
                 return true;
             }
             return true;
         }
-        if (p.access_token && p.refresh_token) {
-            var set = await supabase.auth.setSession({
-                access_token: p.access_token,
-                refresh_token: p.refresh_token
-            });
-            if (set.error) throw set.error;
-            return true;
-        }
-        if (p.code) {
-            var ex = await supabase.auth.exchangeCodeForSession(url);
-            if (ex.error) throw ex.error;
-            return true;
-        }
-        return false;
+        return sessionFromOAuthUrl(supabase, url);
     }
 
     useEffect(function () {
@@ -327,28 +314,44 @@ export default function AuthScreen() {
         }
         setGoogleBusy(true);
         setMsg("");
-        var linkSub = null;
         try {
-            var redirectTo = SITE + "/auth/callback";
-            linkSub = Linking.addEventListener("url", function (ev) {
-                if (ev && ev.url) sessionFromAuthUrl(ev.url).catch(function () {});
-            });
+            // Google → Supabase → https://www.atanly.com/auth/callback → sayfa atanly://auth/callback?code=… açar.
+            // Dönüş bağlantısını uygulamanın genel dinleyicisi de (AppProvider) yakalar; kod tek seferlik
+            // kullanılır (sessionFromOAuthUrl), hangisi önce gelirse oturum açılır.
             var res = await supabase.auth.signInWithOAuth({
                 provider: "google",
-                options: { redirectTo: redirectTo, skipBrowserRedirect: true }
+                options: { redirectTo: SITE + "/auth/callback", skipBrowserRedirect: true }
             });
             if (res.error) throw res.error;
-            var opened = await WebBrowser.openAuthSessionAsync(res.data.url, redirectTo);
+            var opened = await WebBrowser.openAuthSessionAsync(res.data.url, "atanly://auth/callback");
             if (opened.type === "success" && opened.url) {
                 await sessionFromAuthUrl(opened.url);
-            } else if (opened.type === "cancel" || opened.type === "dismiss") {
-                setMsg("Google girişi iptal edildi.");
+            } else if (!(await waitForSession(6000))) {
+                // Android'de uygulamaya dönüş, bağlantı olayından önce "kapatıldı" olarak gelebilir;
+                // oturum birkaç saniye içinde açılmadıysa gerçekten iptal edilmiştir.
+                setMsg("Google girişi tamamlanmadı. Tekrar dene; açılan sayfada “Uygulamaya dön”e dokun.");
             }
         } catch (e) {
             setMsg(trError(e, "Google girişi açılamadı."));
         }
-        if (linkSub && linkSub.remove) linkSub.remove();
         setGoogleBusy(false);
+    }
+
+    function waitForSession(ms) {
+        var until = Date.now() + ms;
+        return new Promise(function (resolve) {
+            function tick() {
+                supabase.auth.getSession().then(function (r) {
+                    if (r && r.data && r.data.session) return resolve(true);
+                    if (Date.now() > until) return resolve(false);
+                    setTimeout(tick, 400);
+                }, function () {
+                    if (Date.now() > until) return resolve(false);
+                    setTimeout(tick, 400);
+                });
+            }
+            tick();
+        });
     }
 
     // ---------- Enter Key ----------
