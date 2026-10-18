@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"></head>
+<body><script src="base.js"></script><script src="trmap.js"></script>
+<script>
+// Reklam 2 · "Coğrafyayı ezberleme, fethet" · 15,3 sn · seslendirme: a2_1 0.15 · a2_2 5.15 · a2_3 6.2 · a2_4 9.35 · a2_6 11.6
+particles(26);
+var MX = 40, MY = 700, MS = 1.0; // harita: 1000x422 svg birimi → sayfada (40,700) itibarıyla 1:1
+// İl merkezleri (ölçüm için görünmez kopya)
+var meas = document.createElementNS("http://www.w3.org/2000/svg", "svg"); meas.setAttribute("viewBox", "0 0 1000 422"); meas.setAttribute("width", "1000"); meas.setAttribute("height", "422"); meas.style.cssText = "position:absolute;left:-3000px;top:0"; document.body.appendChild(meas);
+var CEN = {}; TRP.forEach(function (p) { var e = document.createElementNS("http://www.w3.org/2000/svg", "path"); e.setAttribute("d", p.d); meas.appendChild(e); var b = e.getBBox(); CEN[p.id] = [b.x + b.width / 2, b.y + b.height / 2]; });
+var SIN = CEN.TR57;
+
+// ---------- HARİTA SAHNESİ 0–11.5 ----------
+var sM = scene("map", 0, 11.5, fM);
+var big = E("div", "position:absolute;left:0;right:0;top:230px;transform-origin:50% 50%", "<div class='h' style='font-size:180px;letter-spacing:-7px'>" + chars("3 SANİYEN", "gold") + "</div><div class='h' style='font-size:180px;letter-spacing:-7px'>" + chars("VAR!") + "</div>", sM);
+var q = E("div", "position:absolute;left:0;right:0;top:600px;text-align:center", "<span class='pill' style='font-family:Manrope;font-weight:800;font-size:58px;padding:22px 46px;background:#fff;color:#0D2C4D;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)'>📍 SİNOP NEREDE?</span>", sM);
+var t2 = E("div", "position:absolute;left:0;right:0;top:190px", "<div class='h' style='font-size:92px'>" + chars("Coğrafyayı ezberleme.") + "</div><div class='h' style='font-size:100px;margin-top:8px'>" + chars("Her şehri soruyla", "gold") + "</div><div class='h' style='font-size:100px'>" + chars("fethet.", "gold") + "</div>", sM);
+var mapBox = E("div", "position:absolute;left:" + MX + "px;top:" + MY + "px;width:1000px;height:422px;transform-origin:" + SIN[0] + "px " + SIN[1] + "px", null, sM);
+var svg = '<svg width="1000" height="422" viewBox="0 0 1000 422" style="overflow:visible">';
+TRP.forEach(function (p) { svg += '<path id="p' + p.id + '" d="' + p.d + '" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.42)" stroke-width=".8" stroke-linejoin="round"/>'; });
+TRL.forEach(function (l) { svg += '<path d="' + l.d + '" fill="#123b52" stroke="rgba(120,200,230,.5)" stroke-width=".6"/>'; });
+svg += '</svg>'; mapBox.innerHTML = svg;
+var PE = {}; TRP.forEach(function (p) { PE[p.id] = document.getElementById("p" + p.id); });
+var cross = E("div", "position:absolute;left:0;top:0;width:150px;height:150px;border-radius:50%;border:6px solid #F2D38A;box-shadow:0 0 40px rgba(242,211,138,.6)", "<div style='position:absolute;left:69px;top:-26px;width:6px;height:190px;background:rgba(242,211,138,.8)'></div><div style='position:absolute;top:69px;left:-26px;height:6px;width:190px;background:rgba(242,211,138,.8)'></div>", sM);
+var cd = E("div", "position:absolute;left:0;right:0;top:1190px", "<div id='cdn' class='h' style='font-size:240px;letter-spacing:-8px'>3</div>", sM);
+var pin = E("div", "position:absolute;left:0;top:0;font-size:120px;line-height:1;transform-origin:50% 100%", "📍", sM);
+var lab = E("div", "position:absolute;left:0;right:0;top:1200px;text-align:center", "<span class='pill' style='font-family:Manrope;font-weight:800;font-size:62px;padding:24px 50px;background:#10B981;color:#fff;box-shadow:0 20px 70px -10px rgba(16,185,129,.85)'>✓ İşte burada: Sinop</span><div style='margin-top:22px;font-weight:600;font-size:36px;color:rgba(255,255,255,.88)'>Türkiye'nin en kuzey ucu: İnceburun</div>", sM);
+var cnt = E("div", "position:absolute;left:0;right:0;top:1180px;text-align:center", "<div style='font-weight:600;font-size:36px;letter-spacing:5px;color:#F2D38A'>FETHEDİLEN İL</div><div class='h' style='font-size:170px;letter-spacing:-6px;margin-top:4px'><span id='cn'>1</span><span style='opacity:.45'> / 81</span></div>", sM);
+var CHIPS = ["⛰️ Dağlar", "💧 Göller", "〰️ Fay hatları", "🛢️ Boru hatları"];
+var chipRow = E("div", "position:absolute;left:60px;right:60px;top:1440px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px", CHIPS.map(function (c) { return "<span class='pill ch' style='font-size:36px;padding:16px 28px;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.3)'>" + c + "</span>"; }).join(""), sM);
+var TOASTS = [["Pamukkale hangi ilde?", "Denizli", "TR20", 6.9], ["Sümela Manastırı?", "Trabzon", "TR61", 7.9], ["Ani Harabeleri?", "Kars", "TR36", 8.9]];
+var TE = TOASTS.map(function (x) { return E("div", "position:absolute;left:0;right:0;top:575px;text-align:center", "<span class='pill' style='font-size:40px;padding:18px 34px;background:#fff;color:#0D2C4D;box-shadow:0 30px 70px -15px rgba(0,0,0,.65)'>" + x[0] + " <b style='color:#059669'>✓ " + x[1] + "</b></span>", sM); });
+var trophy = E("div", "position:absolute;left:0;right:0;top:560px;text-align:center", "<span class='pill goldbg' style='font-family:Manrope;font-weight:800;font-size:54px;padding:20px 44px;color:#1a1405;box-shadow:0 30px 80px -20px rgba(224,187,102,.9)'>🏆 Türkiye fethedildi!</span>", sM);
+var conf = confetti(sM, 80, 540, 900);
+// Fetih sırası: Sinop'tan uzaklığa göre dalga (biraz karıştırılmış)
+var ORDER = TRP.map(function (p, i) { var c = CEN[p.id]; return { id: p.id, d: Math.hypot(c[0] - SIN[0], c[1] - SIN[1]) + rnd(i + 17) * 90 }; }).filter(function (o) { return o.id !== "TR57"; }).sort(function (a, b) { return a.d - b.d; });
+var COLS = ["#14B8A6", "#0EA5E9", "#22C55E", "#06B6D4", "#10B981", "#38BDF8"];
+var FILL0 = 6.2, FILL1 = 11.0;
+function fM(t) {
+    // 0–2.1: başlık + soru; 2.1–5.1 geri sayım; 5.1 Sinop
+    animChars(big, t, .05, .035, 120);
+    var k = eio(seg(t, 1.3, 1.8)); big.style.transform = "translateY(" + (-90 * k) + "px) scale(" + (1 - .45 * k) + ")"; big.style.opacity = 1 - seg(t, 6.0, 6.2);
+    pop(q, t, .8, .32); q.style.opacity = parseFloat(q.style.opacity) * (1 - seg(t, 4.95, 5.1));
+    var mp = eo5(seg(t, .4, 1.0)); mapBox.style.opacity = cl(mp * 1.5, 0, 1);
+    // kamera: Sinop'a yakınlaş (4.9–5.6) → geri çık (6.0–6.6)
+    var zin = eio(seg(t, 4.95, 5.55)), zout = eio(seg(t, 6.0, 6.6)); var z = 1 + .55 * zin * (1 - zout);
+    mapBox.style.transform = "translateY(" + ((1 - mp) * 120 + 60 * zin * (1 - zout)) + "px) scale(" + z + ")";
+    // nişangâh dolaşır
+    var ct = seg(t, 1.9, 4.9); var cx = 500 + Math.sin(ct * 7.1) * 380 * (1 - eio(seg(t, 4.2, 4.9))), cy = 211 + Math.sin(ct * 11.3 + 1) * 140 * (1 - eio(seg(t, 4.2, 4.9)));
+    cx = cx + (SIN[0] - cx) * eio(seg(t, 4.2, 4.9)); cy = cy + (SIN[1] - cy) * eio(seg(t, 4.2, 4.9));
+    cross.style.left = (MX + cx - 75) + "px"; cross.style.top = (MY + cy - 75) + "px"; cross.style.opacity = seg(t, 1.8, 2.0) * (1 - seg(t, 4.95, 5.1));
+    cross.style.transform = "scale(" + (1 + .12 * Math.sin(t * 9)) + ")";
+    // geri sayım
+    var left = Math.ceil(3 - seg(t, 2.1, 5.1) * 3 - 1e-6); var cdn = document.getElementById("cdn"); cdn.textContent = String(Math.max(left, 1));
+    var ft = (t - 2.1) % 1; cd.style.opacity = t >= 2.05 && t < 5.1 ? 1 : 0; cd.style.transform = "scale(" + (1 + .18 * Math.exp(-ft * 8)) + ")";
+    cdn.style.color = left <= 1 ? "#FDA4AF" : "#fff";
+    // Sinop vurgusu
+    var sp = PE.TR57; var on = t >= 5.1;
+    sp.setAttribute("fill", on ? "#F2D38A" : "rgba(255,255,255,.08)"); sp.setAttribute("stroke", on ? "#fff" : "rgba(255,255,255,.42)"); sp.setAttribute("stroke-width", on ? "2" : ".8");
+    var pinPos = function () { var zx = SIN[0], zy = SIN[1]; return [MX + zx, MY + zy + 60 * zin * (1 - zout)]; }();
+    var pp = eb(seg(t, 5.1, 5.45)); pin.style.left = (pinPos[0] - 60) + "px"; pin.style.top = (pinPos[1] - 118 - (1 - eo(seg(t, 5.1, 5.35))) * 300) + "px"; pin.style.opacity = on ? 1 - seg(t, 6.6, 6.9) : 0; pin.style.transform = "scale(" + (on ? .7 + .3 * pp : 0) + ")";
+    pop(lab, t, 5.25, .3); lab.style.opacity = t >= 5.25 ? parseFloat(lab.style.opacity) * (1 - seg(t, 6.0, 6.2)) : 0;
+    // 6.2–11.0: fetih
+    animChars(t2, t - 6.2, 0, .022, 90); t2.style.opacity = t < 6.15 ? 0 : 1;
+    var n = 0;
+    ORDER.forEach(function (o, i) {
+        var e = PE[o.id]; var at = FILL0 + (i / ORDER.length) * (FILL1 - FILL0);
+        var tin = t >= at; if (tin) n = i + 1;
+        if (tin) { var f = seg(t, at, at + .25); var col = COLS[Math.floor(rnd(i + 5) * COLS.length)]; e.setAttribute("fill", f < .4 ? "#ffffff" : col); e.setAttribute("stroke", "rgba(255,255,255,.75)"); }
+        else { e.setAttribute("fill", "rgba(255,255,255,.08)"); e.setAttribute("stroke", "rgba(255,255,255,.42)"); }
+    });
+    TOASTS.forEach(function (x, i) { var e = TE[i]; var a = x[3]; var vis = t >= a && t < a + .95; var p = eb(seg(t, a, a + .3)); e.style.opacity = vis ? cl(seg(t, a, a + .08) * 12, 0, 1) * (1 - seg(t, a + .75, a + .95)) : 0; e.style.transform = "scale(" + p + ")"; if (vis && t < a + .5) PE[x[2]].setAttribute("fill", "#F2D38A"); });
+    cnt.style.opacity = t >= 6.25 ? cl(seg(t, 6.25, 6.4) * 8, 0, 1) : 0;
+    document.getElementById("cn").textContent = String(Math.min(81, n + 1));
+    var done = t >= 11.0; cnt.style.transform = "scale(" + (done ? 1 + .12 * Math.sin(seg(t, 11.0, 11.4) * Math.PI) : 1) + ")";
+    animWords(chipRow, t, 9.6, .14);
+    pop(trophy, t, 11.0, .3); if (t < 11.0) trophy.style.opacity = 0;
+    confettiAt(conf, t - 11.05);
+}
+
+// ---------- KAPANIŞ 11.4–15.3 ----------
+ctaScene(11.4, 15.3, "Coğrafya artık bir oyun.", "Türkiye'yi Fethet · harita oyunları · ücretsiz");
+CUTS = [1.8, 5.1, 6.2, 11.4]; FLASH = [5.1, 11.4];
+start(15.3);
+</script></body></html>
