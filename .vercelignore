@@ -21,6 +21,7 @@
 !/manifest.json
 !/sw.js
 !/robots.txt
+!/app-ads.txt
 !/sitemap.xml
 !/vercel.json
 !/package.json
