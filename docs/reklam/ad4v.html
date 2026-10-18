@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head><meta charset="utf-8"></head>
+<body><script src="base.js"></script>
+<script>
+// Reklam 3 (fikir 4) · "POV: gece yarısı" · 20 sn · seslendirme: a4_1 0.5 · a4_2 4.4 · a4_3 8.75 · a4_4a 12.9 · a4_4c 14.75 · a4_5 15.8
+var stage = document.getElementById("stage");
+function under(css, html) { var e = document.createElement("div"); e.style.cssText = css; if (html) e.innerHTML = html; stage.insertBefore(e, cam); return e; }
+var night = under("position:absolute;inset:0;background:linear-gradient(180deg,#03060c 0%,#0a1222 55%,#140e09 100%)");
+var dawn = under("position:absolute;inset:0;opacity:0;background:linear-gradient(180deg,#16365c 0%,#4b6a96 30%,#e9a46a 68%,#ffd9a0 100%)");
+var sun = under("position:absolute;left:290px;top:0;width:500px;height:500px;border-radius:50%;opacity:0;background:radial-gradient(circle,#fff7da 0%,#ffd27a 35%,rgba(255,190,90,.0) 70%)");
+var STARS = []; for (var i = 0; i < 26; i++) STARS.push(under("position:absolute;left:" + (rnd(i + 3) * 1040) + "px;top:" + (80 + rnd(i + 9) * 520) + "px;width:" + (3 + rnd(i) * 4) + "px;height:" + (3 + rnd(i) * 4) + "px;border-radius:50%;background:#fff"));
+var moon = under("position:absolute;left:880px;top:80px;width:110px;height:110px;border-radius:50%;background:#f5f1dc;box-shadow:0 0 80px 20px rgba(245,241,220,.25)");
+// POV yazıları: beyaz kutu, siyah metin (TikTok tarzı)
+function cap(lines, top, parent) { return E("div", "position:absolute;left:60px;right:60px;top:" + top + "px;text-align:center", lines.map(function (l) { return "<div style='margin:8px 0'><span style='display:inline-block;background:#fff;color:#0b0f14;font-weight:600;font-size:54px;line-height:1.25;padding:10px 26px;border-radius:18px;box-shadow:0 20px 50px -15px rgba(0,0,0,.6)'>" + words(l) + "</span></div>"; }).join(""), parent); }
+function capAnim(c, t, times) { c.querySelectorAll("div>span").forEach(function (b, i) { var a = times[i]; var p = eb(seg(t, a, a + .28)); b.style.opacity = cl(seg(t, a, a + .06) * 16, 0, 1); b.style.transform = "scale(" + (t >= a ? p : 0) + ") rotate(" + ((i % 2 ? 1 : -1) * 1.2) + "deg)"; b.querySelectorAll(".ch").forEach(function (w) { w.style.opacity = 1; }); }); }
+
+// ---------- 1. GECE MASASI 0–4.3 ----------
+var s1 = scene("night", 0, 4.3, f1);
+var c1 = cap(["POV: KPSS'ye hazırlanıyorsun", "ve bugün ne çalışacağını", "bilmiyorsun 😮‍💨"], 210, s1);
+var desk = E("div", "position:absolute;left:-40px;right:-40px;top:1250px;height:720px;background:linear-gradient(180deg,#3a281a 0%,#1d140c 40%,#0c0805 100%);border-top:4px solid rgba(255,214,150,.18)", null, s1);
+var cone = E("div", "position:absolute;left:0;top:830px;width:1080px;height:900px;clip-path:polygon(66% 0,84% 0,120% 100%,0% 100%);mix-blend-mode:screen;background:radial-gradient(ellipse at 75% 0%,rgba(255,196,110,.55),rgba(255,180,90,.16) 55%,transparent 80%)", null, s1);
+var lamp = E("div", "position:absolute;left:610px;top:640px;width:420px;height:620px;transform:scaleX(-1)", '<svg width="420" height="620" viewBox="0 0 420 620"><rect x="40" y="590" width="190" height="26" rx="10" fill="#1f2937"/><line x1="135" y1="595" x2="90" y2="330" stroke="#374151" stroke-width="16" stroke-linecap="round"/><line x1="90" y1="330" x2="230" y2="150" stroke="#374151" stroke-width="16" stroke-linecap="round"/><path d="M175 95 L330 150 L285 250 Z" fill="#0f766e"/><ellipse cx="300" cy="205" rx="32" ry="16" fill="#fff2c4"/></svg>', s1);
+var BOOKS = [["TARİH", "#7c2d12", 380], ["COĞRAFYA", "#1e3a8a", 360], ["VATANDAŞLIK", "#065f46", 390], ["TÜRKÇE", "#6b21a8", 350], ["GEOMETRİ", "#a16207", 370], ["GÜNCEL", "#9f1239", 340]];
+var BE = BOOKS.map(function (b, i) { return E("div", "position:absolute;left:" + (70 + rnd(i + 2) * 40) + "px;top:" + (1180 - i * 70) + "px;width:" + b[2] + "px;height:66px;border-radius:8px;background:" + b[1] + ";box-shadow:inset 0 -6px 0 rgba(0,0,0,.25),0 10px 20px rgba(0,0,0,.5);display:flex;align-items:center;padding-left:26px;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px;color:rgba(255,255,255,.92)", b[0], s1); });
+var clock = E("div", "position:absolute;left:500px;top:1110px;width:330px;height:130px;border-radius:24px;background:#0b0b0e;border:3px solid #26262b;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(0,0,0,.6)", "<span id='clk' style='font-family:Manrope;font-weight:800;font-size:96px;letter-spacing:4px;color:#ff3b3b;text-shadow:0 0 30px rgba(255,59,59,.8)'>23:47</span>", s1);
+var mug = E("div", "position:absolute;left:540px;top:1290px;font-size:120px", "☕", s1);
+var QM = []; for (var i = 0; i < 6; i++) QM.push(E("div", "position:absolute;font-family:Manrope;font-weight:800;font-size:" + (90 + rnd(i) * 70) + "px;color:rgba(255,255,255,.5)", "?", s1));
+function f1(t) {
+    capAnim(c1, t, [.35, 1.55, 2.55]);
+    BE.forEach(function (e, i) { var p = eo5(seg(t, .05 + i * .06, .5 + i * .06)); e.style.transform = "translateY(" + ((1 - p) * -300) + "px) rotate(" + ((rnd(i + 7) - .5) * 6) + "deg)"; e.style.opacity = p; });
+    var fl = .9 + .1 * Math.sin(t * 23) * Math.sin(t * 7); cone.style.opacity = fl;
+    document.getElementById("clk").textContent = Math.floor(t * 2) % 2 ? "23 47" : "23:47";
+    QM.forEach(function (e, i) { var lt = t - .8 - i * .35; var p = seg(lt, 0, 2.2); e.style.left = (120 + rnd(i + 30) * 760) + "px"; e.style.top = (1080 - p * 380 - rnd(i + 31) * 120) + "px"; e.style.opacity = lt > 0 ? Math.sin(p * Math.PI) * .7 : 0; e.style.transform = "rotate(" + ((rnd(i) - .5) * 40) + "deg) scale(" + (.7 + .3 * p) + ")"; });
+    mug.style.transform = "translateY(" + (Math.sin(t * 2) * 3) + "px)";
+}
+
+// ---------- 2. TELEFON: ŞİMDİ NE ÇALIŞAYIM? 4.2–8.65 ----------
+var s2 = scene("phone", 4.2, 8.65, f2);
+var c2 = cap(["Atanly sana söyler:", "sıradaki konun, notu ve testi."], 200, s2);
+var halo = E("div", "position:absolute;left:120px;top:480px;width:840px;height:1140px;border-radius:50%;background:radial-gradient(ellipse,rgba(110,170,255,.28),transparent 65%)", null, s2);
+var ph = E("div", "left:250px;top:470px;width:580px;height:1060px", null, s2); ph.className = "phone";
+var scr = E("div", "", null, ph); scr.className = "screen";
+E("div", "position:absolute;left:34px;right:34px;top:30px;display:flex;justify-content:space-between;font-weight:600;font-size:22px;color:#64748b", "<span>23:48</span><span>🔋 41%</span>", scr);
+E("div", "position:absolute;left:34px;top:84px;font-family:Manrope;font-weight:800;font-size:52px;letter-spacing:-1px", "Bugün", scr);
+E("div", "position:absolute;left:34px;top:150px;font-weight:600;font-size:26px;color:#64748b", "İyi akşamlar 🌙", scr);
+var nowc = E("div", "position:absolute;left:26px;right:26px;top:210px;border-radius:34px;background:#0D2C4D;color:#fff;padding:30px 30px 34px;box-shadow:0 30px 60px -20px rgba(13,44,77,.6)", "<div style='font-weight:600;font-size:22px;letter-spacing:4px;color:#F2D38A'>ŞİMDİ NE ÇALIŞAYIM?</div><div style='font-weight:600;font-size:26px;margin-top:16px;opacity:.8'>Coğrafya</div><div style='font-family:Manrope;font-weight:800;font-size:46px;line-height:1.08;margin-top:4px'>Türkiye'nin İklimi</div>", scr);
+var ROWS = ["📖 Konu notu · 6 dk", "✏️ 15 soru", "🔁 Dünkü 4 yanlışın"];
+var RE = ROWS.map(function (r, i) { return E("div", "position:relative;margin-top:" + (i ? 10 : 22) + "px;border-radius:18px;background:rgba(255,255,255,.1);padding:14px 18px;font-weight:600;font-size:27px", r, nowc); });
+var go = E("div", "position:relative;margin-top:22px;border-radius:999px;text-align:center;padding:20px;font-family:Manrope;font-weight:800;font-size:34px;color:#1a1405", "Başla →", nowc); go.className = "goldbg";
+var okc = E("div", "position:absolute;left:26px;right:26px;top:840px;text-align:center", "<span class='pill' style='font-size:28px;padding:14px 26px;background:#ECFDF5;color:#047857;border:2px solid #A7F3D0'>✓ Bugünün planı hazır</span>", scr);
+var fing = E("div", "position:absolute;width:100px;height:100px;border-radius:50%;background:rgba(242,211,138,.3);border:6px solid #F2D38A;left:0;top:0", null, scr);
+function f2(t) {
+    var lt = t - 4.2; capAnim(c2, lt, [.25, 1.3]);
+    var pp = eo5(seg(lt, .05, .7)); ph.style.opacity = cl(pp * 2, 0, 1); ph.style.transform = "translateY(" + ((1 - pp) * 1100) + "px) rotate(" + ((1 - pp) * 8) + "deg)";
+    halo.style.opacity = pp * (.85 + .15 * Math.sin(lt * 3));
+    var cp = eb(seg(lt, .6, .95)); nowc.style.transform = "scale(" + cp + ")"; nowc.style.opacity = cl(seg(lt, .6, .7) * 10, 0, 1);
+    RE.forEach(function (e, i) { var p = eo(seg(lt, 1.0 + i * .25, 1.35 + i * .25)); e.style.opacity = p; e.style.transform = "translateX(" + ((1 - p) * 40) + "px)"; });
+    var gx = 250, gy = 210 + 30 + 22 + 30 + 46 + 4 + 3 * 70 + 60 + 50; var fx = 380 + (gx - 380) * eio(seg(lt, 2.4, 2.9)), fy = 900 + (gy - 900) * eio(seg(lt, 2.4, 2.9));
+    fing.style.left = (fx - 50) + "px"; fing.style.top = (fy - 50) + "px"; fing.style.opacity = seg(lt, 2.3, 2.45) * (1 - seg(lt, 3.3, 3.5)); fing.style.transform = "scale(" + (lt > 2.9 && lt < 3.05 ? .8 : 1) + ")";
+    go.style.transform = "scale(" + (lt > 2.9 && lt < 3.05 ? .95 : 1) + ")";
+    pop(okc, lt, 3.1, .3); if (lt < 3.1) okc.style.opacity = 0;
+}
+
+// ---------- 3. HER GÜN BİRAZ 8.55–12.8 ----------
+var s3 = scene("habit", 8.55, 12.8, f3);
+var c3 = cap(["Her gün biraz.", "Eksiklerin kapanır. ✓"], 200, s3);
+var hm = E("div", "left:90px;top:520px;width:900px;height:700px;background:rgba(255,255,255,.96)", null, s3); hm.className = "card";
+E("div", "position:absolute;left:44px;top:38px;font-family:Manrope;font-weight:800;font-size:42px", "Çalışma takvimi", hm);
+var streak = E("div", "position:absolute;right:44px;top:34px;font-family:Manrope;font-weight:800;font-size:42px;color:#C2410C", "🔥 1 gün", hm);
+var CELLS = []; for (var r = 0; r < 6; r++) for (var c = 0; c < 10; c++) CELLS.push(E("div", "position:absolute;left:" + (44 + c * 82) + "px;top:" + (130 + r * 88) + "px;width:72px;height:76px;border-radius:16px;background:#EEF2F6", null, hm));
+var CHI = ["✓ 4 yanlış tekrar edildi", "✓ İklim konusu bitti", "✓ Haftalık hedef tamam"];
+var CE = CHI.map(function (c, i) { return E("div", "position:absolute;left:0;right:0;top:" + (1250 + i * 92) + "px;text-align:center", "<span class='pill' style='font-size:38px;padding:16px 30px;background:rgba(16,185,129,.16);border:2px solid rgba(110,231,183,.6);color:#D1FAE5'>" + c + "</span>", s3); });
+var GREENS = ["#BBF7D0", "#86EFAC", "#4ADE80", "#22C55E", "#16A34A"];
+function f3(t) {
+    var lt = t - 8.55; capAnim(c3, lt, [.25, 2.5]);
+    var hp = eo5(seg(lt, .05, .55)); hm.style.opacity = cl(hp * 2, 0, 1); hm.style.transform = "translateY(" + ((1 - hp) * 500) + "px) scale(" + (.92 + .08 * hp) + ")";
+    var n = Math.floor(eio(seg(lt, .5, 3.4)) * CELLS.length);
+    CELLS.forEach(function (e, i) { var on = i < n; var lvl = Math.min(4, Math.floor(rnd(i + 50) * 3 + i / 25)); e.style.background = on ? GREENS[lvl] : "#EEF2F6"; e.style.transform = on && i > n - 3 ? "scale(1.12)" : "scale(1)"; });
+    streak.textContent = "🔥 " + Math.max(1, n) + " gün";
+    CE.forEach(function (e, i) { pop(e, lt, 1.4 + i * .55, .3); if (lt < 1.4 + i * .55) e.style.opacity = 0; });
+}
+
+// ---------- 4. SINAV GÜNÜ 12.7–15.7 ----------
+var s4 = scene("exam", 12.7, 15.7, f4);
+var cal = E("div", "position:absolute;left:330px;top:430px;width:420px;height:440px;border-radius:36px;background:#fff;color:#0D2C4D;overflow:hidden;box-shadow:0 50px 110px -25px rgba(0,0,0,.6);transform-origin:50% 0", "<div style='height:120px;background:#DC2626;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Manrope;font-weight:800;font-size:46px;letter-spacing:2px'>SINAV GÜNÜ</div><div style='height:320px;display:flex;align-items:center;justify-content:center;font-size:170px'>🎯</div>", s4);
+var hz = E("div", "position:absolute;left:0;right:0;top:960px", "<div class='h' style='font-size:230px;letter-spacing:-9px;color:#fff;text-shadow:0 10px 40px rgba(90,40,0,.55),0 0 90px rgba(255,214,140,.6)'>" + chars("Hazırsın.") + "</div>", s4);
+var sub4 = E("div", "position:absolute;left:0;right:0;top:1230px;text-align:center;font-weight:600;font-size:44px;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.4)", "Her gün biraz çalışınca.", s4);
+var conf = confetti(s4, 60, 540, 1100);
+function f4(t) {
+    var lt = t - 12.7;
+    var cp = eo5(seg(lt, .05, .5)); cal.style.opacity = cp;
+    cal.style.transform = "translateY(" + ((1 - cp) * 200) + "px) scale(" + (1 + .04 * Math.sin(seg(lt, 2.05, 2.5) * Math.PI)) + ")";
+    animChars(hz, lt, 2.05, .05, 120);
+    hz.style.transform = "scale(" + (1 + .03 * Math.sin(Math.max(0, lt - 2.4) * 3)) + ")";
+    rise(sub4, lt, 2.5, 30);
+    confettiAt(conf, lt - 2.1);
+}
+
+// ---------- KAPANIŞ 15.6–20 ----------
+ctaScene(15.6, 20.0, "KPSS'ye bugün başla.", "Kişisel program · konu notları · binlerce soru");
+
+BGMOOD = function (t) {
+    var nOp = 1 - eio(seg(t, 9.0, 12.4)); night.style.opacity = t < 15.6 ? nOp : 0;
+    var dOp = eio(seg(t, 10.8, 13.2)) * (1 - seg(t, 15.4, 15.8)); dawn.style.opacity = dOp;
+    sun.style.opacity = eio(seg(t, 11.5, 13.5)) * (1 - seg(t, 15.4, 15.8)); sun.style.top = (1500 - 520 * eio(seg(t, 11.5, 15.5))) + "px";
+    STARS.forEach(function (e, i) { e.style.opacity = nOp * (.35 + .65 * Math.abs(Math.sin(t * (1 + rnd(i) * 2) + i))); });
+    moon.style.opacity = nOp; moon.style.transform = "translateY(" + (-t * 6) + "px)";
+};
+CUTS = [4.2, 8.55, 12.7, 15.6]; FLASH = [14.75, 15.6];
+WARP = [[0, 0], [4.2, 4.65], [8.6, 9.1], [12.7, 13.5], [14.75, 15.75], [15.6, 16.7], [20.0, 21.1]];
+start(20.0);
+</script></body></html>

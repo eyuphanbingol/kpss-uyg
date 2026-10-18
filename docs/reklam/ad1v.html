@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"></head>
+<body><script src="base.js"></script>
+<script>
+// Reklam 1 · "5 saniyede çöz" · 15,6 sn · seslendirme: a1_1 0.25 · a1_2 1.35 · a1_3 8.3 · a1_4 10.55 · a1_5 13.25
+particles(30);
+var OPTS = ["Ankara", "Diyarbakır", "Mardin", "Gaziantep", "Şanlıurfa"], RIGHT = 4;
+
+// ---------- SORU + GERİ SAYIM + CEVAP 0–10.35 ----------
+var sQ = scene("quiz", 0, 10.35, fQ);
+var big = E("div", "position:absolute;left:0;right:0;top:420px;transform-origin:50% 50%", "<div class='h' style='font-size:210px;letter-spacing:-8px'>" + chars("5 SANİYEN", "gold") + "</div><div class='h' style='font-size:210px;letter-spacing:-8px'>" + chars("VAR!") + "</div>", sQ);
+var watch = E("div", "position:absolute;left:0;right:0;top:960px;text-align:center;font-size:260px;line-height:1", "⏱️", sQ);
+var cmt = E("div", "position:absolute;left:0;right:0;top:322px;text-align:center", "<span class='pill' style='font-size:34px;padding:14px 32px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25)'>💬 Cevabını yorumlara yaz</span>", sQ);
+var card = E("div", "left:70px;top:420px;width:940px;height:850px", null, sQ); card.className = "card";
+E("div", "position:absolute;left:52px;top:44px;font-weight:600;font-size:26px;letter-spacing:5px;color:#0E7490", "KPSS · GÜNCEL BİLGİLER", card);
+E("div", "position:absolute;left:52px;right:52px;top:100px;font-family:Manrope;font-weight:800;font-size:66px;line-height:1.08;letter-spacing:-1.5px", "Göbeklitepe hangi ildedir?", card);
+var OE = OPTS.map(function (o, i) {
+    return E("div", "position:absolute;left:52px;right:52px;top:" + (290 + i * 106) + "px;height:92px;border-radius:26px;border:3px solid #E2E8F0;background:#fff;display:flex;align-items:center;padding:0 24px;font-weight:600;font-size:40px",
+        "<span style='display:inline-flex;width:56px;height:56px;border-radius:50%;background:#EEF2F7;align-items:center;justify-content:center;font-size:28px;margin-right:24px;color:#5b6b7c'>" + "ABCDE"[i] + "</span><span>" + o + "</span><span class='ck' style='margin-left:auto;font-size:44px;opacity:0'>✓</span>", card);
+});
+var ring = E("div", "position:absolute;left:420px;top:1300px;width:240px;height:240px", '<svg width="240" height="240" viewBox="0 0 240 240"><circle cx="120" cy="120" r="100" fill="rgba(8,32,44,.85)" stroke="rgba(255,255,255,.14)" stroke-width="16"/><circle id="rgc" cx="120" cy="120" r="100" fill="none" stroke="#F2D38A" stroke-width="16" stroke-linecap="round" transform="rotate(-90 120 120)" stroke-dasharray="628.3" stroke-dashoffset="0"/></svg><div id="rgn" class="h" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:130px;letter-spacing:-4px">5</div>', sQ);
+var done = E("div", "position:absolute;left:0;right:0;top:1330px;text-align:center", "<span class='pill' style='font-family:Manrope;font-weight:800;font-size:60px;padding:26px 54px;background:#E11D48;color:#fff;box-shadow:0 20px 70px -10px rgba(225,29,72,.8)'>⏰ SÜRE DOLDU!</span>", sQ);
+var ans = E("div", "position:absolute;left:0;right:0;top:1310px;text-align:center", "<span class='pill' style='font-family:Manrope;font-weight:800;font-size:58px;padding:28px 52px;background:#10B981;color:#fff;box-shadow:0 20px 70px -10px rgba(16,185,129,.85)'>✓ Cevap: Şanlıurfa</span><div style='margin-top:26px;font-weight:600;font-size:36px;color:rgba(255,255,255,.85)'>Sen bildin mi? 👇</div>", sQ);
+var conf = confetti(sQ, 70, 540, 420 + 290 + 4 * 106 + 46);
+function fQ(t) {
+    animChars(big, t, .05, .035, 120);
+    var wp = eb(seg(t, .35, .7)); watch.style.opacity = cl(seg(t, .35, .45) * 10, 0, 1) * (1 - seg(t, 1.15, 1.35));
+    watch.style.transform = "scale(" + wp + ") rotate(" + (Math.sin(t * 38) * 9 * seg(t, .5, .7)) + "deg)";
+    var k = eio(seg(t, 1.1, 1.6));
+    big.style.transform = "translateY(" + (-418 * k) + "px) scale(" + (1 - .62 * k) + ")";
+    pop(cmt, t, 3.05);
+    var cp = eo5(seg(t, 1.3, 1.85)); card.style.opacity = cl(cp * 2, 0, 1); card.style.transform = "translateY(" + ((1 - cp) * 1100) + "px) rotate(" + ((1 - cp) * 6) + "deg)";
+    OE.forEach(function (e, i) { var p = eo(seg(t, 1.6 + i * .07, 1.95 + i * .07)); e.style.transform = "translateX(" + ((1 - p) * 80) + "px)"; e.style.opacity = p; });
+    // geri sayım 3.0 → 8.0
+    var cd = seg(t, 3.0, 8.0), left = Math.ceil(5 - cd * 5 - 1e-6);
+    pop(ring, t, 2.85, .3);
+    if (t >= 8.0) ring.style.opacity = 0;
+    document.getElementById("rgc").setAttribute("stroke-dashoffset", 628.3 * cd);
+    var urgent = left <= 2 && t >= 3;
+    document.getElementById("rgc").setAttribute("stroke", urgent ? "#F43F5E" : "#F2D38A");
+    var rn = document.getElementById("rgn"); rn.textContent = t < 3 ? "5" : String(Math.max(left, 0)); rn.style.color = urgent ? "#FECDD3" : "#fff";
+    var ft = t >= 3 ? (t - 3) % 1 : 1; var beat = t >= 3 && t < 8 ? 1 + .14 * Math.exp(-ft * 9) : 1;
+    if (t >= 2.85 && t < 8) ring.style.transform = "scale(" + (eb(seg(t, 2.85, 3.15)) * beat) + ")";
+    card.style.boxShadow = urgent ? "0 60px 140px -30px rgba(0,0,0,.85),0 0 0 " + (6 + 6 * Math.exp(-ft * 6)) + "px rgba(244,63,94,.55)" : "0 60px 140px -30px rgba(0,0,0,.85)";
+    // cevap
+    var rv = t >= 8.15;
+    OE.forEach(function (e, i) {
+        var right = i === RIGHT && rv; var b = e.firstChild;
+        e.style.borderColor = right ? "#10B981" : "#E2E8F0"; e.style.background = right ? "#ECFDF5" : "#fff";
+        b.style.background = right ? "#10B981" : "#EEF2F7"; b.style.color = right ? "#fff" : "#5b6b7c";
+        e.lastChild.style.opacity = right ? 1 : 0; e.lastChild.style.color = "#10B981";
+        if (rv && !right) e.style.opacity = 1 - .55 * seg(t, 8.15, 8.4);
+        if (right) e.style.transform = "scale(" + (1 + .06 * Math.sin(seg(t, 8.15, 8.55) * Math.PI)) + ")";
+    });
+    var dp = seg(t, 8.0, 8.15); done.style.opacity = t >= 8.0 && t < 8.75 ? 1 - seg(t, 8.55, 8.75) : 0; done.style.transform = "scale(" + (t >= 8.0 ? 1.6 - .6 * eo5(dp) : 0) + ") rotate(-4deg)";
+    pop(ans, t, 8.7, .35);
+    confettiAt(conf, t - 8.2);
+}
+
+// ---------- UYGULAMA 10.25–13.0 ----------
+var sA = scene("app", 10.25, 13.0, fA);
+var tA = E("div", "position:absolute;left:0;right:0;top:190px", "<div class='h' style='font-size:100px'>" + chars("Binlerce soru,") + "</div><div class='h' style='font-size:112px;margin-top:6px'>" + chars("hepsi çözümlü.", "gold") + "</div>", sA);
+var ph = E("div", "left:250px;top:470px;width:580px;height:1080px", null, sA); ph.className = "phone";
+var scr = E("div", "", null, ph); scr.className = "screen";
+E("div", "position:absolute;left:34px;right:34px;top:48px;display:flex;justify-content:space-between;font-weight:600;font-size:24px;color:#64748b", "<span>Tarih · Test</span><span>12 / 20</span>", scr);
+E("div", "position:absolute;left:34px;right:34px;top:88px;height:10px;border-radius:5px;background:#E2E8F0", "<div style='width:60%;height:100%;border-radius:5px;background:#0E7490'></div>", scr);
+E("div", "position:absolute;left:34px;right:34px;top:136px;font-family:Manrope;font-weight:800;font-size:38px;line-height:1.15;letter-spacing:-.5px", "İstanbul'un fethi hangi yıldadır?", scr);
+var AO = ["1402", "1453", "1514", "1517", "1526"].map(function (o, i) {
+    return E("div", "position:absolute;left:34px;right:34px;top:" + (270 + i * 86) + "px;height:72px;border-radius:20px;border:3px solid #E2E8F0;background:#fff;display:flex;align-items:center;padding:0 18px;font-weight:600;font-size:30px",
+        "<span style='display:inline-flex;width:42px;height:42px;border-radius:50%;background:#EEF2F7;align-items:center;justify-content:center;font-size:21px;margin-right:16px;color:#5b6b7c'>" + "ABCDE"[i] + "</span>" + o, scr);
+});
+var expl = E("div", "position:absolute;left:34px;right:34px;top:712px;border-radius:24px;background:#FFF7E6;border:3px solid #F2D38A;padding:22px 24px;font-weight:600;font-size:27px;line-height:1.4;color:#7c4a03", "💡 <b>Çözüm</b><br>İstanbul 1453'te Fatih Sultan Mehmet tarafından fethedildi.", scr);
+var fing = E("div", "position:absolute;width:96px;height:96px;border-radius:50%;background:rgba(14,116,144,.25);border:6px solid #0E7490;left:0;top:0", null, scr);
+var CH = [["⚡ Anında çözüm", 620, 1000, -1], ["🔁 Yanlışlar tekrar listene", 50, 1370, 1], ["📚 6 ders · konu konu", 560, 1462, -1]].map(function (c, i) {
+    var e = E("div", "position:absolute;left:" + c[1] + "px;top:" + c[2] + "px;white-space:nowrap", "<span class='pill' style='font-size:36px;padding:20px 32px;background:#fff;color:#0D2C4D;box-shadow:0 30px 70px -15px rgba(0,0,0,.65)'>" + c[0] + "</span>", sA);
+    return { e: e, d: c[3] };
+});
+function fA(t) {
+    var lt = t - 10.25; animChars(tA, lt, 0, .025, 90);
+    var pp = eo5(seg(lt, .05, .55)); ph.style.opacity = cl(pp * 2, 0, 1); ph.style.transform = "translateY(" + ((1 - pp) * 900) + "px) rotate(" + ((1 - pp) * -8) + "deg)";
+    var tx = 34 + 18 + 21, ty = 270 + 86 + 36; var fx = 420 + (tx + 100 - 420) * eio(seg(lt, .4, .8)), fy = 980 + (ty - 980) * eio(seg(lt, .4, .8));
+    fing.style.left = (fx - 48) + "px"; fing.style.top = (fy - 48) + "px"; fing.style.opacity = seg(lt, .35, .45) * (1 - seg(lt, 1.05, 1.2)); fing.style.transform = "scale(" + (lt > .8 && lt < .92 ? .8 : 1) + ")";
+    AO.forEach(function (e, i) { var ok = i === 1 && lt > .85; e.style.borderColor = ok ? "#10B981" : "#E2E8F0"; e.style.background = ok ? "#ECFDF5" : "#fff"; e.firstChild.style.background = ok ? "#10B981" : "#EEF2F7"; e.firstChild.style.color = ok ? "#fff" : "#5b6b7c"; });
+    var ep = eo5(seg(lt, .95, 1.35)); expl.style.opacity = ep; expl.style.transform = "translateY(" + ((1 - ep) * 40) + "px)";
+    CH.forEach(function (c, i) { var p = eb(seg(lt, 1.2 + i * .22, 1.55 + i * .22)); c.e.style.opacity = cl(seg(lt, 1.2 + i * .22, 1.28 + i * .22) * 12, 0, 1); c.e.style.transform = "scale(" + p + ") translateY(" + (Math.sin(lt * 2 + i) * 8) + "px) rotate(" + (c.d * 2) + "deg)"; });
+}
+
+// ---------- KAPANIŞ 12.9–15.6 ----------
+ctaScene(12.9, 15.6, "KPSS'ye ücretsiz hazırlan", "Konu notları · binlerce soru · canlı deneme");
+CUTS = [1.3, 3.0, 8.0, 10.25, 12.9]; FLASH = [8.0, 12.9];
+WARP = [[0, 0], [1.05, 1.9], [1.85, 3.0], [3.0, 5.0], [8.0, 10.0], [9.3, 11.3], [10.25, 13.9], [12.9, 18.9], [14.6, 20.6], [15.6, 22.3]];
+start(15.6);
+</script></body></html>

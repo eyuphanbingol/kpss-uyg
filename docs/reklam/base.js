@@ -52,19 +52,23 @@ function particles(n, col) { for (var i = 0; i < n; i++) { var e = E("div", "wid
 function confetti(root, n, cx, cy) { var arr = []; var cols = ["#F2D38A", "#34D399", "#60A5FA", "#F472B6", "#FBBF24", "#fff"]; for (var i = 0; i < n; i++) arr.push(E("div", "position:absolute;left:0;top:0;width:" + (12 + rnd(i + 40) * 14) + "px;height:" + (8 + rnd(i + 80) * 10) + "px;border-radius:3px;background:" + cols[i % cols.length], null, root)); return { els: arr, cx: cx, cy: cy }; }
 function confettiAt(c, lt) { c.els.forEach(function (e, i) { if (lt < 0) { e.style.opacity = 0; return; } var a = rnd(i + 3) * Math.PI * 2, v = 600 + rnd(i + 9) * 1100; var x = c.cx + Math.cos(a) * v * lt * .9, y = c.cy + Math.sin(a) * v * lt * .9 - 300 * lt + 1400 * lt * lt; e.style.opacity = cl(1.6 - lt, 0, 1); e.style.transform = "translate(" + x + "px," + y + "px) rotate(" + (lt * 720 * (rnd(i) - .5) * 2) + "deg)"; }); }
 var CUTS = [], FLASH = [], BGMOOD = null;
-function render(t) {
+// Zaman esnetme: WARP = [[orijinal_sn, çıktı_sn], ...] (artan). Video çıktı zamanını orijinal canlandırma zamanına çevirir.
+var WARP = null;
+function warpOutToIn(t) { if (!WARP) return t; for (var i = 1; i < WARP.length; i++) { var a = WARP[i - 1], b = WARP[i]; if (t <= b[1]) return a[0] + (t - a[1]) * (b[0] - a[0]) / (b[1] - a[1]); } var l = WARP[WARP.length - 1]; return l[0] + (t - l[1]); }
+function render(tOut) {
+    var t = warpOutToIn(tOut);
     var punch = 0; CUTS.forEach(function (c) { var d = t - c; if (d >= 0 && d < .3) punch = Math.max(punch, 1 - d / .3); });
     var shx = (rnd(Math.floor(t * 30)) - .5) * 22 * punch, shy = (rnd(Math.floor(t * 30) + 7) - .5) * 22 * punch;
     cam.style.transform = "translate(" + shx + "px," + shy + "px) scale(" + (1 + .035 * punch) + ")";
     var fl = 0; FLASH.forEach(function (c) { var d = t - c; if (d >= 0 && d < .18) fl = Math.max(fl, (1 - d / .18) * .7); }); document.getElementById("flash").style.opacity = fl;
     document.getElementById("bg").style.transform = "translate(" + (Math.sin(t * .4) * 60) + "px," + (Math.cos(t * .35) * 50) + "px) rotate(" + (t * .6) + "deg)";
     document.getElementById("grid").style.transform = "translateY(" + ((t * 50) % 60) + "px)";
-    document.getElementById("bar").style.width = (t / window.DUR * 1080) + "px";
+    document.getElementById("bar").style.width = (tOut / window.DUR * 1080) + "px";
     if (BGMOOD) BGMOOD(t);
     PT.forEach(function (e, i) { var y = (2020 - ((t * (50 + rnd(i + 5) * 90) + rnd(i + 3) * 2000) % 2100)); e.style.transform = "translate(" + (rnd(i + 2) * 1080 + Math.sin(t + i) * 30) + "px," + y + "px)"; });
     for (var k in SC) { var s = SC[k]; var vis = t >= s.a && t <= s.b; s.el.style.display = vis ? "block" : "none"; if (!vis) continue; s.el.style.opacity = Math.min(seg(t, s.a, s.a + .12), 1 - seg(t, s.b - .12, s.b)); FN[k](t); }
 }
-function start(dur) { window.DUR = dur; window.render = render; window.__ready = document.fonts.ready.then(function () { render(0); return true; }); }
+function start(dur) { if (WARP) dur = WARP[WARP.length - 1][1] + (dur - WARP[WARP.length - 1][0]); window.DUR = dur; window.render = render; window.__ready = document.fonts.ready.then(function () { render(0); return true; }); }
 // Ortak kapanış (CTA)
 function ctaScene(a, b, line1, line2) {
     var s = scene("cta", a, b, function (t) {
