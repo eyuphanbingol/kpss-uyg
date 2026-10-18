@@ -13,6 +13,13 @@ import { LogOut, Trash2 } from "lucide-react-native";
 import { colors, eduLabel, fmtExam, needsKulvar, getScoreLabel, trackLabel } from "../lib/theme";
 import { KpssConfig } from "../lib/config";
 
+// Resmî bilgilerin asıl kaynakları; tam liste: yasal/kaynaklar.html
+var OFFICIAL_SOURCES = [
+    ["ÖSYM · sınav tarihleri, kılavuzlar, tercih", "https://www.osym.gov.tr"],
+    ["Mevzuat Bilgi Sistemi · Anayasa ve kanunlar", "https://www.mevzuat.gov.tr"],
+    ["Resmî Gazete · resmî düzenlemeler", "https://www.resmigazete.gov.tr"]
+];
+
 // ============================================================
 // BEN SCREEN
 // ============================================================
@@ -250,7 +257,7 @@ export default function BenScreen({ navigation }) {
                                     {eduLabel(up.educationLevel)}
                                 </Text>
                                 <Text style={[styles.eduHint, isDark && styles.textMuted]}>
-                                    Düzey değişimi yönetici onayı gerektirir. Sınav tarihi ÖSYM takvimine bağlanır.
+                                    Düzey değişimi yönetici onayı gerektirir. Sınav tarihi ÖSYM takvimine bağlanır (kaynak: <Text accessibilityRole="link" style={styles.srcInline} onPress={function () { Linking.openURL("https://www.osym.gov.tr").catch(function () {}); }}>osym.gov.tr</Text>).
                                 </Text>
                                 {(!eduReq || eduReq.status !== "pending") ? (
                                     <View style={[styles.eduRow, { marginTop: 8, flexWrap: "wrap" }]}>
@@ -381,6 +388,30 @@ export default function BenScreen({ navigation }) {
                 </View>
             </Card>
 
+            {/* Sources: resmî bilgilerin kaynağı + bağımsızlık beyanı (Google Play yanıltıcı iddialar politikası) */}
+            <Card style={[isDark && styles.cardDark]}>
+                <Text style={[styles.sectionTitle, isDark && styles.textMuted]}>
+                    Kaynaklar
+                </Text>
+                <Text style={[styles.srcNote, isDark && { color: "#A8A29E" }]}>
+                    Atanly bağımsız bir eğitim uygulamasıdır. ÖSYM'yi ya da herhangi bir kamu kurumunu temsil etmez, bu kurumlarla bağlantısı yoktur. Resmî ve güncel bilgi için:
+                </Text>
+                {OFFICIAL_SOURCES.map(function (row) {
+                    return (
+                        <Tap key={row[1]} accessibilityRole="link" accessibilityLabel={row[0] + ", " + row[1]}
+                            onPress={function () { Linking.openURL(row[1]).catch(function () {}); }}
+                            style={[styles.srcRow, isDark && { borderTopColor: "#334155" }]}>
+                            <Text style={[styles.srcName, isDark && styles.textLight]}>{row[0]}</Text>
+                            <Text style={[styles.srcUrl, isDark && { color: "#5EEAD4" }]}>{row[1].replace("https://", "")}</Text>
+                        </Tap>
+                    );
+                })}
+                <Tap accessibilityRole="link" onPress={function () { Linking.openURL("https://www.atanly.com/yasal/kaynaklar").catch(function () {}); }}
+                    style={[styles.srcRow, isDark && { borderTopColor: "#334155" }]}>
+                    <Text style={[styles.srcAll, isDark && { color: "#5EEAD4" }]}>Tüm kaynaklar ve bilgilendirme →</Text>
+                </Tap>
+            </Card>
+
             {/* Actions */}
             {examPassed ? (
                 <Card dark={isDark} onPress={function () { setResetOpen(true); }}>
@@ -437,6 +468,7 @@ export default function BenScreen({ navigation }) {
             {/* Footer */}
             <View style={styles.legalRow}>
                 {[
+                    ["Kaynaklar", "kaynaklar.html"],
                     ["KVKK Aydınlatma", "aydinlatma.html"],
                     ["Kullanım", "kullanim.html"],
                     ["Üyelik", "uyelik.html"],
@@ -921,6 +953,40 @@ var styles = StyleSheet.create({
         color: "#fff",
         fontSize: 14,
         fontWeight: "700",
+    },
+
+    // ---------- Sources ----------
+    srcNote: {
+        fontSize: 13,
+        lineHeight: 19,
+        color: "#57534E",
+        marginTop: 8,
+        marginBottom: 6,
+    },
+    srcRow: {
+        paddingVertical: 10,
+        borderTopWidth: 1,
+        borderTopColor: "#F5F5F4",
+    },
+    srcName: {
+        fontSize: 14,
+        fontWeight: "600",
+        color: colors.navy,
+    },
+    srcUrl: {
+        fontSize: 12,
+        color: "#0F766E",
+        marginTop: 2,
+    },
+    srcInline: {
+        color: "#0F766E",
+        fontWeight: "700",
+        textDecorationLine: "underline",
+    },
+    srcAll: {
+        fontSize: 13,
+        fontWeight: "700",
+        color: "#0F766E",
     },
 
     // ---------- Footer ----------

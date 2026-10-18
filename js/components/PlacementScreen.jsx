@@ -366,7 +366,7 @@
 
                 {/* Footer */}
                 <div className="mt-4 text-center text-[10px] text-stone-400">
-                    <p>📊 Veriler örnek amaçlıdır · Gerçek tercihler için ÖSYM'yi ziyaret edin</p>
+                    <p>📊 Veriler örnek amaçlıdır · Resmî kılavuz ve taban puanlar için kaynak: <a className="underline font-semibold text-teal-700 dark:text-teal-400" href="https://www.osym.gov.tr" target="_blank" rel="noopener">ÖSYM · osym.gov.tr</a></p>
                 </div>
             </div>
         );

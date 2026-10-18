@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:278417:9krzwl*/
+/*jsx:babel-7.29.9-react-classic:280061:asbj8k*/
 const {
   useState,
   useEffect,
@@ -5753,7 +5753,28 @@ function Ben(props) {
       key: b.id,
       className: "text-xs font-medium px-2 py-1 rounded-full inline-flex items-center gap-1 " + (on ? "bg-emerald-50 text-emerald-600 pop-in" : "bg-stone-100 dark:bg-slate-800 text-stone-400")
     }, on ? null : window.KpssIcon ? window.KpssIcon("lock", "w-3 h-3") : null, b.title);
-  }))), /*#__PURE__*/React.createElement("button", {
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-3xl glass p-5 mb-4"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-xs font-bold uppercase tracking-wider text-stone-400 mb-1"
+  }, "Kaynaklar"), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-2"
+  }, "Atanly ba\u011F\u0131ms\u0131z bir e\u011Fitim uygulamas\u0131d\u0131r. \xD6SYM'yi ya da herhangi bir kamu kurumunu temsil etmez, bu kurumlarla ba\u011Flant\u0131s\u0131 yoktur. Resm\xEE ve g\xFCncel bilgi i\xE7in:"), [["ÖSYM · sınav tarihleri, kılavuzlar, tercih", "https://www.osym.gov.tr"], ["Mevzuat Bilgi Sistemi · Anayasa ve kanunlar", "https://www.mevzuat.gov.tr"], ["Resmî Gazete · resmî düzenlemeler", "https://www.resmigazete.gov.tr"]].map(function (row) {
+    return /*#__PURE__*/React.createElement("a", {
+      key: row[1],
+      href: row[1],
+      target: "_blank",
+      rel: "noopener",
+      className: "block py-2 border-t border-stone-100 dark:border-stone-800"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "block text-sm font-semibold text-slate-800 dark:text-stone-100"
+    }, row[0]), /*#__PURE__*/React.createElement("span", {
+      className: "block text-xs text-teal-700 dark:text-teal-400"
+    }, row[1].replace("https://", "")));
+  }), /*#__PURE__*/React.createElement("a", {
+    href: "yasal/kaynaklar.html",
+    className: "block pt-2 border-t border-stone-100 dark:border-stone-800 text-sm font-bold text-teal-700 dark:text-teal-400"
+  }, "T\xFCm kaynaklar ve bilgilendirme \u2192")), /*#__PURE__*/React.createElement("button", {
     onClick: function () {
       if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
         if (r.ok) {
@@ -5810,6 +5831,9 @@ function Ben(props) {
   }) : null, /*#__PURE__*/React.createElement("div", {
     className: "text-[11px] text-stone-400 text-center leading-relaxed mb-3 flex flex-wrap justify-center items-center gap-x-1"
   }, /*#__PURE__*/React.createElement("a", {
+    className: "underline inline-block py-2 px-1",
+    href: "yasal/kaynaklar.html"
+  }, "Kaynaklar"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {
     className: "underline inline-block py-2 px-1",
     href: "yasal/aydinlatma.html"
   }, "KVKK Ayd\u0131nlatma"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("a", {

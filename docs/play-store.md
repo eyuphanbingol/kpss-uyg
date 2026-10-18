@@ -74,8 +74,13 @@ KPSS GY-GK: konu notları, ÖSYM tarzı sorular, deneme raporu ve harita oyunlar
 ```
 
 **Tam açıklama (4000):**
+> Resmî bilgi geçen uygulamalarda Google, açıklamada **resmî kaynak bağlantısı** ve **en üstte görünür bir
+> "devlet kurumu değiliz" beyanı** ister (Yanıltıcı İddialar Politikası; 18 Eki 2026'da bu yüzden ret geldi).
+> Bu iki bölümü açıklamadan çıkarma. Uygulama içinde aynı bilgiler: Ben › Kaynaklar ve https://www.atanly.com/yasal/kaynaklar
 ```
-Atanly, KPSS Genel Yetenek – Genel Kültür'e hazırlanan lisans, ön lisans ve ortaöğretim adayları için hazırlanmış ücretsiz bir çalışma uygulamasıdır.
+ℹ️ Atanly bağımsız bir eğitim uygulamasıdır. ÖSYM'yi ya da herhangi bir kamu kurumunu temsil etmez; bu kurumlarla bağlantısı yoktur. Resmî bilgi için: https://www.osym.gov.tr
+
+Atanly, KPSS Genel Yetenek – Genel Kültür'e hazırlanan lisans, ön lisans ve ortaöğretim adayları için hazırlanmış bir çalışma uygulamasıdır.
 
 📅 HER GÜN NE ÇALIŞACAĞINI BİL
 • Sınav tarihine göre geri sayım ve günlük hedef
@@ -98,17 +103,31 @@ Atanly, KPSS Genel Yetenek – Genel Kültür'e hazırlanan lisans, ön lisans v
 
 🗺️ OYNAYARAK ÖĞREN
 • Türkiye'yi Fethet: 81 ili harita üstünde bul
-• Dağlar, faylar, platolar, enerji ve ulaşım hatları harita oyunu
+• Dağlar, faylar, platolar, göller, enerji ve ulaşım hatları harita oyunları
 • Tabu, boşluk doldurma ve 30 saniye oyunları
 
 📈 İLERLEMENİ GÖR
 • Isı haritası, haftalık özet, ders analizi
 • Haftalık sıralama
 
-Hesabın web (atanly.com) ve telefon arasında eşitlenir; kaldığın yerden devam edersin.
-Verilerin satılmaz.
+Hesabın web (atanly.com) ve telefon arasında eşitlenir; kaldığın yerden devam edersin. Verilerin satılmaz.
 
-Atanly ücretsizdir. İsteğe bağlı Premium üyelik (aylık / yıllık) ve canlı deneme kaydı uygulama içi satın alma ile alınır.
+ÜCRETSİZ VE PREMIUM
+Atanly'yi ücretsiz indirip kullanabilirsin. Her bölümün ilk konuları ve oyunları ücretsizdir; diğerlerini kısa bir reklam izleyerek 24 saat açabilir ya da Premium üyelikle (aylık veya yıllık) hepsini reklamsız açabilirsin. İlk canlı deneme kaydın ücretsizdir; sonraki denemeler uygulama içi satın alma ile alınır.
+
+📌 KAYNAKLAR
+Uygulamadaki sınav tarihleri ve resmî bilgilerin kaynakları aşağıdadır. Resmî ve güncel bilgi için bu kaynakları esas al:
+• ÖSYM (KPSS sınav takvimi, kılavuzlar, tercih ve yerleştirme): https://www.osym.gov.tr
+• Mevzuat Bilgi Sistemi (Anayasa ve kanunlar): https://www.mevzuat.gov.tr
+• Resmî Gazete (resmî düzenlemeler): https://www.resmigazete.gov.tr
+• TÜİK (nüfus ve istatistikler): https://www.tuik.gov.tr
+• MEB (öğretim programları): https://www.meb.gov.tr
+• TDK (yazım ve dil bilgisi): https://www.tdk.gov.tr
+Tüm kaynak listesi: https://www.atanly.com/yasal/kaynaklar
+
+Sorular ÖSYM tarzını örnek alan özgün çalışma sorularıdır; resmî ÖSYM sorusu değildir. Puan tahmini ve taban puanlar yaklaşık değerlerdir; resmî tercih danışmanlığı değildir.
+
+⚠️ SORUMLULUK REDDİ: Atanly bir devlet uygulaması değildir. ÖSYM, MEB veya herhangi bir kamu kurumuyla bağlantısı, ortaklığı ya da onayı yoktur; sınav başvurusu, sonuç ya da tercih gibi resmî işlemler yapmaz.
 ```
 
 **Görseller** (`docs/play-store/`):
@@ -135,7 +154,7 @@ Tablet görselleri isteğe bağlı; boş bırakılabilir.
 | **İçerik derecelendirmesi** | Anket → Kategori: *Eğitim / referans*. Şiddet, cinsellik, kumar, uyuşturucu: hayır. Kullanıcılar arası iletişim: **hayır** (sohbet yok; sıralamada adın yalnız ilk iki harfi görünür). Konum paylaşımı: hayır. Dijital satın alma: **evet** (Premium ve deneme kaydı). → Sonuç **3+ / Herkes** |
 | **Hedef kitle** | **18 yaş ve üstü** (ortaöğretim KPSS adayları da 18+'dır). "Çocuklara hitap ediyor mu": Hayır |
 | **Haber uygulaması** | Hayır |
-| **Devlet uygulaması** | Hayır (ÖSYM ile bağlantısı yok; açıklamada resmî kurum izlenimi verme) |
+| **Devlet uygulaması** | Hayır (ÖSYM ile bağlantısı yok; açıklamada resmî kurum izlenimi verme, kaynak bağlantılarını ve sorumluluk reddini koru) |
 | **Finansal özellikler** | Yok |
 | **Sağlık** | Yok |
 | **Hesap silme** | Uygulama içinden: Evet (Ben → Hesabımı sil). Web bağlantısı: `https://www.atanly.com/yasal/hesap-silme` |

@@ -367,12 +367,14 @@
                             <span className="text-white/40">· KPSS çalışma odası</span>
                         </div>
                         <nav className="lp-legal" aria-label="Yasal">
+                            <a href="yasal/kaynaklar.html">Kaynaklar</a>
                             <a href="yasal/aydinlatma.html">KVKK</a>
                             <a href="yasal/kullanim.html">Kullanım</a>
                             <a href="yasal/gizlilik.html">Gizlilik</a>
                             <a href="yasal/cerez.html">Çerez</a>
                         </nav>
                     </div>
+                    <p className="lp-wrap text-[11.5px] leading-relaxed text-white/50 pb-6">Atanly bağımsız bir eğitim uygulamasıdır; ÖSYM'yi ya da herhangi bir kamu kurumunu temsil etmez. Resmî bilgi için <a className="underline" href="https://www.osym.gov.tr" target="_blank" rel="noopener">osym.gov.tr</a> · <a className="underline" href="yasal/kaynaklar.html">tüm kaynaklar</a></p>
                 </footer>
             </div>
         );
@@ -1333,6 +1335,7 @@
                             <p className="text-[14.5px] text-slate-500 dark:text-stone-400 mt-1.5 mb-7 leading-relaxed">{sub}</p>
                             {form}
                             <p className="text-[11.5px] text-center text-slate-400 mt-8 leading-relaxed">
+                                <a className="hover:underline" href="yasal/kaynaklar.html">Kaynaklar</a>{" · "}
                                 <a className="hover:underline" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>{" · "}
                                 <a className="hover:underline" href="yasal/kullanim.html">Kullanım</a>{" · "}
                                 <a className="hover:underline" href="yasal/uyelik.html">Üyelik</a>{" · "}

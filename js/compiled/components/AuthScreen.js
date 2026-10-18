@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:84825:1enmpge*/
+/*jsx:babel-7.29.9-react-classic:85396:dmz84z*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -586,6 +586,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       className: "lp-legal",
       "aria-label": "Yasal"
     }, /*#__PURE__*/React.createElement("a", {
+      href: "yasal/kaynaklar.html"
+    }, "Kaynaklar"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/aydinlatma.html"
     }, "KVKK"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/kullanim.html"
@@ -593,7 +595,17 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
       href: "yasal/gizlilik.html"
     }, "Gizlilik"), /*#__PURE__*/React.createElement("a", {
       href: "yasal/cerez.html"
-    }, "\xC7erez")))));
+    }, "\xC7erez"))), /*#__PURE__*/React.createElement("p", {
+      className: "lp-wrap text-[11.5px] leading-relaxed text-white/50 pb-6"
+    }, "Atanly ba\u011F\u0131ms\u0131z bir e\u011Fitim uygulamas\u0131d\u0131r; \xD6SYM'yi ya da herhangi bir kamu kurumunu temsil etmez. Resm\xEE bilgi i\xE7in ", /*#__PURE__*/React.createElement("a", {
+      className: "underline",
+      href: "https://www.osym.gov.tr",
+      target: "_blank",
+      rel: "noopener"
+    }, "osym.gov.tr"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
+      className: "underline",
+      href: "yasal/kaynaklar.html"
+    }, "t\xFCm kaynaklar"))));
   }
   function getStrengthLabel(pass) {
     if (!pass) return {
@@ -2039,6 +2051,9 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     }, sub), form, /*#__PURE__*/React.createElement("p", {
       className: "text-[11.5px] text-center text-slate-400 mt-8 leading-relaxed"
     }, /*#__PURE__*/React.createElement("a", {
+      className: "hover:underline",
+      href: "yasal/kaynaklar.html"
+    }, "Kaynaklar"), " · ", /*#__PURE__*/React.createElement("a", {
       className: "hover:underline",
       href: "yasal/aydinlatma.html"
     }, "KVKK Ayd\u0131nlatma"), " · ", /*#__PURE__*/React.createElement("a", {

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Linking, StyleSheet, Text, View } from "react-native";
 import { Search } from "lucide-react-native";
 import { useApp } from "../AppProvider";
 import { ScoreEngine } from "../lib/scoreEngine";
@@ -149,7 +149,7 @@ export function PlacementScreen({ navigation }) {
                             </View>
                         );
                     })}
-                    <Text style={[s.foot, { color: muted }]}>Resmi tercih danışmanlığı değildir. Gerçek tercihler için ÖSYM'yi ziyaret et.</Text>
+                    <Text style={[s.foot, { color: muted }]}>Resmi tercih danışmanlığı değildir. Resmî kılavuz ve taban puanlar için kaynak: <Text accessibilityRole="link" style={s.footLink} onPress={function () { Linking.openURL("https://www.osym.gov.tr").catch(function () {}); }}>ÖSYM · osym.gov.tr</Text></Text>
                 </View>
             )}
         </ScrollScreen>
@@ -189,4 +189,5 @@ var s = StyleSheet.create({
     badge: { borderRadius: 999, paddingHorizontal: 8, paddingVertical: 3 },
     badgeTxt: { fontSize: 10, fontWeight: "800" },
     foot: { fontSize: 11, textAlign: "center", marginTop: 12 },
+    footLink: { color: "#0F766E", fontWeight: "700", textDecorationLine: "underline" },
 });

@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:21143:1d82syl*/
+/*jsx:babel-7.29.9-react-classic:21301:9cs93e*/
 (function () {
   const {
     useEffect,
@@ -359,7 +359,12 @@
       className: "text-indigo-600 dark:text-indigo-400"
     }, "Resmi tercih dan\u0131\u015Fmanl\u0131\u011F\u0131 de\u011Fildir."))))), /*#__PURE__*/React.createElement("div", {
       className: "mt-4 text-center text-[10px] text-stone-400"
-    }, /*#__PURE__*/React.createElement("p", null, "\uD83D\uDCCA Veriler \xF6rnek ama\xE7l\u0131d\u0131r \xB7 Ger\xE7ek tercihler i\xE7in \xD6SYM'yi ziyaret edin")));
+    }, /*#__PURE__*/React.createElement("p", null, "\uD83D\uDCCA Veriler \xF6rnek ama\xE7l\u0131d\u0131r \xB7 Resm\xEE k\u0131lavuz ve taban puanlar i\xE7in kaynak: ", /*#__PURE__*/React.createElement("a", {
+      className: "underline font-semibold text-teal-700 dark:text-teal-400",
+      href: "https://www.osym.gov.tr",
+      target: "_blank",
+      rel: "noopener"
+    }, "\xD6SYM \xB7 osym.gov.tr"))));
   }
 
   // ============================================================

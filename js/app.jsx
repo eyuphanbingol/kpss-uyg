@@ -3765,6 +3765,23 @@ function Ben(props) {
                     })}
                 </div>
             </div>
+            <div className="rounded-3xl glass p-5 mb-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Kaynaklar</p>
+                <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed mb-2">Atanly bağımsız bir eğitim uygulamasıdır. ÖSYM'yi ya da herhangi bir kamu kurumunu temsil etmez, bu kurumlarla bağlantısı yoktur. Resmî ve güncel bilgi için:</p>
+                {[
+                    ["ÖSYM · sınav tarihleri, kılavuzlar, tercih", "https://www.osym.gov.tr"],
+                    ["Mevzuat Bilgi Sistemi · Anayasa ve kanunlar", "https://www.mevzuat.gov.tr"],
+                    ["Resmî Gazete · resmî düzenlemeler", "https://www.resmigazete.gov.tr"]
+                ].map(function (row) {
+                    return (
+                        <a key={row[1]} href={row[1]} target="_blank" rel="noopener" className="block py-2 border-t border-stone-100 dark:border-stone-800">
+                            <span className="block text-sm font-semibold text-slate-800 dark:text-stone-100">{row[0]}</span>
+                            <span className="block text-xs text-teal-700 dark:text-teal-400">{row[1].replace("https://", "")}</span>
+                        </a>
+                    );
+                })}
+                <a href="yasal/kaynaklar.html" className="block pt-2 border-t border-stone-100 dark:border-stone-800 text-sm font-bold text-teal-700 dark:text-teal-400">Tüm kaynaklar ve bilgilendirme →</a>
+            </div>
             <button onClick={function () {
                 if (window.NotificationEngine) window.NotificationEngine.requestPush().then(function (r) {
                     if (r.ok) {
@@ -3793,6 +3810,8 @@ function Ben(props) {
                 onClose={function () { setDelOpen(false); }}
                 onDeleted={function () { setDelOpen(false); props.onAccountDeleted && props.onAccountDeleted(); }} /> : null}
             <div className="text-[11px] text-stone-400 text-center leading-relaxed mb-3 flex flex-wrap justify-center items-center gap-x-1">
+                <a className="underline inline-block py-2 px-1" href="yasal/kaynaklar.html">Kaynaklar</a>
+                <span>·</span>
                 <a className="underline inline-block py-2 px-1" href="yasal/aydinlatma.html">KVKK Aydınlatma</a>
                 <span>·</span>
                 <a className="underline inline-block py-2 px-1" href="yasal/kullanim.html">Kullanım</a>
