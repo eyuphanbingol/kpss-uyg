@@ -217,7 +217,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
             profile: {
                 onboarded: false,
                 name: "",
-                examDate: "2026-09-06",
+                examDate: "",
                 dailyMinutes: 45,
                 dailyQuestions: 25,
                 dark: false,
@@ -380,14 +380,12 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         if (!userProfile.experiments) userProfile.experiments = {};
         if (!userProfile.referralCode) userProfile.referralCode = "";
         if (userProfile.studyPlan && typeof userProfile.studyPlan !== "object") userProfile.studyPlan = null;
-        var officialDates = (KpssConfig && KpssConfig.examDateByLevel) || {
-            lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25"
-        };
+        var officialDates = (KpssConfig && KpssConfig.examDateByLevel) || {};
         var lv = userProfile.educationLevel || "lisans";
-        var stale = { onlisans: "2026-09-20", ortaogretim: "2026-09-27" };
-        if (officialDates[lv] && (profile.examDate === stale.onlisans || profile.examDate === stale.ortaogretim || !profile.examDate)) {
-            profile.examDate = officialDates[lv];
-        }
+        // Uygulamanın kendisinin atadığı eski resmî tarihler (kullanıcının seçtiği tarihlere dokunulmaz).
+        var stale = { "2026-09-20": 1, "2026-09-27": 1, "2026-09-06": 1, "2026-10-04": 1, "2026-10-25": 1 };
+        var isStale = !!stale[profile.examDate] && profile.examDate < todayStr();
+        if (isStale || !profile.examDate) profile.examDate = officialDates[lv] || "";
         var eduReq = userProfile.educationChangeRequest || parsed.educationChangeRequest;
         if (eduReq && typeof eduReq === "object") {
             if (eduReq.status === "approved" || (eduReq.status === "pending" && eduReq.to && eduReq.to === userProfile.educationLevel)) {
@@ -1141,9 +1139,7 @@ import { localStorageShim as localStorage, sessionStorageShim as sessionStorage 
         setEducationLevel: function (level) {
             var allowed = { lisans: 1, onlisans: 1, ortaogretim: 1 };
             if (!allowed[level]) return { ok: false };
-            var dates = (KpssConfig && KpssConfig.examDateByLevel) || {
-                lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25"
-            };
+            var dates = (KpssConfig && KpssConfig.examDateByLevel) || {};
             state.userProfile.educationLevel = level;
             if (dates[level]) state.profile.examDate = dates[level];
             emit();

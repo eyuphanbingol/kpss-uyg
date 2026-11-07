@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:85396:dmz84z*/
+/*jsx:babel-7.29.9-react-classic:85523:h0jrle*/
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 (function () {
   const {
@@ -890,7 +890,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
     const [level, setLevel] = useState("lisans");
     const [target, setTarget] = useState("B");
     const [refCode, setRefCode] = useState("");
-    const [examDate, setExamDate] = useState(dates.lisans || "2026-09-06");
+    const [examDate, setExamDate] = useState(dates.lisans || "");
     const [interest, setInterest] = useState({});
     const [mode, setMode] = useState("in");
     const [step, setStep] = useState(1);
@@ -1723,13 +1723,14 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
         className: "cursor-pointer list-none px-4 py-3 flex items-center justify-between text-[13.5px] font-semibold text-slate-700 dark:text-stone-200"
       }, /*#__PURE__*/React.createElement("span", null, "S\u0131nav tarihi ve davet kodu"), /*#__PURE__*/React.createElement("span", {
         className: "text-slate-400 text-[12px] font-normal"
-      }, formatDate(examDate), refCode ? " · kod: " + refCode : "")), /*#__PURE__*/React.createElement("div", {
+      }, formatDate(examDate) || "isteğe bağlı", refCode ? " · kod: " + refCode : "")), /*#__PURE__*/React.createElement("div", {
         className: "px-4 space-y-4"
       }, /*#__PURE__*/React.createElement(AuthField, {
         id: "au-date",
         label: "S\u0131nav tarihi",
+        optional: true,
         icon: "cal",
-        hint: "Program\u0131n bu tarihe g\xF6re kurulur; sonradan Ben \u203A Ayarlar'dan de\u011Fi\u015Ftirebilirsin."
+        hint: dates[level] ? "Programın bu tarihe göre kurulur; sonradan programından değiştirebilirsin." : "ÖSYM bir sonraki KPSS tarihini henüz açıklamadı. Hedef tarihin varsa seç; boş bırakabilirsin."
       }, function (a) {
         return /*#__PURE__*/React.createElement("input", _extends({}, a, {
           id: "au-date",

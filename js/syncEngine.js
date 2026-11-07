@@ -399,7 +399,7 @@
             localOn = !!(local.profile && local.profile.onboarded);
             remoteOn = !!(remote && remote.profile && remote.profile.onboarded);
             var cfgDates = window.KpssConfig && window.KpssConfig.examDateByLevel;
-            var examDates = cfgDates || { lisans: "2026-09-06", onlisans: "2026-10-04", ortaogretim: "2026-10-25" };
+            var examDates = cfgDates || {};
             var dbEdu = remoteRow.data && remoteRow.data.education_level;
             var localEdu = local.userProfile && local.userProfile.educationLevel;
             var qTotal = (merged.counters && merged.counters.questions) || 0;

@@ -39,8 +39,10 @@ export default function BugunScreen({ navigation }) {
     var dash = StudyPlanner.studyDashboard ? StudyPlanner.studyDashboard(student) : null;
 
     var examLine, examSub = "";
-    if (plan.daysLeft == null) { examLine = examTrackName(level) + " · sınav tarihi yok"; examSub = "Ben › Ayarlar’dan sınav tarihini seç."; }
-    else if (plan.daysLeft < 0) { examLine = examTrackName(level) + " geride kaldı"; examSub = "Yeni hedefin için sınav tarihini güncelle."; }
+    // Tarih yoksa ya da geçtiyse kart, tarihin seçildiği program sihirbazını açar.
+    var needDate = plan.daysLeft == null || plan.daysLeft < 0;
+    if (plan.daysLeft == null) { examLine = examTrackName(level) + " · tarih bekleniyor"; examSub = "ÖSYM yeni tarihi açıklayınca güncellenecek. Kendi hedef tarihini seçmek için dokun."; }
+    else if (plan.daysLeft < 0) { examLine = examTrackName(level) + " geride kaldı"; examSub = "Yeni hedef tarihini seçmek için dokun."; }
     else if (plan.daysLeft === 0) { examLine = examTrackName(level) + " bugün"; examSub = "Başarılar! Sakin kal."; }
     else { examLine = examTrackName(level) + "’ye " + plan.daysLeft + " gün kaldı"; examSub = plan.daysLeft <= 30 ? "Son düzlük: tekrar ve deneme ağırlıklı çalış." : "Her gün not + test; yanlışlar tekrara düşer."; }
 
@@ -76,6 +78,7 @@ export default function BugunScreen({ navigation }) {
                 }
             />
 
+            <Tap disabled={!needDate} accessibilityLabel={examLine + ". " + examSub} onPress={function () { go(navigation, "Program"); }}>
             <LinearGradient colors={["#0F172A", "#1E293B"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.banner}>
                 <View style={styles.bannerRow}>
                     <View style={{ flex: 1, minWidth: 0 }}>
@@ -90,6 +93,7 @@ export default function BugunScreen({ navigation }) {
                     ) : null}
                 </View>
             </LinearGradient>
+            </Tap>
 
             <NextSteps navigation={navigation} plan={plan} kpssData={app.kpssData} dark={isDark} />
 

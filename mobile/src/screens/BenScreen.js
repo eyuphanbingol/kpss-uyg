@@ -215,7 +215,7 @@ export default function BenScreen({ navigation }) {
                     <View style={styles.infoGrid}>
                         <InfoRow label="Ad" value={st.profile.name || "—"} isDark={isDark} />
                         <InfoRow label="Eğitim" value={eduLabel(up.educationLevel)} isDark={isDark} />
-                        <InfoRow label="Sınav Tarihi" value={fmtExam(st.profile.examDate)} isDark={isDark} />
+                        <InfoRow label="Sınav Tarihi" value={st.profile.examDate ? fmtExam(st.profile.examDate) : "ÖSYM açıklayınca"} isDark={isDark} />
                         {needsKulvar(up.educationLevel) ? (
                             <InfoRow label="Kulvar" value={trackLabel(up.targetType || "B")} isDark={isDark} />
                         ) : null}
@@ -257,7 +257,7 @@ export default function BenScreen({ navigation }) {
                                     {eduLabel(up.educationLevel)}
                                 </Text>
                                 <Text style={[styles.eduHint, isDark && styles.textMuted]}>
-                                    Düzey değişimi yönetici onayı gerektirir. Sınav tarihi ÖSYM takvimine bağlanır (kaynak: <Text accessibilityRole="link" style={styles.srcInline} onPress={function () { Linking.openURL("https://www.osym.gov.tr").catch(function () {}); }}>osym.gov.tr</Text>).
+                                    Düzey değişimi yönetici onayı gerektirir. Sınav tarihi ÖSYM takvimine bağlanır; yeni tarih açıklanana kadar Programımı oluştur'dan kendi hedefini seçebilirsin (kaynak: <Text accessibilityRole="link" style={styles.srcInline} onPress={function () { Linking.openURL("https://www.osym.gov.tr").catch(function () {}); }}>osym.gov.tr</Text>).
                                 </Text>
                                 {(!eduReq || eduReq.status !== "pending") ? (
                                     <View style={[styles.eduRow, { marginTop: 8, flexWrap: "wrap" }]}>

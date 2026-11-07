@@ -105,6 +105,18 @@ st = w2.StudentStore.getState();
 eq([st.profile.onboarded, st.profile.name, st.userProfile.targetType, st.profile.examDate], [true, "Mehmet", "A", "2028-07-16"], "aynı sekmede onay: bekleyen profil uygulanır");
 ok(w2.sessionStorage.getItem("kpss-signup-profile") === null, "bekleyen profil kullanıldıktan sonra silinir");
 
+// Sınav tarihi: uygulamanın atadığı geçmiş resmî tarih temizlenir, kullanıcının seçtiği tarih kalır
+[["2026-09-06", ""], ["2026-10-25", ""], ["2026-08-01", "2026-08-01"], ["2028-07-16", "2028-07-16"], ["", ""]].forEach(function (c) {
+    var wd = sandbox();
+    wd.localStorage.setItem("kpss-student-v1:" + U1, JSON.stringify({ profile: { name: "Ece", onboarded: true, examDate: c[0] }, userProfile: { educationLevel: "lisans" } }));
+    wd.StudentStore.bindToUser(U1, "e@x.com");
+    eq(wd.StudentStore.getState().profile.examDate, c[1], "sınav tarihi göçü: " + (c[0] || "boş") + " → " + (c[1] || "boş"));
+});
+var wl = sandbox();
+wl.StudentStore.bindToUser(U1, "l@x.com");
+wl.StudentStore.setEducationLevel("onlisans");
+eq(wl.StudentStore.getState().profile.examDate, "", "resmî tarih açıklanmamışken düzey değişimi tarih uydurmaz");
+
 // Bozuk kayıtlı veri uygulamayı çökertmez
 var w3 = sandbox();
 w3.localStorage.setItem("kpss-student-v1:" + U1, "{bozuk json");

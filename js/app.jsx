@@ -303,7 +303,7 @@ function Onboarding(props) {
     const [name, setName] = useState(profile.name || "");
     const [level, setLevel] = useState(up.educationLevel || "lisans");
     const [target, setTarget] = useState(up.targetType || "B");
-    const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
+    const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "");
     return (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl fade-in">
@@ -343,7 +343,8 @@ function Onboarding(props) {
                 ) : null}
                 <label className="block text-xs font-bold text-stone-500 mb-1">Sınav tarihi</label>
                 <input type="date" aria-label="Sınav tarihi" value={examDate} onChange={function (e) { setExamDate(e.target.value); }}
-                    className="w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium" />
+                    className={"w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium " + (dates[level] ? "mb-4" : "mb-1")} />
+                {dates[level] ? null : <p className="text-[11px] text-stone-500 mb-4">ÖSYM yeni tarihi henüz açıklamadı; hedef tarihin varsa seç, boş bırakabilirsin.</p>}
                 <p className="text-[11px] text-stone-500 leading-relaxed mb-5">
                     Başla diyerek <a className="underline font-semibold" href="yasal/kullanim.html" target="_blank" rel="noopener">Kullanım Koşulları</a> ve <a className="underline font-semibold" href="yasal/uyelik.html" target="_blank" rel="noopener">Üyelik Sözleşmesi</a>{"'ni kabul etmiş olursunuz. "}<a className="underline" href="yasal/aydinlatma.html" target="_blank" rel="noopener">KVKK Aydınlatma</a>
                 </p>
@@ -1658,8 +1659,10 @@ function Bugun(props) {
     const level = (props.student.userProfile && props.student.userProfile.educationLevel) || "lisans";
     const track = examTrackName(level);
     var examLine, examSub = "";
-    if (plan.daysLeft == null) { examLine = track + " · sınav tarihi yok"; examSub = "Ben › Ayarlar’dan sınav tarihini seç, plan ona göre kurulsun."; }
-    else if (plan.daysLeft < 0) { examLine = track + " geride kaldı"; examSub = "Yeni hedefin için Ben › Ayarlar’dan sınav tarihini güncelle."; }
+    // Tarih yoksa ya da geçtiyse kart, tarihin seçildiği program sihirbazını açar.
+    var needDate = plan.daysLeft == null || plan.daysLeft < 0;
+    if (plan.daysLeft == null) { examLine = track + " · tarih bekleniyor"; examSub = "ÖSYM yeni tarihi açıklayınca güncellenecek. Kendi hedef tarihini seçmek için tıkla."; }
+    else if (plan.daysLeft < 0) { examLine = track + " geride kaldı"; examSub = "Yeni hedef tarihini seçmek için tıkla."; }
     else if (plan.daysLeft === 0) { examLine = track + " bugün"; examSub = "Başarılar! Sakin kal, bildiğin soruya önce git."; }
     else { examLine = track + "’ye " + plan.daysLeft + " gün kaldı"; examSub = plan.daysLeft <= 30 ? "Son düzlük: tekrar ve deneme ağırlıklı çalış." : "Her gün not + test; yanlışlar tekrara düşer."; }
     return (
@@ -1676,7 +1679,10 @@ function Bugun(props) {
                 <ThemeBtn isDark={props.isDark} onClick={props.toggleDark} />
             </div>
 
-            <div className="exam-hero rounded-3xl text-white p-5 mb-6 slide-up">
+            <div className={"exam-hero rounded-3xl text-white p-5 mb-6 slide-up" + (needDate ? " cursor-pointer" : "")}
+                role={needDate ? "button" : undefined} tabIndex={needDate ? 0 : undefined}
+                onClick={needDate ? function () { setWizard(true); } : undefined}
+                onKeyDown={needDate ? function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setWizard(true); } } : undefined}>
                 <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0">
                         <p className="text-xs font-semibold uppercase tracking-wider exam-hero-kicker">Sınav takvimi</p>
@@ -3663,7 +3669,7 @@ function Ben(props) {
                         {[
                             { k: "Ad", v: st.profile.name || "—" },
                             { k: "Eğitim", v: eduLabel(up.educationLevel) },
-                            { k: "Sınav tarihi", v: fmtExam(st.profile.examDate) }
+                            { k: "Sınav tarihi", v: st.profile.examDate ? fmtExam(st.profile.examDate) : "ÖSYM açıklayınca" }
                         ].concat(needsKulvar(up.educationLevel) ? [{ k: "Kulvar", v: trackLabel(up.targetType || "B") }] : []).map(function (row) {
                             return (
                                 <div key={row.k} className="py-3 flex justify-between gap-4">
@@ -3690,7 +3696,7 @@ function Ben(props) {
                         ) : (
                             <div>
                                 <p className="text-sm font-medium">{eduLabel(up.educationLevel)}</p>
-                                <p className="text-xs text-stone-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır.</p>
+                                <p className="text-xs text-stone-400">Düzey değişimi admin onayı ister. Sınav tarihi ÖSYM takvimine bağlanır; yeni tarih açıklanana kadar Bugün › Sınav takvimi kartından kendi hedefini seçebilirsin.</p>
                                 {(!eduReq || eduReq.status !== "pending") ? (
                                     <div>
                                         <label className="text-sm text-stone-500">Yeni eğitim düzeyi</label>

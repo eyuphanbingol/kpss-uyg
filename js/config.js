@@ -31,10 +31,12 @@
         },
         freeWeeklyExams: 2,
         freeDailyMixed: 3,
+        // ÖSYM'nin açıkladığı sınav günü (YYYY-AA-GG). Boş: bir sonraki KPSS tarihi henüz açıklanmadı;
+        // kullanıcı kendi hedef tarihini seçer. Açıklanınca buraya yazmak yeterli (web: js/config.js, mobil: mobile/src/lib/config.js).
         examDateByLevel: {
-            lisans: "2026-09-06",
-            onlisans: "2026-10-04",
-            ortaogretim: "2026-10-25"
+            lisans: "",
+            onlisans: "",
+            ortaogretim: ""
         },
         modules: [
             { id: "gygk", title: "GY-GK", ready: true, lessons: ["Tarih", "Coğrafya", "Türkçe", "Vatandaşlık", "Güncel Bilgiler", "Geometri"] }

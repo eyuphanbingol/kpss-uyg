@@ -33,15 +33,6 @@
         return colors[level] || colors["lisans"];
     }
 
-    function getExamDateHint(level) {
-        var map = {
-            "lisans": "Her yıl yapılır",
-            "onlisans": "Çift yıllarda yapılır",
-            "ortaogretim": "Çift yıllarda yapılır"
-        };
-        return map[level] || "";
-    }
-
     function formatDateForDisplay(iso) {
         if (!iso) return "";
         var parts = iso.split("-");
@@ -64,7 +55,7 @@
         const [name, setName] = useState(profile.name || "");
         const [level, setLevel] = useState((student.userProfile && student.userProfile.educationLevel) || "lisans");
         const [target, setTarget] = useState((student.userProfile && student.userProfile.targetType) || "B");
-        const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "2026-09-06");
+        const [examDate, setExamDate] = useState(profile.examDate || dates[level] || "");
         const [step, setStep] = useState(1);
         const [animating, setAnimating] = useState(false);
 
@@ -251,7 +242,7 @@
                                     className="w-full px-4 py-3 rounded-2xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-[15px] focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
                                 />
                                 <p className="text-[10px] text-stone-400 mt-1.5">
-                                    {getExamDateHint(level)} · Seçilen: {formatDateForDisplay(examDate)}
+                                    {dates[level] ? "ÖSYM takvimindeki tarih" : "ÖSYM yeni tarihi henüz açıklamadı · hedef tarihini seçebilir ya da boş bırakabilirsin"}{examDate ? " · Seçilen: " + formatDateForDisplay(examDate) : ""}
                                 </p>
                             </div>
 

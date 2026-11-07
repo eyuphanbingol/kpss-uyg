@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:280061:asbj8k*/
+/*jsx:babel-7.29.9-react-classic:280896:1itmihh*/
 const {
   useState,
   useEffect,
@@ -660,7 +660,7 @@ function Onboarding(props) {
   const [name, setName] = useState(profile.name || "");
   const [level, setLevel] = useState(up.educationLevel || "lisans");
   const [target, setTarget] = useState(up.targetType || "B");
-  const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "2026-09-06");
+  const [examDate, setExamDate] = useState(profile.examDate || dates[up.educationLevel || "lisans"] || "");
   return /*#__PURE__*/React.createElement("div", {
     className: "fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-4"
   }, /*#__PURE__*/React.createElement("div", {
@@ -741,8 +741,10 @@ function Onboarding(props) {
     onChange: function (e) {
       setExamDate(e.target.value);
     },
-    className: "w-full mb-4 px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium"
-  }), /*#__PURE__*/React.createElement("p", {
+    className: "w-full px-4 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 font-medium " + (dates[level] ? "mb-4" : "mb-1")
+  }), dates[level] ? null : /*#__PURE__*/React.createElement("p", {
+    className: "text-[11px] text-stone-500 mb-4"
+  }, "\xD6SYM yeni tarihi hen\xFCz a\xE7\u0131klamad\u0131; hedef tarihin varsa se\xE7, bo\u015F b\u0131rakabilirsin."), /*#__PURE__*/React.createElement("p", {
     className: "text-[11px] text-stone-500 leading-relaxed mb-5"
   }, "Ba\u015Fla diyerek ", /*#__PURE__*/React.createElement("a", {
     className: "underline font-semibold",
@@ -2718,12 +2720,14 @@ function Bugun(props) {
   const track = examTrackName(level);
   var examLine,
     examSub = "";
+  // Tarih yoksa ya da geçtiyse kart, tarihin seçildiği program sihirbazını açar.
+  var needDate = plan.daysLeft == null || plan.daysLeft < 0;
   if (plan.daysLeft == null) {
-    examLine = track + " · sınav tarihi yok";
-    examSub = "Ben › Ayarlar’dan sınav tarihini seç, plan ona göre kurulsun.";
+    examLine = track + " · tarih bekleniyor";
+    examSub = "ÖSYM yeni tarihi açıklayınca güncellenecek. Kendi hedef tarihini seçmek için tıkla.";
   } else if (plan.daysLeft < 0) {
     examLine = track + " geride kaldı";
-    examSub = "Yeni hedefin için Ben › Ayarlar’dan sınav tarihini güncelle.";
+    examSub = "Yeni hedef tarihini seçmek için tıkla.";
   } else if (plan.daysLeft === 0) {
     examLine = track + " bugün";
     examSub = "Başarılar! Sakin kal, bildiğin soruya önce git.";
@@ -2747,7 +2751,18 @@ function Bugun(props) {
     isDark: props.isDark,
     onClick: props.toggleDark
   })), /*#__PURE__*/React.createElement("div", {
-    className: "exam-hero rounded-3xl text-white p-5 mb-6 slide-up"
+    className: "exam-hero rounded-3xl text-white p-5 mb-6 slide-up" + (needDate ? " cursor-pointer" : ""),
+    role: needDate ? "button" : undefined,
+    tabIndex: needDate ? 0 : undefined,
+    onClick: needDate ? function () {
+      setWizard(true);
+    } : undefined,
+    onKeyDown: needDate ? function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setWizard(true);
+      }
+    } : undefined
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between gap-3"
   }, /*#__PURE__*/React.createElement("div", {
@@ -5591,7 +5606,7 @@ function Ben(props) {
     v: eduLabel(up.educationLevel)
   }, {
     k: "Sınav tarihi",
-    v: fmtExam(st.profile.examDate)
+    v: st.profile.examDate ? fmtExam(st.profile.examDate) : "ÖSYM açıklayınca"
   }].concat(needsKulvar(up.educationLevel) ? [{
     k: "Kulvar",
     v: trackLabel(up.targetType || "B")
@@ -5635,7 +5650,7 @@ function Ben(props) {
     className: "text-sm font-medium"
   }, eduLabel(up.educationLevel)), /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-stone-400"
-  }, "D\xFCzey de\u011Fi\u015Fimi admin onay\u0131 ister. S\u0131nav tarihi \xD6SYM takvimine ba\u011Flan\u0131r."), !eduReq || eduReq.status !== "pending" ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+  }, "D\xFCzey de\u011Fi\u015Fimi admin onay\u0131 ister. S\u0131nav tarihi \xD6SYM takvimine ba\u011Flan\u0131r; yeni tarih a\xE7\u0131klanana kadar Bug\xFCn \u203A S\u0131nav takvimi kart\u0131ndan kendi hedefini se\xE7ebilirsin."), !eduReq || eduReq.status !== "pending" ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
     className: "text-sm text-stone-500"
   }, "Yeni e\u011Fitim d\xFCzeyi"), /*#__PURE__*/React.createElement("select", {
     value: draftEdu,

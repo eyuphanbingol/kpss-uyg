@@ -118,6 +118,7 @@ function PlanWizard({ navigation, onDone }) {
                         <Text style={st.p}>ÖSYM takvimindeki sınav gününü seç. Program bu güne kadar gün gün hazırlanır.</Text>
                         <Text style={[st.date, dark && ps.light]} accessibilityLiveRegion="polite">{longDate(s.examDate)}</Text>
                         <Text style={st.dateSub}>Sınava {SP.diffDays(today, s.examDate)} gün var.</Text>
+                        <Text style={st.p}>ÖSYM tarihi henüz açıklamadıysa tahmini bir tarih seç; açıklanınca buradan değiştirirsin.</Text>
                         <View style={st.dateRow}>
                             <Text style={[st.dateLab, dark && ps.light]}>Ay</Text>
                             <StepBtn dark={dark} label="−" a11y="Bir ay geri" onPress={function () { setDate(addMonths(s.examDate, -1)); }} />

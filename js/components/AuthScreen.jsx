@@ -570,7 +570,7 @@
         const [level, setLevel] = useState("lisans");
         const [target, setTarget] = useState("B");
         const [refCode, setRefCode] = useState("");
-        const [examDate, setExamDate] = useState(dates.lisans || "2026-09-06");
+        const [examDate, setExamDate] = useState(dates.lisans || "");
         const [interest, setInterest] = useState({});
         const [mode, setMode] = useState("in");
         const [step, setStep] = useState(1);
@@ -1170,10 +1170,10 @@
                             {passInput("au-pass", true)}
                             <details className="group rounded-2xl border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 open:pb-4">
                                 <summary className="cursor-pointer list-none px-4 py-3 flex items-center justify-between text-[13.5px] font-semibold text-slate-700 dark:text-stone-200">
-                                    <span>Sınav tarihi ve davet kodu</span><span className="text-slate-400 text-[12px] font-normal">{formatDate(examDate)}{refCode ? " · kod: " + refCode : ""}</span>
+                                    <span>Sınav tarihi ve davet kodu</span><span className="text-slate-400 text-[12px] font-normal">{formatDate(examDate) || "isteğe bağlı"}{refCode ? " · kod: " + refCode : ""}</span>
                                 </summary>
                                 <div className="px-4 space-y-4">
-                                    <AuthField id="au-date" label="Sınav tarihi" icon="cal" hint="Programın bu tarihe göre kurulur; sonradan Ben › Ayarlar'dan değiştirebilirsin.">
+                                    <AuthField id="au-date" label="Sınav tarihi" optional icon="cal" hint={dates[level] ? "Programın bu tarihe göre kurulur; sonradan programından değiştirebilirsin." : "ÖSYM bir sonraki KPSS tarihini henüz açıklamadı. Hedef tarihin varsa seç; boş bırakabilirsin."}>
                                         {function (a) { return <input {...a} id="au-date" type="date" value={examDate} onChange={function (e) { setExamDate(e.target.value); }} />; }}
                                     </AuthField>
                                     <AuthField id="au-ref" label="Davet kodu" optional icon="gift">
