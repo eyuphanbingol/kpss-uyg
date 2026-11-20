@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:6468:14rqpli*/
+/*jsx:babel-7.29.9-react-classic:6467:hhde8p*/
 (function () {
   const {
     useState,
@@ -40,7 +40,7 @@
       yearly: "1000 TL",
       live: "50 TL"
     };
-    if (!M || !M.enabled()) {
+    if (!M || !M.canBuy()) {
       return /*#__PURE__*/React.createElement("div", {
         className: "max-w-lg mx-auto px-4 py-12 text-center"
       }, /*#__PURE__*/React.createElement("h1", {

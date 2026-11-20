@@ -310,7 +310,7 @@ export default function BenScreen({ navigation }) {
                 )}
             </Card>
 
-            {Monetization.enabled() ? (
+            {Monetization.canBuy() ? (
                 <Card dark={isDark} onPress={function () { go(navigation, "Paywall"); }}>
                     <Text style={[styles.toolName, isDark && styles.textLight]}>{Monetization.isPremium() ? "Premium açık" : "Premium'a geç"}</Text>
                     <Text style={[styles.toolDesc, isDark && styles.textMuted]}>{Monetization.isPremium() ? "Bütün konular ve oyunlar açık, reklamsız" : "Bütün konular ve oyunlar · aylık 200 TL ya da yıllık 1000 TL"}</Text>

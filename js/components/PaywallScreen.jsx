@@ -23,7 +23,7 @@
         var stores = cfg.stores || {};
         var prices = (M && M.PRICES) || { monthly: "200 TL", yearly: "1000 TL", live: "50 TL" };
 
-        if (!M || !M.enabled()) {
+        if (!M || !M.canBuy()) {
             return (
                 <div className="max-w-lg mx-auto px-4 py-12 text-center">
                     <h1 className="text-xl font-black mb-2">Tüm özellikler açık</h1>

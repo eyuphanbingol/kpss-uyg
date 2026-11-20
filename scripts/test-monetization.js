@@ -47,4 +47,24 @@ ok(M.keys.konu("Coğrafya", "Akarsular") === "konu:cografya:akarsular", "Türkç
 ok(M.keys.map("gol-tektonik") === "map:gol-tektonik", "harita anahtarı");
 ok(M.keys.konu("Tarih", "A B") !== M.keys.cloze("Tarih", "A B"), "konu ve boşluk anahtarı ayrı");
 ok(!M.setStatus(null) && !M.setStatus({}), "bozuk durum yok sayılır");
+
+// Ödeme anahtarı: satın alma kapalı, kilit yalnız reklamla açılır, reklam yoksa kilit yok
+M.setStatus(st({ live: { free: false, credits: 0 } }));
+ok(M.canBuy() && !M.paymentsPaused(), "anahtar kapalıyken satın alma açık");
+var adsOn = true;
+M.configure({ paymentsPaused: true, adsAvailable: function () { return adsOn; } });
+ok(M.paymentsPaused() && !M.canBuy(), "ödeme kapalı: satın alma teklifi yok");
+ok(!M.livePaywall() && M.liveEntry().kind === "free" && !M.liveEntry().paywall, "ödeme kapalı: canlı deneme ücretsiz");
+ok(!M.isLocked("map:z", 1) && M.isLocked("map:z", 5), "reklam varken kilit reklamla açılır");
+M.markAdReward("map:z");
+ok(!M.isLocked("map:z", 5), "reklam ödülü açar");
+adsOn = false;
+ok(!M.isLocked("map:y", 7), "reklam yokken kilit uygulanmaz");
+M.configure({ adsAvailable: function () { throw new Error("x"); } });
+ok(!M.isLocked("map:y", 7), "reklam kontrolü hata verirse kilit yok");
+M.setStatus(st({ settings: { enabled: false, live_paywall: false } }));
+ok(!M.canBuy() && !M.isLocked("map:y", 7), "sunucuda kapalıyken yine açık");
+M.configure({ paymentsPaused: false, adsAvailable: null });
+M.setStatus(st({ live: { free: false, credits: 0 } }));
+ok(M.canBuy() && M.livePaywall() && M.isLocked("map:y", 7) && M.liveEntry().kind === "pay", "anahtar kapatılınca eski davranış");
 console.log("Gelir modeli istemci testleri: " + n + " kontrol geçti.");

@@ -8,6 +8,10 @@ export const KpssConfig = {
     // gizlenir; AdMob birimi boşsa Google'ın test reklamı gösterilir (gelir yok). Ayrıntı: docs/play-store.md §8.
     // Kilitlerin açık/kapalı olduğu sunucudadır (monet_settings), burada değil.
     monetization: {
+        // Ödeme anahtarı: true iken satın alma kapalı (Premium ve deneme kaydı satışı gizli, canlı deneme ücretsiz);
+        // kilitli bölümler yalnız ödüllü reklamla açılır, reklam gösterilemezse kilit uygulanmaz.
+        // RevenueCat/AdMob altyapısı durur; satışı açmak için false yapıp yeni derleme almak yeterli. Web: js/config.js
+        paymentsPaused: true,
         revenueCat: { androidKey: "goog_oFAsruSqlSTzxQKZVkrrnDyzWca", iosKey: "" },
         admob: { rewardedAndroid: "ca-app-pub-9741954794885426/8960848768", rewardedIos: "" }
     },

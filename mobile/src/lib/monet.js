@@ -29,6 +29,9 @@ var adsInit = null;
 
 function cfg() { return KpssConfig.monetization || {}; }
 
+// Ödeme anahtarı (config: monetization.paymentsPaused): satın alma kapalı; kilit yalnız reklam gösterilebiliyorsa uygulanır.
+Monetization.configure({ paymentsPaused: !!cfg().paymentsPaused, adsAvailable: canShowAds });
+
 function rcKey() {
     var c = cfg().revenueCat || {};
     return Platform.OS === "ios" ? (c.iosKey || "") : (c.androidKey || "");

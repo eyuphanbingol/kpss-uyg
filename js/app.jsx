@@ -1389,7 +1389,8 @@ function LiveExamCard(props) {
             if (window.MonetWeb) window.MonetWeb.refresh();
         }).catch(function (x) {
             setBusy(false);
-            setMsg(x && x.code === "payment_required" ? payMsg : x.message);
+            var paused = window.Monetization && window.Monetization.paymentsPaused && window.Monetization.paymentsPaused();
+            setMsg(x && x.code === "payment_required" ? (paused ? "Kayıt şu an alınamadı. Biraz sonra yeniden \"Kayıt ol\"a bas." : payMsg) : x.message);
             if (window.MonetWeb) window.MonetWeb.refresh();
         });
     }
@@ -3731,7 +3732,7 @@ function Ben(props) {
                     </div>
                 )}
             </div>
-            {window.Monetization && window.Monetization.enabled() ? (
+            {window.Monetization && window.Monetization.canBuy() ? (
                 <button type="button" onClick={function () { props.onOpen && props.onOpen("paywall"); }}
                     className="w-full mb-4 p-3.5 rounded-2xl glass text-left card-hover">
                     <span className="font-medium block">{window.Monetization.isPremium() ? "Premium açık" : "Premium'a geç"}</span>
@@ -4008,7 +4009,7 @@ function App() {
             setExtra(null);
             return;
         }
-        if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.enabled())) {
+        if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.canBuy())) {
             setExtra(null);
             return;
         }

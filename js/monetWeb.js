@@ -3,6 +3,9 @@
 // Mobil karşılığı: mobile/src/lib/monet.js
 (function (global) {
     var M = global.Monetization;
+    // Ödeme anahtarı (js/config.js → monetization.paymentsPaused). Web'de reklam yok: açıkken kilit uygulanmaz.
+    var MC = (global.KpssConfig && global.KpssConfig.monetization) || {};
+    if (M && M.configure) M.configure({ paymentsPaused: !!MC.paymentsPaused });
     var uid = null;
     var inflight = null;
     var CACHE = "atanly-monet:";

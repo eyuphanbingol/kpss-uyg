@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:280896:1itmihh*/
+/*jsx:babel-7.29.9-react-classic:281095:1qmo54i*/
 const {
   useState,
   useEffect,
@@ -2300,7 +2300,8 @@ function LiveExamCard(props) {
       if (window.MonetWeb) window.MonetWeb.refresh();
     }).catch(function (x) {
       setBusy(false);
-      setMsg(x && x.code === "payment_required" ? payMsg : x.message);
+      var paused = window.Monetization && window.Monetization.paymentsPaused && window.Monetization.paymentsPaused();
+      setMsg(x && x.code === "payment_required" ? paused ? "Kayıt şu an alınamadı. Biraz sonra yeniden \"Kayıt ol\"a bas." : payMsg : x.message);
       if (window.MonetWeb) window.MonetWeb.refresh();
     });
   }
@@ -5707,7 +5708,7 @@ function Ben(props) {
       setEditing(false);
     },
     className: "px-4 py-3 rounded-xl border-2 border-stone-200 text-sm font-medium"
-  }, "Vazge\xE7")))), window.Monetization && window.Monetization.enabled() ? /*#__PURE__*/React.createElement("button", {
+  }, "Vazge\xE7")))), window.Monetization && window.Monetization.canBuy() ? /*#__PURE__*/React.createElement("button", {
     type: "button",
     onClick: function () {
       props.onOpen && props.onOpen("paywall");
@@ -6091,7 +6092,7 @@ function App() {
       setExtra(null);
       return;
     }
-    if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.enabled())) {
+    if (extra === "paywall" && !(window.KpssConfig && window.KpssConfig.premiumEnabled) && !(window.Monetization && window.Monetization.canBuy())) {
       setExtra(null);
       return;
     }

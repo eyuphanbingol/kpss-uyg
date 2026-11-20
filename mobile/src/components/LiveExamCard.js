@@ -122,6 +122,10 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
         });
     }
     function askBuy() {
+        if (Monetization.paymentsPaused()) {
+            setMsg("Kayıt şu an alınamadı. Biraz sonra yeniden \"Kayıt ol\"a bas.");
+            return;
+        }
         if (!Monet.canPurchase()) {
             setMsg("Bu deneme için kayıt hakkın yok. Her hesabın ilk denemesi ücretsiz; sonrakiler için kayıt hakkı satışı yakında açılacak.");
             return;

@@ -7,10 +7,16 @@
  * ad_unlock_hours (24) saat açılır. Reklam ödülü sunucuya AdMob doğrulamasıyla yazılır (web'de de geçerli);
  * sunucu cevabını beklemeden telefonda hemen açılsın diye yerelde de işaretlenir.
  * Bu dosya saf mantıktır: ağ ve depolama çağıranın işidir (web: js/monetWeb.js, mobil: src/lib/monet.js).
+ *
+ * Ödeme anahtarı (istemci, config: monetization.paymentsPaused): açıkken satın alma teklifi gösterilmez,
+ * canlı deneme ücretsiz görünür ve kilitli bölümler yalnız ödüllü reklamla açılır. Reklam gösterilemeyen yerde
+ * (web, reklam paketi olmayan derleme, giriş yapılmamış) kilit hiç uygulanmaz. Satın alma altyapısı
+ * (RevenueCat, mağaza ürünleri, sunucu fonksiyonları) olduğu gibi durur; anahtar kapatılınca her şey eski haline döner.
  */
 (function (global) {
     var state = { status: null, local: {}, at: 0 };
     var listeners = [];
+    var opts = { paymentsPaused: false, adsAvailable: null };
 
     function nowMs() { return Date.now(); }
 
@@ -25,7 +31,21 @@
 
     function settings() { return (state.status && state.status.settings) || {}; }
     function enabled() { return !!settings().enabled; }
-    function livePaywall() { return !!settings().live_paywall; }
+    function livePaywall() { return !!settings().live_paywall && !opts.paymentsPaused; }
+
+    // o: { paymentsPaused: bool, adsAvailable: function () → bool }
+    function configure(o) {
+        if (!o) return;
+        if ("paymentsPaused" in o) opts.paymentsPaused = !!o.paymentsPaused;
+        if ("adsAvailable" in o) opts.adsAvailable = typeof o.adsAvailable === "function" ? o.adsAvailable : null;
+        emit();
+    }
+    function paymentsPaused() { return opts.paymentsPaused; }
+    function adsAvailable() {
+        try { return !!(opts.adsAvailable && opts.adsAvailable()); } catch (e) { return false; }
+    }
+    // Premium/satın alma tekliflerini (Premium kartı, Premium'a geç düğmesi) göstermek serbest mi?
+    function canBuy() { return enabled() && !opts.paymentsPaused; }
     function freeCount() {
         var n = Number(settings().free_count);
         return isFinite(n) && n >= 0 ? n : 3;
@@ -79,7 +99,10 @@
         if (!enabled()) return false;
         if (typeof index === "number" && index < freeCount()) return false;
         if (isPremium()) return false;
-        return !isAdUnlocked(key);
+        if (isAdUnlocked(key)) return false;
+        // ödeme kapalıyken tek açma yolu reklam; reklam yoksa içerik kapalı kalmaz
+        if (opts.paymentsPaused && !adsAvailable()) return false;
+        return true;
     }
 
     // Kalan açık süre (dakika); kilitli değilse ya da süresizse null
@@ -149,6 +172,9 @@
         subscribe: subscribe,
         enabled: enabled,
         livePaywall: livePaywall,
+        configure: configure,
+        paymentsPaused: paymentsPaused,
+        canBuy: canBuy,
         freeCount: freeCount,
         unlockHours: unlockHours,
         isPremium: isPremium,

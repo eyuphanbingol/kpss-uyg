@@ -24,6 +24,8 @@
             email: "atanly10@gmail.com"
         },
         premiumEnabled: false,
+        // Ödeme anahtarı (mobil: mobile/src/lib/config.js). Web'de reklam olmadığı için açıkken hiçbir şey kilitlenmez.
+        monetization: { paymentsPaused: true },
         // Uygulama mağaza sayfaları (Premium ekranındaki indirme bağlantıları; boşsa gösterilmez)
         stores: {
             play: "https://play.google.com/store/apps/details?id=app.atanly.mobile",

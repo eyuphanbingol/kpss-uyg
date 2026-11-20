@@ -1,6 +1,7 @@
 // Gelir modeli ekranları (mobil): kilit rozeti, kilitli ekran, kilit sarmalayıcısı ve Premium satın alma.
 // Kural ve durum: src/lib/monetization.js (web ile ortak), mağaza/reklam: src/lib/monet.js.
 // Sunucuda monet_settings.enabled kapalıyken hiçbir şey kilitlenmez ve bu ekranlar görünmez.
+// Ödeme anahtarı (config: monetization.paymentsPaused) açıkken satın alma gizlenir, kilit yalnız reklamla açılır.
 // Web karşılığı: js/app.jsx (MonetLockScreen) ve js/components/PaywallScreen.jsx
 import React, { useEffect, useState } from "react";
 import { Linking, Platform, StyleSheet, Text, View } from "react-native";
@@ -24,7 +25,7 @@ export function LockBadge() {
     return (
         <View style={styles.badge}>
             <Lock size={11} color="#92400E" strokeWidth={2.6} />
-            <Text style={styles.badgeTxt}>Premium</Text>
+            <Text style={styles.badgeTxt}>{Monetization.paymentsPaused() ? "Reklamla aç" : "Premium"}</Text>
         </View>
     );
 }
@@ -37,6 +38,7 @@ export function LockedScreen(props) {
     var [msg, setMsg] = useState("");
     var ads = Monet.canShowAds();
     var h = Monetization.unlockHours();
+    var buy = Monetization.canBuy();
 
     function watch() {
         setBusy(true);
@@ -44,7 +46,11 @@ export function LockedScreen(props) {
         Monet.watchRewarded(props.lockKey).then(function (r) {
             setBusy(false);
             // ödül alınınca durum değişir ve sarmalayıcı gerçek ekranı açar
-            if (r && !r.ok && !r.cancelled) setMsg(r.message || "Reklam gösterilemedi.");
+            if (r && !r.ok && !r.cancelled) {
+                // ödeme kapalıyken reklam çıkmadıysa bölüm yine açılır: içerik ücretsizdir
+                if (!buy) Monetization.markAdReward(props.lockKey);
+                else setMsg(r.message || "Reklam gösterilemedi.");
+            }
         });
     }
 
@@ -55,10 +61,12 @@ export function LockedScreen(props) {
                 <View style={styles.lockIcon}><Lock size={28} color="#92400E" strokeWidth={2.2} /></View>
                 <Text style={[styles.lockTitle, isDark && styles.textLight]}>Bu bölüm kilitli</Text>
                 <Text style={[styles.lockDesc, isDark && styles.textMuted]}>
-                    Her bölümün ilk {Monetization.freeCount()} başlığı ücretsiz. {ads ? "Kısa bir reklam izleyerek bu bölümü " + h + " saat açabilir ya da " : ""}Premium ile hepsini reklamsız açabilirsin.
+                    {buy
+                        ? "Her bölümün ilk " + Monetization.freeCount() + " başlığı ücretsiz. " + (ads ? "Kısa bir reklam izleyerek bu bölümü " + h + " saat açabilir ya da " : "") + "Premium ile hepsini reklamsız açabilirsin."
+                        : "Her bölümün ilk " + Monetization.freeCount() + " başlığı doğrudan açık. Kısa bir reklam izleyerek bu bölümü " + h + " saat ücretsiz açabilirsin."}
                 </Text>
                 {ads ? <PrimaryButton title={"Reklam izle · " + h + " saat aç"} busy={busy} onPress={watch} style={{ alignSelf: "stretch", marginTop: 16 }} /> : null}
-                <SecondaryButton title="Premium'a geç" onPress={function () { go(navigation, "Paywall"); }} style={{ alignSelf: "stretch", marginTop: 10 }} />
+                {buy ? <SecondaryButton title="Premium'a geç" onPress={function () { go(navigation, "Paywall"); }} style={{ alignSelf: "stretch", marginTop: 10 }} /> : null}
                 {msg ? <Text style={styles.err}>{msg}</Text> : null}
             </Card>
         </ScrollScreen>
@@ -108,10 +116,10 @@ export function PaywallScreen({ navigation }) {
         return function () { alive = false; };
     }, []);
 
-    if (!Monetization.enabled()) {
+    if (!Monetization.canBuy()) {
         return (
             <ScrollScreen dark={isDark}>
-                <PageHeader dark={isDark} title="Tüm özellikler açık" subtitle="Şu an bütün konular ve oyunlar ücretsiz." onBack={function () { navigation.goBack(); }} right={null} />
+                <PageHeader dark={isDark} title="Tüm özellikler ücretsiz" subtitle={Monetization.enabled() ? "Satın alma şu an kapalı. Kilitli bölümleri kısa bir reklamla ücretsiz açabilirsin." : "Şu an bütün konular ve oyunlar ücretsiz."} onBack={function () { navigation.goBack(); }} right={null} />
             </ScrollScreen>
         );
     }
