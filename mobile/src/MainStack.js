@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Text, View, StyleSheet, Pressable, InteractionManager } from "react-native";
-import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
+import { NavigationContainer, DefaultTheme, DarkTheme, createNavigationContainerRef } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -26,6 +26,7 @@ import { Clock, BookOpen, PencilLine, BarChart3, User } from "lucide-react-nativ
 import { StatusBar } from "expo-status-bar";
 import { colors } from "./lib/theme";
 import { hapticTap } from "./ui";
+import { startPush, registerPush } from "./lib/push";
 
 var Stack = createNativeStackNavigator();
 
@@ -179,8 +180,21 @@ function Tabs() {
     );
 }
 
+// Bildirime dokununca: canlı deneme açıldı bildirimi Canlı deneme sayfasını açar (src/lib/push.js)
+var navRef = createNavigationContainerRef();
+var pendingLive = false;
+function openFromPush(data) {
+    if (!data || data.type !== "live_open") return;
+    if (navRef.isReady()) navRef.navigate("Live");
+    else pendingLive = true;
+}
+
 export default function MainStack() {
-    var { isDark } = useApp();
+    var { isDark, session, student } = useApp();
+    var uid = session && session.user ? session.user.id : null;
+    var track = (student && student.userProfile && student.userProfile.educationLevel) || "lisans";
+    useEffect(function () { startPush(openFromPush); }, []);
+    useEffect(function () { if (uid) registerPush(uid, track); }, [uid, track]);
     var stackOptions = {
         headerShown: false,
         freezeOnBlur: true,
@@ -196,6 +210,8 @@ export default function MainStack() {
     var baseTheme = isDark ? DarkTheme : DefaultTheme;
     return (
         <NavigationContainer
+            ref={navRef}
+            onReady={function () { if (pendingLive) { pendingLive = false; navRef.navigate("Live"); } }}
             theme={{
                 ...baseTheme,
                 dark: isDark,

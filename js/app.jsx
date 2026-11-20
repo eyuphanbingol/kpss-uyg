@@ -1366,9 +1366,11 @@ function LiveExamCard(props) {
 
     if (!L || !C) return null;
     if (!dash) {
-        if (err) return null;
+        if (err || !props.full) return null;
         return <section className="rounded-3xl glass p-5 mb-4 live-card" aria-busy="true"><p className="text-sm text-stone-500">Canlı deneme yükleniyor…</p></section>;
     }
+    // yönetici denemeyi açmadıkça ana sayfada kart yok (js/liveExam.js cardVisible)
+    if (!props.full && L.cardVisible && !L.cardVisible(dash, now)) return null;
 
     function act(name, args, done) {
         setBusy(true); setMsg("");

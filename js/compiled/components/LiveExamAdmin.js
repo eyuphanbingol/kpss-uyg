@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:128687:v54ujb*/
+/*jsx:babel-7.29.9-react-classic:131361:1qv46xa*/
 (function () {
   const {
     useState,
@@ -10,6 +10,8 @@
   // ============================================================
   // Yönetim: canlı deneme oluşturma, soru yükleme, kayıtlar, canlı izleme, acil durum, istatistik
   // Sunucu: supabase/patch-live-exam.sql (live_admin_* fonksiyonları). Yayınlanmış deneme silinemez.
+  // "Denemeyi aç": supabase/patch-live-open.sql (live_admin_open) kayda açar ve kullanıcılara telefon
+  // bildirimi + web duyurusu yollar. Açılmayan (taslak) deneme kullanıcılarda hiç görünmez.
   // ============================================================
 
   var STATUS = {
@@ -2191,6 +2193,8 @@
     const [replace, setReplace] = useState(false);
     const [find, setFind] = useState("");
     const [loadedAt, setLoadedAt] = useState(0);
+    const [note, setNote] = useState("");
+    const [pushN, setPushN] = useState(null);
     var now = useNow(15000);
     function load() {
       return C.rpc("live_admin_list").then(function (list) {
@@ -2200,6 +2204,13 @@
         setExam(e || null);
         setLoadedAt(Date.now());
         if (!e) return;
+        C.rpc("live_admin_push_count", {
+          p_track: e.track
+        }).then(function (x) {
+          setPushN(x && x.track != null ? Number(x.track) : null);
+        }, function () {
+          setPushN(null);
+        });
         C.rpc("live_admin_registrations", {
           p_exam: id
         }).then(setRegs).catch(function () {});
@@ -2225,6 +2236,36 @@
       setErr("");
       C.rpc(name, args).then(load).catch(function (x) {
         setErr(x.message);
+      });
+    }
+    // Denemeyi aç (taslak → kayda açık) ya da açık denemenin bildirimini yinele
+    function openExam(again) {
+      var phones = pushN != null ? " " + pushN + " telefona bildirim gider." : "";
+      var q = again ? "Bildirim yeniden gönderilsin mi?" + phones : "Deneme açılsın mı? Kayıt başlar, " + (L.TRACKS[exam.track] || exam.track) + " kullanıcılarına bildirim ve duyuru gider." + phones + " Aynı kulvardaki bitmiş deneme arşive geçer.";
+      if (!window.confirm(q)) return;
+      setErr("");
+      setNote("");
+      C.rpc(again ? "live_admin_notify" : "live_admin_open", {
+        p_exam: id
+      }).then(function (r) {
+        var p = r && r.push || r || {};
+        setNote(p.reason === "no_pg_net" ? (again ? "" : "Deneme açıldı. ") + "Bildirim gönderilemedi: Supabase'te pg_net kapalı (Database → Extensions → pg_net)." : (again ? "" : "Deneme açıldı. ") + (Number(p.sent) || 0) + " telefona bildirim gönderildi.");
+        load();
+      }).catch(function (x) {
+        var msg = x && x.message || "";
+        // sunucuya patch-live-open.sql henüz kurulmadıysa: eskisi gibi yalnız yayınla
+        if (!again && /live_admin_open|PGRST202|schema cache/i.test(msg + " " + (x && x.code || ""))) {
+          C.rpc("live_admin_publish", {
+            p_exam: id
+          }).then(function () {
+            setNote("Deneme açıldı; bildirim için Supabase'te supabase/patch-live-open.sql çalıştırılmalı.");
+            load();
+          }).catch(function (y) {
+            setErr(y.message);
+          });
+          return;
+        }
+        setErr(msg);
       });
     }
     if (!exam) return /*#__PURE__*/React.createElement(Box, {
@@ -2294,11 +2335,13 @@
       disabled: exam.questions !== 120 || !exam.has_booklet,
       title: exam.questions !== 120 || !exam.has_booklet ? "Önce 120 soruyu ve kitapçığı yükle" : "",
       onClick: function () {
-        run("live_admin_publish", {
-          p_exam: id
-        }, "Deneme yayınlansın ve kayda açılsın mı? Aynı kulvardaki bitmiş deneme arşive geçer.");
+        openExam(false);
       }
-    }, "Yay\u0131nla (kayda a\xE7)") : null, exam.status === "draft" ? /*#__PURE__*/React.createElement(Btn, {
+    }, "\uD83D\uDD14 Denemeyi a\xE7") : null, exam.status === "scheduled" && now < L.ms(exam.reg_closes_at) ? /*#__PURE__*/React.createElement(Btn, {
+      onClick: function () {
+        openExam(true);
+      }
+    }, "\uD83D\uDD14 Bildirimi tekrar g\xF6nder") : null, exam.status === "draft" ? /*#__PURE__*/React.createElement(Btn, {
       dangerGhost: true,
       onClick: function () {
         run("live_admin_discard_draft", {
@@ -2312,7 +2355,12 @@
     })), err ? /*#__PURE__*/React.createElement("p", {
       className: "text-sm text-rose-600",
       role: "alert"
-    }, err) : null, /*#__PURE__*/React.createElement("div", {
+    }, err) : null, note ? /*#__PURE__*/React.createElement("p", {
+      className: "text-sm text-emerald-700 dark:text-emerald-300",
+      role: "status"
+    }, note) : null, exam.status === "draft" ? /*#__PURE__*/React.createElement("p", {
+      className: "text-xs text-stone-500"
+    }, "Taslak deneme kullan\u0131c\u0131larda g\xF6r\xFCnmez. \"Denemeyi a\xE7\" deyince kay\u0131t ba\u015Flar", pushN != null ? " ve " + pushN + " telefona bildirim gider" : " ve kullanıcılara bildirim gider", ".") : null, /*#__PURE__*/React.createElement("div", {
       className: "grid grid-cols-2 lg:grid-cols-4 gap-3"
     }, /*#__PURE__*/React.createElement(Fact, {
       label: "Sorular",

@@ -12,8 +12,13 @@ run supabase/schema.sql
 run supabase/patch-hardening.sql
 run supabase/patch-privilege-lock.sql
 # 1. aşama sürümü kurulu bir veritabanına güncel yamayı uygulamak da çalışmalı
-git show f424260:supabase/patch-live-exam.sql > "${TMPDIR:-/tmp}/live-exam-phase1.sql"
-run "${TMPDIR:-/tmp}/live-exam-phase1.sql"
+# (sığ klonda eski sürüm yoksa bu adım atlanır)
+if git cat-file -e f424260 2>/dev/null; then
+  git show f424260:supabase/patch-live-exam.sql > "${TMPDIR:-/tmp}/live-exam-phase1.sql"
+  run "${TMPDIR:-/tmp}/live-exam-phase1.sql"
+else
+  echo "not: f424260 bu klonda yok; 1. aşama üzerine kurulum adımı atlandı"
+fi
 # kullanıcı SQL Editor'da parçaları sırayla çalıştırır: testler de parçalarla kurar
 node scripts/split-live-sql.js --check
 for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done
@@ -46,4 +51,16 @@ psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/admin-panel-test.sql 2>&1 | gre
 run supabase/patch-leaderboard-mask.sql
 run supabase/patch-leaderboard-mask.sql
 psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/leaderboard-mask-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
+psql -d $DB -Atc "select 1" >/dev/null
+
+# Canlı denemeyi aç + bildirim (patch-live-open.sql): ayrı, temiz bir veritabanında; yama iki kez çalıştırılır
+DB=live_open_test
+psql -q -d postgres -c "drop database if exists $DB" -c "create database $DB" >/dev/null
+run supabase/tests/supabase-shim.sql
+for f in schema patch-saas patch-announce-expires patch-hardening patch-privilege-lock; do run supabase/$f.sql; done
+for f in $(ls supabase/canli-deneme/*.sql | sort -V); do run "$f"; done
+run supabase/patch-monetization.sql
+run supabase/patch-live-open.sql
+run supabase/patch-live-open.sql
+psql -v ON_ERROR_STOP=1 -d $DB -f supabase/tests/live-open-test.sql 2>&1 | grep -E "ok  |GEÇTİ|BAŞARISIZ|ERROR|HATA" || true
 psql -d $DB -Atc "select 1" >/dev/null

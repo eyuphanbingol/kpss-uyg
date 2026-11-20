@@ -41,3 +41,6 @@ yarn-error.*
 /android
 dist-check/
 .bundle-check.js
+
+# Firebase (bildirim) dosyası: depoya girmez, expo.dev ortam değişkeni GOOGLE_SERVICES_JSON ile verilir
+google-services.json

@@ -68,7 +68,8 @@
       ],
       "permissions": [
         "android.permission.CAMERA",
-        "com.android.vending.BILLING"
+        "com.android.vending.BILLING",
+        "android.permission.POST_NOTIFICATIONS"
       ],
       "allowBackup": false
     },
@@ -98,6 +99,13 @@
         }
       ],
       "expo-asset",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#0F766E"
+        }
+      ],
       [
         "react-native-google-mobile-ads",
         {

@@ -86,6 +86,8 @@ export function LiveExamCard({ navigation, student, kpssData, dark, full }) {
     }, [last && last.exam_id]);
 
     if (!dash) return null;
+    // yönetici denemeyi açmadıkça Bugün'de kart yok (lib/liveExam.js cardVisible)
+    if (!full && !L.cardVisible(dash, now)) return null;
 
     function act(name, args, done) {
         setBusy(true); setMsg("");

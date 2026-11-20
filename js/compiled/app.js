@@ -1,4 +1,4 @@
-/*jsx:babel-7.29.9-react-classic:281095:1qmo54i*/
+/*jsx:babel-7.29.9-react-classic:281275:a0r14i*/
 const {
   useState,
   useEffect,
@@ -2256,7 +2256,7 @@ function LiveExamCard(props) {
   }, [last && last.exam_id]);
   if (!L || !C) return null;
   if (!dash) {
-    if (err) return null;
+    if (err || !props.full) return null;
     return /*#__PURE__*/React.createElement("section", {
       className: "rounded-3xl glass p-5 mb-4 live-card",
       "aria-busy": "true"
@@ -2264,6 +2264,8 @@ function LiveExamCard(props) {
       className: "text-sm text-stone-500"
     }, "Canl\u0131 deneme y\xFCkleniyor\u2026"));
   }
+  // yönetici denemeyi açmadıkça ana sayfada kart yok (js/liveExam.js cardVisible)
+  if (!props.full && L.cardVisible && !L.cardVisible(dash, now)) return null;
   function act(name, args, done) {
     setBusy(true);
     setMsg("");

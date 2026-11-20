@@ -180,5 +180,15 @@ Promise.resolve().then(function () {
     var bad3 = JSON.parse(JSON.stringify(require("../docs/canli-deneme-ornek.json")));
     bad3.sorular[0].metin = "Kapanmamış __altı çizili";
     ok(L.validateUpload(bad3, cat, {}, null).warnings.some(function (w) { return /Soru 1: soru metninde kapanmamış __/.test(w); }), "doğrulayıcı: kapanmamış biçim uyarısı");
+    // Kart görünürlüğü: yönetici açmadıkça gizli, bitince 7 gün sonuç/kaçırma notu
+    var nowT = Date.parse("2026-11-20T12:00:00+03:00");
+    var dayAgo = function (d) { return new Date(nowT - d * 864e5).toISOString(); };
+    ok(!L.cardVisible(null, nowT), "kart: pano yokken gizli");
+    ok(!L.cardVisible({ exam: null, cancelled: null, last_result: null, missed: null }, nowT), "kart: açılmış deneme yokken gizli");
+    ok(L.cardVisible({ exam: { id: "x" } }, nowT), "kart: açılan deneme görünür");
+    ok(L.cardVisible({ exam: null, cancelled: { id: "c" } }, nowT), "kart: iptal notu görünür");
+    ok(L.cardVisible({ exam: null, last_result: { starts_at: dayAgo(2) } }, nowT), "kart: son 7 günün sonucu görünür");
+    ok(!L.cardVisible({ exam: null, last_result: { starts_at: dayAgo(9) } }, nowT), "kart: eski sonuç için gizli");
+    ok(L.cardVisible({ exam: null, missed: { starts_at: dayAgo(1) } }, nowT), "kart: yeni kaçırılan deneme görünür");
     console.log(n + " test geçti.");
 }).catch(function (e) { console.error("BAŞARISIZ:", e.message); process.exit(1); });

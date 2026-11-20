@@ -6,6 +6,8 @@
     // ============================================================
     // Yönetim: canlı deneme oluşturma, soru yükleme, kayıtlar, canlı izleme, acil durum, istatistik
     // Sunucu: supabase/patch-live-exam.sql (live_admin_* fonksiyonları). Yayınlanmış deneme silinemez.
+    // "Denemeyi aç": supabase/patch-live-open.sql (live_admin_open) kayda açar ve kullanıcılara telefon
+    // bildirimi + web duyurusu yollar. Açılmayan (taslak) deneme kullanıcılarda hiç görünmez.
     // ============================================================
 
     var STATUS = { draft: "Taslak", scheduled: "Planlı", finished: "Bitti", cancelled: "İptal", archived: "Arşiv" };
@@ -1090,6 +1092,8 @@
         const [replace, setReplace] = useState(false);
         const [find, setFind] = useState("");
         const [loadedAt, setLoadedAt] = useState(0);
+        const [note, setNote] = useState("");
+        const [pushN, setPushN] = useState(null);
         var now = useNow(15000);
 
         function load() {
@@ -1097,6 +1101,7 @@
                 var e = (list || []).filter(function (x) { return x.id === id; })[0];
                 setExam(e || null); setLoadedAt(Date.now());
                 if (!e) return;
+                C.rpc("live_admin_push_count", { p_track: e.track }).then(function (x) { setPushN(x && x.track != null ? Number(x.track) : null); }, function () { setPushN(null); });
                 C.rpc("live_admin_registrations", { p_exam: id }).then(setRegs).catch(function () {});
                 C.rpc("live_admin_monitor", { p_exam: id }).then(setMon).catch(function () {});
                 if (e.finalized_at) C.rpc("live_admin_stats", { p_exam: id }).then(setStats).catch(function () {});
@@ -1111,6 +1116,32 @@
             if (confirmMsg && !window.confirm(confirmMsg)) return;
             setErr("");
             C.rpc(name, args).then(load).catch(function (x) { setErr(x.message); });
+        }
+        // Denemeyi aç (taslak → kayda açık) ya da açık denemenin bildirimini yinele
+        function openExam(again) {
+            var phones = pushN != null ? " " + pushN + " telefona bildirim gider." : "";
+            var q = again ? "Bildirim yeniden gönderilsin mi?" + phones
+                : "Deneme açılsın mı? Kayıt başlar, " + (L.TRACKS[exam.track] || exam.track) + " kullanıcılarına bildirim ve duyuru gider." + phones + " Aynı kulvardaki bitmiş deneme arşive geçer.";
+            if (!window.confirm(q)) return;
+            setErr(""); setNote("");
+            C.rpc(again ? "live_admin_notify" : "live_admin_open", { p_exam: id }).then(function (r) {
+                var p = (r && r.push) || r || {};
+                setNote(p.reason === "no_pg_net"
+                    ? (again ? "" : "Deneme açıldı. ") + "Bildirim gönderilemedi: Supabase'te pg_net kapalı (Database → Extensions → pg_net)."
+                    : (again ? "" : "Deneme açıldı. ") + (Number(p.sent) || 0) + " telefona bildirim gönderildi.");
+                load();
+            }).catch(function (x) {
+                var msg = (x && x.message) || "";
+                // sunucuya patch-live-open.sql henüz kurulmadıysa: eskisi gibi yalnız yayınla
+                if (!again && /live_admin_open|PGRST202|schema cache/i.test(msg + " " + ((x && x.code) || ""))) {
+                    C.rpc("live_admin_publish", { p_exam: id }).then(function () {
+                        setNote("Deneme açıldı; bildirim için Supabase'te supabase/patch-live-open.sql çalıştırılmalı.");
+                        load();
+                    }).catch(function (y) { setErr(y.message); });
+                    return;
+                }
+                setErr(msg);
+            });
         }
         if (!exam) return <Box title="Deneme">{err || "Yükleniyor…"}</Box>;
         if (editQs) return <QuestionEditor exam={exam} onBack={function () { setEditQs(false); load(); }} onSaved={load} />;
@@ -1144,13 +1175,16 @@
                             <p className="text-sm text-stone-500 dark:text-stone-400 mt-1">{L.fmtDay(L.ms(exam.starts_at), true)} · {ph.text}</p>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                            {exam.status === "draft" ? <Btn primary disabled={exam.questions !== 120 || !exam.has_booklet} title={exam.questions !== 120 || !exam.has_booklet ? "Önce 120 soruyu ve kitapçığı yükle" : ""} onClick={function () { run("live_admin_publish", { p_exam: id }, "Deneme yayınlansın ve kayda açılsın mı? Aynı kulvardaki bitmiş deneme arşive geçer."); }}>Yayınla (kayda aç)</Btn> : null}
+                            {exam.status === "draft" ? <Btn primary disabled={exam.questions !== 120 || !exam.has_booklet} title={exam.questions !== 120 || !exam.has_booklet ? "Önce 120 soruyu ve kitapçığı yükle" : ""} onClick={function () { openExam(false); }}>🔔 Denemeyi aç</Btn> : null}
+                            {exam.status === "scheduled" && now < L.ms(exam.reg_closes_at) ? <Btn onClick={function () { openExam(true); }}>🔔 Bildirimi tekrar gönder</Btn> : null}
                             {exam.status === "draft" ? <Btn dangerGhost onClick={function () { run("live_admin_discard_draft", { p_exam: id }, "Taslak kaldırılsın mı? (Yayınlanmış denemeler asla silinemez.)"); props.onBack(); }}>Taslağı kaldır</Btn> : null}
                         </div>
                     </div>
                     <Timeline exam={exam} now={now} />
                 </section>
                 {err ? <p className="text-sm text-rose-600" role="alert">{err}</p> : null}
+                {note ? <p className="text-sm text-emerald-700 dark:text-emerald-300" role="status">{note}</p> : null}
+                {exam.status === "draft" ? <p className="text-xs text-stone-500">Taslak deneme kullanıcılarda görünmez. "Denemeyi aç" deyince kayıt başlar{pushN != null ? " ve " + pushN + " telefona bildirim gider" : " ve kullanıcılara bildirim gider"}.</p> : null}
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     <Fact label="Sorular" value={<span>{exam.questions}<span className="text-stone-400 text-base">/120</span></span>}><div className="mt-2"><Meter value={exam.questions} max={120} done={exam.questions === 120} /></div></Fact>

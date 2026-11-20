@@ -267,6 +267,7 @@ Reklam kimliği**: "Uygulamanız reklam kimliği kullanıyor mu?" → **Evet** �
 | Cihaz veya diğer kimlikler | **Cihaz kimliği** | Evet | Hayır | Dolandırıcılığı önleme (ücretsiz denemenin kötüye kullanımı) |
 
 | Cihaz veya diğer kimlikler | **Reklam kimliği** (AdMob) | Evet | **Evet** (Google AdMob) | Reklam |
+| Cihaz veya diğer kimlikler | **Cihaz veya diğer kimlikler** (bildirim adresi, Expo/Firebase) | Evet | Hayır (hizmet sağlayıcı) | Uygulama işlevselliği (canlı deneme bildirimi) |
 
 Kart bilgisi uygulamaya hiç gelmez; ödeme ekranı Google'ındır.
 

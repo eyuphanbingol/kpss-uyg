@@ -135,6 +135,18 @@
         return t < ms(e.ranking_at) ? "ended" : "ranking";
     }
 
+    // Canlı deneme kartı görünsün mü? Yönetici denemeyi açmadıkça (planlı deneme yokken) kart gizlidir.
+    // Deneme bittikten sonra yalnız son 7 günün sonucu, kaçırılan deneme ya da iptal notu için görünür.
+    var CARD_KEEP_MS = 7 * 24 * 3600 * 1000;
+    function cardVisible(dash, now) {
+        if (!dash) return false;
+        if (dash.exam || dash.cancelled) return true;
+        var lr = dash.last_result, mi = dash.missed;
+        if (lr && lr.starts_at && now - ms(lr.starts_at) < CARD_KEEP_MS) return true;
+        if (mi && mi.starts_at && now - ms(mi.starts_at) < CARD_KEEP_MS) return true;
+        return false;
+    }
+
     // ---------------------------------------------------------------
     // UTF-8 ve hex
     // ---------------------------------------------------------------
@@ -884,6 +896,7 @@
         distribution: distribution,
         LETTERS: LETTERS,
         createClock: createClock,
+        cardVisible: cardVisible,
         ms: ms,
         fmtClock: fmtClock,
         fmtDay: fmtDay,
