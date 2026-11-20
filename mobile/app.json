@@ -3,7 +3,7 @@
     "name": "Atanly",
     "slug": "atanly",
     "scheme": "atanly",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "platforms": [
       "ios",
       "android"
@@ -99,6 +99,7 @@
         }
       ],
       "expo-asset",
+      "./plugins/withOptionalWifi",
       [
         "expo-notifications",
         {
